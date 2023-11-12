@@ -9,8 +9,16 @@ import { HeaderMenu } from "@/components/HeaderMenu/HeaderMenu";
 import { Box } from "@mui/system";
 import Image from "next/image";
 import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/PromoSectionGeneralPage";
+import { DEV } from "@/const";
+import { IsDev } from "@/components/isDev/IsDev";
 
 export default function Home() {
+  if (DEV)
+    return (
+      <>
+        <IsDev />
+      </>
+    );
   return (
     <RootLayout>
       <HeaderSite />
