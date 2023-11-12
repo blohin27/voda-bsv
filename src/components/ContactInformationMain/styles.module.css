@@ -1,0 +1,15 @@
+.tel_mob{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(92, 92, 92);
+    display: flex;
+    align-items: center;
+}
+.tel_one{
+    font-size: 25px;
+    font-weight: 700;
+    color: #352c1d;
+}
+.tel_two{
+    font-size: 25px;
+    letter-spacing: 1px;
+}

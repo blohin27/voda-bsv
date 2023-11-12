@@ -1,0 +1,33 @@
+.sectionWrapperPromo {
+  width: 100%;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.setcionPromo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 60px;
+  max-width: 50%;
+  color: #352c1d;
+  z-index: 2;
+}
+
+.setcionPromoTitle {
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 50px;
+  margin-bottom: 50px;
+}
+
+.sectionPromoSubTitle {
+  font-size: 18px;
+  color: #5f5f5f;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+
