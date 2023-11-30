@@ -13,7 +13,7 @@ export const ServicesAll: FC<IProps> = () => {
         Основные услуги по водоснабжению
       </div>
       <div id={"tab"} style={{}}>
-        <div>Все услуги</div>
+        <div>Все услуги1</div>
         <div>Для физ. лиц</div>
         <div>Для юр. лиц</div>
       </div>
