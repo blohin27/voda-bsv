@@ -1,11 +1,15 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
+import { DEV } from "@/const";
 
 interface Props {}
 
-export const IsDev: FC<Props> = () => {
-  return (
-    <div style={{ textAlign: "center", fontStyle: "60px" }}>
-      Сайт в разработке
-    </div>
-  );
+export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
+  if (DEV) {
+    return (
+      <div style={{ textAlign: "center", fontSize: "60px" }}>
+        Сайт в разработке
+      </div>
+    );
+  }
+  return <>{children}</>;
 };

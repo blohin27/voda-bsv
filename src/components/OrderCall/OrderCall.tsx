@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 interface Props {}
 export const OrderCall: FC<Props> = () => {
   return (
-    <Box display={"flex"} alignItems={"center"} mt={4}>
+    <Box display={"flex"} alignItems={"center"} mt={3}>
       <Box mr={2}>
         <Input
           onChange={(e) => console.log(e.target.value)}
