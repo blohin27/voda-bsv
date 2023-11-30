@@ -19,6 +19,7 @@ export const ServicesAll: FC<IProps> = () => {
         <div>аша</div>
         <div>аша</div>
         <div>аша</div>
+        <div>аша</div>
       </div>
       <div className={classNames(styles.content)}>
         <ServiceItem />
