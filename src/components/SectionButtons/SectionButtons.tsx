@@ -29,17 +29,17 @@ const classes: ClassesSx = {
     },
   },
   button1: {
-    "@media (max-width: 1100px)": {
+    "@media (max-width: 1120px)": {
       justifyContent: "center",
       display: "none",
-      fontSize: "12px",
+      // fontSize: "12px",
     },
   },
   button2: {
     "@media (max-width: 1100px)": {
       flexDirection: "column",
       justifyContent: "center",
-      fontSize: "12px",
+      // fontSize: "12px",
     },
   },
 };
