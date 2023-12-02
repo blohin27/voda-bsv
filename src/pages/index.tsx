@@ -1,20 +1,16 @@
-import { LogoGeneralVodaBsv } from "@/components/LogoVB/LogoGeneralVodaBsv";
-import { ContactInformationMain } from "@/components/ContactInformationMain/ContactInformationMain";
 import RootLayout from "@/pages/RootLayout";
 import classNames from "classnames";
 import styles from "./index.module.css";
-import { SocialNetworkIcons } from "@/components/SocialNetwork/SocialNetworkIcons";
-import Button from "@mui/material/Button";
-import { HeaderMenu } from "@/components/HeaderMenu/HeaderMenu";
 import { Box } from "@mui/system";
 import Image from "next/image";
 import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/PromoSectionGeneralPage";
 import { IsDev } from "@/components/isDev/IsDev";
-import { SectionButtons } from "@/components/SectionButtons/SectionButtons";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { Montserrat } from "next/font/google";
 import { PromoSectionGeneralPage2 } from "@/components/PromoSectionGeneralPage2/PromoSectionGeneralPage2";
 import { ServicesAll } from "@/components/ServicesAll/Services";
+import React from "react";
+import { HeaderSite } from "@/components/header/HeaderSite/HeaderSite";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -29,19 +25,6 @@ export default function Home() {
   );
 }
 
-export const HeaderSite = () => (
-  <>
-    <div className={classNames(`${styles.sectionHeaderSite}`)}>
-      <LogoGeneralVodaBsv />
-      <ContactInformationMain />
-      <SocialNetworkIcons />
-      <SectionButtons />
-    </div>
-    <div>
-      <HeaderMenu />
-    </div>
-  </>
-);
 const ContentGeneralPage = () => (
   <Box
     display={"flex"}

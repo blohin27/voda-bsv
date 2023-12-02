@@ -7,7 +7,6 @@ export default function Index() {
     <IsDev>
       <RootLayout>
         <HeaderSite />
-        123
       </RootLayout>
     </IsDev>
   );

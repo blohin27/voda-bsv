@@ -3,7 +3,9 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 5px auto;
+    margin: 0px auto;
+    margin-top: 15px;
+    margin-bottom: 12px;
 
 }
 
@@ -103,3 +105,5 @@
     height: 100%;
     opacity: .7;
 }
+
+
