@@ -9,7 +9,7 @@ import { PromoSectionGeneralPage2 } from "@/components/PromoSectionGeneralPage2/
 import { ServicesAll } from "@/components/ServicesAll/Services";
 import React from "react";
 import { ClassesSx } from "@/theme/theme";
-import { HeaderSite } from "@/components/header/HeaderSite/HeaderSite";
+import { HeaderSite } from "../components/header/HeaderSite/HeaderSite";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
