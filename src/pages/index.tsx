@@ -1,6 +1,4 @@
 import RootLayout from "@/pages/RootLayout";
-import classNames from "classnames";
-import styles from "./index.module.css";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/PromoSectionGeneralPage";
@@ -10,9 +8,8 @@ import { Montserrat } from "next/font/google";
 import { PromoSectionGeneralPage2 } from "@/components/PromoSectionGeneralPage2/PromoSectionGeneralPage2";
 import { ServicesAll } from "@/components/ServicesAll/Services";
 import React from "react";
-import { HeaderSite } from "@/components/header/HeaderSite/HeaderSite";
-import { SimpleSlider } from "@/components/SimpleSlider/SimpleSlider";
 import { ClassesSx } from "@/theme/theme";
+import { HeaderSite } from "@/components/header/HeaderSite/HeaderSite";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -34,7 +31,7 @@ const ContentGeneralPage = () => {
       flexDirection={"column"}
       className={montserrat.className}
     >
-      <Box sx={classes.setcionGeneralPageBanner}>
+      <Box sx={classesStyle.setcionGeneralPageBanner}>
         <Image
           src="/photoNew/testImage.jpg"
           alt={"image"}
@@ -43,13 +40,13 @@ const ContentGeneralPage = () => {
           objectPosition="center center" // По умолчанию 'center', но может быть изменено
           quality={100}
         />
-        <Box sx={classes.sectionWhite} />
+        <Box sx={classesStyle.sectionWhite} />
 
         <PromoSectionGeneralPage />
       </Box>
       <InfoBlocks />
       <Box id={"PhotoAndText"}>
-        <Box sx={classes.sectionPhotoAndText}>
+        <Box sx={classesStyle.sectionPhotoAndText}>
           <Box style={{ position: "relative", marginRight: "35px" }}>
             <Image
               src="/photoNew/testImage.jpg"
@@ -60,7 +57,7 @@ const ContentGeneralPage = () => {
               quality={100}
             />
           </Box>
-          <Box sx={classes.sectionText}>
+          <Box sx={classesStyle.sectionText}>
             <Box>
               Сейчас наша компания – это целый штат квалифицированных
               сотрудников, насчитывающий более 100 профессиональных клинеров.
@@ -75,49 +72,49 @@ const ContentGeneralPage = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={classes.titleObject}>
+      <Box sx={classesStyle.titleObject}>
         Какие объекты в Москве и Московской области мы обслуживаем
       </Box>
-      <Box sx={classes.sectionObslujAll}>
-        <Box sx={classes.sectionObslujItem}>
-          <Box sx={classes.imgItem}>
+      <Box sx={classesStyle.sectionObslujAll}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
             <img src={"/icons/_.svg"} />
           </Box>
           <Box style={{ textAlign: "center" }}>Квартиры</Box>
         </Box>
-        <Box sx={classes.sectionObslujItem}>
-          <Box sx={classes.imgItem}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
             <img src={"/icons/_.svg"} />
           </Box>
           <Box style={{ textAlign: "center" }}>Квартиры</Box>
         </Box>
-        <Box sx={classes.sectionObslujItem}>
-          <Box sx={classes.imgItem}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
             <img src={"/icons/_.svg"} />
           </Box>
           <Box style={{ textAlign: "center" }}>Квартиры</Box>
         </Box>
-        <Box sx={classes.sectionObslujItem}>
-          <Box sx={classes.imgItem}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
             <img src={"/icons/_.svg"} />
           </Box>
           <Box style={{ textAlign: "center" }}>Квартиры</Box>
         </Box>
-        <Box sx={classes.sectionObslujItem}>
-          <Box sx={classes.imgItem}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
             <img src={"/icons/_.svg"} />
           </Box>
           <Box style={{ textAlign: "center" }}>Квартиры</Box>
         </Box>
-        <Box sx={classes.sectionObslujItem}>
-          <Box sx={classes.imgItem}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
             <img src={"/icons/_.svg"} />
           </Box>
           <Box style={{ textAlign: "center" }}>Квартиры</Box>
         </Box>
       </Box>
 
-      <Box sx={classes.specRachetWrapper}>
+      <Box sx={classesStyle.specRachetWrapper}>
         <Image
           src="/photoNew/testImage.jpg"
           alt={"image"}
@@ -129,7 +126,7 @@ const ContentGeneralPage = () => {
         <Box>
           <PromoSectionGeneralPage2 />
         </Box>
-        <Box sx={classes.sectionBlack}></Box>
+        <Box sx={classesStyle.sectionBlack}></Box>
       </Box>
       <Box
         style={{
@@ -144,7 +141,7 @@ const ContentGeneralPage = () => {
   );
 };
 
-const classes: ClassesSx = {
+const classesStyle: ClassesSx = {
   sectionHeaderSite: {
     display: "flex",
     justifyContent: "space-between",
