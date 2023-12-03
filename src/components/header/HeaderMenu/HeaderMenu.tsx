@@ -1,6 +1,5 @@
 import { FC } from "react";
 import styles from "./styles.module.scss";
-import { SimpleSlider } from "@/components/SimpleSlider/SimpleSlider";
 import { Roboto_Slab } from "next/font/google";
 import classNames from "classnames";
 import { Box } from "@mui/material";
