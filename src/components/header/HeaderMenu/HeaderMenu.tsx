@@ -13,14 +13,16 @@ export const HeaderMenu: FC<IProps> = () => {
   return (
     <>
       <Box sx={classes.wrapper}>
-        <Box sx={classes.section} className={roboto.className}>
-          <Box sx={classes.link}>Услуги</Box>
-          <Box sx={classes.link}>Цены</Box>
-          <Box sx={classes.link}>Срочный выезд</Box>
-          <Box sx={classes.link}>Калькулятор</Box>
-          <Box sx={classes.link}>Наши работы</Box>
-          <Box sx={classes.link}>Полезные статьи</Box>
-          <Box sx={classes.link}>Контакты</Box>
+        <Box ml={2} mr={2}>
+          <Box sx={classes.section} className={roboto.className}>
+            <Box sx={classes.link}>Услуги</Box>
+            <Box sx={classes.link}>Цены</Box>
+            <Box sx={classes.link}>Срочный выезд</Box>
+            <Box sx={classes.link}>Калькулятор</Box>
+            <Box sx={classes.link}>Наши работы</Box>
+            <Box sx={classes.link}>Полезные статьи</Box>
+            <Box sx={classes.link}>Контакты</Box>
+          </Box>
         </Box>
       </Box>
     </>

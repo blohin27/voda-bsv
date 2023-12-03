@@ -9,7 +9,6 @@ import { ClassesSx } from "@/theme/theme";
 import { useMediaPredicate } from "react-media-hook";
 import { MOBILE_TELEPHONE } from "@/const";
 import { Montserrat } from "next/font/google";
-import SimpleDrawer from "@/components/header/Drawer/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -73,11 +72,13 @@ export const HeaderSite = () => {
           </Box>
         )}
         <Box sx={classes.wrapperHeader}>
-          <Box sx={classes.sectionHeaderSite}>
-            <LogoGeneralVodaBsv />
-            <ContactInformationMain />
-            <SocialNetworkIcons />
-            <SectionButtons />
+          <Box ml={2} mr={2}>
+            <Box sx={classes.sectionHeaderSite}>
+              <LogoGeneralVodaBsv />
+              <ContactInformationMain />
+              <SocialNetworkIcons />
+              <SectionButtons />
+            </Box>
           </Box>
           <div>
             <HeaderMenu />
