@@ -35,6 +35,7 @@ export const HeaderSite = () => {
         { title: "Контакты", urlRedirect: "/" },
       ].map((text, index) => (
         <Box
+          key={`${index + text.title}`}
           sx={classes.itemHeaderDrawer}
           className={montserrat.className}
         >{`${text.title}`}</Box>
