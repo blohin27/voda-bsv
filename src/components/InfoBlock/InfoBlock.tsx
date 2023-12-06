@@ -1,5 +1,4 @@
 import { FC } from "react";
-import styles from "./styles.module.scss";
 import GppGoodIcon from "@mui/icons-material/GppGood";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import { Montserrat } from "next/font/google";
@@ -13,8 +12,8 @@ interface Props {}
 export const InfoBlocks: FC<Props> = () => {
   return (
     <Box sx={classes.root}>
-      <Box position={"absolute"} className={styles.sectionWrapper}>
-        <Box sx={classes.section}>
+      <Box sx={classes.sectionWrapper}>
+        <Box sx={classes.sections}>
           <Box sx={classes.infoItems}>
             <InfoItem />
             <InfoItem />
@@ -28,25 +27,24 @@ export const InfoBlocks: FC<Props> = () => {
 
 const classes: ClassesSx = {
   root: {
-    position: "relative",
-    width: "100%",
     display: "flex",
+    maxWidth: "1200px",
+    margin: "0 auto",
   },
   sectionWrapper: {
     zIndex: 5,
-    top: "0%",
-    left: "50%",
-    width: "100%",
-    transform: "translate(-50%, -20%)",
-    maxWidth: "1200px",
-    margin: "0 auto",
+    marginLeft: "16px",
+    marginRight: "16px",
     backgroundColor: "white",
     boxSizing: "border-box",
     padding: "25px",
     boxShadow: "0px 0px 26px 0px rgba(102, 102, 102, 0.75)",
     borderRadius: "10px",
+    "@media (max-width:600px)": {
+      padding: "12px",
+    },
   },
-  section: {
+  sections: {
     backgroundColor: "white",
     display: "flex",
     justifyContent: "space-between",
@@ -56,11 +54,13 @@ const classes: ClassesSx = {
     justifyContent: "space-around",
     flexWrap: "wrap",
     width: "100%",
+    "@media (max-width:600px)": {
+      flexDirection: "column",
+    },
   },
   infoItem: {
     display: "flex",
     alignItems: "stretch",
-    maxWidth: "250px",
   },
   sectionPromoTitle: {
     fontWeight: 900,

@@ -5,12 +5,10 @@ import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/Pr
 import { IsDev } from "@/components/isDev/IsDev";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { Montserrat } from "next/font/google";
-import { PromoSectionGeneralPage2 } from "@/components/PromoSectionGeneralPage2/PromoSectionGeneralPage2";
 import { ServicesAll } from "@/components/ServicesAll/Services";
 import React from "react";
 import { ClassesSx } from "@/theme/theme";
 import { HeaderSite } from "../components/header/HeaderSite/HeaderSite";
-// import { HeaderSite } from "../components/header/HeaderSite/HeaderSite";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -27,11 +25,7 @@ export default function Home() {
 
 const ContentGeneralPage = () => {
   return (
-    <Box
-      display={"flex"}
-      flexDirection={"column"}
-      className={montserrat.className}
-    >
+    <Box display={"flex"} flexDirection={"column"} className={montserrat.className}>
       <Box sx={classesStyle.setcionGeneralPageBanner}>
         <Image
           src="/photoNew/testImage.jpg"
@@ -42,103 +36,56 @@ const ContentGeneralPage = () => {
           quality={100}
         />
         <Box sx={classesStyle.sectionWhite} />
-
         <PromoSectionGeneralPage />
       </Box>
-      <InfoBlocks />
-      {/*<Box>*/}
-      {/*  <Box sx={classesStyle.sectionPhotoAndText}>*/}
-      {/*    <Box style={{ position: "relative", marginRight: "35px" }}>*/}
-      {/*      <Image*/}
-      {/*        src="/photoNew/testImage.jpg"*/}
-      {/*        alt={"image"}*/}
-      {/*        width={500}*/}
-      {/*        height={400}*/}
-      {/*        objectFit={"contain"}*/}
-      {/*        quality={100}*/}
-      {/*      />*/}
-      {/*    </Box>*/}
-      {/*    <Box sx={classesStyle.sectionText}>*/}
-      {/*      <Box>*/}
-      {/*        Сейчас наша компания – это целый штат квалифицированных*/}
-      {/*        сотрудников, насчитывающий более 100 профессиональных клинеров.*/}
-      {/*        Каждый из них ения оправки КП, перечисления оплаты, материальной*/}
-      {/*        ответсттправки КП, перечисления, сотрудничества – удобным и*/}
-      {/*        выгодным.Сейчас наша компания – это целыйперечисления оправки КП,*/}
-      {/*        перечисления оправки КП, перечисления оплаты, материальной*/}
-      {/*        ответственности перед заказчиком, делает процесс заключения*/}
-      {/*        договора максимально быстрым, сотрудничества – удобным и*/}
-      {/*        выгодным.Сейчас наша компания – это целый*/}
-      {/*      </Box>*/}
-      {/*    </Box>*/}
-      {/*  </Box>*/}
-      {/*</Box>*/}
-      {/*<Box sx={classesStyle.titleObject}>*/}
-      {/*  Какие объекты в Москве и Московской области мы обслуживаем*/}
-      {/*</Box>*/}
+      <Box mt={-6}>
+        <InfoBlocks />
+      </Box>
 
-      {/*<Box sx={classesStyle.sectionObslujAll}>*/}
-      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
-      {/*    <Box sx={classesStyle.imgItem}>*/}
-      {/*      <img src={"/icons/_.svg"} />*/}
-      {/*    </Box>*/}
-      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
-      {/*  </Box>*/}
-      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
-      {/*    <Box sx={classesStyle.imgItem}>*/}
-      {/*      <img src={"/icons/_.svg"} />*/}
-      {/*    </Box>*/}
-      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
-      {/*  </Box>*/}
-      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
-      {/*    <Box sx={classesStyle.imgItem}>*/}
-      {/*      <img src={"/icons/_.svg"} />*/}
-      {/*    </Box>*/}
-      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
-      {/*  </Box>*/}
-      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
-      {/*    <Box sx={classesStyle.imgItem}>*/}
-      {/*      <img src={"/icons/_.svg"} />*/}
-      {/*    </Box>*/}
-      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
-      {/*  </Box>*/}
-      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
-      {/*    <Box sx={classesStyle.imgItem}>*/}
-      {/*      <img src={"/icons/_.svg"} />*/}
-      {/*    </Box>*/}
-      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
-      {/*  </Box>*/}
-      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
-      {/*    <Box sx={classesStyle.imgItem}>*/}
-      {/*      <img src={"/icons/_.svg"} />*/}
-      {/*    </Box>*/}
-      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
-      {/*  </Box>*/}
-      {/*</Box>*/}
+      <Box sx={classesStyle.titleObject}>Какие объекты в Москве и Московской области мы обслуживаем</Box>
 
-      {/*<Box sx={classesStyle.specRachetWrapper}>*/}
-      {/*  <Image*/}
-      {/*    src="/photoNew/testImage.jpg"*/}
-      {/*    alt={"image"}*/}
-      {/*    layout={"fill"}*/}
-      {/*    objectFit="cover"*/}
-      {/*    objectPosition="center center"*/}
-      {/*    quality={100}*/}
-      {/*  />*/}
-      {/*  <Box>*/}
-      {/*    <PromoSectionGeneralPage2 />*/}
-      {/*  </Box>*/}
-      {/*  <Box sx={classesStyle.sectionBlack}></Box>*/}
-      {/*</Box>*/}
-      {/*<Box*/}
-      {/*  style={{*/}
-      {/*    margin: "60px 0 30px 0",*/}
-      {/*    display: "flex",*/}
-      {/*    justifyContent: "center",*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  <ServicesAll />*/}
-      {/*</Box>*/}
+      <Box sx={classesStyle.sectionObslujAll}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+      </Box>
+
+      <Box style={{ margin: "60px 0 30px 0", display: "flex", justifyContent: "center" }}>
+        <ServicesAll />
+      </Box>
     </Box>
   );
 };
@@ -166,8 +113,7 @@ const classesStyle: ClassesSx = {
     },
   },
   sectionWhite: {
-    background:
-      "linear-gradient(to right, black, black 20%, rgba(0, 0, 0, 30%) 80%)",
+    background: "linear-gradient(to right, black, black 20%, rgba(0, 0, 0, 30%) 80%)",
     position: "absolute",
     width: "100%",
     height: "100%",
@@ -186,8 +132,9 @@ const classesStyle: ClassesSx = {
   sectionPhotoAndText: {
     display: "flex",
     maxWidth: "1200px",
-    margin: "0 auto",
     marginTop: "200px",
+    marginLeft: "16px",
+    marginRight: "16px",
     backgroundColor: "#fcfbf9",
     padding: "40px 60px",
     borderRadius: "10px",
@@ -196,6 +143,7 @@ const classesStyle: ClassesSx = {
   sectionText: {
     display: "flex",
     flexDirection: "column",
+    width: "50%",
     fontSize: "18px",
     fontWeight: 300,
     lineHeight: "30px",

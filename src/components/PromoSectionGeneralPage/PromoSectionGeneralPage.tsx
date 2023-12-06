@@ -14,13 +14,10 @@ export const PromoSectionGeneralPage: FC<Props> = () => {
   return (
     <Box sx={classes.sectionWrapperPromo}>
       <Box sx={classes.setcionPromo}>
-        <Box sx={classes.setcionPromoTitle}>
-          Чистка и ремонт скважин в Москве и Московской области
-        </Box>
+        <Box sx={classes.setcionPromoTitle}>Чистка и ремонт скважин в Москве и Московской области</Box>
         {!showSubTitle && (
           <Box sx={classes.sectionPromoSubTitle}>
-            Оставьте заявку, и наш менеджер ответит на вопросы, подскажет по
-            набору услуг и рассчитает стоимость уборки
+            Оставьте заявку, и наш менеджер ответит на вопросы, подскажет по набору услуг и рассчитает стоимость уборки
           </Box>
         )}
 
@@ -82,7 +79,7 @@ const classes: ClassesSx = {
       marginBottom: "30px",
     },
     "@media (max-width:600px)": {
-      fontSize: "25px",
+      fontSize: "30px",
       lineHeight: "30px",
       letterSpacing: "2px",
       marginBottom: "5px",
