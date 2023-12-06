@@ -6,12 +6,9 @@ import React, { useState } from "react";
 import { HeaderMenu } from "@/components/header/HeaderMenu/HeaderMenu";
 import { Box, useMediaQuery } from "@mui/material";
 import { ClassesSx } from "@/theme/theme";
-import { useMediaPredicate } from "react-media-hook";
 import { MOBILE_TELEPHONE } from "@/const";
 import { Montserrat } from "next/font/google";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
 import Drawer from "@mui/material/Drawer";
 
 export const montserrat = Montserrat({ subsets: ["latin"] });
