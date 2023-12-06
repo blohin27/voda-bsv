@@ -92,7 +92,7 @@ const classes: ClassesSx = {
   itemHeaderDrawer: {
     color: "white",
     margin: "15px",
-    fontSize: "20px",
+    fontSize: "25px",
     cursor: "pointer",
     fontWeight: "700",
     "@media (max-width:400px)": {
