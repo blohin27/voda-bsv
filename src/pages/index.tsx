@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <IsDev>
       <RootLayout>
-        {/*<HeaderSite />*/}
-        {/*<ContentGeneralPage />*/}
+        <HeaderSite />
+        <ContentGeneralPage />
         <div>2</div>
       </RootLayout>
     </IsDev>
