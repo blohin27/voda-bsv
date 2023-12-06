@@ -1,28 +1,54 @@
 import Box from "@mui/material/Box";
+import React, { FC } from "react";
 import Image from "next/image";
 import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/PromoSectionGeneralPage";
-import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
-import { ServicesAll } from "@/components/ServicesAll/Services";
-import React from "react";
 import { ClassesSx } from "@/theme/theme";
-import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
-import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
-import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
 
-export const ContentGeneralPage = () => {
+interface IProps {}
+export const WhatTypeService: FC<IProps> = () => {
   return (
-    <Box display={"flex"} flexDirection={"column"} className={montserrat.className}>
-      <BannerPromo />
-      <Box mt={-6}>
-        <InfoBlocks />
+    <>
+      <Box sx={classesStyle.titleObject}>Какие объекты в Москве и Московской области мы обслуживаем</Box>
+
+      <Box sx={classesStyle.sectionObslujAll}>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
+        <Box sx={classesStyle.sectionObslujItem}>
+          <Box sx={classesStyle.imgItem}>
+            <img src={"/icons/_.svg"} />
+          </Box>
+          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+        </Box>
       </Box>
-      <Box mt={8}>
-        <WhatTypeService />
-      </Box>
-      <Box style={{ margin: "60px 0 30px 0", display: "flex", justifyContent: "center" }}>
-        <ServicesAll />
-      </Box>
-    </Box>
+    </>
   );
 };
 
@@ -87,7 +113,6 @@ const classesStyle: ClassesSx = {
   titleObject: {
     maxWidth: "1200px",
     margin: "0 auto",
-    marginTop: "120px",
     textAlign: "center",
     fontWeight: 700,
     fontSize: "42px",

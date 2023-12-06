@@ -31,11 +31,7 @@ export const HeaderSite = () => {
         { title: "Полезные статьи", urlRedirect: "/" },
         { title: "Контакты", urlRedirect: "/" },
       ].map((text, index) => (
-        <Box
-          key={`${index + text.title}`}
-          sx={classes.itemHeaderDrawer}
-          className={montserrat.className}
-        >{`${text.title}`}</Box>
+        <Box key={`${index + text.title}`} sx={classes.itemHeaderDrawer} className={montserrat.className}>{`${text.title}`}</Box>
       ))}
     </List>
   );
@@ -106,7 +102,6 @@ const classes: ClassesSx = {
   },
   wrapperLinesHeader: {
     padding: "5px",
-    paddingRight: "20px",
     cursor: "pointer",
   },
   linesHeader: {
