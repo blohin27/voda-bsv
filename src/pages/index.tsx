@@ -20,7 +20,6 @@ export default function Home() {
       <RootLayout>
         <HeaderSite />
         <ContentGeneralPage />
-        <div>2</div>
       </RootLayout>
     </IsDev>
   );
@@ -47,98 +46,99 @@ const ContentGeneralPage = () => {
         <PromoSectionGeneralPage />
       </Box>
       <InfoBlocks />
-      <Box id={"PhotoAndText"}>
-        <Box sx={classesStyle.sectionPhotoAndText}>
-          <Box style={{ position: "relative", marginRight: "35px" }}>
-            <Image
-              src="/photoNew/testImage.jpg"
-              alt={"image"}
-              width={500}
-              height={400}
-              objectFit={"contain"}
-              quality={100}
-            />
-          </Box>
-          <Box sx={classesStyle.sectionText}>
-            <Box>
-              Сейчас наша компания – это целый штат квалифицированных
-              сотрудников, насчитывающий более 100 профессиональных клинеров.
-              Каждый из них ения оправки КП, перечисления оплаты, материальной
-              ответсттправки КП, перечисления, сотрудничества – удобным и
-              выгодным.Сейчас наша компания – это целыйперечисления оправки КП,
-              перечисления оправки КП, перечисления оплаты, материальной
-              ответственности перед заказчиком, делает процесс заключения
-              договора максимально быстрым, сотрудничества – удобным и
-              выгодным.Сейчас наша компания – это целый
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-      <Box sx={classesStyle.titleObject}>
-        Какие объекты в Москве и Московской области мы обслуживаем
-      </Box>
-      <Box sx={classesStyle.sectionObslujAll}>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
-          </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
-        </Box>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
-          </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
-        </Box>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
-          </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
-        </Box>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
-          </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
-        </Box>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
-          </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
-        </Box>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
-          </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
-        </Box>
-      </Box>
+      {/*<Box>*/}
+      {/*  <Box sx={classesStyle.sectionPhotoAndText}>*/}
+      {/*    <Box style={{ position: "relative", marginRight: "35px" }}>*/}
+      {/*      <Image*/}
+      {/*        src="/photoNew/testImage.jpg"*/}
+      {/*        alt={"image"}*/}
+      {/*        width={500}*/}
+      {/*        height={400}*/}
+      {/*        objectFit={"contain"}*/}
+      {/*        quality={100}*/}
+      {/*      />*/}
+      {/*    </Box>*/}
+      {/*    <Box sx={classesStyle.sectionText}>*/}
+      {/*      <Box>*/}
+      {/*        Сейчас наша компания – это целый штат квалифицированных*/}
+      {/*        сотрудников, насчитывающий более 100 профессиональных клинеров.*/}
+      {/*        Каждый из них ения оправки КП, перечисления оплаты, материальной*/}
+      {/*        ответсттправки КП, перечисления, сотрудничества – удобным и*/}
+      {/*        выгодным.Сейчас наша компания – это целыйперечисления оправки КП,*/}
+      {/*        перечисления оправки КП, перечисления оплаты, материальной*/}
+      {/*        ответственности перед заказчиком, делает процесс заключения*/}
+      {/*        договора максимально быстрым, сотрудничества – удобным и*/}
+      {/*        выгодным.Сейчас наша компания – это целый*/}
+      {/*      </Box>*/}
+      {/*    </Box>*/}
+      {/*  </Box>*/}
+      {/*</Box>*/}
+      {/*<Box sx={classesStyle.titleObject}>*/}
+      {/*  Какие объекты в Москве и Московской области мы обслуживаем*/}
+      {/*</Box>*/}
 
-      <Box sx={classesStyle.specRachetWrapper}>
-        <Image
-          src="/photoNew/testImage.jpg"
-          alt={"image"}
-          layout={"fill"}
-          objectFit="cover"
-          objectPosition="center center"
-          quality={100}
-        />
-        <Box>
-          <PromoSectionGeneralPage2 />
-        </Box>
-        <Box sx={classesStyle.sectionBlack}></Box>
-      </Box>
-      <Box
-        style={{
-          margin: "60px 0 30px 0",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <ServicesAll />
-      </Box>
+      {/*<Box sx={classesStyle.sectionObslujAll}>*/}
+      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
+      {/*    <Box sx={classesStyle.imgItem}>*/}
+      {/*      <img src={"/icons/_.svg"} />*/}
+      {/*    </Box>*/}
+      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
+      {/*  </Box>*/}
+      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
+      {/*    <Box sx={classesStyle.imgItem}>*/}
+      {/*      <img src={"/icons/_.svg"} />*/}
+      {/*    </Box>*/}
+      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
+      {/*  </Box>*/}
+      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
+      {/*    <Box sx={classesStyle.imgItem}>*/}
+      {/*      <img src={"/icons/_.svg"} />*/}
+      {/*    </Box>*/}
+      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
+      {/*  </Box>*/}
+      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
+      {/*    <Box sx={classesStyle.imgItem}>*/}
+      {/*      <img src={"/icons/_.svg"} />*/}
+      {/*    </Box>*/}
+      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
+      {/*  </Box>*/}
+      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
+      {/*    <Box sx={classesStyle.imgItem}>*/}
+      {/*      <img src={"/icons/_.svg"} />*/}
+      {/*    </Box>*/}
+      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
+      {/*  </Box>*/}
+      {/*  <Box sx={classesStyle.sectionObslujItem}>*/}
+      {/*    <Box sx={classesStyle.imgItem}>*/}
+      {/*      <img src={"/icons/_.svg"} />*/}
+      {/*    </Box>*/}
+      {/*    <Box style={{ textAlign: "center" }}>Квартиры</Box>*/}
+      {/*  </Box>*/}
+      {/*</Box>*/}
+
+      {/*<Box sx={classesStyle.specRachetWrapper}>*/}
+      {/*  <Image*/}
+      {/*    src="/photoNew/testImage.jpg"*/}
+      {/*    alt={"image"}*/}
+      {/*    layout={"fill"}*/}
+      {/*    objectFit="cover"*/}
+      {/*    objectPosition="center center"*/}
+      {/*    quality={100}*/}
+      {/*  />*/}
+      {/*  <Box>*/}
+      {/*    <PromoSectionGeneralPage2 />*/}
+      {/*  </Box>*/}
+      {/*  <Box sx={classesStyle.sectionBlack}></Box>*/}
+      {/*</Box>*/}
+      {/*<Box*/}
+      {/*  style={{*/}
+      {/*    margin: "60px 0 30px 0",*/}
+      {/*    display: "flex",*/}
+      {/*    justifyContent: "center",*/}
+      {/*  }}*/}
+      {/*>*/}
+      {/*  <ServicesAll />*/}
+      {/*</Box>*/}
     </Box>
   );
 };
@@ -186,7 +186,6 @@ const classesStyle: ClassesSx = {
   sectionPhotoAndText: {
     display: "flex",
     maxWidth: "1200px",
-    width: "100%",
     margin: "0 auto",
     marginTop: "200px",
     backgroundColor: "#fcfbf9",

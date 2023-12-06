@@ -125,9 +125,8 @@ const classes: ClassesSx = {
     maxWidth: "1200px",
     margin: "15px auto",
     marginBottom: "15px",
-    "@media (max-width:720px)": {
-      marginTop: "10px",
-      marginBottom: "10px",
+    "@media (max-width:920px)": {
+      margin: "10px 16px 10px 16px",
     },
   },
 };
