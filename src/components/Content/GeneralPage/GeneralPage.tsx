@@ -19,7 +19,7 @@ export const ContentGeneralPage = () => {
       <Box mt={8}>
         <WhatTypeService />
       </Box>
-      <Box style={{ margin: "60px 0 30px 0", display: "flex", justifyContent: "center" }}>
+      <Box>
         <ServicesAll />
       </Box>
     </Box>
