@@ -17,7 +17,7 @@ export const ServiceItem: FC<IProps> = () => {
 
 const classes: ClassesSx = {
   content: {
-    width: "260px",
+    width: "280px",
     height: " 300px",
     border: "1px solid blue;",
   },

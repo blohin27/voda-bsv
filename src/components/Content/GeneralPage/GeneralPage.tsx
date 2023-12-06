@@ -19,7 +19,7 @@ export const ContentGeneralPage = () => {
       <Box mt={8}>
         <WhatTypeService />
       </Box>
-      <Box>
+      <Box mt={4}>
         <ServicesAll />
       </Box>
     </Box>

@@ -17,10 +17,10 @@ export const ServicesAll: FC<IProps> = () => {
 
   return (
     <Box sx={classes.wrapper} className={montserrat.className}>
-      <Box sx={classes.title} className={montserrat.className}>
+      <Box sx={classes.title} className={montserrat.className} mb={3}>
         Основные услуги по водоснабжению
       </Box>
-      <Box sx={classes.pultServiceItems}>
+      <Box sx={classes.pultServiceItems} mb={3}>
         <Box
           onClick={() => {
             changePult("пульт1");
@@ -56,6 +56,8 @@ export const ServicesAll: FC<IProps> = () => {
         <ServiceItem />
         <ServiceItem />
         <ServiceItem />
+        <ServiceItem />
+        <ServiceItem />
       </Box>
     </Box>
   );
@@ -83,7 +85,7 @@ const classes: ClassesSx = {
     },
   },
   pultItem: {
-    transition: "all 0.5s ease",
+    transition: "all 0.6s ease",
     cursor: "pointer",
     border: "2px solid #fe6c36",
     paddingTop: "10px",
