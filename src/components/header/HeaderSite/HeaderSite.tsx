@@ -91,12 +91,12 @@ const classes: ClassesSx = {
   root: {},
   itemHeaderDrawer: {
     color: "white",
-    margin: "15px",
+    margin: "25px",
     fontSize: "25px",
     cursor: "pointer",
     fontWeight: "700",
     "@media (max-width:400px)": {
-      fontSize: "16px",
+      fontSize: "25px",
     },
   },
   wrapperHeader: {
