@@ -7,8 +7,8 @@ import React from "react";
 import { ClassesSx } from "@/theme/theme";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
-import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
 import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
+import { Steps } from "@/components/Steps/Steps";
 
 export const ContentGeneralPage = () => {
   return (
@@ -23,8 +23,11 @@ export const ContentGeneralPage = () => {
       <Box mt={4}>
         <ServicesAll />
       </Box>
-      <Box>
+      <Box mt={10}>
         <OurAdvantages />
+      </Box>
+      <Box mt={5} mb={10}>
+        <Steps />
       </Box>
     </Box>
   );

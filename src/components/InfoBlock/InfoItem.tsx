@@ -9,10 +9,11 @@ interface IProps {}
 
 export const InfoItem: FC<IProps> = () => {
   const adaptiv950 = useMediaQuery("(max-width:950px)");
+  const adaptiv600 = useMediaQuery("(max-width:600px)");
   return (
     <Box sx={classes.infoItem} id={"icon"}>
       {!adaptiv950 && <AddBusinessIcon style={{ fontSize: "120px", color: "#fe6c36" }} />}
-      {adaptiv950 && <AddBusinessIcon style={{ fontSize: "100px", color: "#fe6c36" }} />}
+      {adaptiv950 && <AddBusinessIcon style={{ fontSize: "70px", color: "#fe6c36" }} />}
       <Box style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
         <Box sx={classes.sectionPromoTitle} className={montserrat.className}>
           9+ лет
@@ -55,6 +56,9 @@ const classes: ClassesSx = {
     color: "#352c1d",
     "@media (max-width:950px)": {
       fontSize: "30px",
+    },
+    "@media (max-width:600px)": {
+      fontSize: "25px",
     },
   },
 };

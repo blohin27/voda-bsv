@@ -97,6 +97,9 @@ const classes: ClassesSx = {
     textAlign: "center",
     fontWeight: "700",
     lineHeight: "1xp",
+    "@media (max-width:600px)": {
+      fontSize: "30px",
+    },
   },
   root: {
     display: "flex",
@@ -112,6 +115,9 @@ const classes: ClassesSx = {
     marginTop: "50px",
     "@media (max-width:600px)": {
       marginTop: "35px",
+    },
+    "@media (max-width:400px)": {
+      gap: "10px",
     },
   },
   itemText: {
@@ -130,6 +136,10 @@ const classes: ClassesSx = {
     сolor: "#362c1d",
     fontSize: "16px",
     fontWeight: 400,
+    "@media (max-width:500px)": {
+      fontSize: "14px",
+      lineHeight: "20px",
+    },
   },
   itemImage: {
     width: "25%",
