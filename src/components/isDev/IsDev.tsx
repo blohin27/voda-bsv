@@ -13,13 +13,12 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
     return (
       <>
         <Box sx={c.setcionGeneralPageBanner}>
-          <Skeleton />
           <Image
             src="/photoNew/dev.png"
             alt={"image"}
             layout={"fill"}
             // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            objectFit="contain"
+            objectFit="cover"
             objectPosition="top center" // По умолчанию 'center', но может быть изменено
             quality={100}
             placeholder={"blur"}
@@ -38,7 +37,8 @@ const c: ClassesSx = {
   setcionGeneralPageBanner: {
     width: "100%",
     display: "flex",
-    height: "100%",
+    height: "600px",
+    minWidth: "700px",
     position: "relative",
   },
 };
