@@ -12,9 +12,6 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
   if (DEV) {
     return (
       <>
-        <Box sx={c.text} className={montserrat.className}>
-          В разработке
-        </Box>
         <Box sx={c.setcionGeneralPageBanner}>
           <Skeleton />
           <Image
@@ -38,19 +35,10 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
 };
 
 const c: ClassesSx = {
-  text: {
-    textAlign: "center",
-    fontSize: "60px",
-    backgroundColor: "blue",
-    color: "white",
-    "@media (max-width:600px)": {
-      fontSize: "40px",
-    },
-  },
   setcionGeneralPageBanner: {
     width: "100%",
     display: "flex",
-    height: "100vh",
+    height: "100%",
     position: "relative",
   },
 };
