@@ -17,9 +17,20 @@ export const ServiceItem: FC<IProps> = () => {
 
 const classes: ClassesSx = {
   content: {
-    width: "280px",
-    height: " 300px",
+    width: "100%",
+    height: "100%",
     border: "1px solid blue;",
   },
-  wrapper: {},
+
+  wrapper: {
+    backgroundColor: "rgba(0 0 0)",
+    width: "260px",
+    height: " 320px",
+    "@media (max-width:600px)": {
+      flex: "0 0 auto",
+    },
+    "@media (max-width:360px)": {
+      width: "300px",
+    },
+  },
 };

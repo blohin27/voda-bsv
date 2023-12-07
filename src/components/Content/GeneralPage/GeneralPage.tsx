@@ -8,6 +8,7 @@ import { ClassesSx } from "@/theme/theme";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
 import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
+import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
 
 export const ContentGeneralPage = () => {
   return (
@@ -16,11 +17,14 @@ export const ContentGeneralPage = () => {
       <Box mt={-6}>
         <InfoBlocks />
       </Box>
-      <Box mt={8}>
-        <WhatTypeService />
-      </Box>
+      {/*<Box mt={8}>*/}
+      {/*  <WhatTypeService />*/}
+      {/*</Box>*/}
       <Box mt={4}>
         <ServicesAll />
+      </Box>
+      <Box>
+        <OurAdvantages />
       </Box>
     </Box>
   );
