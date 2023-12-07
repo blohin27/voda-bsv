@@ -11,16 +11,16 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
   if (DEV) {
     return (
       <>
-        <Box style={{ textAlign: "center", fontSize: "60px", backgroundColor: "blue", color: "white" }} className={montserrat.className}>
-          Сайт в разработке
+        <Box sx={c.text} className={montserrat.className}>
+          В разработке
         </Box>
         <Box sx={c.setcionGeneralPageBanner}>
           <Image
             src="/photoNew/dev.png"
             alt={"image"}
             layout={"fill"}
-            objectFit="cover"
-            objectPosition="center center" // По умолчанию 'center', но может быть изменено
+            objectFit="contain"
+            objectPosition="top center" // По умолчанию 'center', но может быть изменено
             quality={100}
           />
         </Box>
@@ -31,6 +31,15 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
 };
 
 const c: ClassesSx = {
+  text: {
+    textAlign: "center",
+    fontSize: "60px",
+    backgroundColor: "blue",
+    color: "white",
+    "@media (max-width:600px)": {
+      fontSize: "40px",
+    },
+  },
   setcionGeneralPageBanner: {
     width: "100%",
     display: "flex",
