@@ -22,6 +22,8 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
             objectFit="contain"
             objectPosition="top center" // По умолчанию 'center', но может быть изменено
             quality={100}
+            placeholder={"blur"}
+            blurDataURL={"/photoNew/devPre.jpg"}
           />
         </Box>
       </>
