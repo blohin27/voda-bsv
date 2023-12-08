@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import React, { FC, useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+// import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 interface IProps {}
 
