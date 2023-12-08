@@ -49,43 +49,39 @@ export const NashyRaboty: FC<IProps> = () => {
             <Box sx={classes.descr}>
               <Box>
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  ⦿ Пакет
+                  Пакет
                 </Box>
                 - "Комплексный послестроительный клининг"
               </Box>
               <Box>
-                {" "}
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  ⦿ Количество убранных комнат
-                </Box>{" "}
+                  Количество убранных комнат
+                </Box>
                 : 2
               </Box>
               <Box>
-                {" "}
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  ⦿ Сложные загрязнения:
-                </Box>{" "}
+                  Сложные загрязнения:
+                </Box>
                 разводы клея после ремонта на полу и подоконнике
               </Box>
               <Box>
                 {" "}
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  ⦿ Бригада:
-                </Box>{" "}
+                  Бригада:
+                </Box>
                 2 человека
               </Box>
               <Box>
-                {" "}
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  ⦿ Время выполнения уборки после ремонта:
-                </Box>{" "}
+                  Время выполнения уборки после ремонта:
+                </Box>
                 4 часа
               </Box>
               <Box>
-                {" "}
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  ⦿ Пакет
-                </Box>{" "}
+                  Пакет
+                </Box>
                 Сумма 6 500 руб.
               </Box>
             </Box>
