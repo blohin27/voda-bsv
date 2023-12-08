@@ -9,6 +9,7 @@ import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
 import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
 import { Steps } from "@/components/Steps/Steps";
+import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
 
 export const ContentGeneralPage = () => {
   return (
@@ -28,6 +29,9 @@ export const ContentGeneralPage = () => {
       </Box>
       <Box mt={5} mb={10}>
         <Steps />
+      </Box>
+      <Box>
+        <KvalWorker />
       </Box>
     </Box>
   );
