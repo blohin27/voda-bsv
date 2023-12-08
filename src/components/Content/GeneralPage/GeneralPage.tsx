@@ -10,6 +10,7 @@ import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
 import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
 import { Steps } from "@/components/Steps/Steps";
 import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
+import { SliderPhoto } from "@/components/SliderPhoto/SliderPhoto";
 
 export const ContentGeneralPage = () => {
   return (
@@ -27,12 +28,13 @@ export const ContentGeneralPage = () => {
       <Box mt={10}>
         <OurAdvantages />
       </Box>
-      <Box mt={5} mb={10}>
+      <Box mt={5} mb={5}>
         <Steps />
       </Box>
       <Box>
         <KvalWorker />
       </Box>
+      <SliderPhoto />
     </Box>
   );
 };
