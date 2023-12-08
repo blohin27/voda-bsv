@@ -18,7 +18,7 @@ export const SliderPhoto: FC<IProps> = () => {
         <Box sx={classes.content}>
           <Box sx={classes.sectionImg}>
             <Image
-              src={state}
+              src="/photoNew/dev.png"
               alt={"image"}
               layout={"fill"}
               objectFit="cover"
@@ -68,9 +68,12 @@ const classes: ClassesSx = {
   sectionImg: {
     display: "flex",
     position: "relative",
-    // width: "20%",
-    height: "400px",
+    width: "50%",
+    height: "300px",
     alignSelf: "center",
+    "@media (max-width:800px)": {
+      width: "100%",
+    },
     "@media (max-width:500px)": {
       height: "300px",
     },

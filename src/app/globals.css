@@ -348,5 +348,8 @@ template {
 [hidden] {
     display: none;
 }
+ul {
+    padding-left: 0;
+}
 
 /*---_---------------------------*/
