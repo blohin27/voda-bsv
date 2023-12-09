@@ -50,7 +50,7 @@ export const NashyRaboty: FC<IProps> = () => {
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
                   Пакет
                 </Box>
-                - "Комплексный послестроительный клининг"
+                Комплексный послестроительный клининг
               </Box>
               <Box>
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
@@ -65,7 +65,6 @@ export const NashyRaboty: FC<IProps> = () => {
                 разводы клея после ремонта на полу и подоконнике
               </Box>
               <Box>
-                {" "}
                 <Box display={"inline"} style={{ fontWeight: 700 }}>
                   Бригада:
                 </Box>
