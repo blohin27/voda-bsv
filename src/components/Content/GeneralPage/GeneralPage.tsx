@@ -36,7 +36,7 @@ export const ContentGeneralPage = () => {
         <KvalWorker />
       </Box>
       {/*<SliderPhoto />*/}
-      <NashyRaboty />
+      {/*<NashyRaboty />*/}
     </Box>
   );
 };
