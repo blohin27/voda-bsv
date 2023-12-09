@@ -10,7 +10,7 @@ import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
 import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
 import { Steps } from "@/components/Steps/Steps";
 import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
-import { SliderPhoto } from "@/components/SliderPhoto/SliderPhoto";
+// import { SliderPhoto } from "@/components/SliderPhoto/SliderPhoto";
 // import { NashyRaboty } from "@/components/NashyRaboty/NashyRaboty";
 
 export const ContentGeneralPage = () => {

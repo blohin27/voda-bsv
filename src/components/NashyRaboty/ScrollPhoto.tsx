@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import React, { FC, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Image from "next/image";
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+// import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { jsx } from "@emotion/react";
 import JSX = jsx.JSX;
 
