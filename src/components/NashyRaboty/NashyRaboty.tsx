@@ -35,10 +35,10 @@ export const NashyRaboty: FC<IProps> = () => {
                 }}
                 sx={classes.leftButton}
               >
-                <KeyboardArrowLeft style={{ color: "#fd6c36", fontSize: "100px" }} />
+                <KeyboardArrowLeft style={{ color: "white", fontSize: "50px" }} />
               </Box>
               <Box sx={classes.rightButton}>
-                <KeyboardArrowRightIcon style={{ color: "#fd6c36", fontSize: "100px" }} />
+                <KeyboardArrowRightIcon style={{ color: "white", fontSize: "50px" }} />
               </Box>
             </Box>
           </Box>
@@ -147,27 +147,31 @@ const classes: ClassesSx = {
     cursor: "pointer",
     position: "absolute",
     zIndex: 2,
-    left: "-15px",
+    left: "5px",
     top: "50%",
+    backgroundColor: "#fd6c36",
+
     transform: "translate(0,-50%)",
-    // "&:active": {
-    //   // Используйте одно двоеточие для псевдоклассов
-    //   backgroundColor: "rgba(168, 207, 255)",
-    //   transition: "all .3s ",
-    // },
+    "&:active": {
+      // Используйте одно двоеточие для псевдоклассов
+      backgroundColor: "rgba(168, 207, 255)",
+      transition: "all .3s ",
+    },
   },
   rightButton: {
     cursor: "pointer",
     position: "absolute",
+    backgroundColor: "#fd6c36",
     zIndex: 2,
-    right: "-15px",
+    right: "5px",
+
     top: "50%",
     transform: "translate(0,-50%)",
-    // "&:active": {
-    //   // Используйте одно двоеточие для псевдоклассов
-    //   backgroundColor: "rgba(168, 207, 255)",
-    //   transition: "all .3s ",
-    // },
+    "&:active": {
+      // Используйте одно двоеточие для псевдоклассов
+      backgroundColor: "rgba(168, 207, 255)",
+      transition: "all .3s ",
+    },
   },
   sectionLeftAndRight: {},
 
