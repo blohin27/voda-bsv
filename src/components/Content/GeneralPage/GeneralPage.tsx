@@ -1,6 +1,4 @@
 import Box from "@mui/material/Box";
-import Image from "next/image";
-import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/PromoSectionGeneralPage";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { ServicesAll } from "@/components/ServicesAll/Services";
 import React from "react";
@@ -10,7 +8,6 @@ import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
 import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
 import { Steps } from "@/components/Steps/Steps";
 import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
-// import { SliderPhoto } from "@/components/SliderPhoto/SliderPhoto";
 // import { NashyRaboty } from "@/components/NashyRaboty/NashyRaboty";
 
 export const ContentGeneralPage = () => {
