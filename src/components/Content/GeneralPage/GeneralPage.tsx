@@ -8,7 +8,7 @@ import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
 import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
 import { Steps } from "@/components/Steps/Steps";
 import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
-// import { NashyRaboty } from "@/components/NashyRaboty/NashyRaboty";
+import { NashyRaboty } from "@/components/NashyRaboty/NashyRaboty";
 
 export const ContentGeneralPage = () => {
   return (
@@ -32,7 +32,7 @@ export const ContentGeneralPage = () => {
       <Box>
         <KvalWorker />
       </Box>
-      {/*<NashyRaboty />*/}
+      <NashyRaboty />
     </Box>
   );
 };
