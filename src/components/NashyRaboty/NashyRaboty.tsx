@@ -152,11 +152,11 @@ const classes: ClassesSx = {
     left: "-15px",
     top: "50%",
     transform: "translate(0,-50%)",
-    "&:active": {
-      // Используйте одно двоеточие для псевдоклассов
-      backgroundColor: "rgba(168, 207, 255)",
-      transition: "all .3s ",
-    },
+    // "&:active": {
+    //   // Используйте одно двоеточие для псевдоклассов
+    //   backgroundColor: "rgba(168, 207, 255)",
+    //   transition: "all .3s ",
+    // },
   },
   rightButton: {
     cursor: "pointer",
@@ -165,11 +165,11 @@ const classes: ClassesSx = {
     right: "-15px",
     top: "50%",
     transform: "translate(0,-50%)",
-    "&:active": {
-      // Используйте одно двоеточие для псевдоклассов
-      backgroundColor: "rgba(168, 207, 255)",
-      transition: "all .3s ",
-    },
+    // "&:active": {
+    //   // Используйте одно двоеточие для псевдоклассов
+    //   backgroundColor: "rgba(168, 207, 255)",
+    //   transition: "all .3s ",
+    // },
   },
   sectionLeftAndRight: {},
 
