@@ -4,10 +4,9 @@ import { ClassesSx } from "@/theme/theme";
 import Image from "next/image";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 
 interface IProps {}
-export const NashyRaboty: FC<IProps> = () => {
+export const NashyRaboty3: FC<IProps> = () => {
   const [state, setState] = useState("/photoNew/dev.png");
   const changeImg = () => {
     setState("/photo/1t.jpg");
@@ -16,7 +15,6 @@ export const NashyRaboty: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <TitleComponent title={"Наши работы"} />
         <Box sx={classes.content}>
           <Box sx={classes.sectionImg}>
             <Image

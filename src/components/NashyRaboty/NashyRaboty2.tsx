@@ -4,10 +4,9 @@ import { ClassesSx } from "@/theme/theme";
 import Image from "next/image";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 
 interface IProps {}
-export const NashyRaboty: FC<IProps> = () => {
+export const NashyRaboty2: FC<IProps> = () => {
   const [state, setState] = useState("/photoNew/dev.png");
   const changeImg = () => {
     setState("/photo/1t.jpg");
@@ -16,34 +15,7 @@ export const NashyRaboty: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <TitleComponent title={"Наши работы"} />
         <Box sx={classes.content}>
-          <Box sx={classes.sectionImg}>
-            <Image
-              src={state}
-              alt={"image"}
-              layout={"fill"}
-              // width={600}
-              // height={400}
-              objectFit="cover"
-              objectPosition="center center" // По умолчанию 'center', но может быть изменено
-              quality={100}
-            />
-            <Box sx={classes.arrow}>
-              <Box
-                onClick={() => {
-                  changeImg();
-                }}
-                sx={classes.leftButton}
-              >
-                <KeyboardArrowLeft style={{ color: "white", fontSize: "50px" }} />
-              </Box>
-              <Box sx={classes.rightButton}>
-                <KeyboardArrowRightIcon style={{ color: "white", fontSize: "50px" }} />
-              </Box>
-            </Box>
-          </Box>
-
           <Box sx={classes.sectionText}>
             <Box sx={classes.titleSectionText}>Объект: двухкомнатная квартира после ремонта</Box>
             <Box sx={classes.descr}>
@@ -85,6 +57,31 @@ export const NashyRaboty: FC<IProps> = () => {
               </Box>
               <Box display={"flex"}>
                 <Box sx={classes.zakaz}>Заказать</Box>
+              </Box>
+            </Box>
+          </Box>
+          <Box sx={classes.sectionImg}>
+            <Image
+              src={state}
+              alt={"image"}
+              layout={"fill"}
+              // width={600}
+              // height={400}
+              objectFit="cover"
+              objectPosition="center center" // По умолчанию 'center', но может быть изменено
+              quality={100}
+            />
+            <Box sx={classes.arrow}>
+              <Box
+                onClick={() => {
+                  changeImg();
+                }}
+                sx={classes.leftButton}
+              >
+                <KeyboardArrowLeft style={{ color: "white", fontSize: "50px" }} />
+              </Box>
+              <Box sx={classes.rightButton}>
+                <KeyboardArrowRightIcon style={{ color: "white", fontSize: "50px" }} />
               </Box>
             </Box>
           </Box>

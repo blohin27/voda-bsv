@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 import { ServiceItem } from "@/components/ServicesAll/component/ServiceItem/ServiceItem";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
+import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {}
@@ -17,9 +18,7 @@ export const ServicesAll: FC<IProps> = () => {
 
   return (
     <Box sx={classes.wrapper} className={montserrat.className}>
-      <Box sx={classes.title} className={montserrat.className} mb={3}>
-        Основные услуги по водоснабжению
-      </Box>
+      <TitleComponent title={"Услуги по водоснабжению"} />
       <Box sx={classes.pultServiceItems} mb={3}>
         <Box
           onClick={() => {
@@ -57,7 +56,7 @@ export const ServicesAll: FC<IProps> = () => {
               <ServiceItem />
               <ServiceItem />
               <ServiceItem />
-              <ServiceItem /> <ServiceItem />
+              <ServiceItem />
               <ServiceItem /> <ServiceItem />
               <ServiceItem />
             </>

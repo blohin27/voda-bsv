@@ -1,37 +1,34 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Box } from "@mui/material";
-import { Input } from "@mui/material";
 import Button from "@mui/material/Button";
 import { ClassesSx } from "@/theme/theme";
+import TextField from '@mui/material/TextField';
+
 
 interface Props {}
 export const OrderCall: FC<Props> = () => {
+  const [mob,setMob] = useState<string>('')
+
+  const validateNumber=(value:number | string)=> {
+    const regex = /^\d{1,13}$/;
+    const val= value.toString()
+
+    if (regex.test(val) || val==='') {
+      setMob(val)
+    } else {
+    }
+  }
+
   return (
     <Box sx={classes.root} display={"flex"} alignItems={"center"}>
       <Box sx={classes.wrapperInput}>
-        <Box sx={classes.input} mr={1}>
-          <Input
-            onChange={(e) => console.log(e.target.value)}
-            placeholder={"+7 "}
-            type={"number"}
-            sx={{
-              "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button":
-                {
-                  "-webkit-appearance": "none",
-                  margin: 0,
-                },
-              "& input[type=number]": {
-                "-moz-appearance": "textfield",
-              },
-            }}
-          />
+        <Box sx={classes.input} >
+          <TextField id="outlined-basic" label="Телефон"  variant="outlined" size={'small'} value={mob} onChange={(e)=>{
+            validateNumber(e.target.value)
+          }}/>
         </Box>
         <Box>
-          <Button
-            sx={classes.button}
-            variant="contained"
-            style={{ backgroundColor: "#ff6c36" }}
-          >
+          <Button sx={classes.button} variant="contained">
             Заказать звонок
           </Button>
         </Box>
@@ -47,15 +44,20 @@ const classes: ClassesSx = {
     },
   },
   wrapperInput: {
+    gap:'5px',
     display: "flex",
     justifyContent: "space-between",
     backgroundColor: "white",
-    padding: "5px",
+    padding: "10px",
     borderRadius: "5px",
     "@media (max-width:400px)": {
       flexDirection: "column",
     },
   },
-  button: {},
+  textField:{color:'#fe6c36',width:"100%"},
+  button: {
+    backgroundColor: "#ff6c36",
+    width:'100%',
+  },
   input: {},
 };

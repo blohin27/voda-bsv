@@ -4,16 +4,14 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
+import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 
 interface IProps {}
 
 export const OurAdvantages: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
-      <Box sx={classes.titleRoot} className={montserrat.className}>
-        Что мы можем предложить? <br />
-        Наши преимущества:
-      </Box>
+      <TitleComponent title={"Что мы можем предложить?"} title2={"Наши услуги:"}></TitleComponent>
       <Box sx={classes.wrapperAdv}>
         <Box sx={classes.sectionForItems}>
           <Box sx={classes.item}>

@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
+import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 
 interface IProps {}
 
@@ -11,7 +12,7 @@ export const Steps: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper} className={montserrat.className}>
-        <Box sx={classes.title}>4 шага до результата</Box>
+        <TitleComponent title={"4 шага до результата"}></TitleComponent>
         <Box sx={classes.content} mt={10}>
           <Box sx={classes.itemCard}>
             <Box sx={classes.circle}>

@@ -9,6 +9,11 @@ import { OurAdvantages } from "@/components/OurAdvantages/OurAdvantages";
 import { Steps } from "@/components/Steps/Steps";
 import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
 import { NashyRaboty } from "@/components/NashyRaboty/NashyRaboty";
+import { LineBorder } from "@/components/LineBorder/LineBorder";
+import { NashyRaboty2 } from "@/components/NashyRaboty/NashyRaboty2";
+import { NashyRaboty3 } from "@/components/NashyRaboty/NashyRaboty3";
+import { ButtonCentr } from "@/components/ButtonCenter/ButtonCentr";
+import { Banner } from "@/components/Banner/Banner";
 
 export const ContentGeneralPage = () => {
   return (
@@ -32,7 +37,14 @@ export const ContentGeneralPage = () => {
       <Box>
         <KvalWorker />
       </Box>
+      <LineBorder />
       <NashyRaboty />
+      <LineBorder />
+      <NashyRaboty2 />
+      <LineBorder />
+      <NashyRaboty3 />
+      <ButtonCentr title={"Больше кейсов"} />
+      <Banner />
     </Box>
   );
 };

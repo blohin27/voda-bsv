@@ -3,13 +3,14 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
+import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 
 interface IProps {}
 export const KvalWorker: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <Box sx={classes.titleWorker}>Квалифицированные сотрудники</Box>
+        <TitleComponent title={"Квалифицированные сотрудники"} />
         <Box sx={classes.content} className={montserrat.className}>
           <Box sx={classes.sectionImg}>
             <Image
