@@ -17,6 +17,7 @@ import { Banner } from "@/components/Banner/Banner";
 import { FotoRabot } from "@/components/FotoRabot/FotoRabot";
 import { OurClients } from "@/components/OurClients/OurClients";
 import { ComentOnas } from "@/components/ComentOnas/ComentOnas";
+import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
 
 export const ContentGeneralPage = () => {
   return (
@@ -25,9 +26,9 @@ export const ContentGeneralPage = () => {
       <Box mt={-6}>
         <InfoBlocks />
       </Box>
-      {/*<Box mt={8}>*/}
-      {/*  <WhatTypeService />*/}
-      {/*</Box>*/}
+      <Box mt={8}>
+        <WhatTypeService />
+      </Box>
       <Box mt={4}>
         <ServicesAll />
       </Box>

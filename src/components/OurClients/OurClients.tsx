@@ -90,11 +90,5 @@ const classes: ClassesSx = {
     width: "50%",
     height: "300px",
 
-    // "@media (max-width:960px)": {
-    //   maxWidth: "32%",
-    // },
-    // "@media (max-width:780px)": {
-    //   maxWidth: "50%",
-    // },
   },
 };
