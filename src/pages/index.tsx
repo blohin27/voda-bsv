@@ -10,6 +10,7 @@ import React from "react";
 import { ClassesSx } from "@/theme/theme";
 import { HeaderSite } from "../components/header/HeaderSite/HeaderSite";
 import { ContentGeneralPage } from "@/components/Content/GeneralPage/GeneralPage";
+// import { ContentGeneralPage } from "@/components/Content/GeneralPage/GeneralPage";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
