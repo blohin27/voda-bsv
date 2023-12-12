@@ -5,6 +5,13 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/cache/images/-FSIR9AYNzQl-hr8+cLWzm3hxrbK77gw3KFAPf5G1Ng=" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/cache/images/6cjVxey+x2VSg9SnExZwS24Y0gfJ8Mhx+hubTSvmYic=" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/cache/images/W60kyXRHzolo5oiPBucjjQ+T+BcxPwDkucNKBfImP5w=" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/cache/images/ctBogaKUogvmyJI+6RNx5oN4nHYyl5KGu0t7gcGJCsg=" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/cache/images/nsCnkCokzMipRko77zTbEtpRbZ00Eph4wYBrj2IO0lU=" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/cache/images/yd0qOq7pl1+tvsDNqkbyOCdjcZmBrjeDTWbR5iaoLhk=" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/cache/swc" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
