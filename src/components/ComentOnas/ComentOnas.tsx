@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import { ButtonCentr } from "@/components/ButtonCenter/ButtonCentr";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { IoStarSharp } from "react-icons/io5";
+// import { IoStarSharp } from "react-icons/io5";
 
 interface IProps {}
 export const ComentOnas: FC<IProps> = () => {
