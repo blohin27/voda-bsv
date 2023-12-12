@@ -18,6 +18,7 @@ import { FotoRabot } from "@/components/FotoRabot/FotoRabot";
 import { OurClients } from "@/components/OurClients/OurClients";
 import { ComentOnas } from "@/components/ComentOnas/ComentOnas";
 import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
+import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
 
 export const ContentGeneralPage = () => {
   return (
@@ -52,6 +53,7 @@ export const ContentGeneralPage = () => {
       <FotoRabot />
       <OurClients />
       <ComentOnas />
+      <QuesResonse />
     </Box>
   );
 };

@@ -71,7 +71,18 @@ const classes: ClassesSx = {
   root: {},
   sectionOtz: {
     display: "flex",
-    gap: "15px",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: "10px",
+    "@media (max-width:1150px)": {
+      justifyContent: "center",
+      width: "70%",
+      margin: "0 auto",
+    },
+    "@media (max-width:700px)": {
+      justifyContent: "center",
+      width: "100%",
+    },
   },
   otzItemDesc: {
     fontWeight: "300",
@@ -83,15 +94,26 @@ const classes: ClassesSx = {
     fontWeight: "300",
   },
   sectionOtzItem: {
-    height: "200px",
+    minHeight: "200px",
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
-    width: "25%",
     backgroundColor: "#fcfbf9",
     padding: "20px 25px 25px 25px",
     fontSize: "14px",
+    width: "20%",
     marginTop: "30px",
+    "@media (max-width:1150px)": {
+      width: "30%",
+      marginTop: "0px",
+    },
+    "@media (max-width:700px)": {
+      width: "60%",
+      minHeight: "150px",
+    },
+    "@media (max-width:500px)": {
+      width: "80%",
+    },
   },
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   obOcen: {

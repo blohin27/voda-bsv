@@ -1,7 +1,5 @@
 "use client";
-
 import Image from "next/image";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Pagination, Thumbs } from "swiper/modules";
 import "swiper/css";
