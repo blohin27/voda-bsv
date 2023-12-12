@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 38px;
+  color: #362c1d;
+  font-weight: 700;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+.item{
+
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+}

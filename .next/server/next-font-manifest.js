@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{\"/\":[\"static/media/e1c529c04de64b40-s.p.woff2\",\"static/media/d3d85d86ad5c431a-s.p.woff2\"]},\"app\":{\"/Users/blohin/dev/MyProjects/voda-bsv.ru/src/app/layout\":[\"static/media/c9a5bc6a7c948fb0-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":true}"
