@@ -1,11 +1,19 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import { OrderCall } from "@/components/OrderCall/OrderCall";
+import TextField from "@mui/material/TextField";
 
 interface IProps {}
 export const BannerOstalisVopros: FC<IProps> = () => {
+  const [mob, setMob] = useState<string>("");
+  const validateNumber = (value: number | string) => {
+    const regex = /^\d{1,13}$/;
+    const val = value.toString();
+    setMob(val);
+  };
+
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
@@ -28,8 +36,65 @@ export const BannerOstalisVopros: FC<IProps> = () => {
                     <Box sx={classes.descr}>
                       Просто заполните поля ниже, мы перезвоним Вам в течении 5 минут и подробно проконсультируем по нашим ценам и услугам.
                     </Box>
-                    <Box sx={{ display: "flex", justifyContent: "center" }}>
-                      <OrderCall />
+                    <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", gap: "15px", margin: "0 auto", width: "560px" }}>
+                      <Box sx={{ display: "flex", justifyContent: "center", backgroundColor: "white", padding: "8px", borderRadius: "5px" }}>
+                        <TextField
+                          id="outlined-basic"
+                          label="Телефон"
+                          variant="outlined"
+                          size={"small"}
+                          sx={{ width: "100%", backgroundColor: "white", borderRadius: "5px" }}
+                          value={mob}
+                          onChange={(e) => {
+                            validateNumber(e.target.value);
+                          }}
+                        />
+                      </Box>
+                      <Box sx={{ display: "flex", justifyContent: "center", backgroundColor: "white", padding: "8px", borderRadius: "5px" }}>
+                        <TextField
+                          id="outlined-basic"
+                          label="Телефон"
+                          variant="outlined"
+                          size={"small"}
+                          value={mob}
+                          sx={{ width: "100%", borderRadius: "5px" }}
+                          onChange={(e) => {
+                            validateNumber(e.target.value);
+                          }}
+                        />
+                      </Box>
+                      <Box sx={{ display: "flex", justifyContent: "center" }}>
+                        <Box
+                          sx={{
+                            backgroundColor: "#ff6c36",
+                            width: "100%",
+                            textAlign: "center",
+                            height: "50px",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            display: "flex",
+                            color: "white",
+                            fontSize: "20px",
+                            fontWeight: "500",
+                            borderRadius: "5px",
+                          }}
+                        >
+                          {" "}
+                          Отправить заявку
+                        </Box>
+                      </Box>
+                      <Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            color: "white",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          Нажимая на кнопку вы даете согласие на &nbsp; <span style={{ color: "green" }}> обработку персональных данных</span>
+                        </Box>
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
