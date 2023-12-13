@@ -19,6 +19,7 @@ import { OurClients } from "@/components/OurClients/OurClients";
 import { ComentOnas } from "@/components/ComentOnas/ComentOnas";
 import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
 import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
+import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
 
 export const ContentGeneralPage = () => {
   return (
@@ -54,6 +55,7 @@ export const ContentGeneralPage = () => {
       <OurClients />
       <ComentOnas />
       <QuesResonse />
+      <EmailSbscribtion />
     </Box>
   );
 };
