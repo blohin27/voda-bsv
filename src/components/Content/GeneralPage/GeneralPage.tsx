@@ -20,6 +20,7 @@ import { ComentOnas } from "@/components/ComentOnas/ComentOnas";
 import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
 import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
 import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
+import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 
 export const ContentGeneralPage = () => {
   return (
@@ -56,6 +57,7 @@ export const ContentGeneralPage = () => {
       <ComentOnas />
       <QuesResonse />
       <EmailSbscribtion />
+      <BannerOstalisVopros />
     </Box>
   );
 };
