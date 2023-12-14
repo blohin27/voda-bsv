@@ -12,20 +12,8 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
   if (DEV) {
     return (
       <>
-        <Box sx={c.setcionGeneralPageBanner}>
-          <Image
-            src="/photoNew/dev.png"
-            alt={"image"}
-            layout={"fill"}
-            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            objectFit="cover"
-            objectPosition="top center" // По умолчанию 'center', но может быть изменено
-            quality={100}
-            placeholder={"blur"}
-            // priority
-            blurDataURL={"/photoNew/devPre.jpg"}
-            onLoad={(e) => console.log(e.target)}
-          />
+        <Box sx={c.setcionGeneralPageBanner} className={montserrat.className}>
+          В разработке
         </Box>
       </>
     );
@@ -36,9 +24,13 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
 const c: ClassesSx = {
   setcionGeneralPageBanner: {
     width: "100%",
+    fontSize: "70px",
+    fontWeight: "700",
     display: "flex",
-    height: "600px",
-    minWidth: "700px",
+    justifyContent: "center",
     position: "relative",
+    "@media (max-width:600px)": {
+      fontSize: "40px",
+    },
   },
 };
