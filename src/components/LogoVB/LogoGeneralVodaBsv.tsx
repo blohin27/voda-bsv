@@ -8,12 +8,7 @@ interface IProps {}
 export const LogoGeneralVodaBsv: FC<IProps> = () => {
   return (
     <Box sx={classes.menu_logo}>
-      <Box
-        sx={classes.img_logo}
-        display={"flex"}
-        position={"relative"}
-        id={"11111"}
-      >
+      <Box sx={classes.img_logo} display={"flex"} position={"relative"} id={"11111"}>
         <Image
           src="/logo_dom.png"
           alt={"image"}
@@ -36,8 +31,8 @@ const classes: ClassesSx = {
     display: "flex",
     justifyItems: "center",
     alignItems: "center",
-    borderTop: "4px solid #66cdfd ",
-    borderBottom: "4px solid #66cdfd",
+    borderTop: "2px solid #66cdfd ",
+    borderBottom: "2px solid #66cdfd",
   },
   img_logo: {
     height: "50px",

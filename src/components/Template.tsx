@@ -9,7 +9,6 @@ export const Template: FC<IProps> = () => {
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}></Box>;
       </Box>
-      ;
     </Box>
   );
 };

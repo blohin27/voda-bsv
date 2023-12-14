@@ -10,7 +10,6 @@ export const LineBorder: FC<IProps> = () => {
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}></Box>;
       </Box>
-      ;
     </Box>
   );
 };

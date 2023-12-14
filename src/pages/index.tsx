@@ -10,6 +10,7 @@ import React from "react";
 import { ClassesSx } from "@/theme/theme";
 import { HeaderSite } from "../components/header/HeaderSite/HeaderSite";
 import { ContentGeneralPage } from "@/components/Content/GeneralPage/GeneralPage";
+import { FooterPage } from "@/components/Footer/FooterPage/FooterPage";
 // import { ContentGeneralPage } from "@/components/Content/GeneralPage/GeneralPage";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -20,7 +21,7 @@ export default function Home() {
       <RootLayout>
         <HeaderSite />
         <ContentGeneralPage />
-        {/*<FooterPage />*/}
+        <FooterPage />
       </RootLayout>
     </IsDev>
   );

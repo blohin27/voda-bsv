@@ -26,7 +26,6 @@ export const FotoRabot: FC<IProps> = () => {
             <PhotoItem />
           </Box>
         </Box>
-        ;
       </Box>
     </Box>
   );
