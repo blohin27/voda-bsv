@@ -10,6 +10,7 @@ import { MOBILE_TELEPHONE } from "@/const";
 import { Montserrat } from "next/font/google";
 import List from "@mui/material/List";
 import Drawer from "@mui/material/Drawer";
+import Link from "next/link";
 
 export const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -68,7 +69,9 @@ export const HeaderSite = () => {
         <Box sx={classes.wrapperHeader}>
           <Box ml={2} mr={2}>
             <Box sx={classes.sectionHeaderSite}>
-              <LogoGeneralVodaBsv />
+              <Link href={"/"} style={{ textDecoration: "none" }}>
+                <LogoGeneralVodaBsv />
+              </Link>
               <ContactInformationMain />
               <SocialNetworkIcons />
               <SectionButtons />

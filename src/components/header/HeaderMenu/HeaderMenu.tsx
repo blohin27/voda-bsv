@@ -4,6 +4,7 @@ import { Roboto_Slab } from "next/font/google";
 import classNames from "classnames";
 import { Box } from "@mui/material";
 import { ClassesSx } from "@/theme/theme";
+import Link from "next/link";
 const roboto = Roboto_Slab({ subsets: ["latin"] });
 
 interface IProps {}
@@ -20,7 +21,9 @@ export const HeaderMenu: FC<IProps> = () => {
             <Box sx={classes.link}>Калькулятор</Box>
             <Box sx={classes.link}>Наши работы</Box>
             <Box sx={classes.link}>Полезные статьи</Box>
-            <Box sx={classes.link}>Контакты</Box>
+            <Link href={"/contact"} style={{ textDecoration: "none" }}>
+              <Box sx={classes.link}>Контакты</Box>
+            </Link>
           </Box>
         </Box>
       </Box>

@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { ClassesSx } from "@/theme/theme";
 import { Box } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 interface IProps {}
 

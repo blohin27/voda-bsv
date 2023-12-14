@@ -3,6 +3,7 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { FcCustomerSupport } from "react-icons/fc";
+import { LogoGeneralVodaBsv } from "@/components/LogoVB/LogoGeneralVodaBsv";
 
 interface IProps {}
 export const FooterPage: FC<IProps> = () => {
@@ -35,7 +36,6 @@ export const FooterPage: FC<IProps> = () => {
               <Box sx={classes.title}>О нас</Box>
               <Box sx={classes.arrayRef}>
                 <Box sx={classes.itemRef}>Бурение скважин</Box>
-
                 <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
                 <Box sx={classes.itemRef}>Бурение МБУ</Box>
                 <Box sx={classes.itemRef}>Бурение на даче</Box>
@@ -70,7 +70,7 @@ const classes: ClassesSx = {
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { display: "flex", paddingTop: "40px", flexDirection: "column", margin: "0 16px 0 16px" },
   fourSection: { display: "flex", justifyContent: "space-between", flex: "1 1 25%" },
-  sectionIP: { display: "flex", color: "white", justifyContent: "center", mt: "60px", textAlign: "center" },
+  sectionIP: { display: "flex", color: "white", justifyContent: "center", textAlign: "center", margin: "100px 0px 40px 0" },
   timeWork: { color: "white", display: "flex", alignItems: "center" },
   zvonokButton: {
     backgroundColor: "#fe6c36",
