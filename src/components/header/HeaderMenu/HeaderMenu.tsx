@@ -16,7 +16,9 @@ export const HeaderMenu: FC<IProps> = () => {
         <Box ml={2} mr={2}>
           <Box sx={classes.section} className={roboto.className}>
             <Box sx={classes.link}>Услуги</Box>
-            <Box sx={classes.link}>Цены</Box>
+            <Link href={"/price"} style={{ textDecoration: "none" }}>
+              <Box sx={classes.link}>Цены</Box>
+            </Link>
             <Box sx={classes.link}>Срочный выезд</Box>
             <Box sx={classes.link}>Калькулятор</Box>
             <Box sx={classes.link}>Наши работы</Box>

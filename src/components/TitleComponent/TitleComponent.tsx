@@ -2,16 +2,18 @@ import { FC } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { montserrat } from "../header/HeaderSite/HeaderSite";
+import { CSSProperties } from "@mui/system/CSSProperties";
 
 interface IProps {
   title: string;
   title2?: string;
+  options?: { color?: string };
 }
-export const TitleComponent: FC<IProps> = ({ title, title2 }) => {
+export const TitleComponent: FC<IProps> = ({ title, title2, options }) => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <Box sx={classes.content} className={montserrat.className}>
+        <Box sx={classes.content} color={`${options?.color}`} className={montserrat.className}>
           {title}
         </Box>
         {title2 && (

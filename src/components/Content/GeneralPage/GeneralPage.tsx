@@ -21,6 +21,7 @@ import { WhatTypeService } from "@/components/WhatTypeService/WhatTypeService";
 import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
 import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
 import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
+import { RayonObsl } from "@/components/RayonObsl/RayonObsl";
 
 export const ContentGeneralPage = () => {
   return (
@@ -54,10 +55,6 @@ export const ContentGeneralPage = () => {
       <Banner />
       <FotoRabot />
       <OurClients />
-      <ComentOnas />
-      <QuesResonse />
-      <EmailSbscribtion />
-      <BannerOstalisVopros />
     </Box>
   );
 };

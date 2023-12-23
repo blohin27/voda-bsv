@@ -4,57 +4,69 @@ import Box from "@mui/material/Box";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { FcCustomerSupport } from "react-icons/fc";
 import { LogoGeneralVodaBsv } from "@/components/LogoVB/LogoGeneralVodaBsv";
+import { RayonObsl } from "@/components/RayonObsl/RayonObsl";
+import { ComentOnas } from "@/components/ComentOnas/ComentOnas";
+import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
+import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
+import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 
 interface IProps {}
 export const FooterPage: FC<IProps> = () => {
   return (
-    <Box sx={classes.root} className={montserrat.className}>
-      <Box sx={classes.wrapper}>
-        <Box sx={classes.content}>
-          <Box sx={classes.fourSection}>
-            <Box>
-              <Box sx={classes.title}>О нас</Box>
-              <Box sx={classes.arrayRef}>
-                <Box sx={classes.itemRef}>Бурение скважин</Box>
-                <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
-                <Box sx={classes.itemRef}>Бурение МБУ</Box>
-                <Box sx={classes.itemRef}>Бурение на даче</Box>
-                <Box sx={classes.itemRef}>Обустройство скважины</Box>
-              </Box>
-            </Box>
-            <Box>
-              <Box sx={classes.title}>О нас</Box>
-              <Box sx={classes.arrayRef}>
-                <Box sx={classes.itemRef}>Бурение скважин</Box>
-                <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
-                <Box sx={classes.itemRef}>Бурение МБУ</Box>
-                <Box sx={classes.itemRef}>Бурение на даче</Box>
-                <Box sx={classes.itemRef}>Обустройство скважины</Box>
-              </Box>
-            </Box>
-            <Box>
-              <Box sx={classes.title}>О нас</Box>
-              <Box sx={classes.arrayRef}>
-                <Box sx={classes.itemRef}>Бурение скважин</Box>
-                <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
-                <Box sx={classes.itemRef}>Бурение МБУ</Box>
-                <Box sx={classes.itemRef}>Бурение на даче</Box>
-                <Box sx={classes.itemRef}>Обустройство скважины</Box>
-              </Box>
-            </Box>
-            <Box>
-              <Box sx={classes.title}>Режим работы</Box>
-              <Box sx={classes.arrayRef}>
-                <Box sx={classes.timeWork}>
-                  <FcCustomerSupport fontSize={30} /> с 8:00 до 23:00
+    <Box className={montserrat.className}>
+      <RayonObsl />
+      <ComentOnas />
+      <QuesResonse />
+      <EmailSbscribtion />
+      <BannerOstalisVopros />
+      <Box sx={classes.root} className={montserrat.className}>
+        <Box sx={classes.wrapper}>
+          <Box sx={classes.content}>
+            <Box sx={classes.fourSection}>
+              <Box>
+                <Box sx={classes.title}>О нас</Box>
+                <Box sx={classes.arrayRef}>
+                  <Box sx={classes.itemRef}>Бурение скважин</Box>
+                  <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
+                  <Box sx={classes.itemRef}>Бурение МБУ</Box>
+                  <Box sx={classes.itemRef}>Бурение на даче</Box>
+                  <Box sx={classes.itemRef}>Обустройство скважины</Box>
                 </Box>
-                <Box sx={classes.zvonokButton}>Обратный звонок</Box>
-                <Box sx={classes.raschetButton}>Расчитать стоимость</Box>
+              </Box>
+              <Box>
+                <Box sx={classes.title}>О нас</Box>
+                <Box sx={classes.arrayRef}>
+                  <Box sx={classes.itemRef}>Бурение скважин</Box>
+                  <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
+                  <Box sx={classes.itemRef}>Бурение МБУ</Box>
+                  <Box sx={classes.itemRef}>Бурение на даче</Box>
+                  <Box sx={classes.itemRef}>Обустройство скважины</Box>
+                </Box>
+              </Box>
+              <Box>
+                <Box sx={classes.title}>О нас</Box>
+                <Box sx={classes.arrayRef}>
+                  <Box sx={classes.itemRef}>Бурение скважин</Box>
+                  <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
+                  <Box sx={classes.itemRef}>Бурение МБУ</Box>
+                  <Box sx={classes.itemRef}>Бурение на даче</Box>
+                  <Box sx={classes.itemRef}>Обустройство скважины</Box>
+                </Box>
+              </Box>
+              <Box>
+                <Box sx={classes.title}>Режим работы</Box>
+                <Box sx={classes.arrayRef}>
+                  <Box sx={classes.timeWork}>
+                    <FcCustomerSupport fontSize={30} /> с 8:00 до 23:00
+                  </Box>
+                  <Box sx={classes.zvonokButton}>Обратный звонок</Box>
+                  <Box sx={classes.raschetButton}>Расчитать стоимость</Box>
+                </Box>
               </Box>
             </Box>
-          </Box>
-          <Box sx={classes.sectionIP}>
-            © 2017-2024 ИП Блохин Д.В. <br /> Все права защищены
+            <Box sx={classes.sectionIP}>
+              © 2017-2024 ИП Блохин Д.В. <br /> Все права защищены
+            </Box>
           </Box>
         </Box>
       </Box>

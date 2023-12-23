@@ -30,7 +30,7 @@ export const IsDev: FC<PropsWithChildren<Props>> = ({ children }) => {
       </>
     );
   }
-  return <>{children}</>;
+  return <Box className={montserrat.className}>{children}</Box>;
 };
 
 const c: ClassesSx = {
