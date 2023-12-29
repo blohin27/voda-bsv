@@ -25,7 +25,7 @@ export const ContactPage: FC<IProps> = () => {
       </Box>
       <Box sx={classes.wrapper}>
         <AddressInMap />
-        <NashiPreim />
+        {/*<NashiPreim />*/}
       </Box>
     </Box>
   );
