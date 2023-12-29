@@ -36,7 +36,7 @@ export const BannerOstalisVopros: FC<IProps> = () => {
                     <Box sx={classes.descr}>
                       Просто заполните поля ниже, мы перезвоним Вам в течении 5 минут и подробно проконсультируем по нашим ценам и услугам.
                     </Box>
-                    <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", gap: "15px", margin: "0 auto", width: "560px" }}>
+                    <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", gap: "15px", margin: "0 auto" }}>
                       <Box sx={{ display: "flex", justifyContent: "center", backgroundColor: "white", padding: "8px", borderRadius: "5px" }}>
                         <TextField
                           id="outlined-basic"
@@ -79,7 +79,6 @@ export const BannerOstalisVopros: FC<IProps> = () => {
                             borderRadius: "5px",
                           }}
                         >
-                          {" "}
                           Отправить заявку
                         </Box>
                       </Box>
@@ -90,9 +89,11 @@ export const BannerOstalisVopros: FC<IProps> = () => {
                             color: "white",
                             fontSize: "14px",
                             fontWeight: "400",
+                            flexWrap: "wrap",
+                            justifyContent: "center",
                           }}
                         >
-                          Нажимая на кнопку вы даете согласие на &nbsp; <span style={{ color: "green" }}> обработку персональных данных</span>
+                          Нажимая на кнопку вы даете согласие на &nbsp; <span style={{ color: "#63fe93" }}> обработку персональных данных</span>
                         </Box>
                       </Box>
                     </Box>

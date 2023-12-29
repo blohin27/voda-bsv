@@ -3,11 +3,11 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 
 interface IProps {}
-export const Template: FC<IProps> = () => {
+export const AddressInMap: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <Box sx={classes.content}></Box>;
+        <Box sx={classes.content}></Box>
       </Box>
     </Box>
   );
@@ -15,6 +15,6 @@ export const Template: FC<IProps> = () => {
 
 const classes: ClassesSx = {
   root: {},
-  wrapper: { maxWidth: "1200px", margin: "0 auto" },
-  content: { margin: "0 16px 0 16px" },
+  wrapper: { maxWidth: "1200px", margin: "auto" },
+  content: {},
 };

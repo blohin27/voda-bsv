@@ -9,9 +9,11 @@ import { ComentOnas } from "@/components/ComentOnas/ComentOnas";
 import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
 import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
 import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
+import { useMediaQuery } from "@mui/material";
 
 interface IProps {}
 export const FooterPage: FC<IProps> = () => {
+  const px600 = useMediaQuery("(max-width:600px)");
   return (
     <Box className={montserrat.className}>
       <RayonObsl />
@@ -53,17 +55,31 @@ export const FooterPage: FC<IProps> = () => {
                   <Box sx={classes.itemRef}>Обустройство скважины</Box>
                 </Box>
               </Box>
+              {!px600 && (
+                <Box>
+                  <Box sx={classes.title}>Режим работы</Box>
+                  <Box sx={classes.arrayRef}>
+                    <Box sx={classes.timeWork}>
+                      <FcCustomerSupport fontSize={30} /> с 8:00 до 23:00
+                    </Box>
+                    <Box sx={classes.zvonokButton}>Обратный звонок</Box>
+                    <Box sx={classes.raschetButton}>Расчитать стоимость</Box>
+                  </Box>
+                </Box>
+              )}
+            </Box>
+            {px600 && (
               <Box>
-                <Box sx={classes.title}>Режим работы</Box>
+                <Box sx={{ ...classes.title, textAlign: "center" }}>Режим работы</Box>
                 <Box sx={classes.arrayRef}>
-                  <Box sx={classes.timeWork}>
+                  <Box sx={{ ...classes.timeWork, display: "flex", justifyContent: "center" }}>
                     <FcCustomerSupport fontSize={30} /> с 8:00 до 23:00
                   </Box>
                   <Box sx={classes.zvonokButton}>Обратный звонок</Box>
                   <Box sx={classes.raschetButton}>Расчитать стоимость</Box>
                 </Box>
               </Box>
-            </Box>
+            )}
             <Box sx={classes.sectionIP}>
               © 2017-2024 ИП Блохин Д.В. <br /> Все права защищены
             </Box>
@@ -81,7 +97,16 @@ const classes: ClassesSx = {
   itemRef: { cursor: "pointer", display: "flex" },
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { display: "flex", paddingTop: "40px", flexDirection: "column", margin: "0 16px 0 16px" },
-  fourSection: { display: "flex", justifyContent: "space-between", flex: "1 1 25%" },
+  fourSection: {
+    display: "flex",
+    justifyContent: "space-between",
+    flex: "1 1 25%",
+    gap: "10px",
+    "@media(max-width:350px)": {
+      flexWrap: "wrap",
+      justifyContent: "center",
+    },
+  },
   sectionIP: { display: "flex", color: "white", justifyContent: "center", textAlign: "center", margin: "100px 0px 40px 0" },
   timeWork: { color: "white", display: "flex", alignItems: "center" },
   zvonokButton: {

@@ -21,6 +21,7 @@
     "@mui/material": "^5.11.8",
     "@mui/system": "5.11.8",
     "@mui/x-date-pickers": "6.11.2",
+    "@pbe/react-yandex-maps": "^1.2.5",
     "@types/nodemailer": "^6.4.14",
     "@types/react-image-gallery": "^1.2.2",
     "@types/react-input-mask": "^3.0.5",

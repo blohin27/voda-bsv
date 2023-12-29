@@ -49,27 +49,19 @@ export const PricePage: FC<IProps> = () => {
                   >
                     Для быстрой навигации по странице используйте кнопки разделов или боковое меню. В них вы найдете подробное описание цен
                   </Box>
-                  <Box sx={classes.buttonsNavigation}>
-                    <Box sx={{ display: "flex", gap: "20px", flexDirection: "column" }}>
-                      <Box sx={classes.buttonItem} onClick={scrollToMyRef}>
-                        Чистка и ремонт
-                      </Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                  <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
+                    <Box sx={classes.buttonItem} onClick={scrollToMyRef}>
+                      Чистка и ремонт
                     </Box>
-                    <Box sx={{ display: "flex", gap: "20px", flexDirection: "column" }}>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                    </Box>
-                    <Box sx={{ display: "flex", gap: "20px", flexDirection: "column" }}>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                      <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                    </Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box> <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box> <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
+                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
                   </Box>
                 </Box>
               </Box>
@@ -78,46 +70,191 @@ export const PricePage: FC<IProps> = () => {
           <Box sx={classes.wrapperItemPrice}>
             <Box sx={classes.contenItemPrice}>
               <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
-              <Box sx={classes.contenManagement}>
-                <Box
-                  sx={classes.contenItemManagement}
-                  color={`${rem === "Ремонт скважины" ? "green" : ""}`}
-                  onClick={() => {
-                    setRem("Ремонт скважины");
-                    setDataTableRem(data1);
-                  }}
-                >
-                  Ремонт скважины
-                </Box>
-                <Box
-                  sx={classes.contenItemManagement}
-                  color={`${rem === "Чистка скважины" ? "green" : ""}`}
-                  onClick={() => {
-                    setRem("Чистка скважины");
-                    setDataTableRem(data2);
-                  }}
-                >
-                  Чистка скважины
-                </Box>
-                <Box
-                  sx={classes.contenItemManagement}
-                  color={`${rem === "Замена насоса" ? "green" : ""}`}
-                  onClick={() => {
-                    setRem("Замена насоса");
-                  }}
-                >
-                  Замена насоса
-                </Box>
-                <Box
-                  sx={classes.contenItemManagement}
-                  color={`${rem === "Монтаж скважины" ? "green" : ""}`}
-                  onClick={() => {
-                    setRem("Монтаж скважины");
-                  }}
-                >
-                  Монтаж скважины
-                </Box>
+              <Box sx={classes.contenManagement}></Box>
+              <Box sx={classes.table}>
+                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
+                  <thead>
+                    <tr>
+                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
+                        Название услуги
+                      </th>
+                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dataTableRem.map((item) => (
+                      <tr key={item.name}>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.name}
+                        </td>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </Box>
+            </Box>
+            <Box sx={classes.contenItemPrice}>
+              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
+              <Box sx={classes.contenManagement}></Box>
+              <Box sx={classes.table}>
+                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
+                  <thead>
+                    <tr>
+                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
+                        Название услуги
+                      </th>
+                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dataTableRem.map((item) => (
+                      <tr key={item.name}>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.name}
+                        </td>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </Box>
+            </Box>
+            <Box sx={classes.contenItemPrice}>
+              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
+              <Box sx={classes.contenManagement}></Box>
+              <Box sx={classes.table}>
+                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
+                  <thead>
+                    <tr>
+                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
+                        Название услуги
+                      </th>
+                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dataTableRem.map((item) => (
+                      <tr key={item.name}>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.name}
+                        </td>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </Box>
+            </Box>
+            <Box sx={classes.contenItemPrice}>
+              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
+              <Box sx={classes.contenManagement}></Box>
+              <Box sx={classes.table}>
+                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
+                  <thead>
+                    <tr>
+                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
+                        Название услуги
+                      </th>
+                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dataTableRem.map((item) => (
+                      <tr key={item.name}>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.name}
+                        </td>
+                        <td
+                          style={{
+                            textAlign: "center",
+                            backgroundColor: "#fcfbf9",
+                            border: "1px solid #dedede",
+                            height: "35px",
+                            fontSize: "14px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </Box>
+            </Box>
+            <Box sx={classes.contenItemPrice}>
+              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
+              <Box sx={classes.contenManagement}></Box>
               <Box sx={classes.table}>
                 <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
                   <thead>
@@ -232,7 +369,7 @@ const classes: ClassesSx = {
     height: "350px",
     position: "relative",
     "@media (max-width:800px)": {
-      height: "450px",
+      height: "850px",
     },
   },
   sectionWhite: {
