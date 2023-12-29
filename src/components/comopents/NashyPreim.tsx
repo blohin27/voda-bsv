@@ -3,7 +3,7 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 
 interface IProps {}
-export const NashiPreim: FC<IProps> = () => {
+export const NashyPreim: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>

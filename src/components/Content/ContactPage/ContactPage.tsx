@@ -3,10 +3,10 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { COLOR_MILK, EMAIL, IP, MOBILE_TELEPHONE } from "@/const";
 import Image from "next/image";
-import { ContactSection } from "./comopents/ContactSection";
-import { ContactySoiskatelem } from "@/pages/contact/comopents/ContactySoiskatelem";
-import { AddressInMap } from "@/pages/contact/comopents/AddressInMap";
-import { NashiPreim } from "@/pages/contact/comopents/NashyPreim";
+import { ContactSection } from "@/components/comopents/ContactSection";
+import { ContactySoiskatelem } from "@/components/comopents/ContactySoiskatelem";
+import { AddressInMap } from "@/components/comopents/AddressInMap";
+import { NashyPreim } from "@/components/comopents/NashyPreim";
 
 interface IProps {}
 export const ContactPage: FC<IProps> = () => {
@@ -25,7 +25,7 @@ export const ContactPage: FC<IProps> = () => {
       </Box>
       <Box sx={classes.wrapper}>
         <AddressInMap />
-        <NashiPreim />
+        <NashyPreim />
       </Box>
     </Box>
   );
