@@ -3,10 +3,12 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { COLOR_MILK, EMAIL, IP, MOBILE_TELEPHONE } from "@/const";
 import Image from "next/image";
-import { ContactSection } from "@/components/comopents/ContactSection";
-import { ContactySoiskatelem } from "@/components/comopents/ContactySoiskatelem";
-import { AddressInMap } from "@/components/comopents/AddressInMap";
-import { NashyPreim } from "@/components/comopents/NashyPreim";
+import { ContactSection } from "@/components/Content/ContactPage/ContactSection";
+import { ContactySoiskatelem } from "@/components/Content/ContactPage/ContactySoiskatelem";
+import { AddressInMap } from "@/components/Content/ContactPage/AddressInMap";
+import { NashyPreim } from "@/components/Content/ContactPage/NashyPreim";
+import { BannerPromoContact } from "@/components/Content/ContactPage/BannerPromoConact";
+import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
 
 interface IProps {}
 export const ContactPage: FC<IProps> = () => {
@@ -27,6 +29,8 @@ export const ContactPage: FC<IProps> = () => {
         <AddressInMap />
         <NashyPreim />
       </Box>
+      <BannerPromoContact />
+      <KvalWorker />
     </Box>
   );
 };

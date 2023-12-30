@@ -10,7 +10,7 @@ import { Steps } from "@/components/Steps/Steps";
 import { KvalWorker } from "@/components/KvalWorker/KvalWorker";
 import { NashyRaboty } from "@/components/NashyRaboty/NashyRaboty";
 import { LineBorder } from "@/components/LineBorder/LineBorder";
-import { NashyRaboty2 } from "@/components/NashyRaboty/NashyRaboty2";
+import { NashyRabotyTemplate } from "@/components/NashyRaboty/NashyRaboty2";
 import { NashyRaboty3 } from "@/components/NashyRaboty/NashyRaboty3";
 import { ButtonCentr } from "@/components/ButtonCenter/ButtonCentr";
 import { Banner } from "@/components/Banner/Banner";
@@ -48,7 +48,15 @@ export const ContentGeneralPage = () => {
       <LineBorder />
       <NashyRaboty />
       <LineBorder />
-      <NashyRaboty2 />
+      <NashyRabotyTemplate
+        title={"Чистка скважины"}
+        glubina={"30 метров"}
+        time={"3 часа"}
+        typeWork={"Чистка скважины с использованием профессиональной химии"}
+        kolvoPersonal={"2 человека"}
+        photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
+        price={"30 000 рублей"}
+      />
       <LineBorder />
       <NashyRaboty3 />
       <ButtonCentr title={"Больше кейсов"} />

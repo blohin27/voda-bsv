@@ -41,7 +41,7 @@ const classes: ClassesSx = {
   sectionItems: {
     width: "100%",
     display: "flex",
-    border: "2px solid blue",
+
     justifyContent: "center",
     gap: "30px",
     "@media(max-width:850px)": {
@@ -53,7 +53,6 @@ const classes: ClassesSx = {
     },
   },
   sectionItem: {
-    border: "2px solid red",
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#352c1d",
@@ -62,6 +61,7 @@ const classes: ClassesSx = {
     width: "150px",
     padding: "30px 30px",
     borderRadius: "10px",
+    "&:hover": { backgroundColor: "#12dc00" },
     "@media(max-width:850px)": {
       padding: "30px",
       width: "auto",
@@ -71,6 +71,13 @@ const classes: ClassesSx = {
       padding: "20px",
     },
   },
-  titleItem: { fontWeight: 700, marginBottom: "10px", display: "flex" },
+  titleItem: {
+    fontWeight: 700,
+    marginBottom: "30px",
+    display: "flex",
+    "@media(max-width:850px)": {
+      marginBottom: "10px",
+    },
+  },
   descrItem: { fontWeight: 400, display: "flex" },
 };

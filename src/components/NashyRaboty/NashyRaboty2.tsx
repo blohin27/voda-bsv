@@ -1,90 +1,176 @@
 import Box from "@mui/material/Box";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Image from "next/image";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 
-interface IProps {}
-export const NashyRaboty2: FC<IProps> = () => {
-  const [state, setState] = useState("/photoNew/dev.png");
-  const changeImg = () => {
-    setState("/photo/1t.jpg");
-  };
+interface IProps {
+  title?: string;
+  textFirst?: boolean;
+  typeWork?: string;
+  glubina?: string;
+  price?: string;
+  kolvoPersonal?: string;
+  time?: string;
+  photo: string[];
+}
+export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFirst, time, glubina, kolvoPersonal, price }) => {
+  const [index, setIndex] = useState(0);
+  const maxIndex = photo.length - 1;
 
+  // useEffect(() => {
+  //   let timer = setInterval(() => {
+  //     changeImgRight();
+  //   }, 4000);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, [index]);
+
+  const changeImgRight = () => {
+    if (maxIndex > index) {
+      setIndex((prevState) => prevState + 1);
+    } else {
+      setIndex(0);
+    }
+  };
+  const changeImgLeft = () => {
+    if (index > 0) {
+      setIndex((prevState) => prevState - 1);
+    } else {
+      setIndex(maxIndex);
+    }
+  };
+  console.log("indexPosle", index);
+  console.log("maxIndex", maxIndex);
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}>
-          <Box sx={classes.sectionText}>
-            <Box sx={classes.titleSectionText}>Объект: двухкомнатная квартира после ремонта</Box>
-            <Box sx={classes.descr}>
-              <Box>
-                <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  Пакет
+          {textFirst ? (
+            <>
+              <Box sx={classes.sectionText}>
+                <Box sx={classes.titleSectionText}>{title}</Box>
+                <Box sx={classes.descr}>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Вид работ&nbsp;
+                    </Box>
+                    {typeWork}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Глубина скважины:&nbsp;
+                    </Box>
+                    {glubina}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Бригада:&nbsp;
+                    </Box>
+                    {kolvoPersonal}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Время выполнения уборки после ремонта:&nbsp;
+                    </Box>
+                    {time}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Стоимость&nbsp;
+                    </Box>
+                    {price}
+                  </Box>
+                  <Box display={"flex"}>
+                    <Box sx={classes.zakaz}>Заказать</Box>
+                  </Box>
                 </Box>
-                Комплексный послестроительный клининг
               </Box>
-              <Box>
-                <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  Количество убранных комнат
+              <Box sx={classes.sectionImg}>
+                <Image
+                  src={photo[index]}
+                  alt={"image"}
+                  layout={"fill"}
+                  // width={600}
+                  // height={400}
+                  objectFit="cover"
+                  objectPosition="center center" // По умолчанию 'center', но может быть изменено
+                  quality={100}
+                />
+                <Box sx={classes.arrow}>
+                  <Box onClick={changeImgLeft} sx={classes.leftButton}>
+                    <KeyboardArrowLeft style={{ color: "white", fontSize: "50px" }} />
+                  </Box>
+                  <Box sx={classes.rightButton} onClick={changeImgRight}>
+                    <KeyboardArrowRightIcon style={{ color: "white", fontSize: "50px" }} />
+                  </Box>
                 </Box>
-                : 2
               </Box>
-              <Box>
-                <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  Сложные загрязнения:
+            </>
+          ) : (
+            <>
+              <Box sx={classes.sectionImg}>
+                <Image
+                  src={photo[index]}
+                  alt={"image"}
+                  layout={"fill"}
+                  // width={600}
+                  // height={400}
+                  objectFit="cover"
+                  objectPosition="center center" // По умолчанию 'center', но может быть изменено
+                  quality={100}
+                />
+                <Box sx={classes.arrow}>
+                  <Box onClick={changeImgLeft} sx={classes.leftButton}>
+                    <KeyboardArrowLeft style={{ color: "white", fontSize: "50px" }} />
+                  </Box>
+                  <Box sx={classes.rightButton} onClick={changeImgRight}>
+                    <KeyboardArrowRightIcon style={{ color: "white", fontSize: "50px" }} />
+                  </Box>
                 </Box>
-                разводы клея после ремонта на полу и подоконнике
               </Box>
-              <Box>
-                <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  Бригада:
+              <Box sx={classes.sectionText}>
+                <Box sx={classes.titleSectionText}>{title}</Box>
+                <Box sx={classes.descr}>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Вид работ&nbsp;
+                    </Box>
+                    {typeWork}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Глубина скважины:&nbsp;
+                    </Box>
+                    {glubina}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Бригада:&nbsp;
+                    </Box>
+                    {kolvoPersonal}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Время выполнения уборки после ремонта:&nbsp;
+                    </Box>
+                    {time}
+                  </Box>
+                  <Box>
+                    <Box display={"inline"} style={{ fontWeight: 700 }}>
+                      Стоимость&nbsp;
+                    </Box>
+                    {price}
+                  </Box>
+                  <Box display={"flex"}>
+                    <Box sx={classes.zakaz}>Заказать</Box>
+                  </Box>
                 </Box>
-                2 человека
               </Box>
-              <Box>
-                <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  Время выполнения уборки после ремонта:
-                </Box>
-                4 часа
-              </Box>
-              <Box>
-                <Box display={"inline"} style={{ fontWeight: 700 }}>
-                  Пакет
-                </Box>
-                Сумма 6 500 руб.
-              </Box>
-              <Box display={"flex"}>
-                <Box sx={classes.zakaz}>Заказать</Box>
-              </Box>
-            </Box>
-          </Box>
-          <Box sx={classes.sectionImg}>
-            <Image
-              src={state}
-              alt={"image"}
-              layout={"fill"}
-              // width={600}
-              // height={400}
-              objectFit="cover"
-              objectPosition="center center" // По умолчанию 'center', но может быть изменено
-              quality={100}
-            />
-            <Box sx={classes.arrow}>
-              <Box
-                onClick={() => {
-                  changeImg();
-                }}
-                sx={classes.leftButton}
-              >
-                <KeyboardArrowLeft style={{ color: "white", fontSize: "50px" }} />
-              </Box>
-              <Box sx={classes.rightButton}>
-                <KeyboardArrowRightIcon style={{ color: "white", fontSize: "50px" }} />
-              </Box>
-            </Box>
-          </Box>
+            </>
+          )}
         </Box>
       </Box>
     </Box>
@@ -102,6 +188,7 @@ const classes: ClassesSx = {
     position: "relative",
     width: "50%",
     height: "400px",
+    transition: ".5s",
     alignSelf: "center",
     "@media (max-width:780px)": {
       width: "70%",

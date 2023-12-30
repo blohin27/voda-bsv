@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "prettier": {
-    "printWidth": 162
+    "printWidth": 161
   },
   "scripts": {
     "dev": "next dev -p 3000",
