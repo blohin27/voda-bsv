@@ -14,13 +14,12 @@ export const PoleznyeStatiPage: FC<IProps> = () => {
         <Box sx={classes.content}>
           <Box sx={classes.titlePage}>Полезные статьи</Box>
           <Box sx={classes.sectionItems}>
-            <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} />
-
-            <PoleznyeStatiItem photo={"/photo/2t.jpg"} title={"Как чистить скважину правильно?"} />
-            <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Как чистить скважину правильно?"} />
-            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} />
-            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} />
-            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} />
+            <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+            <PoleznyeStatiItem photo={"/photo/2t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+            <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
           </Box>
         </Box>
       </Box>
