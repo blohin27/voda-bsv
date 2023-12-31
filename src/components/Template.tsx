@@ -7,7 +7,7 @@ export const Template: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <Box sx={classes.content}></Box>;
+        <Box sx={classes.content}></Box>
       </Box>
     </Box>
   );

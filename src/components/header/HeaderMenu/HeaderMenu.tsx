@@ -24,7 +24,9 @@ export const HeaderMenu: FC<IProps> = () => {
             <Link href={"/our-works"} style={{ textDecoration: "none" }}>
               <Box sx={classes.link}>Наши работы</Box>
             </Link>
-            <Box sx={classes.link}>Полезные статьи</Box>
+            <Link href={"/poleznye-stati"} style={{ textDecoration: "none" }}>
+              <Box sx={classes.link}>Полезные статьи</Box>
+            </Link>
             <Link href={"/contact"} style={{ textDecoration: "none" }}>
               <Box sx={classes.link}>Контакты</Box>
             </Link>
