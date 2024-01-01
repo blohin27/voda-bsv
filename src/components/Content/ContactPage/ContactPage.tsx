@@ -57,6 +57,7 @@ const classes: ClassesSx = {
   photoGeneralSection: {
     width: "65%",
   },
+
   titleContactSection: { fontSize: "25px", fontWeight: "700" },
   sectionContact: {
     display: "flex",
