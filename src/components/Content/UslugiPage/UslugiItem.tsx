@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import Image from "next/image";
@@ -10,11 +10,20 @@ interface IProps {
   link?: string;
 }
 export const UslugiItem: FC<IProps> = ({ title, photo }) => {
+  const [opacity, setOpacity] = useState(0.8);
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <Box sx={classes.content}>
-          <Box sx={classes.photoGeneralSection}>
+        <Box
+          sx={classes.content}
+          onMouseEnter={() => {
+            setOpacity(0);
+          }}
+          onMouseLeave={() => {
+            setOpacity(0.7);
+          }}
+        >
+          <Box sx={{ ...classes.photoGeneralSection }}>
             <Box sx={classes.photo}>
               <Image
                 src={photo}
@@ -27,7 +36,7 @@ export const UslugiItem: FC<IProps> = ({ title, photo }) => {
               <Box sx={classes.Card}>
                 <Box sx={classes.textCard}>{title}</Box>
               </Box>
-              <Box sx={classes.sectionWhite} />
+              <Box sx={{ ...classes.sectionWhite, opacity: opacity }} />
             </Box>
           </Box>
         </Box>
@@ -88,7 +97,7 @@ const classes: ClassesSx = {
   textCard: { display: "flex", fontWeight: "700", fontSize: "25px", margin: "0 5px" },
   sectionWhite: {
     background: "linear-gradient(to right, black, black 100%, rgba(0, 0, 0, 10%) 80%)",
-    opacity: 0.8,
+
     position: "absolute",
     width: "100%",
     height: "100%",

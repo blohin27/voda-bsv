@@ -22,9 +22,6 @@ export const HeaderMenu: FC<IProps> = () => {
               <Box sx={classes.link}>Цены</Box>
             </Link>
             <Box sx={classes.link}>Срочный выезд</Box>
-            <Link href={"/calculator"} style={{ textDecoration: "none" }}>
-              <Box sx={classes.link}>Калькулятор</Box>
-            </Link>
             <Link href={"/our-works"} style={{ textDecoration: "none" }}>
               <Box sx={classes.link}>Наши работы</Box>
             </Link>
@@ -44,10 +41,11 @@ export const HeaderMenu: FC<IProps> = () => {
 const classes: ClassesSx = {
   section: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
     padding: "15px 0 15px 0",
     maxWidth: "1200px",
     margin: "0 auto",
+    gap: "30px",
   },
   wrapper: {
     backgroundColor: "#08a4eb",
