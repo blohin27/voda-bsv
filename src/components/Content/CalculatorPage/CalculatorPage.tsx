@@ -3,6 +3,7 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { COLOR_BLUE, COLOR_BLUE_HOVER, COLOR_ORANGE } from "@/const";
 import { BurenieCalc } from "@/components/Content/CalculatorPage/components/BurenieCalc";
+import { RemontCalc } from "@/components/Content/CalculatorPage/components/RemontCalc";
 
 interface IProps {}
 export const CalculatorPage: FC<IProps> = () => {
@@ -47,7 +48,8 @@ export const CalculatorPage: FC<IProps> = () => {
               Канализя
             </Box>
           </Box>
-          <BurenieCalc />
+          {state === "Бурение" && <BurenieCalc />}
+          {state === "Ремонт и отчистка" && <RemontCalc />}
         </Box>
       </Box>
     </Box>

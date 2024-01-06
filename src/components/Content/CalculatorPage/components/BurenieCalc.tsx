@@ -6,7 +6,7 @@ import Image from "next/image";
 
 interface IProps {}
 export const BurenieCalc: FC<IProps> = () => {
-  const [state, setState] = useState(1);
+  const [state, setState] = useState({ count: 1, photoUrl: "/photoTruba/133.jpg", price: 2300 });
   const [slider, setSlider] = useState(10);
   return (
     <Box sx={classes.root}>
@@ -17,29 +17,29 @@ export const BurenieCalc: FC<IProps> = () => {
             <Box sx={classes.checkBoxArray}>
               <Box sx={classes.checkBoxItem}>
                 <Checkbox
-                  checked={state === 1 ? true : false}
+                  checked={state.count === 1 ? true : false}
                   inputProps={{ "aria-label": "controlled" }}
                   onChange={() => {
-                    setState(1);
+                    setState({ count: 1, photoUrl: "/photoTruba/133.jpg", price: 2300 });
                   }}
                 />
                 <Box>Металлические трубы Ø133мм (Цена за метр - 2300 руб)</Box>
               </Box>
               <Box sx={classes.checkBoxItem}>
                 <Checkbox
-                  checked={state === 2 ? true : false}
+                  checked={state.count === 2 ? true : false}
                   inputProps={{ "aria-label": "controlled" }}
                   onChange={() => {
-                    setState(2);
+                    setState({ count: 2, photoUrl: "/photoTruba/133pnd117.jpg", price: 2300 });
                   }}
                 />
                 <Box>Металлические трубы Ø133мм + ПНД труба Ø117мм (Цена за метр - 2600 руб.)</Box>
               </Box>
               <Box sx={classes.checkBoxItem}>
                 <Checkbox
-                  checked={state === 3 ? true : false}
+                  checked={state.count === 3 ? true : false}
                   onChange={() => {
-                    setState(3);
+                    setState({ count: 3, photoUrl: "/photoTruba/159.jpg", price: 2800 });
                   }}
                   inputProps={{ "aria-label": "controlled" }}
                 />
@@ -47,9 +47,9 @@ export const BurenieCalc: FC<IProps> = () => {
               </Box>
               <Box sx={classes.checkBoxItem}>
                 <Checkbox
-                  checked={state === 4 ? true : false}
+                  checked={state.count === 4 ? true : false}
                   onChange={() => {
-                    setState(4);
+                    setState({ count: 4, photoUrl: "/photoTruba/159125.jpg", price: 3000 });
                   }}
                   inputProps={{ "aria-label": "controlled" }}
                 />
@@ -57,9 +57,9 @@ export const BurenieCalc: FC<IProps> = () => {
               </Box>
               <Box sx={classes.checkBoxItem}>
                 <Checkbox
-                  checked={state === 5 ? true : false}
+                  checked={state.count === 5 ? true : false}
                   onChange={() => {
-                    setState(5);
+                    setState({ count: 5, photoUrl: "/photoTruba/npvh125.jpg", price: 2200 });
                   }}
                   inputProps={{ "aria-label": "controlled" }}
                 />
@@ -67,9 +67,9 @@ export const BurenieCalc: FC<IProps> = () => {
               </Box>
               <Box sx={classes.checkBoxItem}>
                 <Checkbox
-                  checked={state === 6 ? true : false}
+                  checked={state.count === 6 ? true : false}
                   onChange={() => {
-                    setState(6);
+                    setState({ count: 6, photoUrl: "/photoTruba/npvh125_90.jpg", price: 2400 });
                   }}
                   inputProps={{ "aria-label": "controlled" }}
                 />
@@ -93,7 +93,7 @@ export const BurenieCalc: FC<IProps> = () => {
           <Box sx={classes.photoGeneralSection}>
             <Box sx={classes.photo}>
               <Image
-                src="/photoTruba/133.jpg"
+                src={state.photoUrl}
                 alt={"image"}
                 layout={"fill"}
                 objectFit="contain"
@@ -101,6 +101,7 @@ export const BurenieCalc: FC<IProps> = () => {
                 quality={100}
               />
             </Box>
+            <Box sx={{ textAlign: "center", fontWeight: 600, fontSize: "25px" }}>{`Итого ${slider * state.price} рублей`}</Box>
           </Box>
         </Box>
       </Box>
