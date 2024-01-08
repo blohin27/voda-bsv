@@ -31,6 +31,8 @@ export const UslugiPage: FC<IProps> = () => {
                 <UslugiItem title={"Ремонт скважины"} photo={"/photo/1t.jpg"} />
               </Box>
             )}
+          </Box>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box onClick={changePokaz} sx={{ ...classes.button, backgroundColor: `${pokaz ? "grey" : COLOR_ORANGE}` }}>
               {pokaz ? "Свернуть" : " Показать больше"}
             </Box>
