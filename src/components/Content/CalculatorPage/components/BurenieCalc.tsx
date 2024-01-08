@@ -81,8 +81,8 @@ export const BurenieCalc: FC<IProps> = () => {
                 size="small"
                 defaultValue={10}
                 aria-label="Small"
-                onChange={(event) => {
-                  setSlider(event?.target?.value);
+                onChange={(event, value, activeThumb) => {
+                  setSlider(activeThumb);
                 }}
                 min={5}
                 max={150}
