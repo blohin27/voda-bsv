@@ -5,7 +5,7 @@ import { Montserrat } from "next/font/google";
 import Box from "@mui/material/Box";
 import { ClassesSx } from "@/theme/theme";
 import Image from "next/image";
-import { COLOR_BLUE, COLOR_BLUE_HOVER, COLOR_ORANGE } from "@/const";
+import { COLOR_BLUE, COLOR_BLUE_HOVER, COLOR_MILK, COLOR_ORANGE } from "@/const";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {
@@ -55,8 +55,10 @@ export const ServiceItem: FC<IProps> = ({ title, desc, photo }) => {
 const classes: ClassesSx = {
   content: {
     width: "100%",
+    cursor: "pointer",
     height: "100%",
-    backgroundColor: "#e7f7ff",
+    backgroundColor: "#d6d6d6",
+    // backgroundColor: "white",
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",

@@ -7,6 +7,7 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 import { UslugiItem } from "@/components/Content/UslugiPage/UslugiItem";
+import { COLOR_MILK } from "@/const";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {}
@@ -134,6 +135,7 @@ const classes: ClassesSx = {
     flexDirection: "column",
     maxWidth: "1200px",
     margin: "0 auto",
+    backgroundColor: "white",
     // marginLeft: "16px",
     // marginRight: "16px",
   },

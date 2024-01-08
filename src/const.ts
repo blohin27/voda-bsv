@@ -1,5 +1,5 @@
-// export const COLOR_MILK = "#fcfbf9";
-export const COLOR_MILK = "#edfaff";
+export const COLOR_MILK = "#fcfbf9";
+// export const COLOR_MILK = "#edfaff";
 export const COLOR_ORANGE = "#fe6c36";
 export const COLOR_BLUE_HOVER = "#1876d1";
 export const COLOR_BLUE_SECTION = "#eaf6fd";
