@@ -1,28 +1,33 @@
 import RootLayout from "@/pages/RootLayout";
-import Box from "@mui/material/Box";
-import Image from "next/image";
-import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/PromoSectionGeneralPage";
 import { IsDev } from "@/components/isDev/IsDev";
-import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { Montserrat } from "next/font/google";
-import { ServicesAll } from "@/components/ServicesAll/Services";
 import React from "react";
-import { ClassesSx } from "@/theme/theme";
 import { HeaderSite } from "../components/header/HeaderSite/HeaderSite";
 import { ContentGeneralPage } from "@/components/Content/GeneralPage/GeneralPage";
 import { FooterPage } from "@/components/Footer/FooterPage/FooterPage";
-import { UslugiPage } from "@/components/Content/UslugiPage/UslugiPage";
+import Head from "next/head";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <IsDev>
-      <RootLayout>
-        <HeaderSite />
-        <ContentGeneralPage />
-        <FooterPage />
-      </RootLayout>
-    </IsDev>
+    <>
+      <Head>
+        <title>Ремонт и обслуживание скважины на воду в Московской области</title>
+        <meta name="description" content="Ремонт скважины на воду в Москве и Подмосковье" />
+        <meta name="keywords" content="ключевое слово 1, ключевое слово 2" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preload" href="your-script.js" as="script" />
+      </Head>
+      <IsDev>
+        <RootLayout>
+          <HeaderSite />
+          <ContentGeneralPage />
+          <FooterPage />
+        </RootLayout>
+      </IsDev>
+    </>
   );
 }

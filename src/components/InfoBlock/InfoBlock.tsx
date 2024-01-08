@@ -6,6 +6,9 @@ import classNames from "classnames";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { InfoItem } from "@/components/InfoBlock/InfoItem";
+import { FcComboChart } from "react-icons/fc";
+import { FcBullish } from "react-icons/fc";
+
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface Props {}
@@ -15,9 +18,21 @@ export const InfoBlocks: FC<Props> = () => {
       <Box sx={classes.sectionWrapper}>
         <Box sx={classes.sections}>
           <Box sx={classes.infoItems}>
-            <InfoItem />
-            <InfoItem />
-            <InfoItem />
+            <InfoItem
+              title={"9+лет"}
+              titleSub={"Эффективной работы в сфере водоснабжения "}
+              icon={<FcComboChart style={{ fontSize: "100px", color: "#fe6c36" }} />}
+            />
+            <InfoItem
+              title={"450+"}
+              titleSub={"За 2023 год мы восстановили воду более чем в 450 домах "}
+              icon={<FcBullish style={{ fontSize: "100px", color: "#fe6c36" }} />}
+            />
+            <InfoItem
+              title={"10+"}
+              titleSub={"Победили более чем в 10 тендерах на сервисное обслуживание "}
+              icon={<FcComboChart style={{ fontSize: "100px", color: "#fe6c36" }} />}
+            />
           </Box>
         </Box>
       </Box>
@@ -28,6 +43,7 @@ export const InfoBlocks: FC<Props> = () => {
 const classes: ClassesSx = {
   root: {
     display: "flex",
+    justifyContent: "center",
     maxWidth: "1200px",
     margin: "0 auto",
   },
@@ -37,7 +53,7 @@ const classes: ClassesSx = {
     marginRight: "16px",
     backgroundColor: "white",
     boxSizing: "border-box",
-    padding: "25px",
+    padding: "15px",
     boxShadow: "0px 0px 26px 0px rgba(102, 102, 102, 0.75)",
     borderRadius: "10px",
     "@media (max-width:600px)": {
@@ -51,8 +67,7 @@ const classes: ClassesSx = {
   },
   infoItems: {
     display: "flex",
-    justifyContent: "space-around",
-    flexWrap: "wrap",
+    justifyContent: "center",
     width: "100%",
     "@media (max-width:600px)": {
       flexDirection: "column",

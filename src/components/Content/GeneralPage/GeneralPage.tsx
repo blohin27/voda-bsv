@@ -22,6 +22,7 @@ import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
 import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
 import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 import { RayonObsl } from "@/components/RayonObsl/RayonObsl";
+import { Onas } from "@/components/ONas/Onas";
 
 export const ContentGeneralPage = () => {
   return (
@@ -29,6 +30,9 @@ export const ContentGeneralPage = () => {
       <BannerPromo />
       <Box mt={-6}>
         <InfoBlocks />
+      </Box>
+      <Box mt={8}>
+        <Onas />
       </Box>
       <Box mt={8}>
         <WhatTypeService />

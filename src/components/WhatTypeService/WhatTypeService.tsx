@@ -3,56 +3,113 @@ import React, { FC } from "react";
 import Image from "next/image";
 import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/PromoSectionGeneralPage";
 import { ClassesSx } from "@/theme/theme";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { COLOR_BLUE, COLOR_BLUE_HOVER, COLOR_BLUE_SECTION } from "@/const";
 
 interface IProps {}
 export const WhatTypeService: FC<IProps> = () => {
   return (
-    <>
+    <Box sx={classesStyle.content}>
       <Box sx={classesStyle.titleObject}>Какие объекты в Москве и Московской области мы обслуживаем</Box>
-
       <Box sx={classesStyle.sectionObslujAll}>
         <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
+          <Box sx={classesStyle.sectionImg}>
+            <Image
+              src={"/photo/photoObjectObslug/snt.jpg"}
+              alt={"image"}
+              layout={"fill"}
+              // width={600}
+              // height={400}
+              objectFit="cover"
+              objectPosition="center center" // По умолчанию 'center', но может быть изменено
+              quality={100}
+            />
           </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+          <Box sx={{ ...classesStyle.titleSub }}>СНТ и ИЖС</Box>
         </Box>
         <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
+          <Box sx={classesStyle.sectionImg}>
+            <Image
+              src={"/photo/photoObjectObslug/home.jpg"}
+              alt={"image"}
+              layout={"fill"}
+              // width={600}
+              // height={400}
+              objectFit="cover"
+              objectPosition="center center" // По умолчанию 'center', но может быть изменено
+              quality={100}
+            />
           </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+          <Box sx={{ ...classesStyle.titleSub }}>Частные дома</Box>
         </Box>
         <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
+          <Box sx={classesStyle.sectionImg}>
+            <Image
+              src={"/photo/photoObjectObslug/tc.jpg"}
+              alt={"image"}
+              layout={"fill"}
+              // width={600}
+              // height={400}
+              objectFit="cover"
+              objectPosition="center center" // По умолчанию 'center', но может быть изменено
+              quality={100}
+            />
           </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+          <Box sx={{ ...classesStyle.titleSub }}>Торговые центры</Box>
         </Box>
         <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
+          <Box sx={classesStyle.sectionImg}>
+            <Image
+              src={"/photo/photoObjectObslug/predpri.jpg"}
+              alt={"image"}
+              layout={"fill"}
+              // width={600}
+              // height={400}
+              objectFit="cover"
+              objectPosition="center center" // По умолчанию 'center', но может быть изменено
+              quality={100}
+            />
           </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+          <Box sx={{ ...classesStyle.titleSub }}>Предприятия</Box>
         </Box>
         <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
+          <Box sx={classesStyle.sectionImg}>
+            <Image
+              src={"/photo/photoObjectObslug/globus.jpg"}
+              alt={"image"}
+              layout={"fill"}
+              // width={600}
+              // height={400}
+              objectFit="cover"
+              objectPosition="center center" // По умолчанию 'center', но может быть изменено
+              quality={100}
+            />
           </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+          <Box sx={{ ...classesStyle.titleSub }}>Розничные сети</Box>
         </Box>
         <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.imgItem}>
-            <img src={"/icons/_.svg"} />
+          <Box sx={classesStyle.sectionImg}>
+            <Image
+              src={"/photo/photoObjectObslug/zapravka.jpg"}
+              alt={"image"}
+              layout={"fill"}
+              // width={600}
+              // height={400}
+              objectFit="cover"
+              objectPosition="center center" // По умолчанию 'center', но может быть изменено
+              quality={100}
+            />
           </Box>
-          <Box style={{ textAlign: "center" }}>Квартиры</Box>
+          <Box sx={{ ...classesStyle.titleSub }}>Заправочные станции</Box>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 
 const classesStyle: ClassesSx = {
+  content: { backgroundColor: COLOR_BLUE_SECTION },
   sectionHeaderSite: {
     display: "flex",
     justifyContent: "space-between",
@@ -61,6 +118,57 @@ const classesStyle: ClassesSx = {
     margin: "0 auto",
     marginTop: "15px",
     marginBottom: "12px",
+  },
+  sectionImg: {
+    display: "flex",
+    position: "relative",
+    width: "270px",
+    height: "270px",
+    alignSelf: "center",
+    "@media (max-width:1040px)": {
+      width: "400px",
+      height: "270px",
+    },
+    "@media (max-width:980px)": {
+      width: "350px",
+      height: "270px",
+    },
+    "@media (max-width:860px)": {
+      width: "320px",
+      height: "270px",
+    },
+    "@media (max-width:800px)": {
+      width: "290px",
+      height: "270px",
+    },
+    "@media (max-width:780px)": {
+      width: "250px",
+      height: "230px",
+    },
+    "@media (max-width:670px)": {
+      width: "200px",
+      height: "180px",
+    },
+    "@media (max-width:570px)": {
+      width: "400px",
+      height: "180px",
+    },
+    "@media (max-width:520px)": {
+      width: "380px",
+      height: "180px",
+    },
+    "@media (max-width:490px)": {
+      width: "360px",
+      height: "180px",
+    },
+    "@media (max-width:470px)": {
+      width: "270px",
+      height: "180px",
+    },
+    "@media (max-width:400px)": {
+      width: "240px",
+      height: "150px",
+    },
   },
   setcionGeneralPageBanner: {
     width: "100%",
@@ -74,6 +182,7 @@ const classesStyle: ClassesSx = {
       height: "350px",
     },
   },
+  titleSub: { fontSize: "18px", fontWeight: 600, textAlign: "center", marginTop: "10px" },
   sectionWhite: {
     background: "linear-gradient(to right, black, black 20%, rgba(0, 0, 0, 30%) 80%)",
     position: "absolute",
@@ -124,18 +233,18 @@ const classesStyle: ClassesSx = {
     marginTop: "30px",
     display: "flex",
     flexWrap: "wrap",
-    width: "100%",
-    justifyContent: "space-between",
+
+    justifyContent: "center",
+    gap: "30px",
   },
   sectionObslujItem: {
+    backgroundColor: "white",
+    borderRadius: "15px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    minWidth: "270px",
     boxShadow: "2px 5px 45px -28px rgba(0, 0, 0, 1)",
-    borderRadius: "15px",
-    padding: "15px 10px",
-    marginBottom: "40px",
+    padding: "20px",
   },
   imgItem: {
     textAlign: "center",

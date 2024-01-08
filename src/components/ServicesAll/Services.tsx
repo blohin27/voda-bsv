@@ -6,6 +6,7 @@ import { ServiceItem } from "@/components/ServicesAll/component/ServiceItem/Serv
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
+import { UslugiItem } from "@/components/Content/UslugiPage/UslugiItem";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {}
@@ -52,31 +53,17 @@ export const ServicesAll: FC<IProps> = () => {
         <Box sx={classes.contentItems}>
           {statePult === "пульт1" && (
             <>
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem /> <ServiceItem />
-              <ServiceItem />
+              <ServiceItem title={"Ремонт скважины"} photo={"/photo/1t.jpg"} />
             </>
           )}
-          {statePult === "пульт2" && (
-            <>
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-            </>
-          )}
+          {statePult === "пульт2" && <></>}
           {statePult === "пульт3" && (
             <>
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
+              {/*<ServiceItem />*/}
+              {/*<ServiceItem />*/}
+              {/*<ServiceItem />*/}
+              {/*<ServiceItem />*/}
+              {/*<ServiceItem />*/}
             </>
           )}
         </Box>

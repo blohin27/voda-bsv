@@ -9,7 +9,7 @@ interface IProps {
   sizeLogoHome?: string;
 }
 
-export const LogoGeneralVodaBsv: FC<IProps> = ({ sizeText = "30px", sizeLogoHome = "50px" }) => {
+export const LogoVodaBsv: FC<IProps> = ({ sizeText = "30px", sizeLogoHome = "50px" }) => {
   return (
     <Box sx={classes.menu_logo}>
       <Box sx={{ ...classes.img_logo, height: sizeLogoHome, width: sizeLogoHome }} display={"flex"} position={"relative"} id={"11111"}>
@@ -32,6 +32,7 @@ export const LogoGeneralVodaBsv: FC<IProps> = ({ sizeText = "30px", sizeLogoHome
 
 const classes: ClassesSx = {
   menu_logo: {
+    whiteSpace: "nowrap",
     display: "flex",
     justifyItems: "center",
     alignItems: "center",
@@ -55,11 +56,10 @@ const classes: ClassesSx = {
     cursor: "pointer",
     marginLeft: "10px",
     letterSpacing: "3px",
-
     paddingTop: "3px",
     paddingBottom: "3px",
-    "@media (max-width: 930px)": {
-      fontSize: "20px",
+    "@media (max-width:600px)": {
+      fontSize: "28px",
     },
   },
   text_deviz: {
