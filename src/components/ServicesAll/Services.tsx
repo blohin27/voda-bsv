@@ -28,7 +28,7 @@ export const ServicesAll: FC<IProps> = () => {
           sx={classes.pultItem}
           style={statePult === "пульт1" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
         >
-          Все услуги
+          Ремонт и чистка
         </Box>
         <Box
           onClick={() => {
@@ -37,7 +37,7 @@ export const ServicesAll: FC<IProps> = () => {
           sx={classes.pultItem}
           style={statePult === "пульт2" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
         >
-          Для физ. лиц
+          Монтаж и обслуживание
         </Box>
         <Box
           onClick={() => {
@@ -46,24 +46,50 @@ export const ServicesAll: FC<IProps> = () => {
           sx={classes.pultItem}
           style={statePult === "пульт3" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
         >
-          Для юр. лиц
+          Водоочистка
+        </Box>
+        <Box
+          onClick={() => {
+            changePult("пульт4");
+          }}
+          sx={classes.pultItem}
+          style={statePult === "пульт4" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
+        >
+          Канализация
         </Box>
       </Box>
       <Box sx={classes.wrapperItems} mb={10}>
         <Box sx={classes.contentItems}>
           {statePult === "пульт1" && (
             <>
-              <ServiceItem title={"Ремонт скважины"} photo={"/photo/1t.jpg"} />
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+              <ServiceItem
+                photo={"/photoNew/testImage.jpg"}
+                title={"Ремонт скважины"}
+                desc={"о избавим от ила и песка Быстро избавим от ила и песка Быстро избавим от ила и песка"}
+              />{" "}
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
             </>
           )}
-          {statePult === "пульт2" && <></>}
+          {statePult === "пульт2" && (
+            <>
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+            </>
+          )}
           {statePult === "пульт3" && (
             <>
-              {/*<ServiceItem />*/}
-              {/*<ServiceItem />*/}
-              {/*<ServiceItem />*/}
-              {/*<ServiceItem />*/}
-              {/*<ServiceItem />*/}
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+            </>
+          )}
+          {statePult === "пульт4" && (
+            <>
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
             </>
           )}
         </Box>
@@ -94,10 +120,10 @@ const classes: ClassesSx = {
     },
   },
   contentItems: {
-    gap: "10px",
+    gap: "20px",
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     "@media (max-width:600px)": {
       flexWrap: "nowrap",
       overflowX: "auto",
@@ -113,6 +139,7 @@ const classes: ClassesSx = {
   },
   pultServiceItems: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "center",
     "& > :first-child": {
       borderBottomLeftRadius: "5px",
@@ -136,7 +163,12 @@ const classes: ClassesSx = {
     backgroundColor: "white",
     flex: "1 0 auto",
     justifyContent: "center",
+    textAlign: "center",
     maxWidth: "250px",
+    mminWidth: "150px",
+    "@media (max-width:800px)": {
+      width: "50%",
+    },
   },
   title: {
     display: "flex",
