@@ -31,7 +31,7 @@ export const InfoBlocks: FC<Props> = () => {
             <InfoItem
               title={"10+"}
               titleSub={"Победили более чем в 10 тендерах на сервисное обслуживание "}
-              icon={<FcComboChart style={{ fontSize: "100px", color: "#fe6c36" }} />}
+              icon={<FcComboChart style={{ fontSize: "120px", color: "#fe6c36" }} />}
             />
           </Box>
         </Box>
@@ -67,7 +67,7 @@ const classes: ClassesSx = {
   },
   infoItems: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-around",
     width: "100%",
     "@media (max-width:600px)": {
       flexDirection: "column",

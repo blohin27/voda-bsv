@@ -19,7 +19,7 @@ export const InfoItem: FC<IProps> = ({ title, titleSub, icon }) => {
   return (
     <Box sx={classes.infoItem} id={"icon"}>
       {icon}
-      <Box style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      <Box style={{ display: "flex", flexDirection: "column", justifyContent: "center", marginLeft: "10px" }}>
         <Box sx={classes.sectionPromoTitle} className={montserrat.className}>
           {title}
         </Box>
@@ -30,14 +30,29 @@ export const InfoItem: FC<IProps> = ({ title, titleSub, icon }) => {
 };
 
 const classes: ClassesSx = {
+  // infoItem: {
+  //   width: "29%",
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   textAlign: "center",
+  //   maxWidth: "300px",
+  //   alignItems: "center",
+  //   "@media (max-width:950px)": {},
+  //   "@media (max-width:600px)": {
+  //     flexDirection: "row",
+  //     width: "100%",
+  //   },
+  // },
   infoItem: {
     width: "29%",
     display: "flex",
-    flexDirection: "column",
-    textAlign: "center",
-    maxWidth: "300px",
-    alignItems: "center",
-    "@media (max-width:950px)": {},
+
+    alignItems: "stretch",
+    "@media (max-width:950px)": {
+      flexDirection: "column",
+      textAlign: "center",
+      alignItems: "center",
+    },
     "@media (max-width:600px)": {
       flexDirection: "row",
       width: "100%",
