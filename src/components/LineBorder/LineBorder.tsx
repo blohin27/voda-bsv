@@ -18,8 +18,6 @@ const classes: ClassesSx = {
   root: {},
   wrapper: {},
   content: {
-    marginTop: "60px",
-    marginBottom: "30px",
     height: "2px",
     backgroundColor: "#09a4eb",
     width: "100%",

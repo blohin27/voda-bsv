@@ -5,13 +5,13 @@ import { PromoSectionGeneralPage } from "@/components/PromoSectionGeneralPage/Pr
 import { ClassesSx } from "@/theme/theme";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { COLOR_BLUE, COLOR_BLUE_HOVER, COLOR_BLUE_SECTION } from "@/const";
+import { COLOR_BLACK, COLOR_BLUE, COLOR_BLUE_HOVER, COLOR_BLUE_SECTION, CONST_TITLE } from "@/const";
 
 interface IProps {}
 export const WhatTypeService: FC<IProps> = () => {
   return (
     <Box sx={classesStyle.content}>
-      <Box sx={classesStyle.titleObject}>Какие объекты в Москве и Московской области мы обслуживаем</Box>
+      <Box sx={classesStyle.titleObject}>Какие объекты мы обслуживаем</Box>
       <Box sx={classesStyle.sectionObslujAll}>
         <Box sx={classesStyle.sectionObslujItem}>
           <Box sx={classesStyle.sectionImg}>
@@ -220,12 +220,37 @@ const classesStyle: ClassesSx = {
     lineHeight: "30px",
   },
   titleObject: {
-    maxWidth: "1200px",
-    margin: "0 auto",
-    textAlign: "center",
+    marginTop: "60px",
+    paddingTop: "80px",
+    marginBottom: "30px",
+    fontSize: "48px",
+    color: COLOR_BLACK,
     fontWeight: 700,
-    fontSize: "42px",
-    color: "#362c1d",
+    textAlign: "center",
+    "@media (max-width: 1200px)": {
+      fontSize: "48px",
+      marginTop: "30px",
+      paddingTop: "60px",
+      marginBottom: "30px",
+    },
+    "@media (max-width: 950px)": {
+      fontSize: "38px",
+      marginTop: "40px",
+      paddingTop: "40px",
+      marginBottom: "25px",
+    },
+    "@media (max-width: 640px)": {
+      fontSize: "32px",
+      marginTop: "30px",
+      paddingTop: "30px",
+      marginBottom: "20px",
+    },
+    "@media (max-width: 480px)": {
+      fontSize: "27px",
+      marginTop: "20px",
+      paddingTop: "30px",
+      marginBottom: "15px",
+    },
   },
   sectionObslujAll: {
     maxWidth: "1000px",

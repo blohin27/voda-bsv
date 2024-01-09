@@ -7,7 +7,7 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 import { UslugiItem } from "@/components/Content/UslugiPage/UslugiItem";
-import { COLOR_MILK } from "@/const";
+import { COLOR_BLUE_SECTION, COLOR_MILK, CONST_TITLE } from "@/const";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {}
@@ -20,7 +20,7 @@ export const ServicesAll: FC<IProps> = () => {
 
   return (
     <Box sx={classes.wrapper} className={montserrat.className}>
-      <TitleComponent title={"Услуги по водоснабжению"} />
+      <Box sx={classes.titleGeneral}> Услуги по водоснабжению</Box>
       <Box sx={classes.pultServiceItems} mb={3}>
         <Box
           onClick={() => {
@@ -103,6 +103,7 @@ const classes: ClassesSx = {
   wrapperItems: {
     maxWidth: "1080px",
     margin: "0 auto",
+    paddingBottom: "60px",
     "@media (max-width:1090px)": {
       maxWidth: "805px",
       margin: "0 auto",
@@ -110,6 +111,7 @@ const classes: ClassesSx = {
     "@media (max-width:840px)": {
       maxWidth: "535px",
       margin: "0 auto",
+      paddingBottom: "40px",
     },
     "@media (max-width:540px)": {
       maxWidth: "100%",
@@ -117,13 +119,27 @@ const classes: ClassesSx = {
     },
     "@media (max-width:440px)": {
       maxWidth: "100%",
+      paddingBottom: "30px",
       margin: "0 auto",
+    },
+  },
+  titleGeneral: {
+    ...CONST_TITLE,
+    marginTop: "40px",
+    paddingTop: "40px",
+    "@media (max-width: 1200px)": {
+      fontSize: "48px",
+      marginTop: "40px",
+      paddingTop: "40px",
+      marginBottom: "30px",
     },
   },
   contentItems: {
     gap: "20px",
     display: "flex",
     flexWrap: "wrap",
+    // backgroundColor: COLOR_MILK,
+    backgroundColor: COLOR_BLUE_SECTION,
     justifyContent: "center",
     "@media (max-width:600px)": {
       flexWrap: "nowrap",
@@ -135,7 +151,6 @@ const classes: ClassesSx = {
     flexDirection: "column",
     maxWidth: "1200px",
     margin: "0 auto",
-    backgroundColor: "white",
     // marginLeft: "16px",
     // marginRight: "16px",
   },
@@ -156,8 +171,9 @@ const classes: ClassesSx = {
   },
   pultItem: {
     transition: "all 0.6s ease",
+    borderRadius: "5px",
     cursor: "pointer",
-    border: "2px solid #fe6c36",
+    border: "1px solid #fe6c36",
     paddingTop: "10px",
     paddingBottom: "10px",
     display: "flex",

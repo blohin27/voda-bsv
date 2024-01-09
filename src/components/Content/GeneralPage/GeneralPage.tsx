@@ -23,6 +23,7 @@ import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscripti
 import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 import { RayonObsl } from "@/components/RayonObsl/RayonObsl";
 import { Onas } from "@/components/ONas/Onas";
+import { COLOR_BLUE_SECTION, COLOR_MILK } from "@/const";
 
 export const ContentGeneralPage = () => {
   return (
@@ -31,28 +32,28 @@ export const ContentGeneralPage = () => {
       <Box mt={-6}>
         <InfoBlocks />
       </Box>
-      <Box mt={8}>
+      <Box>
         <Onas />
       </Box>
-      <Box mt={8}>
+      <Box>
         <WhatTypeService />
       </Box>
-      <Box mt={4}>
+      <Box sx={{ backgroundColor: COLOR_BLUE_SECTION }}>
         <ServicesAll />
       </Box>
-      <Box mt={10}>
+      <Box>
         <OurAdvantages />
       </Box>
-      <Box mt={5} mb={5}>
+      <Box>
         <Steps />
       </Box>
       <Box>
         <KvalWorker />
       </Box>
-      <LineBorder />
       <NashyRaboty />
-      <LineBorder />
+
       <NashyRabotyTemplate
+        textFirst
         title={"Чистка скважины"}
         glubina={"30 метров"}
         time={"3 часа"}
@@ -61,7 +62,6 @@ export const ContentGeneralPage = () => {
         photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
         price={"30 000 рублей"}
       />
-      <LineBorder />
       <NashyRaboty3 />
       <ButtonCentr title={"Больше кейсов"} />
       <Banner />

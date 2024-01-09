@@ -5,13 +5,16 @@ import { Typography } from "@mui/material";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
+import { CONST_TITLE } from "@/const";
 
 interface IProps {}
 
 export const OurAdvantages: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
-      <TitleComponent title={"Что мы можем предложить?"} title2={"Наши услуги:"}></TitleComponent>
+      <Box sx={{ ...classes.title }}>
+        Что мы можем предложить? <br /> Наши услуги:
+      </Box>
       <Box sx={classes.wrapperAdv}>
         <Box sx={classes.sectionForItems}>
           <Box sx={classes.item}>
@@ -89,15 +92,10 @@ export const OurAdvantages: FC<IProps> = () => {
 };
 
 const classes: ClassesSx = {
-  titleRoot: {
-    color: "#362c1d",
-    fontSize: "40px",
-    textAlign: "center",
-    fontWeight: "700",
-    lineHeight: "1xp",
-    "@media (max-width:600px)": {
-      fontSize: "30px",
-    },
+  title: {
+    ...CONST_TITLE,
+    marginTop: "40px",
+    paddingTop: "40px",
   },
   root: {
     display: "flex",

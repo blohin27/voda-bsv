@@ -5,6 +5,8 @@ import Image from "next/image";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
+import { COLOR_BLACK, CONST_TITLE } from "@/const";
+import { LineBorder } from "@/components/LineBorder/LineBorder";
 
 interface IProps {}
 export const NashyRaboty: FC<IProps> = () => {
@@ -15,8 +17,9 @@ export const NashyRaboty: FC<IProps> = () => {
 
   return (
     <Box sx={classes.root}>
+      <LineBorder />
       <Box sx={classes.wrapper}>
-        <TitleComponent title={"Наши работы"} />
+        <Box sx={classes.title}>Наши работы</Box>
         <Box sx={classes.content}>
           <Box sx={classes.sectionImg}>
             <Image
@@ -95,7 +98,44 @@ export const NashyRaboty: FC<IProps> = () => {
 };
 
 const classes: ClassesSx = {
-  root: {},
+  root: {
+    marginTop: "60px",
+    "@media (max-width:700px)": {
+      marginTop: "40px",
+    },
+  },
+  title: {
+    marginTop: "20px",
+    marginBottom: "30px",
+    fontSize: "48px",
+    color: COLOR_BLACK,
+    fontWeight: 700,
+    textAlign: "center",
+    "@media (max-width: 1200px)": {
+      fontSize: "48px",
+      marginTop: "20px",
+
+      marginBottom: "30px",
+    },
+    "@media (max-width: 950px)": {
+      fontSize: "38px",
+      marginTop: "20px",
+
+      marginBottom: "25px",
+    },
+    "@media (max-width: 640px)": {
+      fontSize: "32px",
+      marginTop: "20px",
+
+      marginBottom: "20px",
+    },
+    "@media (max-width: 480px)": {
+      fontSize: "27px",
+      marginTop: "20px",
+
+      marginBottom: "15px",
+    },
+  },
   wrapper: {
     maxWidth: "1200px",
     margin: "0 auto",
@@ -132,12 +172,7 @@ const classes: ClassesSx = {
     flexDirection: "column",
     gap: "10px",
   },
-  titleRoot: {
-    fontSize: "38px",
-    fontWeight: "700",
-    textAlign: "center",
-    marginBottom: "20px",
-  },
+
   titleSectionText: {
     fontSize: "24px",
     fontWeight: "700",

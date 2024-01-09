@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
+import { COLOR_BLACK } from "@/const";
 
 interface IProps {}
 
@@ -12,7 +13,7 @@ export const Steps: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper} className={montserrat.className}>
-        <TitleComponent title={"4 шага до результата"}></TitleComponent>
+        <Box sx={classes.title}> 4 шага до результата</Box>
         <Box sx={classes.content} mt={10}>
           <Box sx={classes.itemCard}>
             <Box sx={classes.circle}>
@@ -34,7 +35,7 @@ export const Steps: FC<IProps> = () => {
             <Box sx={classes.circle}>
               <Box sx={classes.circleContent}>
                 <Box style={{ position: "relative", width: "100%", height: "100%" }}>
-                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>1</Box>
+                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>2</Box>
                 </Box>
               </Box>
             </Box>
@@ -50,7 +51,7 @@ export const Steps: FC<IProps> = () => {
             <Box sx={classes.circle}>
               <Box sx={classes.circleContent}>
                 <Box style={{ position: "relative", width: "100%", height: "100%" }}>
-                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>1</Box>
+                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>3</Box>
                 </Box>
               </Box>
             </Box>
@@ -66,7 +67,7 @@ export const Steps: FC<IProps> = () => {
             <Box sx={classes.circle}>
               <Box sx={classes.circleContent}>
                 <Box style={{ position: "relative", width: "100%", height: "100%" }}>
-                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>1</Box>
+                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>4</Box>
                 </Box>
               </Box>
             </Box>
@@ -86,15 +87,51 @@ export const Steps: FC<IProps> = () => {
 
 const classes: ClassesSx = {
   root: {
+    marginTop: "50px",
+    paddingTop: "40px",
+    paddingBottom: "70px",
+
     backgroundColor: "#fcfbf9",
-    paddingTop: "60px",
-    paddingBottom: "60px",
+    "@media (max-width: 1200px)": {
+      marginTop: "50px",
+      paddingTop: "40px",
+    },
+    "@media (max-width: 950px)": {
+      marginTop: "40px",
+      paddingTop: "40px",
+      paddingBottom: "40px",
+    },
+    "@media (max-width: 640px)": {
+      marginTop: "30px",
+      paddingTop: "30px",
+    },
+    "@media (max-width: 480px)": {
+      marginTop: "20px",
+      paddingTop: "30px",
+      paddingBottom: "30px",
+    },
   },
   title: {
+    marginTop: "10px",
+    paddingTop: "10px",
+    marginBottom: "60px",
+    fontSize: "52px",
+    color: COLOR_BLACK,
+    fontWeight: 700,
     textAlign: "center",
-    fontSize: "35px",
-    fontWeight: "700",
-    marginBottom: "80px",
+    "@media (max-width: 1200px)": {
+      fontSize: "48px",
+    },
+    "@media (max-width: 950px)": {
+      fontSize: "38px",
+      marginBottom: "50px",
+    },
+    "@media (max-width: 640px)": {
+      fontSize: "32px",
+    },
+    "@media (max-width: 480px)": {
+      fontSize: "27px",
+    },
   },
   circle: {
     // top: "-40px",

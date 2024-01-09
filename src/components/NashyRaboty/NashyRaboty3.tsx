@@ -93,7 +93,12 @@ export const NashyRaboty3: FC<IProps> = () => {
 };
 
 const classes: ClassesSx = {
-  root: {},
+  root: {
+    marginTop: "60px",
+    "@media (max-width:700px)": {
+      marginTop: "40px",
+    },
+  },
   wrapper: {
     maxWidth: "1200px",
     margin: "0 auto",

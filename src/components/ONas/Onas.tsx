@@ -3,7 +3,7 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { LogoGeneralVodaBsv } from "@/components/LogoVB/LogoGeneralVodaBsv";
 import { LogoVodaBsv } from "@/components/LogoVB/LogoVodaBsv";
-import { IP } from "@/const";
+import { COLOR_BLACK, COLOR_BLUE, CONST_TITLE, IP } from "@/const";
 
 interface IProps {}
 export const Onas: FC<IProps> = () => {
@@ -53,7 +53,39 @@ const classes: ClassesSx = {
   root: {},
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { margin: "0 16px 0 16px" },
-  title: { fontSize: "35px", fontWeight: 700, textAlign: "center" },
+  title: {
+    marginTop: "40px",
+    paddingTop: "40px",
+    marginBottom: "30px",
+    fontSize: "48px",
+    color: COLOR_BLACK,
+    fontWeight: 700,
+    textAlign: "center",
+    "@media (max-width: 1200px)": {
+      fontSize: "48px",
+      marginTop: "20px",
+      paddingTop: "60px",
+      marginBottom: "30px",
+    },
+    "@media (max-width: 950px)": {
+      fontSize: "38px",
+      marginTop: "40px",
+      paddingTop: "40px",
+      marginBottom: "25px",
+    },
+    "@media (max-width: 640px)": {
+      fontSize: "32px",
+      marginTop: "30px",
+      paddingTop: "30px",
+      marginBottom: "20px",
+    },
+    "@media (max-width: 480px)": {
+      fontSize: "27px",
+      marginTop: "20px",
+      paddingTop: "30px",
+      marginBottom: "15px",
+    },
+  },
   photo: {
     flexDirection: "column",
     display: "flex",

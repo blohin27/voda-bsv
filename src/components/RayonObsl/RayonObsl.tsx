@@ -14,14 +14,14 @@ export const RayonObsl: FC<IProps> = () => {
     <Box sx={classes.root}>
       <Box>
         <Box>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Box sx={classes.title}>Районы обслуживания</Box>
+          </Box>
           <Box sx={classes.setcionGeneralPageBanner}>
             <Image src="/photoNew/rayony.jpg" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
             <Box sx={classes.sectionWhite} />
             <Box sx={classes.wrapper}>
               <Box sx={classes.content}>
-                <Box sx={{ display: "flex", justifyContent: "center" }}>
-                  <Box sx={classes.title}>Районы обслуживания</Box>
-                </Box>
                 <Box sx={classes.blockItems}>
                   {/*<Box sx={classes.block2}>*/}
                   {/*  <Box sx={classes.block4}>*/}

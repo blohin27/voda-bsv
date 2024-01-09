@@ -4,13 +4,14 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
+import { COLOR_BLACK } from "@/const";
 
 interface IProps {}
 export const KvalWorker: FC<IProps> = () => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
-        <TitleComponent title={"Квалифицированные сотрудники"} />
+        <Box sx={classes.title}> Квалифицированные сотрудники</Box>
         <Box sx={classes.content} className={montserrat.className}>
           <Box sx={classes.sectionImg}>
             <Image
@@ -62,17 +63,38 @@ const classes: ClassesSx = {
     maxWidth: "1200px",
     margin: "0 auto",
   },
-  titleWorker: {
-    textAlign: "center",
-    color: "#362c1d",
+
+  title: {
+    marginTop: "40px",
+    paddingTop: "40px",
+    marginBottom: "50px",
+    fontSize: "48px",
+    color: COLOR_BLACK,
     fontWeight: 700,
-    fontSize: "40px",
-    marginBottom: "40px",
-    "@media (max-width:600px)": {
-      fontSize: "28px",
+    textAlign: "center",
+    "@media (max-width: 1200px)": {
+      fontSize: "48px",
+      marginTop: "20px",
+      paddingTop: "60px",
+      marginBottom: "30px",
     },
-    "@media (max-width:400px)": {
-      fontSize: "22px",
+    "@media (max-width: 950px)": {
+      fontSize: "38px",
+      marginTop: "40px",
+      paddingTop: "40px",
+      marginBottom: "25px",
+    },
+    "@media (max-width: 640px)": {
+      fontSize: "32px",
+      marginTop: "30px",
+      paddingTop: "30px",
+      marginBottom: "20px",
+    },
+    "@media (max-width: 480px)": {
+      fontSize: "27px",
+      marginTop: "20px",
+      paddingTop: "30px",
+      marginBottom: "15px",
     },
   },
   subTitle: {

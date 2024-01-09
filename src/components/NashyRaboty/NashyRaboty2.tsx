@@ -4,6 +4,7 @@ import { ClassesSx } from "@/theme/theme";
 import Image from "next/image";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import { LineBorder } from "@/components/LineBorder/LineBorder";
 
 interface IProps {
   title?: string;
@@ -18,15 +19,6 @@ interface IProps {
 export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFirst, time, glubina, kolvoPersonal, price }) => {
   const [index, setIndex] = useState(0);
   const maxIndex = photo.length - 1;
-
-  // useEffect(() => {
-  //   let timer = setInterval(() => {
-  //     changeImgRight();
-  //   }, 4000);
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, [index]);
 
   const changeImgRight = () => {
     if (maxIndex > index) {
@@ -178,7 +170,12 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
 };
 
 const classes: ClassesSx = {
-  root: {},
+  root: {
+    marginTop: "60px",
+    "@media (max-width:700px)": {
+      marginTop: "40px",
+    },
+  },
   wrapper: {
     maxWidth: "1200px",
     margin: "0 auto",
