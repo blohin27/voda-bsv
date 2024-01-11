@@ -51,7 +51,7 @@ const classes: ClassesSx = {
     color: "#352c1d",
     zIndex: 2,
     "@media (max-width:900px)": {
-      top: "70px",
+      top: "40px",
       minWidth: "500px",
     },
     "@media (max-width:800px)": {
@@ -67,6 +67,7 @@ const classes: ClassesSx = {
     },
   },
   setcionPromoTitle: {
+    marginTop: "30px",
     color: "white",
     fontWeight: 785,
     fontSize: "50px",
@@ -74,19 +75,27 @@ const classes: ClassesSx = {
     letterSpacing: "2px",
     marginBottom: "10px",
     "@media (max-width:900px)": {
+      marginTop: "30px",
       fontSize: "40px",
       lineHeight: "50px",
       letterSpacing: "2px",
-      marginBottom: "30px",
+      marginBottom: "20px",
     },
     "@media (max-width:600px)": {
       fontSize: "30px",
       lineHeight: "30px",
       letterSpacing: "2px",
       marginBottom: "5px",
+      marginTop: "10px",
     },
     "@media (max-width:500px)": {
-      fontSize: "22px",
+      fontSize: "30px",
+      lineHeight: "30px",
+      letterSpacing: "2px",
+      marginBottom: "5px",
+    },
+    "@media (max-width:400px)": {
+      fontSize: "25px",
       lineHeight: "30px",
       letterSpacing: "2px",
       marginBottom: "5px",

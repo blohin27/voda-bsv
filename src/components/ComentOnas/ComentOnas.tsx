@@ -17,7 +17,7 @@ export const ComentOnas: FC<IProps> = () => {
             Отзывы о нас:
           </Box>
           <Box sx={classes.obOcen}>
-            <Box style={{ fontSize: "100px", fontWeight: "600" }}>4,5</Box>
+            <Box style={{ fontSize: "100px", fontWeight: "600" }}>4,7</Box>
             <Box>
               <img src="photoNew/4.5stars.jpg" alt="Your Alt Text" />
             </Box>

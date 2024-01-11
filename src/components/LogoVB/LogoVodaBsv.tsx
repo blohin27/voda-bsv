@@ -23,7 +23,7 @@ export const LogoVodaBsv: FC<IProps> = ({ sizeText = "30px", sizeLogoHome = "50p
         />
       </Box>
       <Box sx={{ ...classes.text_logo, fontSize: sizeText }}>
-        <Box>voda-bsv.ru</Box>
+        <Box sx={{ ...classes.voda }}>voda-bsv.ru</Box>
         <Box sx={classes.text_deviz}>вода в каждый дом</Box>
       </Box>
     </Box>
@@ -38,6 +38,36 @@ const classes: ClassesSx = {
     alignItems: "center",
     borderTop: "2px solid #66cdfd ",
     borderBottom: "2px solid #66cdfd",
+  },
+  voda: {
+    fontSize: "55px",
+    "@media (max-width:1050px)": {
+      fontSize: "45px",
+    },
+    "@media (max-width:950px)": {
+      fontSize: "40px",
+    },
+    "@media (max-width:900px)": {
+      fontSize: "55px",
+    },
+    "@media (max-width:600px)": {
+      fontSize: "40px",
+    },
+    "@media (max-width:450px)": {
+      fontSize: "35px",
+    },
+    "@media (max-width:410px)": {
+      fontSize: "30px",
+    },
+    "@media (max-width:380px)": {
+      fontSize: "28px",
+    },
+    "@media (max-width:360px)": {
+      fontSize: "26px",
+    },
+    "@media (max-width:340px)": {
+      fontSize: "24px",
+    },
   },
   img_logo: {
     height: "50px",

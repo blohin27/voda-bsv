@@ -1,9 +1,10 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { LogoGeneralVodaBsv } from "@/components/LogoVB/LogoGeneralVodaBsv";
 import { LogoVodaBsv } from "@/components/LogoVB/LogoVodaBsv";
 import { COLOR_BLACK, COLOR_BLUE, CONST_TITLE, IP } from "@/const";
+import Image from "next/image";
 
 interface IProps {}
 export const Onas: FC<IProps> = () => {
@@ -14,21 +15,34 @@ export const Onas: FC<IProps> = () => {
           <Box sx={classes.title}>О НАС</Box>
           <Box sx={classes.section}>
             <Box sx={classes.photo}>
-              <LogoVodaBsv sizeText={"50px"} sizeLogoHome={"80px"} />
-              <Box sx={classes.titleReqvizit} mt={2}>
-                Реквизиты
+              <Box sx={classes.sectionWhite} />
+              <Box>
+                <Image
+                  src="/photo/fonOnas.png"
+                  alt={"image"}
+                  layout={"fill"}
+                  objectFit="cover"
+                  objectPosition="center center" // По умолчанию 'center', но может быть изменено
+                  quality={100}
+                />
               </Box>
-              <Box mt={2}>
-                <Box sx={classes.titleItemReqvizit}>Полное наименоваие: </Box>
-                <Box sx={classes.itemValueReqvizit}> {IP.name}</Box>
-              </Box>
-              <Box mt={1}>
-                <Box sx={classes.titleItemReqvizit}> ИНН:</Box>
-                <Box sx={classes.itemValueReqvizit}>{IP.INN}</Box>
-              </Box>
-              <Box mt={1}>
-                <Box sx={classes.titleItemReqvizit}> ОГРН:</Box>
-                <Box sx={classes.itemValueReqvizit}> {IP.OGRNIP}</Box>
+              <Box sx={{ zIndex: 3, marginLeft: "5px" }}>
+                <LogoVodaBsv sizeText={"50px"} sizeLogoHome={"80px"} />
+                {/*<Box sx={classes.titleReqvizit} mt={2}>*/}
+                {/*  Реквизиты*/}
+                {/*</Box>*/}
+                <Box mt={2}>
+                  <Box sx={classes.titleItemReqvizit}>Полное наименоваие: </Box>
+                  <Box sx={classes.itemValueReqvizit}> {IP.name}</Box>
+                </Box>
+                <Box mt={1}>
+                  <Box sx={classes.titleItemReqvizit}> ИНН:</Box>
+                  <Box sx={classes.itemValueReqvizit}>{IP.INN}</Box>
+                </Box>
+                <Box mt={1}>
+                  <Box sx={classes.titleItemReqvizit}> ОГРН:</Box>
+                  <Box sx={classes.itemValueReqvizit}> {IP.OGRNIP}</Box>
+                </Box>
               </Box>
             </Box>
             <Box sx={classes.textSection}>
@@ -62,9 +76,9 @@ const classes: ClassesSx = {
   root: {},
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { margin: "0 16px 0 16px" },
-  titleReqvizit: { fontWeight: 700, fontSize: "25px", color: COLOR_BLACK },
-  titleItemReqvizit: { display: "inline", color: COLOR_BLACK, fontWeight: 600 },
-  itemValueReqvizit: { display: "inline", fontWeight: 400, fontSize: "16px" },
+  titleReqvizit: { fontWeight: 700, fontSize: "25px" },
+  titleItemReqvizit: { display: "inline", fontWeight: 700, fontSize: "19px", letterSpacing: "1px" },
+  itemValueReqvizit: { display: "inline", fontWeight: 500, fontSize: "19px", letterSpacing: "1px" },
   title: {
     marginTop: "40px",
     paddingTop: "40px",
@@ -100,12 +114,14 @@ const classes: ClassesSx = {
   },
   photo: {
     flexDirection: "column",
+    position: "relative",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     width: "50%",
     "@media (max-width: 900px)": {
       width: "100%",
+      height: "250px",
     },
   },
   textSection: {
@@ -124,6 +140,19 @@ const classes: ClassesSx = {
     gap: "20px",
     "@media (max-width: 900px)": {
       flexDirection: "column",
+    },
+  },
+
+  sectionWhite: {
+    zIndex: "2",
+    background: "linear-gradient(to left, white, white 100%, rgba(0, 0, 0, 10%) 90%)",
+    opacity: 0.6,
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    "@media (max-width:900px)": {
+      backgroundColor: "black",
+      opacity: 0.65,
     },
   },
 };
