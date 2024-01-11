@@ -209,7 +209,7 @@ const classesStyle: ClassesSx = {
     backgroundColor: "#fcfbf9",
     padding: "40px 60px",
     borderRadius: "10px",
-    boxShadow: "1px 2px 45px -22px rgba(0, 0, 0, 0.75)",
+    boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
   },
   sectionText: {
     display: "flex",
@@ -268,7 +268,7 @@ const classesStyle: ClassesSx = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    boxShadow: "2px 5px 45px -28px rgba(0, 0, 0, 1)",
+    boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
     padding: "20px",
   },
   imgItem: {

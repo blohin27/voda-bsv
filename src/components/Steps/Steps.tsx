@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
-import { COLOR_BLACK } from "@/const";
+import { COLOR_BLACK, COLOR_BLUE_SECTION } from "@/const";
 
 interface IProps {}
 
@@ -91,7 +91,8 @@ const classes: ClassesSx = {
     paddingTop: "40px",
     paddingBottom: "70px",
 
-    backgroundColor: "#fcfbf9",
+    // backgroundColor: "#fcfbf9",
+    backgroundColor: COLOR_BLUE_SECTION,
     "@media (max-width: 1200px)": {
       marginTop: "50px",
       paddingTop: "40px",

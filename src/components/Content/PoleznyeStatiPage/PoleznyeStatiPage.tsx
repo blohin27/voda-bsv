@@ -28,7 +28,7 @@ export const PoleznyeStatiPage: FC<IProps> = () => {
 };
 
 const classes: ClassesSx = {
-  root: { backgroundColor: "#ededed" },
+  root: { backgroundColor: "white" },
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { margin: "0 16px 0 16px" },
   titlePage: { fontWeight: "700", fontSize: "40px", textAlign: "center" },

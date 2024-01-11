@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import { Box } from "@mui/material";
 import { ClassesSx } from "@/theme/theme";
-import { COLOR_BLACK } from "@/const";
+import { COLOR_BLACK, COLOR_BLUE_SECTION } from "@/const";
 
 interface IProps {}
 export const QuesResonse: FC<IProps> = () => {
@@ -108,7 +108,7 @@ export const QuesResonse: FC<IProps> = () => {
 const classes: ClassesSx = {
   root: { marginBottom: "30px" },
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
-  itemAccord: { backgroundColor: "#fcfbf9" },
+  itemAccord: { backgroundColor: COLOR_BLUE_SECTION },
   title: {
     marginTop: "40px",
     paddingTop: "40px",

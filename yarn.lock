@@ -524,13 +524,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pbe/react-yandex-maps@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.npmjs.org/@pbe/react-yandex-maps/-/react-yandex-maps-1.2.5.tgz"
-  integrity sha512-cBojin5e1fPx9XVCAqHQJsCnHGMeBNsP0TrNfpWCrPFfxb30ye+JgcGr2mn767Gbr1d+RufBLRiUcX2kaiAwjQ==
-  dependencies:
-    "@types/yandex-maps" "2.1.29"
-
 "@popperjs/core@^2.11.6", "@popperjs/core@^2.11.8":
   version "2.11.8"
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
@@ -547,6 +540,16 @@
   integrity sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==
   dependencies:
     tslib "^2.4.0"
+
+"@tsparticles/engine@^3.0.2":
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/@tsparticles/engine/-/engine-3.0.3.tgz"
+  integrity sha512-1yGci0gMF9uBIVPXBYekORq8UYf8Twz3Xy/ZWWVCFWeVh90Amdns3fad2pf2HicZe8HZqpa1cN2Io1MOHAlO8w==
+
+"@tsparticles/react@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@tsparticles/react/-/react-3.0.0.tgz"
+  integrity sha512-hjGEtTT1cwv6BcjL+GcVgH++KYs52bIuQGW3PWv7z3tMa8g0bd6RI/vWSLj7p//NZ3uTjEIeilYIUPBh7Jfq/Q==
 
 "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.5"
@@ -638,11 +641,6 @@
   version "0.0.3"
   resolved "https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz"
   integrity sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==
-
-"@types/yandex-maps@2.1.29":
-  version "2.1.29"
-  resolved "https://registry.npmjs.org/@types/yandex-maps/-/yandex-maps-2.1.29.tgz"
-  integrity sha512-nuibRWj3RU/9KXlCzTrRtDE+n6V9l7NbT9JakicqZ5OXIdwyb6blvV2Uwn6lB58WYm3DSUDP2I2AWlnWMc8z2w==
 
 "@typescript-eslint/parser@^5.4.2 || ^6.0.0":
   version "6.14.0"
@@ -2519,7 +2517,7 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@*, "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.5 || ^17.0.0 || ^18.0.0", "react@^16.x || ^17.x || ^18.x", "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0", react@^18, react@^18.2.0, "react@>= 0.14.7", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=0.14.0, react@>=16.6.0, react@>=16.8, react@>=16.8.0:
+react@*, "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.5 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0", react@^18, react@^18.2.0, "react@>= 0.14.7", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=0.14.0, react@>=16.6.0, react@>=16.8, react@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

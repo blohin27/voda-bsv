@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 import { Swiper as SwiperClass } from "swiper/types";
-import { COLOR_BLACK } from "@/const";
+import { COLOR_BLACK, COLOR_BLUE_SECTION } from "@/const";
 
 export const OurClients = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
@@ -110,8 +110,9 @@ const classes: ClassesSx = {
     },
   },
   desc: {
-    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-    backgroundColor: "#fcfbf9",
+    boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
+    // backgroundColor: "#fcfbf9",
+    backgroundColor: COLOR_BLUE_SECTION,
     padding: "50px",
     lineHeight: "30px",
     "@media (max-width:960px)": {

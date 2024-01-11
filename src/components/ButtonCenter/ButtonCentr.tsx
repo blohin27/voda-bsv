@@ -16,9 +16,11 @@ export const ButtonCentr: FC<IProps> = ({ title }) => {
       onClick={() => {
         change();
       }}
+      mt={4}
+      mb={9}
     >
       <Box sx={classes.wrapper}>
-        <Box sx={classes.content}>{title}</Box>;
+        <Box sx={classes.content}>{title}</Box>
       </Box>
     </Box>
   );
@@ -32,7 +34,7 @@ const classes: ClassesSx = {
     padding: "10px 15px 10px 15px",
     color: "white",
     fontWeight: "700",
-    fontSize: "25px",
+    fontSize: "20px",
     backgroundColor: "#fd6c36",
     borderRadius: "5px",
     "@media (max-width:400px)": {

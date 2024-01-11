@@ -1,10 +1,12 @@
 import Box from "@mui/material/Box";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Image from "next/image";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import { LineBorder } from "@/components/LineBorder/LineBorder";
+import { COLOR_BLACK } from "@/const";
+import { useMediaQuery } from "@mui/material";
 
 interface IProps {
   title?: string;
@@ -19,6 +21,13 @@ interface IProps {
 export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFirst, time, glubina, kolvoPersonal, price }) => {
   const [index, setIndex] = useState(0);
   const maxIndex = photo.length - 1;
+  const px780 = useMediaQuery("(max-width:780px)");
+  const _textFirst = useMemo(() => {
+    if (!px780) {
+      return textFirst;
+    }
+    return false;
+  }, [px780, textFirst]);
 
   const changeImgRight = () => {
     if (maxIndex > index) {
@@ -34,13 +43,11 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
       setIndex(maxIndex);
     }
   };
-  console.log("indexPosle", index);
-  console.log("maxIndex", maxIndex);
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}>
-          {textFirst ? (
+          {_textFirst ? (
             <>
               <Box sx={classes.sectionText}>
                 <Box sx={classes.titleSectionText}>{title}</Box>
@@ -75,7 +82,7 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
                     </Box>
                     {price}
                   </Box>
-                  <Box display={"flex"}>
+                  <Box display={"flex"} justifyContent={"center"}>
                     <Box sx={classes.zakaz}>Заказать</Box>
                   </Box>
                 </Box>
@@ -156,7 +163,7 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
                     </Box>
                     {price}
                   </Box>
-                  <Box display={"flex"}>
+                  <Box display={"flex"} justifyContent={"center"}>
                     <Box sx={classes.zakaz}>Заказать</Box>
                   </Box>
                 </Box>
@@ -171,9 +178,9 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
 
 const classes: ClassesSx = {
   root: {
-    marginTop: "60px",
-    "@media (max-width:700px)": {
-      marginTop: "40px",
+    color: COLOR_BLACK,
+    "@media (max-width:780px)": {
+      marginTop: "80px",
     },
   },
   wrapper: {
@@ -189,15 +196,18 @@ const classes: ClassesSx = {
     alignSelf: "center",
     "@media (max-width:780px)": {
       width: "70%",
+      height: "320px",
     },
     "@media (max-width:580px)": {
       width: "90%",
+      height: "300px",
     },
     "@media (max-width:400px)": {
       width: "100%",
     },
   },
   zakaz: {
+    marginTop: "10px",
     display: "flex",
     color: "white",
     padding: "10px 20px 10px 20px",
@@ -220,11 +230,13 @@ const classes: ClassesSx = {
     marginBottom: "20px",
   },
   titleSectionText: {
+    color: COLOR_BLACK,
     fontSize: "24px",
     fontWeight: "700",
-    textAlign: "left",
+    textAlign: "center",
     "@media (max-width:780px)": {
       textAlign: "center",
+      fontSize: "20px",
     },
   },
   content: {
@@ -234,6 +246,7 @@ const classes: ClassesSx = {
     gap: "30px",
     "@media (max-width:780px)": {
       flexDirection: "column",
+
       alignItems: "center",
     },
   },
@@ -244,7 +257,10 @@ const classes: ClassesSx = {
     left: "5px",
     top: "50%",
     backgroundColor: "#fd6c36",
-
+    opacity: 0.4,
+    "&: hover": {
+      opacity: 0.8,
+    },
     transform: "translate(0,-50%)",
     "&:active": {
       // Используйте одно двоеточие для псевдоклассов
@@ -253,6 +269,10 @@ const classes: ClassesSx = {
     },
   },
   rightButton: {
+    opacity: 0.4,
+    "&: hover": {
+      opacity: 0.8,
+    },
     cursor: "pointer",
     position: "absolute",
     backgroundColor: "#fd6c36",
@@ -272,6 +292,7 @@ const classes: ClassesSx = {
   sectionText: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
     width: "50%",
     "@media (max-width:780px)": {
       width: "70%",

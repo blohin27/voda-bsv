@@ -54,7 +54,7 @@ const classes: ClassesSx = {
     backgroundColor: "white",
     boxSizing: "border-box",
     padding: "15px",
-    boxShadow: "0px 0px 26px 0px rgba(102, 102, 102, 0.75)",
+    boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
     borderRadius: "10px",
     "@media (max-width:600px)": {
       padding: "12px",

@@ -3,6 +3,7 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import { data1, data2 } from "./data";
+import { CONST_TITLE } from "@/const";
 
 interface IProps {}
 export const PricePage: FC<IProps> = () => {
@@ -20,33 +21,13 @@ export const PricePage: FC<IProps> = () => {
       <Box>
         <Box>
           <Box sx={classes.setcionGeneralPageBanner}>
-            <Image src="/photoNew/testImage.jpg" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
+            <Image src="/photo/photoObjectObslug/mj.png" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
             <Box sx={classes.sectionWhite} />
             <Box sx={classes.wrapper}>
               <Box sx={classes.content}>
                 <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      fontSize: "35px",
-                      fontWeight: "700",
-                      textAlign: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    Цены на ремонт скважин
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      fontSize: "16px",
-                      fontWeight: "400",
-                      textAlign: "center",
-                      justifyContent: "center",
-                      maxWidth: "600px",
-                      margin: "0 auto",
-                    }}
-                  >
+                  <Box sx={{ ...classes.title }}>Цены на ремонт скважин</Box>
+                  <Box sx={{ ...classes.titleDesc }}>
                     Для быстрой навигации по странице используйте кнопки разделов или боковое меню. В них вы найдете подробное описание цен
                   </Box>
                   <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
@@ -55,12 +36,8 @@ export const PricePage: FC<IProps> = () => {
                     </Box>
                     <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
                     <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box> <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
                     <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
                     <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
-                    <Box sx={classes.buttonItem}>Чистка и ремонт</Box> <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
                     <Box sx={classes.buttonItem}>Чистка и ремонт</Box>
                   </Box>
                 </Box>
@@ -75,39 +52,15 @@ export const PricePage: FC<IProps> = () => {
                 <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
                   <thead>
                     <tr>
-                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
-                        Название услуги
-                      </th>
-                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
+                      <th style={{ ...classes.thStyle }}>Название услуги</th>
+                      <th style={{ ...classes.thStyle, width: "60%" }}>Цена</th>
                     </tr>
                   </thead>
                   <tbody>
                     {dataTableRem.map((item) => (
                       <tr key={item.name}>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.name}
-                        </td>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.price}
-                        </td>
+                        <td style={{ ...classes.tdStyle }}>{item.name}</td>
+                        <td style={{ ...classes.tdStyle }}>{item.price}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -121,177 +74,15 @@ export const PricePage: FC<IProps> = () => {
                 <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
                   <thead>
                     <tr>
-                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
-                        Название услуги
-                      </th>
-                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
+                      <th style={{ ...classes.thStyle }}>Название услуги</th>
+                      <th style={{ ...classes.thStyle, width: "60%" }}>Цена</th>
                     </tr>
                   </thead>
                   <tbody>
                     {dataTableRem.map((item) => (
                       <tr key={item.name}>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.name}
-                        </td>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.price}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </Box>
-            </Box>
-            <Box sx={classes.contenItemPrice}>
-              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
-              <Box sx={classes.contenManagement}></Box>
-              <Box sx={classes.table}>
-                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
-                  <thead>
-                    <tr>
-                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
-                        Название услуги
-                      </th>
-                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dataTableRem.map((item) => (
-                      <tr key={item.name}>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.name}
-                        </td>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.price}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </Box>
-            </Box>
-            <Box sx={classes.contenItemPrice}>
-              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
-              <Box sx={classes.contenManagement}></Box>
-              <Box sx={classes.table}>
-                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
-                  <thead>
-                    <tr>
-                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
-                        Название услуги
-                      </th>
-                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dataTableRem.map((item) => (
-                      <tr key={item.name}>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.name}
-                        </td>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.price}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </Box>
-            </Box>
-            <Box sx={classes.contenItemPrice}>
-              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
-              <Box sx={classes.contenManagement}></Box>
-              <Box sx={classes.table}>
-                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
-                  <thead>
-                    <tr>
-                      <th style={{ width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>
-                        Название услуги
-                      </th>
-                      <th style={{ width: "40%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" }}>Цена</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dataTableRem.map((item) => (
-                      <tr key={item.name}>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.name}
-                        </td>
-                        <td
-                          style={{
-                            textAlign: "center",
-                            backgroundColor: "#fcfbf9",
-                            border: "1px solid #dedede",
-                            height: "35px",
-                            fontSize: "14px",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item.price}
-                        </td>
+                        <td style={{ ...classes.tdStyle }}>{item.name}</td>
+                        <td style={{ ...classes.tdStyle }}>{item.price}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -307,6 +98,19 @@ export const PricePage: FC<IProps> = () => {
 
 const classes: ClassesSx = {
   root: {},
+  tdStyle: { textAlign: "center", backgroundColor: "#fcfbf9", border: "1px solid #dedede", height: "35px", fontSize: "14px", fontWeight: "400" },
+  thStyle: { width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" },
+  title: { ...CONST_TITLE, marginTop: "40px", paddingTop: "40px", color: "white" },
+  titleDesc: {
+    display: "flex",
+    fontSize: "16px",
+    fontWeight: "400",
+    textAlign: "center",
+    justifyContent: "center",
+    maxWidth: "600px",
+    margin: "0 auto",
+    color: "white",
+  },
   buttonsNavigation: { display: "flex", justifyContent: "center", gap: "20px" },
   titleContentItem: {
     display: "flex",
@@ -366,16 +170,16 @@ const classes: ClassesSx = {
     width: "100%",
 
     display: "flex",
-    height: "350px",
+    height: "500px",
     position: "relative",
     "@media (max-width:800px)": {
-      height: "850px",
+      // height: "50px",
     },
   },
   sectionWhite: {
     // background: "linear-gradient(to left, white, white 100%, rgba(255,255,255 10%) 100%)",
-    background: "linear-gradient(to left, white, white 100%, rgba(0, 0, 0, 10%) 90%)",
-    opacity: 0.95,
+    background: "linear-gradient(to left, black, black 100%, rgba(0, 0, 0, 10%) 90%)",
+    opacity: 0.6,
     position: "absolute",
     width: "100%",
     height: "100%",

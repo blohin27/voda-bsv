@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import React, { FC, useState } from "react";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 import { Montserrat } from "next/font/google";
@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 import { UslugiItem } from "@/components/Content/UslugiPage/UslugiItem";
 import { COLOR_BLUE_SECTION, COLOR_MILK, CONST_TITLE } from "@/const";
+import { PoleznyeStatiItem } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiItem";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {}
@@ -63,13 +64,12 @@ export const ServicesAll: FC<IProps> = () => {
         <Box sx={classes.contentItems}>
           {statePult === "пульт1" && (
             <>
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-              <ServiceItem
-                photo={"/photoNew/testImage.jpg"}
-                title={"Ремонт скважины"}
-                desc={"о избавим от ила и песка Быстро избавим от ила и песка Быстро избавим от ила и песка"}
-              />{" "}
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
             </>
           )}
           {statePult === "пульт2" && (

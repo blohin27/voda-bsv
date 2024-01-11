@@ -175,6 +175,7 @@ const classes: ClassesSx = {
 
   titleSectionText: {
     fontSize: "24px",
+    textAlign: "center",
     fontWeight: "700",
     textAlign: "left",
     "@media (max-width:780px)": {
@@ -224,6 +225,8 @@ const classes: ClassesSx = {
   sectionLeftAndRight: {},
 
   sectionText: {
+    border: "2px solid red",
+    justifyContent: "center",
     display: "flex",
     flexDirection: "column",
     width: "50%",

@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import { ButtonCentr } from "@/components/ButtonCenter/ButtonCentr";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { IoStarSharp } from "react-icons/io5";
+import { COLOR_BLUE_SECTION } from "@/const";
 // import { IoStarSharp } from "react-icons/io5";
 
 interface IProps {}
@@ -98,7 +99,8 @@ const classes: ClassesSx = {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
-    backgroundColor: "#fcfbf9",
+    // backgroundColor: "#fcfbf9",
+    backgroundColor: COLOR_BLUE_SECTION,
     padding: "20px 25px 25px 25px",
     fontSize: "14px",
     width: "20%",
@@ -120,8 +122,9 @@ const classes: ClassesSx = {
     padding: "30px",
     textAlign: "center",
     borderRadius: "15px",
-    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+    boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
     backgroundColor: "#fcfbf9",
+    // backgroundColor: COLOR_BLUE_SECTION,
     marginLeft: "100px",
     "@media (max-width:1100px)": {
       flexDirection: "column",

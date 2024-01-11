@@ -40,7 +40,16 @@ export const PoleznyeStatiItem: FC<IProps> = (props) => {
 };
 
 const classes: ClassesSx = {
-  item: { display: "flex", flexDirection: "column", width: "25%", minWidth: "200px", backgroundColor: "white", borderRadius: "10px", overflow: "hidden" },
+  item: {
+    display: "flex",
+    flexDirection: "column",
+    width: "25%",
+    minWidth: "200px",
+    backgroundColor: "white",
+    borderRadius: "10px",
+    overflow: "hidden",
+    boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
+  },
   sectionImage: {},
   photo: {
     width: "100%",

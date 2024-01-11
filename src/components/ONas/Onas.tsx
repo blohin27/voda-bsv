@@ -15,26 +15,35 @@ export const Onas: FC<IProps> = () => {
           <Box sx={classes.section}>
             <Box sx={classes.photo}>
               <LogoVodaBsv sizeText={"50px"} sizeLogoHome={"80px"} />
-              <Box> Полное наименоваие:{IP.name}</Box>
-              <Box> ИНН:{IP.INN}</Box>
-              <Box> ОГРН:{IP.OGRNIP}</Box>
+              <Box sx={classes.titleReqvizit} mt={2}>
+                Реквизиты
+              </Box>
+              <Box mt={2}>
+                <Box sx={classes.titleItemReqvizit}>Полное наименоваие: </Box>
+                <Box sx={classes.itemValueReqvizit}> {IP.name}</Box>
+              </Box>
+              <Box mt={1}>
+                <Box sx={classes.titleItemReqvizit}> ИНН:</Box>
+                <Box sx={classes.itemValueReqvizit}>{IP.INN}</Box>
+              </Box>
+              <Box mt={1}>
+                <Box sx={classes.titleItemReqvizit}> ОГРН:</Box>
+                <Box sx={classes.itemValueReqvizit}> {IP.OGRNIP}</Box>
+              </Box>
             </Box>
             <Box sx={classes.textSection}>
               <Box display={"flex"} flexDirection={"column"}>
                 <Box sx={classes.titleTextSection}>Кто мы?</Box>
-                <Box sx={classes.descTextSection}>
-                  Мы — команда опытных специалистов, занимающихся ремонтом и обслуживанием скважин на воду. Наша миссия — обеспечивать надежный и безопасный
-                  доступ к воде для всех наших клиентов.
-                </Box>
+                <Box sx={classes.descTextSection}>Мы — команда опытных специалистов, занимающихся ремонтом и обслуживанием скважин на воду.</Box>
               </Box>
-              <Box display={"flex"} flexDirection={"column"}>
+              <Box display={"flex"} flexDirection={"column"} mt={1}>
                 <Box sx={classes.titleTextSection}> Чем мы занимаемся?</Box>
                 <Box sx={classes.descTextSection}>
-                  Наши услуги включают всесторонний ремонт и техническое обслуживание скважин. Мы используем передовое оборудование и технологии для обеспечения
-                  высокого качества работ и долговечности водных скважин.
+                  Наши услуги включают ремонт и техническое обслуживание скважин. Мы используем передовое оборудование и технологии для обеспечения высокого
+                  качества работ
                 </Box>
               </Box>
-              <Box display={"flex"} flexDirection={"column"}>
+              <Box display={"flex"} flexDirection={"column"} mt={1}>
                 <Box sx={classes.titleTextSection}> Почему нам доверяют?</Box>
                 <Box sx={classes.descTextSection}>
                   Благодаря многолетнему опыту и тщательному подходу к каждому проекту, мы завоевали доверие сотен клиентов. Мы гарантируем профессионализм,
@@ -53,6 +62,9 @@ const classes: ClassesSx = {
   root: {},
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { margin: "0 16px 0 16px" },
+  titleReqvizit: { fontWeight: 700, fontSize: "25px", color: COLOR_BLACK },
+  titleItemReqvizit: { display: "inline", color: COLOR_BLACK, fontWeight: 600 },
+  itemValueReqvizit: { display: "inline", fontWeight: 400, fontSize: "16px" },
   title: {
     marginTop: "40px",
     paddingTop: "40px",
@@ -104,8 +116,8 @@ const classes: ClassesSx = {
       width: "100%",
     },
   },
-  titleTextSection: { textAlign: "left", fontWeight: 700 },
-  descTextSection: { textAlign: "left", margin: "10px 10px" },
+  titleTextSection: { textAlign: "left", fontWeight: 700, fontSize: "24px", color: COLOR_BLACK },
+  descTextSection: { textAlign: "left", margin: "5px 5px", fontSize: "16px", fontWeight: 300, lineHeight: "25px" },
   section: {
     display: "flex",
     alignContent: "start",
