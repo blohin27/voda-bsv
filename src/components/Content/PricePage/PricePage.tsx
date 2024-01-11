@@ -21,12 +21,12 @@ export const PricePage: FC<IProps> = () => {
       <Box>
         <Box>
           <Box sx={classes.setcionGeneralPageBanner}>
-            <Image src="/photo/photoObjectObslug/mj.png" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
+            <Image src="/photo/photoObjectObslug/mj.png" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="50% 25%" quality={100} />
             <Box sx={classes.sectionWhite} />
             <Box sx={classes.wrapper}>
               <Box sx={classes.content}>
                 <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-                  <Box sx={{ ...classes.title }}>Цены на ремонт скважин</Box>
+                  <Box sx={{ ...classes.title, fontSize: "52px" }}>Цены на ремонт скважин</Box>
                   <Box sx={{ ...classes.titleDesc }}>
                     Для быстрой навигации по странице используйте кнопки разделов или боковое меню. В них вы найдете подробное описание цен
                   </Box>
@@ -98,8 +98,8 @@ export const PricePage: FC<IProps> = () => {
 
 const classes: ClassesSx = {
   root: {},
-  tdStyle: { textAlign: "center", backgroundColor: "#fcfbf9", border: "1px solid #dedede", height: "35px", fontSize: "14px", fontWeight: "400" },
-  thStyle: { width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "18px", fontWeight: "600" },
+  tdStyle: { textAlign: "center", backgroundColor: "#fcfbf9", border: "1px solid #dedede", height: "35px", fontSize: "16px", fontWeight: "400" },
+  thStyle: { width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "20px", fontWeight: "600" },
   title: { ...CONST_TITLE, marginTop: "40px", paddingTop: "40px", color: "white" },
   titleDesc: {
     display: "flex",
@@ -113,11 +113,9 @@ const classes: ClassesSx = {
   },
   buttonsNavigation: { display: "flex", justifyContent: "center", gap: "20px" },
   titleContentItem: {
-    display: "flex",
-    fontSize: "38px",
-    fontWeight: "700",
-    textAlign: "center",
-    justifyContent: "center",
+    ...CONST_TITLE,
+    marginTop: "40px",
+    paddingTop: "40px",
   },
   contenManagement: {
     margin: "0 auto",
@@ -170,7 +168,7 @@ const classes: ClassesSx = {
     width: "100%",
 
     display: "flex",
-    height: "500px",
+    height: "550px",
     position: "relative",
     "@media (max-width:800px)": {
       // height: "50px",
