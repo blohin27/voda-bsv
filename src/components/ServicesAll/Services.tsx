@@ -135,6 +135,7 @@ const classes: ClassesSx = {
     },
   },
   contentItems: {
+    margin: "0 16px 0 16px",
     gap: "20px",
     display: "flex",
     flexWrap: "wrap",

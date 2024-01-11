@@ -30,24 +30,11 @@ export const InfoItem: FC<IProps> = ({ title, titleSub, icon }) => {
 };
 
 const classes: ClassesSx = {
-  // infoItem: {
-  //   width: "29%",
-  //   display: "flex",
-  //   flexDirection: "column",
-  //   textAlign: "center",
-  //   maxWidth: "300px",
-  //   alignItems: "center",
-  //   "@media (max-width:950px)": {},
-  //   "@media (max-width:600px)": {
-  //     flexDirection: "row",
-  //     width: "100%",
-  //   },
-  // },
   infoItem: {
     width: "29%",
     display: "flex",
-
-    alignItems: "stretch",
+    alignItems: "flex-start",
+    justifyContent: "space-around",
     "@media (max-width:950px)": {
       flexDirection: "column",
       textAlign: "center",
@@ -70,6 +57,8 @@ const classes: ClassesSx = {
     },
   },
   sectionPromoTitle: {
+    width: "100%",
+    textAlign: "center",
     fontWeight: "700",
     fontSize: "40px",
     lineHeight: "50px",

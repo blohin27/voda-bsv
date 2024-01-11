@@ -29,9 +29,9 @@ export const InfoBlocks: FC<Props> = () => {
               icon={<FcBullish style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
             <InfoItem
-              title={"10+"}
-              titleSub={"Победили более чем в 10 тендерах на сервисное обслуживание "}
-              icon={<FcComboChart style={{ fontSize: "120px", color: "#fe6c36" }} />}
+              title={"450+"}
+              titleSub={"За 2023 год мы восстановили воду более чем в 450 домах "}
+              icon={<FcBullish style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
           </Box>
         </Box>
