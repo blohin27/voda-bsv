@@ -43,12 +43,18 @@ const classes: ClassesSx = {
   item: {
     display: "flex",
     flexDirection: "column",
-    width: "25%",
+    width: "30%",
     minWidth: "200px",
     backgroundColor: "white",
     borderRadius: "10px",
     overflow: "hidden",
     boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
+    "@media (max-width:650px)": {
+      width: "40%",
+    },
+    "@media (max-width:600px)": {
+      width: "80%",
+    },
   },
   sectionImage: {},
   photo: {

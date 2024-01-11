@@ -105,15 +105,15 @@ const classes: ClassesSx = {
     margin: "0 auto",
     paddingBottom: "60px",
     "@media (max-width:1090px)": {
-      maxWidth: "805px",
-      margin: "0 auto",
+      // maxWidth: "805px",
+      // margin: "0 auto",
     },
     "@media (max-width:840px)": {
-      maxWidth: "535px",
+      // maxWidth: "535px",
       margin: "0 auto",
       paddingBottom: "40px",
     },
-    "@media (max-width:540px)": {
+    "@media (max-width:640px)": {
       maxWidth: "100%",
       margin: "0 auto",
     },
@@ -143,7 +143,8 @@ const classes: ClassesSx = {
     justifyContent: "center",
     "@media (max-width:600px)": {
       flexWrap: "nowrap",
-      overflowX: "auto",
+      overflowX: "scroll",
+      justifyContent: "flex-start",
     },
   },
   wrapper: {

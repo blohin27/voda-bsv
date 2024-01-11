@@ -83,7 +83,6 @@ const classes: ClassesSx = {
   sectionItems: { display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "30px 20px" },
   setcionGeneralPageBannerImg: {
     width: "100%",
-
     display: "flex",
     height: "450px",
     position: "relative",
