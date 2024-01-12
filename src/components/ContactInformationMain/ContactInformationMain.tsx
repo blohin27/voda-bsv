@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { ClassesSx } from "@/theme/theme";
 import { Box, useMediaQuery } from "@mui/material";
-import { EMAIL, MOBILE_TELEPHONE } from "@/const";
+import { COLOR_BLACK, COLOR_ORANGE, EMAIL, MOBILE_TELEPHONE } from "@/const";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 
 interface IProps {}
@@ -48,9 +48,7 @@ export const ContactInformationMain: FC<IProps> = ({}) => {
       </Box>
       {!matches && (
         <Box style={{ textAlign: "center" }} ml={1}>
-          <span style={{ fontWeight: "900", color: "black" }}>
-            Режим работы
-          </span>
+          <span style={{ fontWeight: "700", color: COLOR_BLACK }}>Режим работы</span>
           <br /> ежедневно <br /> с 07:00 до 21:00
         </Box>
       )}
@@ -69,7 +67,7 @@ const classes: ClassesSx = {
     fontSize: "20px",
     fontWeight: "700",
     textAlign: "center",
-    color: "#352c1d",
+    color: COLOR_ORANGE,
     "@media (max-width: 200px)": {
       fontSize: "16px",
     },
