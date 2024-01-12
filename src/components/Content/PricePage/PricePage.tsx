@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import { data1, data2 } from "./data";
 import { CONST_TITLE } from "@/const";
+import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 
 interface IProps {}
 export const PricePage: FC<IProps> = () => {
@@ -49,44 +50,22 @@ export const PricePage: FC<IProps> = () => {
               <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
               <Box sx={classes.contenManagement}></Box>
               <Box sx={classes.table}>
-                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
-                  <thead>
-                    <tr>
-                      <th style={{ ...classes.thStyle }}>Название услуги</th>
-                      <th style={{ ...classes.thStyle, width: "60%" }}>Цена</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                <Table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell sx={{ ...classes.thStyle }}>Название услуги</TableCell>
+                      <TableCell sx={{ ...classes.thStyle, width: "60%" }}>Цена</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
                     {dataTableRem.map((item) => (
-                      <tr key={item.name}>
-                        <td style={{ ...classes.tdStyle }}>{item.name}</td>
-                        <td style={{ ...classes.tdStyle }}>{item.price}</td>
-                      </tr>
+                      <TableRow key={item.name}>
+                        <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
+                        <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
+                      </TableRow>
                     ))}
-                  </tbody>
-                </table>
-              </Box>
-            </Box>
-            <Box sx={classes.contenItemPrice}>
-              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
-              <Box sx={classes.contenManagement}></Box>
-              <Box sx={classes.table}>
-                <table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
-                  <thead>
-                    <tr>
-                      <th style={{ ...classes.thStyle }}>Название услуги</th>
-                      <th style={{ ...classes.thStyle, width: "60%" }}>Цена</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dataTableRem.map((item) => (
-                      <tr key={item.name}>
-                        <td style={{ ...classes.tdStyle }}>{item.name}</td>
-                        <td style={{ ...classes.tdStyle }}>{item.price}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                  </TableBody>
+                </Table>
               </Box>
             </Box>
           </Box>
