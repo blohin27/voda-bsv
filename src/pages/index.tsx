@@ -13,13 +13,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ремонт и обслуживание скважины на воду в Московской области</title>
-        <meta name="description" content="Ремонт скважины на воду в Москве и Подмосковье" />
-        <meta name="keywords" content="ключевое слово 1, ключевое слово 2" />
-        <meta name="robots" content="index, follow" />
+        <title>Заголовок вашей страницы</title>
+        <meta name="description" content="Описание вашей страницы" />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="http://voda-bsv.ru" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="BSV" />
+        <meta name="keywords" content="ключевое, слово, вашего, сайта" />
+        {/* Ссылки на ресурсы */}
+        <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preload" href="your-script.js" as="script" />
+        <link rel="preconnect" href="https://example.com" />
+        <link rel="stylesheet" href="/path/to/styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+        {/* Дополнительные элементы */}
       </Head>
       <IsDev>
         <RootLayout>
