@@ -100,15 +100,16 @@ const classes: ClassesSx = {
   subTitle: {
     color: "#362c1d",
     fontWeight: 700,
-    fontSize: "16px",
+    fontSize: "20px",
     marginBottom: "5px",
   },
   text: {
-    color: "#362c1d",
-    fontWeight: 400,
-    fontSize: "16px",
     lineHeight: "25px",
-    "@media (max-width:800px)": {
+    сolor: "#362c1d",
+    fontSize: "16px",
+    fontWeight: 400,
+    "@media (max-width:500px)": {
+      fontSize: "14px",
       lineHeight: "20px",
     },
   },

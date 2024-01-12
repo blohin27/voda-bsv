@@ -133,7 +133,7 @@ const classes: ClassesSx = {
     },
   },
   titleTextSection: { textAlign: "left", fontWeight: 700, fontSize: "24px", color: COLOR_BLACK },
-  descTextSection: { textAlign: "left", margin: "5px 5px", fontSize: "16px", fontWeight: 300, lineHeight: "25px" },
+  descTextSection: { textAlign: "left", margin: "5px 5px", fontSize: "16px", fontWeight: "400", lineHeight: "1.55" },
   section: {
     display: "flex",
     alignContent: "start",
