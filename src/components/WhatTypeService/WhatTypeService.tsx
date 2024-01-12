@@ -258,9 +258,8 @@ const classesStyle: ClassesSx = {
     marginTop: "30px",
     display: "flex",
     flexWrap: "wrap",
-
     justifyContent: "center",
-    gap: "30px",
+    // gap: "30px",
   },
   sectionObslujItem: {
     backgroundColor: "white",
@@ -270,6 +269,7 @@ const classesStyle: ClassesSx = {
     justifyContent: "center",
     boxShadow: "0px 5px 10px 2px rgba(34, 60, 80, 0.2)",
     padding: "20px",
+    margin: "10px",
   },
   imgItem: {
     textAlign: "center",
