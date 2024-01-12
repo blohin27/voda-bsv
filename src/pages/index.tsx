@@ -15,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Заголовок вашей страницы</title>
         <meta name="description" content="Описание вашей страницы" />
-        <meta charset="UTF-8" />
+        {/*<meta charset="UTF-8" />*/}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="http://voda-bsv.ru" />
         <meta name="robots" content="index, follow" />
