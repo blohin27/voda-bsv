@@ -1,12 +1,9 @@
 import React, { FC, useState } from "react";
-import classNames from "classnames";
-import styles from "./styles.module.scss";
 import { Montserrat } from "next/font/google";
 import { ServiceItem } from "@/components/ServicesAll/component/ServiceItem/ServiceItem";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
-import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
-import { UslugiItem } from "@/components/Content/UslugiPage/UslugiItem";
+
 import { COLOR_BLUE_SECTION, COLOR_MILK, CONST_TITLE } from "@/const";
 import { PoleznyeStatiItem } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiItem";
 const montserrat = Montserrat({ subsets: ["latin"] });

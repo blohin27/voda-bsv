@@ -1,3 +1,5 @@
+import { white } from "next/dist/lib/picocolors";
+
 export const COLOR_MILK = "#fcfbf9";
 export const COLOR_BLACK = "#352c1d";
 // export const COLOR_MILK = "#edfaff";
@@ -15,6 +17,8 @@ export const CONST_TITLE = {
   marginTop: "70px",
   paddingTop: "70px",
   marginBottom: "30px",
+  marginLeft: "16px",
+  marginRight: "16px",
   fontSize: "48px",
   color: COLOR_BLACK,
   fontWeight: 700,
@@ -42,5 +46,46 @@ export const CONST_TITLE = {
     marginTop: "20px",
     paddingTop: "30px",
     marginBottom: "15px",
+  },
+};
+
+//Использовать для загаловка на в качестве верхного элемента на странице
+export const CONST_TITLE_WITHOUT_MARGIN = {
+  fontSize: "48px",
+  color: "white",
+  fontWeight: 700,
+  textAlign: "center",
+  "@media (max-width: 1200px)": {
+    fontSize: "48px",
+  },
+  "@media (max-width: 950px)": {
+    fontSize: "38px",
+  },
+  "@media (max-width: 640px)": {
+    fontSize: "32px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "27px",
+  },
+};
+
+export const CONST_TITLE_FIRST_PAGE = {
+  fontSize: "35px",
+  marginTop: "40px",
+  marginBottom: "10px",
+  color: "white",
+  fontWeight: 700,
+  textAlign: "center",
+  "@media (max-width: 1200px)": {
+    fontSize: "35px",
+  },
+  "@media (max-width: 950px)": {
+    fontSize: "30px",
+  },
+  "@media (max-width: 640px)": {
+    fontSize: "24px",
+  },
+  "@media (max-width: 480px)": {
+    fontSize: "22px",
   },
 };

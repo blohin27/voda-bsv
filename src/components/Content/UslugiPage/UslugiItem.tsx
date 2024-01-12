@@ -10,17 +10,17 @@ interface IProps {
   link?: string;
 }
 export const UslugiItem: FC<IProps> = ({ title, photo }) => {
-  const [opacity, setOpacity] = useState(0.8);
+  const [opacity, setOpacity] = useState(0.5);
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
         <Box
           sx={classes.content}
           onMouseEnter={() => {
-            setOpacity(0);
+            setOpacity(0.2);
           }}
           onMouseLeave={() => {
-            setOpacity(0.7);
+            setOpacity(0.5);
           }}
         >
           <Box sx={{ ...classes.photoGeneralSection }}>
@@ -56,24 +56,24 @@ const classes: ClassesSx = {
     height: "300px",
     position: "relative",
     "@media (max-width:790px)": {
-      width: "600px",
+      width: "300px",
       height: "200px",
     },
     "@media (max-width:650px)": {
-      width: "550px",
+      width: "250px",
       height: "200px",
     },
     "@media (max-width:580px)": {
-      width: "450px",
-      height: "200px",
+      width: "200px",
+      height: "180px",
     },
 
     "@media (max-width:480px)": {
-      width: "400px",
+      width: "250px",
       height: "200px",
     },
     "@media (max-width:420px)": {
-      width: "300px",
+      width: "250px",
       height: "200px",
     },
     "@media (max-width:350px)": {
@@ -91,11 +91,25 @@ const classes: ClassesSx = {
     width: "100%",
     height: "100%",
 
-    "&:hover": {
-      color: COLOR_ORANGE,
+    // "&:hover": {
+    //   color: COLOR_ORANGE,
+    // },
+  },
+  textCard: {
+    display: "flex",
+    fontWeight: "700",
+    fontSize: "25px",
+    margin: "0 5px",
+    "@media (max-width:700px)": {
+      fontSize: "22px",
+    },
+    "@media (max-width:600px)": {
+      fontSize: "20px",
+    },
+    "@media (max-width:500px)": {
+      fontSize: "18px",
     },
   },
-  textCard: { display: "flex", fontWeight: "700", fontSize: "25px", margin: "0 5px" },
   sectionWhite: {
     background: "linear-gradient(to right, black, black 100%, rgba(0, 0, 0, 10%) 80%)",
 
