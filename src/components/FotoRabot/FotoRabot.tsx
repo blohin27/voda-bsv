@@ -19,12 +19,6 @@ export const FotoRabot: FC<IProps> = () => {
             <PhotoItem />
             <PhotoItem />
             <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
           </Box>
         </Box>
       </Box>
@@ -40,8 +34,8 @@ const PhotoItem = () => {
         alt={"image"}
         // layout={"fill"}
         layout="responsive"
-        height={200}
-        width={200}
+        height={300}
+        width={300}
         objectFit="cover"
         objectPosition="center center" // По умолчанию 'center', но может быть изменено
         quality={100}
@@ -90,20 +84,21 @@ const classes: ClassesSx = {
   arrayPhoto: {
     display: "flex",
     flexWrap: "wrap",
+    justifyContent: "center",
     gap: "4px",
     "@media (max-width:780px)": {
-      gap: "0px",
+      gap: "2px",
     },
   },
   wrapperItem: {
     position: "relative",
     display: "flex",
-    maxWidth: "24%",
+    maxWidth: "30%",
     "@media (max-width:960px)": {
-      maxWidth: "32%",
+      maxWidth: "40%",
     },
     "@media (max-width:780px)": {
-      maxWidth: "50%",
+      maxWidth: "48%",
     },
   },
 };
