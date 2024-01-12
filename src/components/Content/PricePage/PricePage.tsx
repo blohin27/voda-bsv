@@ -3,8 +3,9 @@ import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import { data1, data2 } from "./data";
-import { CONST_TITLE } from "@/const";
+import { COLOR_BLACK, CONST_TITLE, CONST_TITLE_FIRST_PAGE } from "@/const";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
+import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 
 interface IProps {}
 export const PricePage: FC<IProps> = () => {
@@ -28,9 +29,6 @@ export const PricePage: FC<IProps> = () => {
               <Box sx={classes.content}>
                 <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                   <Box sx={{ ...classes.title, fontSize: "52px" }}>Цены на ремонт скважин</Box>
-                  <Box sx={{ ...classes.titleDesc }}>
-                    Для быстрой навигации по странице используйте кнопки разделов или боковое меню. В них вы найдете подробное описание цен
-                  </Box>
                   <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
                     <Box sx={classes.buttonItem} onClick={scrollToMyRef}>
                       Чистка и ремонт
@@ -45,9 +43,12 @@ export const PricePage: FC<IProps> = () => {
               </Box>
             </Box>
           </Box>
+          <Box mt={-6}>
+            <InfoBlocks />
+          </Box>
           <Box sx={classes.wrapperItemPrice}>
             <Box sx={classes.contenItemPrice}>
-              <Box sx={classes.titleContentItem}>Ремонт скважины</Box>
+              <Box sx={{ ...classes.subTitle1 }}>Ремонт скважины</Box>
               <Box sx={classes.contenManagement}></Box>
               <Box sx={classes.table}>
                 <Table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
@@ -79,7 +80,7 @@ const classes: ClassesSx = {
   root: {},
   tdStyle: { textAlign: "center", backgroundColor: "#fcfbf9", border: "1px solid #dedede", height: "35px", fontSize: "16px", fontWeight: "400" },
   thStyle: { width: "60%", backgroundColor: "#4ab461", color: "white", height: "50px", fontSize: "20px", fontWeight: "600" },
-
+  subTitle1: { ...CONST_TITLE_FIRST_PAGE, color: COLOR_BLACK },
   buttonsNavigation: { display: "flex", justifyContent: "center", gap: "20px" },
   titleContentItem: {
     ...CONST_TITLE,

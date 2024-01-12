@@ -7,6 +7,7 @@ import { grey } from "@mui/material/colors";
 import Image from "next/image";
 import Link from "next/link";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
+import { BannerFirst } from "@/components/Banner/BannerFirst";
 
 interface IProps {}
 export const UslugiPage: FC<IProps> = () => {
@@ -15,19 +16,10 @@ export const UslugiPage: FC<IProps> = () => {
   const changePokaz = useCallback(() => {
     setPokaz((prevState) => !prevState);
   }, []);
+
   return (
     <Box sx={classes.root}>
-      <Box sx={classes.setcionGeneralPageBannerImg}>
-        <Image src="/photo/photoObjectObslug/mj.png" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="50% 30%" quality={100} />
-        <Box sx={classes.sectionWhiteImg} />
-        <Box sx={classes.wrapperImg}>
-          <Box sx={classes.contentImg}>
-            <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-              <Box sx={{ ...classes.titleGeneral, fontSize: "52px" }}>Услуги </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
+      <BannerFirst src={"/photo/photoObjectObslug/mj.png"} title={"Услуги"} />
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}>
           <Box mt={-6}>
@@ -90,10 +82,6 @@ const classes: ClassesSx = {
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { margin: "0 16px 0 16px" },
   title: { fontSize: "30px", fontWeight: "600", textAlign: "center" },
-  titleGeneral: {
-    marginTop: "80px",
-    ...CONST_TITLE_WITHOUT_MARGIN,
-  },
   subTitle1: { ...CONST_TITLE_FIRST_PAGE, color: COLOR_BLACK },
   uslugiItems: { display: "flex", justifyContent: "center", gap: "15px", flexWrap: "wrap" },
   button: { display: "flex", backgroundColor: COLOR_ORANGE, color: "white", padding: "10px", fontWeight: "700", borderRadius: "3px", cursor: "pointer" },
@@ -103,51 +91,4 @@ const classes: ClassesSx = {
   fadeEnter: { opacity: 0 },
 
   fadeEnterActive: { opacity: 1 },
-  setcionGeneralPageBannerImg: {
-    width: "100%",
-    display: "flex",
-    height: "300px",
-    position: "relative",
-    "@media (max-width:480px)": {
-      height: "250px",
-    },
-  },
-  contentImg: {
-    display: "flex",
-    width: "100%",
-    flexDirection: "column",
-    fontSize: "20px",
-    maxWidth: "1200px",
-    margin: "0 auto",
-  },
-  titleDesc: {
-    display: "flex",
-    fontSize: "16px",
-    fontWeight: "400",
-    textAlign: "center",
-    justifyContent: "center",
-    maxWidth: "600px",
-    margin: "0 auto",
-    color: "white",
-  },
-  wrapperImg: {
-    zIndex: 2,
-    maxWidth: "1200px",
-    margin: "0 auto",
-    width: "100%",
-    height: "100%",
-    display: "flex",
-  },
-  sectionWhiteImg: {
-    // background: "linear-gradient(to left, white, white 100%, rgba(255,255,255 10%) 100%)",
-    background: "linear-gradient(to left, black, black 100%, rgba(0, 0, 0, 10%) 90%)",
-    opacity: 0.8,
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    "@media (max-width:900px)": {
-      backgroundColor: "black",
-      opacity: 0.65,
-    },
-  },
 };
