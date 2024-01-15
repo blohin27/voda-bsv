@@ -72,7 +72,7 @@ export const CONST_TITLE_WITHOUT_MARGIN = {
 export const CONST_TITLE_FIRST_PAGE = {
   fontSize: "35px",
   marginTop: "40px",
-  marginBottom: "10px",
+  marginBottom: "15px",
   color: "white",
   fontWeight: 700,
   textAlign: "center",

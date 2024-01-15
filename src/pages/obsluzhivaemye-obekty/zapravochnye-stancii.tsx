@@ -6,8 +6,9 @@ import { ContactPage } from "@/components/Content/ContactPage/ContactPage";
 import type { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
+import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
 
-export default function Contact() {
+export default function ZapravochnyeStancii() {
   return (
     <>
       <Head>
@@ -24,7 +25,7 @@ export default function Contact() {
       <IsDev>
         <RootLayout>
           <HeaderSite />
-          <ContactPage />
+          <SntAndIjs />
           <FooterPage />
         </RootLayout>
       </IsDev>

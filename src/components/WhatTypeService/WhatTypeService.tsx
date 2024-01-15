@@ -6,6 +6,7 @@ import { ClassesSx } from "@/theme/theme";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { COLOR_BLACK, COLOR_BLUE, COLOR_BLUE_HOVER, COLOR_BLUE_SECTION, CONST_TITLE } from "@/const";
+import Link from "next/link";
 
 interface IProps {}
 export const WhatTypeService: FC<IProps> = () => {
@@ -13,21 +14,23 @@ export const WhatTypeService: FC<IProps> = () => {
     <Box sx={classesStyle.content}>
       <Box sx={classesStyle.titleObject}>Какие объекты мы обслуживаем</Box>
       <Box sx={classesStyle.sectionObslujAll}>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.sectionImg}>
-            <Image
-              src={"/photo/photoObjectObslug/snt.jpg"}
-              alt={"image"}
-              layout={"fill"}
-              // width={600}
-              // height={400}
-              objectFit="cover"
-              objectPosition="center center" // По умолчанию 'center', но может быть изменено
-              quality={100}
-            />
+        <Link href={"/obsluzhivaemye-obekty/snt-ijs"} style={{ textDecoration: "none" }}>
+          <Box sx={classesStyle.sectionObslujItem}>
+            <Box sx={classesStyle.sectionImg}>
+              <Image
+                src={"/photo/photoObjectObslug/snt.jpg"}
+                alt={"image"}
+                layout={"fill"}
+                // width={600}
+                // height={400}
+                objectFit="cover"
+                objectPosition="center center" // По умолчанию 'center', но может быть изменено
+                quality={100}
+              />
+            </Box>
+            <Box sx={{ ...classesStyle.titleSub, color: COLOR_BLACK }}>СНТ и ИЖС</Box>
           </Box>
-          <Box sx={{ ...classesStyle.titleSub }}>СНТ и ИЖС</Box>
-        </Box>
+        </Link>
         <Box sx={classesStyle.sectionObslujItem}>
           <Box sx={classesStyle.sectionImg}>
             <Image
@@ -254,6 +257,7 @@ const classesStyle: ClassesSx = {
   },
   sectionObslujAll: {
     maxWidth: "1000px",
+    cursor: "pointer",
     margin: "0 auto",
     marginTop: "30px",
     display: "flex",

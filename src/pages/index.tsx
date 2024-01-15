@@ -13,22 +13,24 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Заголовок вашей страницы</title>
-        <meta name="description" content="Описание вашей страницы" />
+        <title>Чистка Скважин на Воду в Московской Области - Voda-BSV</title>
+        <meta
+          name="description"
+          content="Предлагаем качественные услуги по чистке и обслуживанию скважин на воду в Московской области. Быстро, надежно и по доступным ценам. Забота о вашем комфорте и безопасности."
+        />
         {/*<meta charset="UTF-8" />*/}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="http://voda-bsv.ru" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="BSV" />
-        <meta name="keywords" content="ключевое, слово, вашего, сайта" />
-        {/* Ссылки на ресурсы */}
+        <meta
+          name="keywords"
+          content="чистка скважин, скважины на воду, обслуживание скважин, Московская область, частные дома, водоснабжение, профессиональная чистка, безопасность воды, чистая вода, скважинное оборудование."
+        />
         <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://example.com" />
-        <link rel="stylesheet" href="/path/to/styles.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-
-        {/* Дополнительные элементы */}
+        <link rel="preconnect" href="http://voda-bsv.ru" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
         <RootLayout>

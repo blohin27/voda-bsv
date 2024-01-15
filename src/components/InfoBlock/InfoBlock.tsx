@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import { InfoItem } from "@/components/InfoBlock/InfoItem";
 import { FcComboChart } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
+import { FcHome } from "react-icons/fc";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -20,17 +21,17 @@ export const InfoBlocks: FC<Props> = () => {
           <Box sx={classes.infoItems}>
             <InfoItem
               title={"9+лет"}
-              titleSub={"Эффективной работы в сфере водоснабжения "}
+              titleSub={"Эффективной работы в сфере водоснабжения и водоотведения "}
               icon={<FcComboChart style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
             <InfoItem
               title={"450+"}
-              titleSub={"За 2023 год мы восстановили воду более чем в 450 домах "}
-              icon={<FcBullish style={{ fontSize: "100px", color: "#fe6c36" }} />}
+              titleSub={"За 2023 год мы восстановили подачу воды более чем в 450 домах "}
+              icon={<FcHome style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
             <InfoItem
-              title={"450+"}
-              titleSub={"За 2023 год мы восстановили воду более чем в 450 домах "}
+              title={"+75%"}
+              titleSub={"Более 75% наших клиентов рекоммендуют нас своим друзьям и знакомым"}
               icon={<FcBullish style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
           </Box>

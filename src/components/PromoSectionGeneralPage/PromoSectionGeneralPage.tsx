@@ -18,9 +18,7 @@ export const PromoSectionGeneralPage: FC<Props> = () => {
           <Box sx={classes.setcionPromoTitle}>Чистка и ремонт скважин в Москве и Московской области</Box>
         </h1>
         {!showSubTitle && (
-          <Box sx={classes.sectionPromoSubTitle}>
-            Оставьте заявку, и наш менеджер ответит на вопросы, подскажет по набору услуг и рассчитает стоимость уборки
-          </Box>
+          <Box sx={classes.sectionPromoSubTitle}>Оставьте заявку, и наш менеджер ответит на вопросы, подскажет по набору услуг и рассчитает стоимость</Box>
         )}
         <Box mt={2}>
           <OrderCall />

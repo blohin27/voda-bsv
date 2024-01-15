@@ -4,19 +4,22 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import { OrderCall } from "@/components/OrderCall/OrderCall";
 
-interface IProps {}
-export const Banner: FC<IProps> = () => {
+interface IProps {
+  text?: string;
+  subText?: string;
+}
+export const Banner: FC<IProps> = ({ text, subText }) => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}>
           <Box sx={classes.setcionGeneralPageBanner}>
             <Image
-              src="/photoNew/testImage.jpg"
+              src="/photo/schlang.jpg"
               alt={"image"}
               layout={"fill"}
               objectFit="cover"
-              objectPosition="left left" // По умолчанию 'center', но может быть изменено
+              objectPosition="50% 70%" // По умолчанию 'center', но может быть изменено
               quality={100}
             />
             <Box sx={classes.sectionWhite} />
@@ -24,8 +27,10 @@ export const Banner: FC<IProps> = () => {
               <Box sx={classes.contentForBannerwrapperSection}>
                 <Box sx={classes.sectionBanner}>
                   <Box display={"flex"} flexDirection={"column"} gap={"30px"} mt={7} mr={2} ml={2}>
-                    <Box sx={classes.bannerTitle}> Получить консультацию и расчет стоимости уборки</Box>
-                    <Box sx={classes.descr}>Оставьте свои контакты и наш менеджер свяжется с Вами в течение 1 минуты!</Box>
+                    <h3>
+                      <Box sx={classes.bannerTitle}> {text}</Box>
+                    </h3>
+                    {subText && <Box sx={classes.descr}>{subText}</Box>}
                     <OrderCall />
                   </Box>
                 </Box>
@@ -84,6 +89,9 @@ const classes: ClassesSx = {
     height: "400px",
     position: "relative",
     "@media (max-width:800px)": {
+      height: "350px",
+    },
+    "@media (max-width:400px)": {
       height: "450px",
     },
   },
@@ -98,7 +106,7 @@ const classes: ClassesSx = {
     margin: "0 auto",
   },
   sectionWhite: {
-    background: "linear-gradient(to left, black, black 60%, rgba(0, 0, 0, 10%) 90%)",
+    background: "linear-gradient(to left, black, black 40%, rgba(0, 0, 0, 10%) 90%)",
     opacity: 0.8,
     position: "absolute",
     width: "100%",
