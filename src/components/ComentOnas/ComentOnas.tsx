@@ -135,12 +135,16 @@ const classes: ClassesSx = {
   },
   titleContent: {
     fontSize: "50px",
+
     fontWeight: "700",
     marginLeft: "60px",
     "@media (max-width:1100px)": {
       flexDirection: "column",
       justifyContent: "center",
       marginLeft: "0px",
+    },
+    "@media (max-width:600px)": {
+      fontSize: "40px",
     },
   },
   itemSee: {
@@ -177,6 +181,7 @@ const classes: ClassesSx = {
     },
   },
   content: {
+    paddingTop: "70px",
     display: "flex",
     margin: "0 16px 0 16px",
     alignItems: "center",

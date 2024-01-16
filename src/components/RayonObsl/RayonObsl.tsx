@@ -6,6 +6,7 @@ import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 import { ButtonCentr } from "@/components/ButtonCenter/ButtonCentr";
 import { useMediaQuery } from "@mui/material";
 import { ItemIconRayon } from "@/components/RayonObsl/ItemIconRayon";
+import { CONST_TITLE } from "@/const";
 
 interface IProps {}
 export const RayonObsl: FC<IProps> = () => {
@@ -224,16 +225,7 @@ const classes: ClassesSx = {
     // },
   },
   title: {
-    marginTop: "25px",
-    padding: "5px 15px 5px 15px",
-    backgroundColor: "white",
-    display: "flex",
-    fontSize: "35px",
-    fontWeight: "700",
-    textAlign: "center",
-    marginBottom: "50px",
-    justifyContent: "center",
-    borderRadius: "5px",
+    ...CONST_TITLE,
   },
   sectionItems: {
     display: "flex",

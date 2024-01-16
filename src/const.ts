@@ -14,8 +14,8 @@ export const NICKTELEGRAM = "blohinsergei";
 export const DEV = false;
 
 export const CONST_TITLE = {
-  marginTop: "70px",
-  paddingTop: "70px",
+  marginTop: "40px",
+  paddingTop: "40px",
   marginBottom: "30px",
   marginLeft: "16px",
   marginRight: "16px",
