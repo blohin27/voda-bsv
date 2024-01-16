@@ -9,7 +9,7 @@ interface IProps {}
 export const BannerPromo: FC<IProps> = () => {
   return (
     <Box sx={classesStyle.setcionGeneralPageBanner}>
-      <Image src="/photo/glav.jpg" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
+      <Image src="/photo/glav.jpg" alt={"Чистаая вода из скважины"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
       <Box sx={classesStyle.sectionWhite} />
       <PromoSectionGeneralPage />
     </Box>
