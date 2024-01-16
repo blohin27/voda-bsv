@@ -1,4 +1,7 @@
-export const sendContactForm = async (data: any) =>
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+export const sendContactForm = async (data: any) => {
   fetch("/api/contact", {
     method: "POST",
     body: JSON.stringify(data),
@@ -7,3 +10,4 @@ export const sendContactForm = async (data: any) =>
     // if (!res.ok) throw new Error("Failed to send message");
     // return res.json();
   });
+};

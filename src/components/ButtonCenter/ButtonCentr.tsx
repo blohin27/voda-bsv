@@ -2,6 +2,7 @@ import { FC } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { sendContactForm } from "@/lib/api";
+import { toast } from "react-toastify";
 
 interface IProps {
   title: string;
