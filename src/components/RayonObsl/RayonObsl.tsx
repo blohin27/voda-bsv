@@ -5,6 +5,7 @@ import Image from "next/image";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 import { ButtonCentr } from "@/components/ButtonCenter/ButtonCentr";
 import { useMediaQuery } from "@mui/material";
+import { ItemIconRayon } from "@/components/RayonObsl/ItemIconRayon";
 
 interface IProps {}
 export const RayonObsl: FC<IProps> = () => {
@@ -17,8 +18,8 @@ export const RayonObsl: FC<IProps> = () => {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={classes.title}>Районы обслуживания</Box>
           </Box>
+
           <Box sx={classes.setcionGeneralPageBanner}>
-            {/*<Image src="/photoNew/rayony.jpg" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />*/}
             <Box sx={classes.sectionWhite} />
             <Box sx={classes.wrapper}>
               <Box sx={classes.content}>
@@ -26,157 +27,150 @@ export const RayonObsl: FC<IProps> = () => {
                   <Box sx={classes.block2}>
                     <Box sx={classes.block4}>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoOkr/bal.png" alt={"image"} width={30} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Балашихинский район
+                        <ItemIconRayon src={"/photoFlag/balashiha.jpg"} />
+                        <Box ml={1}> Балашихинский район</Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoOkr/" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Волоколамский район
+                        <ItemIconRayon src={"/photoFlag/volokolamsk.jpg"} />
+                        <Box ml={1}> Волоколамский район</Box>
+                      </Box>
+
+                      <Box sx={classes.itemRayon}>
+                        <ItemIconRayon src={"/photoFlag/voskresensk.jpg"} />
+                        <Box ml={1}> Воскресенский район</Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Воскресенский район
+                        <ItemIconRayon src={"/photoFlag/dmitrov.jpg"} />
+                        <Box ml={1}> Дмитровский район </Box>
+                      </Box>
+
+                      <Box sx={classes.itemRayon}>
+                        <ItemIconRayon src={"/photoFlag/egorevsk.jpg"} />
+                        <Box ml={1}> Егорьевский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Дмитровский район
+                        <ItemIconRayon src={"/photoFlag/zaraisk.jpg"} />
+                        <Box ml={1}> Зарайский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Домодедовский район
+                        <ItemIconRayon src={"/photoFlag/istra.jpg"} />
+                        <Box ml={1}> Истринский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Егорьевский район
-                      </Box>
-                      <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Зарайский район
-                      </Box>
-                      <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Истринский район
-                      </Box>
-                      <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Раменский район
+                        <ItemIconRayon src={"/photoFlag/ramensk.jpg"} />
+                        <Box ml={1}> Раменский район </Box>
                       </Box>
                     </Box>
                     <Box sx={classes.block4}>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Каширский район
+                        <ItemIconRayon src={"/photoFlag/kashira.jpg"} />
+                        <Box ml={1}> Каширский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Рузский район
+                        <ItemIconRayon src={"/photoFlag/ruza.jpg"} />
+                        <Box ml={1}> Рузский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Клинский район
+                        <ItemIconRayon src={"/photoFlag/klin.jpg"} />
+                        <Box ml={1}> Клинский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Коломенский район
+                        <ItemIconRayon src={"/photoFlag/kolomna.jpg"} />
+                        <Box ml={1}> Коломенский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Красногорский район
+                        <ItemIconRayon src={"/photoFlag/krasnogorsk.jpg"} />
+                        <Box ml={1}> Красногорский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Ленинский район
+                        <ItemIconRayon src={"/photoFlag/lenin.jpg"} />
+                        <Box ml={1}> Ленинский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Лотошинский район
+                        <ItemIconRayon src={"/photoFlag/domodedovo.jpg"} />
+                        <Box ml={1}> Домодедовский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Луховицкий район
+                        <ItemIconRayon src={"/photoFlag/lotosh.jpg"} />
+                        <Box ml={1}> Луховицкий район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Люберецкий район
+                        <ItemIconRayon src={"/photoFlag/lubercy.jpg"} />
+                        <Box ml={1}> Люберецкий район </Box>
                       </Box>
                     </Box>
                   </Box>
                   <Box sx={classes.block2}>
                     <Box sx={classes.block4}>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Можайский район
+                        <ItemIconRayon src={"/photoFlag/pushkino.jpg"} />
+                        <Box ml={1}> Пушкинский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Мытищинский район
+                        <ItemIconRayon src={"/photoFlag/mojaick.jpg"} />
+                        <Box ml={1}> Можайский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Наро-Фоминский район
+                        <ItemIconRayon src={"/photoFlag/mytishi.jpg"} />
+                        <Box ml={1}> Мытищинский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Новая Москва район
+                        <ItemIconRayon src={"/photoFlag/nara.jpg"} />
+                        <Box ml={1}> Наро-Фоминский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Ногинский район
+                        <ItemIconRayon src={"/photoFlag/noginsk.jpg"} />
+                        <Box ml={1}> Ногинский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Одинцовский район
+                        <ItemIconRayon src={"/photoFlag/odincovo.jpg"} />
+                        <Box ml={1}> Одинцовский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Орехово-Зуевский район
+                        <ItemIconRayon src={"/photoFlag/orehovo.jpg"} />
+                        <Box ml={1}> Орехово-Зуевский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Павлово-Посадский район
+                        <ItemIconRayon src={"/photoFlag/pavlovo.jpg"} />
+                        <Box ml={1}> Павлово-Посадский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Подольский район
+                        <ItemIconRayon src={"/photoFlag/podolsk.jpg"} />
+                        <Box ml={1}> Подольский район </Box>
                       </Box>
                     </Box>
                     <Box sx={classes.block4}>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Пушкинский район
-                      </Box>
-
-                      <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Сергиево-Посадский район
+                        <ItemIconRayon src={"/photoFlag/sergievo.jpg"} />
+                        <Box ml={1}> Сергиево-Посадский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Серпуховский район
+                        <ItemIconRayon src={"/photoFlag/serpuho.jpg"} />
+                        <Box ml={1}> Серпуховский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Солнечногорский район
+                        <ItemIconRayon src={"/photoFlag/solnce.jpg"} />
+                        <Box ml={1}> Солнечногорский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Ступинский район
+                        <ItemIconRayon src={"/photoFlag/stupino.jpg"} />
+                        <Box ml={1}> Ступинский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Талдомский район
+                        <ItemIconRayon src={"/photoFlag/tald.jpg"} />
+                        <Box ml={1}> Талдомский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Химкинский район
+                        <ItemIconRayon src={"/photoFlag/himki.jpg"} />
+                        <Box ml={1}> Химкинский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Чеховский район
+                        <ItemIconRayon src={"/photoFlag/chehov.jpg"} />
+                        <Box ml={1}> Чеховский район </Box>
                       </Box>
                       <Box sx={classes.itemRayon}>
-                        <Image src="/photoNew/rayony.jpg" alt={"image"} width={50} height={30} objectFit="cover" objectPosition="center center" quality={100} />
-                        Шатурский район
+                        <ItemIconRayon src={"/photoFlag/shatura.jpg"} />
+                        <Box ml={1}> Шатурский район </Box>
                       </Box>
                     </Box>
                   </Box>
@@ -194,7 +188,7 @@ const classes: ClassesSx = {
   root: {},
   wrapper: {
     zIndex: 2,
-    maxWidth: "1200px",
+    maxWidth: "1400px",
     margin: "0 auto",
     width: "100%",
     height: "100%",
@@ -203,8 +197,8 @@ const classes: ClassesSx = {
   content: {
     display: "flex",
     width: "100%",
-    justifyContent: "start",
-
+    justifyContent: "center",
+    margin: "0 16px 0 16px",
     flexDirection: "column",
     fontSize: "20px",
   },
@@ -245,12 +239,25 @@ const classes: ClassesSx = {
     display: "flex",
     flexDirection: "column",
   },
-  blockItems: { display: "flex", justifyContent: "center", gap: "10px" },
+  blockItems: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "30px",
+    "@media (max-width:480px)": {
+      flexDirection: "column",
+      gap: "25px",
+    },
+  },
   block2: {
     display: "flex",
-    gap: "10px",
+    gap: "30px",
     "@media (max-width:1200px)": {
       flexDirection: "column",
+      gap: "5px",
+    },
+    "@media (max-width:480px)": {
+      flexDirection: "column",
+      gap: "5px",
     },
   },
   block4: {
@@ -267,6 +274,22 @@ const classes: ClassesSx = {
     display: "flex",
     textAlign: "left",
     borderRadius: "5px",
+    "@media (max-width:480px)": {
+      marginLeft: "90px",
+      fontSize: "18px",
+    },
+    "@media (max-width:440px)": {
+      marginLeft: "70px",
+      fontSize: "18px",
+    },
+    "@media (max-width:400px)": {
+      marginLeft: "50px",
+      fontSize: "18px",
+    },
+    "@media (max-width:380px)": {
+      marginLeft: "40px",
+      fontSize: "18px",
+    },
   },
   sectionWhite: {
     background: "linear-gradient(to left, white,white 100%, rgba(255, 255, 255, 10%) 90%)",
