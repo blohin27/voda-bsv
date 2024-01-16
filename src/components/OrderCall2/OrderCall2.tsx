@@ -10,15 +10,13 @@ export const OrderCall2: FC<Props> = () => {
       <Box mr={2} style={{ backgroundColor: "white", borderRadius: "5px" }}>
         <Input
           style={{ padding: "0 5px 0 5px" }}
-          onChange={(e) => console.log(e.target.value)}
           placeholder={"+7 (___) ___-____"}
           type={"number"}
           sx={{
-            "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button":
-              {
-                "-webkit-appearance": "none",
-                margin: 0,
-              },
+            "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
+              "-webkit-appearance": "none",
+              margin: 0,
+            },
             "& input[type=number]": {
               "-moz-appearance": "textfield",
             },

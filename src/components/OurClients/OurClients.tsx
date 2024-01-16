@@ -27,7 +27,6 @@ export const OurClients = () => {
           <Swiper
             navigation
             modules={[Navigation, Pagination]}
-            onSwiper={(swiper) => console.log(swiper)}
             thumbs={{
               swiper: thumbsSwiper,
             }}
