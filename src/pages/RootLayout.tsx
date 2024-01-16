@@ -5,6 +5,8 @@ import { Box } from "@mui/material";
 import { COLOR_BLACK } from "@/const";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SimpleDialog } from "@/components/Modal/Modal";
+import { modalStore } from "@/domain";
 
 export default function RootLayout({ children }: PropsWithChildren<unknown>) {
   return (

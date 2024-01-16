@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { ServicesAll } from "@/components/ServicesAll/Services";
-import React from "react";
+import React, { useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
@@ -24,8 +24,11 @@ import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 import { RayonObsl } from "@/components/RayonObsl/RayonObsl";
 import { Onas } from "@/components/ONas/Onas";
 import { COLOR_BLACK, COLOR_BLUE_SECTION, COLOR_MILK } from "@/const";
+import { SimpleDialog } from "@/components/Modal/Modal";
+import { modalStore } from "@/domain";
+import { observer } from "mobx-react";
 
-export const ContentGeneralPage = () => {
+export const ContentGeneralPage = observer(() => {
   return (
     <Box display={"flex"} flexDirection={"column"} className={montserrat.className}>
       <BannerPromo />
@@ -73,10 +76,10 @@ export const ContentGeneralPage = () => {
       <ButtonCentr title={"Больше кейсов"} />
       <Banner />
       <FotoRabot />
-      <OurClients />
+      <SimpleDialog open={modalStore.modalOpen} />
     </Box>
   );
-};
+});
 
 const classes: ClassesSx = {
   title: {
