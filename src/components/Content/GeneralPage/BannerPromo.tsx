@@ -9,7 +9,7 @@ interface IProps {}
 export const BannerPromo: FC<IProps> = () => {
   return (
     <Box sx={classesStyle.setcionGeneralPageBanner}>
-      <Image src="/photoNew/testImage.jpg" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
+      <Image src="/photo/glav.jpg" alt={"image"} layout={"fill"} objectFit="cover" objectPosition="center center" quality={100} />
       <Box sx={classesStyle.sectionWhite} />
       <PromoSectionGeneralPage />
     </Box>
@@ -31,13 +31,13 @@ const classesStyle: ClassesSx = {
   },
   sectionWhite: {
     background: "linear-gradient(to right, black, black 30%, rgba(0, 0, 0, 10%) 80%)",
-    opacity: 0.8,
+    opacity: 0.2,
     position: "absolute",
     width: "100%",
     height: "100%",
     "@media (max-width:800px)": {
       backgroundColor: "black",
-      opacity: 0.65,
+      opacity: 0.3,
     },
   },
 };

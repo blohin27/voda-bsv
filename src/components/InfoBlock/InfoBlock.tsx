@@ -20,17 +20,17 @@ export const InfoBlocks: FC<Props> = () => {
         <Box sx={classes.sections}>
           <Box sx={classes.infoItems}>
             <InfoItem
-              title={"9+лет"}
+              title={"9 лет"}
               titleSub={"Эффективной работы в сфере водоснабжения и водоотведения "}
               icon={<FcComboChart style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
             <InfoItem
-              title={"450+"}
+              title={"450"}
               titleSub={"За 2023 год мы восстановили подачу воды более чем в 450 домах "}
               icon={<FcHome style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
             <InfoItem
-              title={"+75%"}
+              title={"75%"}
               titleSub={"Более 75% наших клиентов рекоммендуют нас своим друзьям и знакомым"}
               icon={<FcBullish style={{ fontSize: "100px", color: "#fe6c36" }} />}
             />
