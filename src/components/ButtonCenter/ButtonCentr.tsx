@@ -8,9 +8,7 @@ interface IProps {
   title: string;
 }
 export const ButtonCentr: FC<IProps> = ({ title }) => {
-  const change = async () => {
-    await sendContactForm({ name: "Sergey", email: "Email@Email", mob: "89269468330", message: "Ремонт", subject: "Ремонт", click: "Главная" });
-  };
+  const change = async () => {};
   return (
     <Box
       sx={classes.root}
