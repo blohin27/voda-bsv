@@ -13,8 +13,14 @@ import AddIcon from "@mui/icons-material/Add";
 import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
 import { modalStore } from "@/domain";
-
-const emails = ["username@gmail.com", "user02@gmail.com"];
+import { Box } from "@mui/material";
+import { ClassesSx } from "@/theme/theme";
+import TextField from "@mui/material/TextField";
+import { useState } from "react";
+import { COLOR_ORANGE } from "@/const";
+import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
+import { toast } from "react-toastify";
+import { sendContactForm } from "@/lib/api";
 
 export interface SimpleDialogProps {
   open: boolean;
@@ -22,7 +28,9 @@ export interface SimpleDialogProps {
 }
 
 export function SimpleDialog(props: SimpleDialogProps) {
-  const { onClose, open = true } = props;
+  const [name, setName] = useState("");
+  const [mob, setMob] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleClose = () => {
     modalStore.closeModal();
@@ -33,59 +41,119 @@ export function SimpleDialog(props: SimpleDialogProps) {
   };
 
   return (
-    <Dialog onClose={handleClose} open={open}>
-      <DialogTitle></DialogTitle>
-      <List sx={{ pt: 0 }}>
-        {emails.map((email) => (
-          <ListItem disableGutters key={email}>
-            <ListItemButton onClick={() => handleListItemClick(email)}>
-              <ListItemAvatar>
-                <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
-                  <PersonIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary={email} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-        <ListItem disableGutters>
-          <ListItemButton autoFocus onClick={() => handleListItemClick("addAccount")}>
-            <ListItemAvatar>
-              <Avatar>
-                <AddIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary="Add account" />
-          </ListItemButton>
-        </ListItem>
-      </List>
+    <Dialog onClose={handleClose} open={props.open} maxWidth={"xl"}>
+      <DialogTitle sx={{ textAlign: "center", fontSize: "25px" }}>Создание заявки</DialogTitle>
+      <Box sx={classes.content}>
+        <Box sx={classes.inputItem}>
+          <TextField
+            id="name"
+            label="Имя"
+            sx={{ ...classes.input }}
+            variant="outlined"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+        </Box>
+        <Box sx={classes.inputItem}>
+          <TextField
+            id="mob"
+            label="Телефон"
+            variant="outlined"
+            sx={{ ...classes.input }}
+            value={mob}
+            onChange={(e) => {
+              setMob(e.target.value);
+            }}
+          />
+        </Box>
+        <Box sx={classes.inputItem}>
+          <TextField
+            id="Сообщение"
+            label="Сообщение"
+            multiline={true}
+            variant="outlined"
+            rows={4}
+            value={message}
+            sx={{ ...classes.inputMessage }}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          />
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box
+            className={montserrat.className}
+            sx={{
+              display: "flex",
+              backgroundColor: COLOR_ORANGE,
+              color: "white",
+              fontSize: "25px",
+              fontWeight: 600,
+              padding: "5px 10px",
+              borderRadius: "3px",
+              cursor: "pointer",
+            }}
+            onClick={async () => {
+              if (mob.length > 8 && mob.length < 14) {
+                toast.success("Заявка отправлена!", {
+                  position: "top-center",
+                  autoClose: 2000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "colored",
+                });
+                await sendContactForm({
+                  name: `${name}`,
+                  email: "",
+                  mob: `${mob}`,
+                  message: `${message}`,
+                  click: "Модальное окно",
+                });
+              } else {
+                toast.error("Ошибка ввода", {
+                  position: "top-center",
+                  autoClose: 3000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "colored",
+                });
+              }
+              setMob("");
+              setMessage("");
+              setName("");
+            }}
+          >
+            Отправить
+          </Box>
+        </Box>
+      </Box>
     </Dialog>
   );
 }
 
-export default function SimpleDialogDemo() {
-  const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+const classes: ClassesSx = {
+  inputItem: { display: "flex", width: "100%", justifyContent: "center" },
+  input: {
+    margin: "10px",
+    width: "300px",
+    "@media max-width(600px)": {
+      width: "200px",
+    },
+  },
+  inputMessage: {
+    width: "300px",
+    margin: "10px",
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+    "@media max-width(600px)": {},
+  },
 
-  const handleClose = (value: string) => {
-    setOpen(false);
-    setSelectedValue(value);
-  };
-
-  return (
-    <div>
-      <Typography variant="subtitle1" component="div">
-        Selected: {selectedValue}
-      </Typography>
-      <br />
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open simple dialog
-      </Button>
-      <SimpleDialog open={open} onClose={handleClose} />
-    </div>
-  );
-}
+  content: { margin: "0 25px 25px 25px", "@media max-width(600px)": {} },
+};

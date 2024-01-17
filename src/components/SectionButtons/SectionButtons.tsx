@@ -14,7 +14,7 @@ export const SectionButtons = () => (
           modalStore.openModal();
         }}
       >
-        Обратный звонок
+        Создать заявку
       </Button>
     </Box>
     <Box ml={1} display={"flex"} justifyContent={"center"}>
