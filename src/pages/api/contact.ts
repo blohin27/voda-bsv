@@ -10,7 +10,7 @@ const CONTACT_MESSAGE_FIELDS = {
 const generateEmailContent = (data: any) => {
   const stringData = Object.entries(data).reduce((str, [key, val]) => (str += `<p>${key} : ${val}</p>`), "");
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
-    return (str += `<h3 class="form-heading" align="left">'${key}'</h3><p class="form-answer" align="left">${val}</p>`);
+    return (str += `<h2 class="form-heading" align="left">${key}</h2><p class="form-answer" align="left">${val}</p>`);
   }, "");
 
   return {
