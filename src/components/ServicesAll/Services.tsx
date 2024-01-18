@@ -3,13 +3,15 @@ import { Montserrat } from "next/font/google";
 import { ServiceItem } from "@/components/ServicesAll/component/ServiceItem/ServiceItem";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
-
 import { COLOR_BLUE_SECTION, COLOR_MILK, CONST_TITLE } from "@/const";
 import { PoleznyeStatiItem } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiItem";
+import { observer } from "mobx-react";
+import { BasicSelect } from "../BasicSelect/BasicSelect";
+import { modalStore } from "@/domain";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {}
-export const ServicesAll: FC<IProps> = () => {
+export const ServicesAll: FC<IProps> = observer(() => {
   const [statePult, setStatePult] = useState("пульт1");
 
   const changePult = (item: string) => {
@@ -19,47 +21,10 @@ export const ServicesAll: FC<IProps> = () => {
   return (
     <Box sx={classes.wrapper} className={montserrat.className}>
       <Box sx={classes.titleGeneral}> Услуги по водоснабжению</Box>
-      <Box sx={classes.pultServiceItems} mb={3}>
-        <Box
-          onClick={() => {
-            changePult("пульт1");
-          }}
-          sx={classes.pultItem}
-          style={statePult === "пульт1" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
-        >
-          Ремонт и чистка
-        </Box>
-        <Box
-          onClick={() => {
-            changePult("пульт2");
-          }}
-          sx={classes.pultItem}
-          style={statePult === "пульт2" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
-        >
-          Монтаж и обслуживание
-        </Box>
-        <Box
-          onClick={() => {
-            changePult("пульт3");
-          }}
-          sx={classes.pultItem}
-          style={statePult === "пульт3" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
-        >
-          Водоочистка
-        </Box>
-        <Box
-          onClick={() => {
-            changePult("пульт4");
-          }}
-          sx={classes.pultItem}
-          style={statePult === "пульт4" ? { backgroundColor: "#fe6c36", color: "white" } : {}}
-        >
-          Канализация
-        </Box>
-      </Box>
+      <BasicSelect />
       <Box sx={classes.wrapperItems} mb={10}>
         <Box sx={classes.contentItems}>
-          {statePult === "пульт1" && (
+          {modalStore.stateServiceAll === "пульт1" && (
             <>
               <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
               <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
@@ -69,21 +34,21 @@ export const ServicesAll: FC<IProps> = () => {
               <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
             </>
           )}
-          {statePult === "пульт2" && (
-            <>
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-            </>
-          )}
-          {statePult === "пульт3" && (
+          {modalStore.stateServiceAll === "пульт2" && (
             <>
               <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
               <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
               <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
             </>
           )}
-          {statePult === "пульт4" && (
+          {modalStore.stateServiceAll === "пульт3" && (
+            <>
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
+              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+            </>
+          )}
+          {modalStore.stateServiceAll === "пульт4" && (
             <>
               <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
               <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
@@ -94,7 +59,7 @@ export const ServicesAll: FC<IProps> = () => {
       </Box>
     </Box>
   );
-};
+});
 
 const classes: ClassesSx = {
   wrapperItems: {
