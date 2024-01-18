@@ -169,8 +169,8 @@ export const DomObject: FC<IProps> = () => {
             <Box sx={{ ...classes.subTitle1 }}>Почему стоит выбрать Нас?</Box>
           </h2>
           <Box sx={classes.descTextSection}>
-            <Box sx={{ ...classes.imgSection, float: "right", height: "200px" }}>
-              <Image src="/photo/dostaem_nasos.jpg" alt={"Демонтаж насоса в СНТ"} layout={"fill"} objectFit="cover" objectPosition="50% 30%" quality={100} />
+            <Box sx={{ ...classes.imgSection, float: "left", height: "350px" }}>
+              <Image src="/photo/zamena_nasosa.jpg" alt={"Демонтаж насоса в СНТ"} layout={"fill"} objectFit="cover" objectPosition="50% 30%" quality={100} />
             </Box>
             <Box mt={2}>
               Клиенты высоко ценят нас за персонализированный подход, тщательное внимание к деталям и нашу способность эффективно решать сложные задачи,
