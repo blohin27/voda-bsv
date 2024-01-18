@@ -7,25 +7,33 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
+import { ZaprStancii } from "@/components/Content/ObjectObsluj/ZaprStancii";
 
 export default function ZapravochnyeStancii() {
   return (
     <>
       <Head>
-        <title>Название моей страницы</title>
-        <meta name="description" content="Описание страницы, которое будет отображаться в результатах поиска." />
-        <meta name="keywords" content="ключевое слово 1, ключевое слово 2" />
-        <meta name="robots" content="index, follow" /> {/* Разрешить индексацию и следование по ссылкам */}
+        <title>Обслуживание Систем Водоснабжения на АЗС - Надежные и Эффективные Решения</title>
+        <meta
+          name="description"
+          content="Комплексные услуги по обслуживанию систем водоснабжения на автозаправочных станциях. Эффективное управление водными ресурсами, повышение безопасности и соблюдение экологических стандартов."
+        />
+        <meta
+          name="keywords"
+          content="водоснабжение АЗС, обслуживание АЗС, водные системы АЗС, управление водными ресурсами на АЗС, экологические стандарты водоснабжения"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="http://voda-bsv.ru" />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preload" href="your-script.js" as="script" />
-        {/*<meta name="robots" content="noindex, nofollow" />  /!* Запретить индексацию и следование по ссылкам *!/*/}
-        {/* Здесь можно добавить другие элементы head, если это необходимо */}
       </Head>
       <IsDev>
         <RootLayout>
           <HeaderSite />
-          <SntAndIjs />
+          <ZaprStancii />
           <FooterPage />
         </RootLayout>
       </IsDev>

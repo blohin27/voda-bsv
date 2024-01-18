@@ -99,21 +99,23 @@ export const WhatTypeService: FC<IProps> = () => {
             <Box sx={{ ...classesStyle.titleSub, color: COLOR_BLACK }}>Розничные сети</Box>
           </Box>
         </Link>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.sectionImg}>
-            <Image
-              src={"/photo/photoObjectObslug/zapravka.jpg"}
-              alt={"image"}
-              layout={"fill"}
-              // width={600}
-              // height={400}
-              objectFit="cover"
-              objectPosition="center center" // По умолчанию 'center', но может быть изменено
-              quality={100}
-            />
+        <Link href={"/obsluzhivaemye-obekty/zapravochnye-stancii"} style={{ textDecoration: "none" }}>
+          <Box sx={classesStyle.sectionObslujItem}>
+            <Box sx={classesStyle.sectionImg}>
+              <Image
+                src={"/photo/photoObjectObslug/zapravka.jpg"}
+                alt={"image"}
+                layout={"fill"}
+                // width={600}
+                // height={400}
+                objectFit="cover"
+                objectPosition="center center" // По умолчанию 'center', но может быть изменено
+                quality={100}
+              />
+            </Box>
+            <Box sx={{ ...classesStyle.titleSub, color: COLOR_BLACK }}>Заправочные станции</Box>
           </Box>
-          <Box sx={{ ...classesStyle.titleSub }}>Заправочные станции</Box>
-        </Box>
+        </Link>
       </Box>
     </Box>
   );
