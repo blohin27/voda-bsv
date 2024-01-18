@@ -158,10 +158,12 @@ export const DomObject: FC<IProps> = () => {
             <Box sx={{ ...classes.subTitle1 }}> Фото наших работ</Box>
           </h2>
           <Box sx={classes.arrayPhoto}>
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
+            <PhotoItem src="/photo/primer_vodoochistki.jpg" />
+            <PhotoItem src="/photo/zamena_nasosa_beloozersk.jpg" />
+            <PhotoItem src="/photo/vodoochistka.jpg" />
+            <PhotoItem src="/photo/zamena_trub.jpg" />
+            <PhotoItem src="/photo/reanim.jpg" />
+            <PhotoItem src="/photo/nasos_dlya_vody.jpg" />
           </Box>
           <h2>
             <Box sx={{ ...classes.subTitle1 }}>Почему стоит выбрать Нас?</Box>
@@ -220,7 +222,7 @@ const classes: ClassesSx = {
       marginBottom: "10px",
     },
   },
-  liItem: { fontWeight: "600", fontSize: "20px", color: COLOR_BLACK, "@media (max-width:700px)": { fontSize: "14px" } },
+
   subTitle1: { ...CONST_TITLE_FIRST_PAGE, color: COLOR_BLACK },
   descTextSection: { textAlign: "left", margin: "5px 5px", fontSize: "16px", fontWeight: "400", lineHeight: "1.55" },
   content: { margin: "0 16px 0 16px" },
@@ -264,7 +266,7 @@ const classes: ClassesSx = {
     flexWrap: "wrap",
     justifyContent: "center",
     gap: "4px",
-    "@media (max-width:780px)": {
+    "@media (max-width:580px)": {
       gap: "2px",
     },
   },

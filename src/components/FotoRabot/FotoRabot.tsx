@@ -13,12 +13,12 @@ export const FotoRabot: FC<IProps> = () => {
         <Box sx={classes.content}>
           <Box sx={classes.title}>Наши сотрудники за работой</Box>
           <Box sx={classes.arrayPhoto}>
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
-            <PhotoItem />
+            <PhotoItem src="/photoNew/1.png" />
+            <PhotoItem src="/photoNew/1.png" />
+            <PhotoItem src="/photoNew/1.png" />
+            <PhotoItem src="/photoNew/1.png" />
+            <PhotoItem src="/photoNew/1.png" />
+            <PhotoItem src="/photoNew/1.png" />
           </Box>
         </Box>
       </Box>
@@ -26,14 +26,12 @@ export const FotoRabot: FC<IProps> = () => {
   );
 };
 
-export const PhotoItem = () => {
+export const PhotoItem: FC<{ src: string }> = ({ src }) => {
   return (
     <Box sx={classes.wrapperItem}>
       <Image
-        src="/photoNew/1.png"
+        src={src}
         alt={"image"}
-        // layout={"fill"}
-        layout="responsive"
         height={300}
         width={300}
         objectFit="cover"
@@ -93,12 +91,8 @@ const classes: ClassesSx = {
   wrapperItem: {
     position: "relative",
     display: "flex",
-    maxWidth: "30%",
-    "@media (max-width:960px)": {
-      maxWidth: "40%",
-    },
-    "@media (max-width:780px)": {
-      maxWidth: "48%",
-    },
+
+    "@media (max-width:960px)": {},
+    "@media (max-width:780px)": {},
   },
 };
