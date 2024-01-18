@@ -7,25 +7,30 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
+import { Predpriyatie } from "@/components/Content/ObjectObsluj/Predpriyatie";
 
 export default function Predpriytie() {
   return (
     <>
       <Head>
-        <title>Название моей страницы</title>
-        <meta name="description" content="Описание страницы, которое будет отображаться в результатах поиска." />
-        <meta name="keywords" content="ключевое слово 1, ключевое слово 2" />
-        <meta name="robots" content="index, follow" /> {/* Разрешить индексацию и следование по ссылкам */}
+        <title>Водоснабжение и Ремонт Скважин на Воду для Предприятий</title>
+        <meta
+          name="description"
+          content="Профессиональное водоснабжение и ремонт скважин на воду для предприятий. Качественные услуги по доступным ценам.Гарантии качества в соответствии с договором"
+        />
+        <meta name="keywords" content="водоснабжение предприятий, ремонт скважин, бурение скважин, обслуживание водных скважин, водоснабжение скважин" />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preload" href="your-script.js" as="script" />
-        {/*<meta name="robots" content="noindex, nofollow" />  /!* Запретить индексацию и следование по ссылкам *!/*/}
-        {/* Здесь можно добавить другие элементы head, если это необходимо */}
+        <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="http://voda-bsv.ru" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
         <RootLayout>
           <HeaderSite />
-          <SntAndIjs />
+          <Predpriyatie />
           <FooterPage />
         </RootLayout>
       </IsDev>

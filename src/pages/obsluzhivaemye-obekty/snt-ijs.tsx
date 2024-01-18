@@ -34,7 +34,7 @@ export default function SntIjs() {
       <IsDev>
         <RootLayout>
           <HeaderSite />
-          <DomObject />
+          <SntAndIjs />
           <FooterPage />
         </RootLayout>
       </IsDev>
