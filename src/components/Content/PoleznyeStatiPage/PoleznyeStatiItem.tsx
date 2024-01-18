@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import { COLOR_ORANGE } from "@/const";
+import { COLOR_BLACK, COLOR_ORANGE } from "@/const";
 import Link from "next/link";
 
 interface IProps {
@@ -65,7 +65,7 @@ const classes: ClassesSx = {
     "@media (max-width:800px)": {},
   },
   textSection: {},
-  title: { fontWeight: 600, fontSize: "20px", textAlign: "center", marginTop: "5px", color: "black" },
+  title: { fontWeight: 600, fontSize: "20px", textAlign: "center", marginTop: "15px", color: COLOR_BLACK },
   desc: { fontSize: "16px" },
   buttonSection: { display: "flex", justifyContent: "center" },
   button: { backgroundColor: `${COLOR_ORANGE}`, color: "white", borderRadius: "5px", padding: "10px", fontWeight: "700", margin: "20px" },
