@@ -21,7 +21,10 @@ export const ServicesAll: FC<IProps> = observer(() => {
   return (
     <Box sx={classes.wrapper} className={montserrat.className}>
       <Box sx={classes.titleGeneral}> Услуги по водоснабжению</Box>
-      <BasicSelect />
+      <Box mb={2}>
+        <BasicSelect />
+      </Box>
+
       <Box sx={classes.wrapperItems} mb={10}>
         <Box sx={classes.contentItems}>
           {modalStore.stateServiceAll === "пульт1" && (
