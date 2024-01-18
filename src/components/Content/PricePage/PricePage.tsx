@@ -11,7 +11,15 @@ interface IProps {}
 export const PricePage: FC<IProps> = () => {
   const myRef = useRef<HTMLDivElement>(null);
   const [rem, setRem] = useState("Ремонт скважины");
-  const [dataTableRem, setDataTableRem] = useState(data1);
+  const [dataTableRem, setDataTableRem] = useState([
+    { name: "1Замена asdw asdwdа до 40 м.", price: 30 },
+    { name: "2Замена насоса до 40 м.", price: 25 },
+    { name: "3Замена насоса до 40 м.", price: 35 },
+    { name: "4Замена насоса до 40 м.", price: 25 },
+    { name: "5Замена насоса до 40 м.", price: 35 },
+    { name: "6Замена насоса до 40 м.", price: 25 },
+    { name: "7Замена насоса до 40 м.", price: 35 },
+  ]);
 
   const scrollToMyRef = () => {
     // Проверяем, что элемент существует, прежде чем вызывать scrollIntoView

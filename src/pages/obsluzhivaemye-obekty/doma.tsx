@@ -7,25 +7,34 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
+import { DomObject } from "@/components/Content/ObjectObsluj/DomObject";
 
-export default function Doma() {
+export default function SntIjs() {
   return (
     <>
       <Head>
-        <title>Название моей страницы</title>
-        <meta name="description" content="Описание страницы, которое будет отображаться в результатах поиска." />
-        <meta name="keywords" content="ключевое слово 1, ключевое слово 2" />
-        <meta name="robots" content="index, follow" /> {/* Разрешить индексацию и следование по ссылкам */}
+        <title>Водоснабжение для Частных - Профессиональные Решения от Voda-BSV</title>
+        <meta
+          name="description"
+          content="Комплексные решения по водоснабжению для частных и загородных домов. Эффективные системы, проектирование, установка и обслуживание в Московской области."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="http://voda-bsv.ru/obsluzhivaemye-obekty/doma" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Voda-BSV" />
+        <meta
+          name="keywords"
+          content="водоснабжение частных домов, водоснабжение загородных домов, системы водоснабжения, Московская область, установка водоснабжения, обслуживание систем водоснабжения, проектирование систем водоснабжения, частное водоснабжение"
+        />
+        <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preload" href="your-script.js" as="script" />
-        {/*<meta name="robots" content="noindex, nofollow" />  /!* Запретить индексацию и следование по ссылкам *!/*/}
-        {/* Здесь можно добавить другие элементы head, если это необходимо */}
+        <link rel="preconnect" href="http://voda-bsv.ru" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
         <RootLayout>
           <HeaderSite />
-          <SntAndIjs />
+          <DomObject />
           <FooterPage />
         </RootLayout>
       </IsDev>

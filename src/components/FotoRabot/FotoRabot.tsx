@@ -26,7 +26,7 @@ export const FotoRabot: FC<IProps> = () => {
   );
 };
 
-const PhotoItem = () => {
+export const PhotoItem = () => {
   return (
     <Box sx={classes.wrapperItem}>
       <Image
