@@ -48,21 +48,23 @@ export const WhatTypeService: FC<IProps> = () => {
             <Box sx={{ ...classesStyle.titleSub, color: COLOR_BLACK }}>Частные дома</Box>
           </Box>
         </Link>
-        <Box sx={classesStyle.sectionObslujItem}>
-          <Box sx={classesStyle.sectionImg}>
-            <Image
-              src={"/photo/photoObjectObslug/tc.jpg"}
-              alt={"image"}
-              layout={"fill"}
-              // width={600}
-              // height={400}
-              objectFit="cover"
-              objectPosition="center center" // По умолчанию 'center', но может быть изменено
-              quality={100}
-            />
+        <Link href={"/obsluzhivaemye-obekty/torg-centry"} style={{ textDecoration: "none" }}>
+          <Box sx={classesStyle.sectionObslujItem}>
+            <Box sx={classesStyle.sectionImg}>
+              <Image
+                src={"/photo/photoObjectObslug/tc.jpg"}
+                alt={"image"}
+                layout={"fill"}
+                // width={600}
+                // height={400}
+                objectFit="cover"
+                objectPosition="center center" // По умолчанию 'center', но может быть изменено
+                quality={100}
+              />
+            </Box>
+            <Box sx={{ ...classesStyle.titleSub, color: COLOR_BLACK }}>Торговые центры</Box>
           </Box>
-          <Box sx={{ ...classesStyle.titleSub }}>Торговые центры</Box>
-        </Box>
+        </Link>
         <Box sx={classesStyle.sectionObslujItem}>
           <Box sx={classesStyle.sectionImg}>
             <Image

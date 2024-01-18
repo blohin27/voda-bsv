@@ -9,7 +9,7 @@ import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
 import { DomObject } from "@/components/Content/ObjectObsluj/DomObject";
 
-export default function SntIjs() {
+export default function Copmponent() {
   return (
     <>
       <Head>
