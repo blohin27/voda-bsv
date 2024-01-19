@@ -29,8 +29,8 @@ export const ServicesAll: FC<IProps> = observer(() => {
           {modalStore.stateServiceAll === "пульт1" && (
             <>
               <PoleznyeStatiItem photo={"/photo/nasos.jpg"} title={"Ремонт скважины"} link={"/uslugi/remont-scvajin"} />
-              <PoleznyeStatiItem photo={"/photo/2t.jpg"} title={"Чистка скважины"} link={"/uslugi/chistka"} />
-              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Бурение скважины"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/gryaznaya_voda.jpg"} title={"Чистка скважины"} link={"/uslugi/chistka"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Бурение скважины"} link={"/uslugi/burenie"} />
               <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Замена насоса в скважине"} link={"/"} />
               <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Очистка фильтра скважины"} link={"/"} />
               <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Обустройства скважины"} link={"/"} />
