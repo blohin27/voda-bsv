@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
-import { COLOR_BLACK, COLOR_BLUE, CONST_TITLE, CONST_TITLE_FIRST_PAGE, CONST_TITLE_WITHOUT_MARGIN } from "@/const";
+import { COLOR_BLACK, COLOR_BLUE, COLOR_ORANGE, CONST_TITLE, CONST_TITLE_FIRST_PAGE, CONST_TITLE_WITHOUT_MARGIN } from "@/const";
 import Image from "next/image";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { Banner } from "@/components/Banner/Banner";
@@ -11,17 +11,20 @@ import { data1 } from "@/components/Content/PricePage/data";
 import { FotoRabot, PhotoItem } from "@/components/FotoRabot/FotoRabot";
 import { List, ListItem, ListItemDecorator } from "@mui/joy";
 import { FcFlashOn } from "react-icons/fc";
+import { FcCheckmark } from "react-icons/fc";
+import { FcMediumPriority } from "react-icons/fc";
 
 interface IProps {}
 export const RemontScvajin: FC<IProps> = () => {
   const [dataTableRem, setDataTableRem] = useState([
-    { name: "Бурение Скважин на Воду", price: "от 2700" },
-    { name: "Проектирование Систем Водоснабжения:", price: "от 3000" },
-    { name: "Установка Насосного Оборудования:", price: "от 4000" },
-    { name: "Монтаж Систем Водоподготовки", price: "от 5000" },
-    { name: "Прокладка Водопроводных Сетей", price: "по договоренности" },
+    { name: "Диагностика скважины на воду (Выезд)", price: "от 5000" },
+    { name: "Видеодиагностика", price: "от 5000" },
+    { name: "Замена гидроаккумулятора (гидробак)", price: "от 4000" },
+    { name: "Замена реле управления", price: "от 2000" },
+    { name: "Установка / замена оголовка", price: "от 2500" },
+    { name: "Монтаж кранов и прочее", price: "от 2500" },
     { name: "Настройка автоматики", price: " от 2000" },
-    { name: "Консультации (онлайн)", price: " Бесплатно" },
+    { name: "Сварочные работы", price: " от 4000" },
   ]);
   return (
     <Box sx={classes.root}>
@@ -46,14 +49,7 @@ export const RemontScvajin: FC<IProps> = () => {
           </h2>
           <Box sx={classes.descTextSection}>
             <Box sx={{ ...classes.imgSection, float: "left", height: "240px" }}>
-              <Image
-                src="/photo/obustroystvo_skvajiny.jpg"
-                alt={"Демонтаж насоса ЭЦВ "}
-                layout={"fill"}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                quality={100}
-              />
+              <Image src="/photo/nasos.jpg" alt={"Демонтаж насоса ЭЦВ "} layout={"fill"} objectFit="cover" objectPosition="50% 50%" quality={100} />
             </Box>
             <Box>
               Ремонт скважины – это всегда не приятная ситуация которую вы точно не ждали. Отсутствие воды доставляет сильный дискомфорт, так как человек без
@@ -70,8 +66,12 @@ export const RemontScvajin: FC<IProps> = () => {
             </Box>
           </Box>
           <h2>
-            <Box sx={{ ...classes.titlePrice }}>Цены на услуги водоснабжение в частных домов</Box>
+            <Box sx={{ ...classes.titlePrice }}>Цены на ремонт скважины</Box>
           </h2>
+          <Box sx={{ ...classes.descTextSection, marginBottom: "20px" }}>
+            Наши цены являются вполне доступными. Мы предлагаем значительные скидки на пакет услуг. Ниже вы найдете краткий перечень предоставляемых работ и их
+            цены. Также мы предоставляем бесплатную телефонную консультацию, чтобы вы могли самостоятельно определить, что у вас не работает.
+          </Box>
           <Box sx={classes.table}>
             <Table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
               <TableHead>
@@ -91,65 +91,180 @@ export const RemontScvajin: FC<IProps> = () => {
             </Table>
           </Box>
           <h2>
-            <Box sx={{ ...classes.subTitle1 }}>Этапы водоснабжения</Box>
+            <Box sx={{ ...classes.subTitle1 }}>Почему скважина выходит из строя?</Box>
           </h2>
           <Box sx={classes.descTextSection}>
-            Существует перечень определенных этапов водоснабжения, без котороых не обходится ни одно подключение дома к источнику воды. Рассмотрим их более
-            подробно:
+            Самые частые причины почему скважина на воду ломается, забегая вперед можем сказать, что любую проблему мы в силах устранить!
             <Box>
               <Box mt={2} sx={{ display: "flex", justifyContent: "center" }}>
                 <Box>
                   <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
                     <Box>
-                      <FcFlashOn size={40} color={COLOR_BLUE} />
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
                     </Box>
                     <h3>
                       <Box ml={2} sx={{ ...classes.liItem }}>
-                        Планирование и Проектирование
+                        Маленькое потребление.
                       </Box>
                     </h3>
                   </Box>
                   <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
                     <Box>
-                      <FcFlashOn size={40} color={COLOR_BLUE} />
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
                     </Box>
 
                     <h3>
                       <Box ml={2} sx={{ ...classes.liItem }}>
-                        Бурение Скважины или Подключение к Центральному Водопроводу:
+                        Неверный монтаж трубы.
                       </Box>
                     </h3>
                   </Box>
                   <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
                     <Box>
-                      <FcFlashOn size={40} color={COLOR_BLUE} />
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
                     </Box>
                     <h3>
                       <Box ml={2} sx={{ ...classes.liItem }}>
-                        Установка Насосной Станции и Системы Фильтрации:
+                        Перебои в сети электроэнергии
                       </Box>
                     </h3>
                   </Box>
                   <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
                     <Box>
-                      <FcFlashOn size={40} color={COLOR_BLUE} />
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
                     </Box>
                     <h3>
                       <Box ml={2} sx={{ ...classes.liItem }}>
-                        Подключение К Водопотребляющим Приборам и Тестирование
+                        Забился фильтр
                       </Box>
                     </h3>
                   </Box>
                   <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
                     <Box>
-                      <FcFlashOn size={40} color={COLOR_BLUE} />
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
                     </Box>
                     <h3>
                       <Box ml={2} sx={{ ...classes.liItem }}>
-                        Завершение Работ и Ввод в Эксплуатацию
+                        Неверно настроенное автоматика или гидроаккумулятор
                       </Box>
                     </h3>
                   </Box>
+                  <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                    <Box>
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
+                    </Box>
+                    <h3>
+                      <Box ml={2} sx={{ ...classes.liItem }}>
+                        Неисправен кабель питания
+                      </Box>
+                    </h3>
+                  </Box>
+                  <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                    <Box>
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
+                    </Box>
+                    <h3>
+                      <Box ml={2} sx={{ ...classes.liItem }}>
+                        Застрял насоса
+                      </Box>
+                    </h3>
+                  </Box>
+                  <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                    <Box>
+                      <FcMediumPriority size={40} color={COLOR_BLUE} />
+                    </Box>
+                    <h3>
+                      <Box ml={2} sx={{ ...classes.liItem }}>
+                        Плохая герметичность обратного клапана
+                      </Box>
+                    </h3>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+          <h2>
+            <Box sx={{ ...classes.subTitle1 }}>Позвонив нам, что Вы получите?</Box>
+          </h2>
+          <Box sx={{ ...classes.descTextSection }}>
+            Как правило, восстановление скважины состоит из стандартных этапов и только в редком случае ваши проблемы с водоснабжением могут удивить наших
+            мастеров. К нам поступает заявка и мы тут же распределяем их на группу специалистом с учетом территориального признака для того чтобы ваше ожидание
+            было минимальным. По прибытию мастера производят детальную диагностику скважины и всех ее характеристик. Далее, наши специалисты дествуют следующим
+            образом:
+          </Box>
+          <Box>
+            <Box mt={2} sx={{ display: "flex", justifyContent: "center" }}>
+              <Box>
+                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <Box>
+                    <FcCheckmark size={40} color={COLOR_BLUE} />
+                  </Box>
+                  <h3>
+                    <Box ml={2} sx={{ ...classes.liItem }}>
+                      Демонтаж насосного оборудования
+                    </Box>
+                  </h3>
+                </Box>
+                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <Box>
+                    <FcCheckmark size={40} color={COLOR_BLUE} />
+                  </Box>
+
+                  <h3>
+                    <Box ml={2} sx={{ ...classes.liItem }}>
+                      Видеодиагностика
+                    </Box>
+                  </h3>
+                </Box>
+                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <Box>
+                    <FcCheckmark size={40} color={COLOR_BLUE} />
+                  </Box>
+                  <h3>
+                    <Box ml={2} sx={{ ...classes.liItem }}>
+                      Обнаруживаем источник засора и его причины
+                    </Box>
+                  </h3>
+                </Box>
+                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <Box>
+                    <FcCheckmark size={40} color={COLOR_BLUE} />
+                  </Box>
+                  <h3>
+                    <Box ml={2} sx={{ ...classes.liItem }}>
+                      При необходимости желоним
+                    </Box>
+                  </h3>
+                </Box>
+                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <Box>
+                    <FcCheckmark size={40} color={COLOR_BLUE} />
+                  </Box>
+                  <h3>
+                    <Box ml={2} sx={{ ...classes.liItem }}>
+                      При необходимости делаем гидроудар.
+                    </Box>
+                  </h3>
+                </Box>
+                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <Box>
+                    <FcCheckmark size={40} color={COLOR_BLUE} />
+                  </Box>
+                  <h3>
+                    <Box ml={2} sx={{ ...classes.liItem }}>
+                      Проверяем результат
+                    </Box>
+                  </h3>
+                </Box>
+                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                  <Box>
+                    <FcCheckmark size={40} color={COLOR_BLUE} />
+                  </Box>
+                  <h3>
+                    <Box ml={2} sx={{ ...classes.liItem, color: COLOR_ORANGE }}>
+                      Оплата после устранение всех проблем с водой
+                    </Box>
+                  </h3>
                 </Box>
               </Box>
             </Box>
