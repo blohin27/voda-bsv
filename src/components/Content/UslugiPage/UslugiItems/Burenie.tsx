@@ -34,7 +34,9 @@ export const Burenie: FC<IProps> = () => {
         <Box sx={classes.wrapperImg}>
           <Box sx={classes.contentImg}>
             <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-              <Box sx={{ ...classes.titleGeneral, fontSize: "52px" }}>Бурение артезианских скважин</Box>
+              <h1>
+                <Box sx={{ ...classes.titleGeneral, fontSize: "52px" }}>Бурение артезианских скважин</Box>
+              </h1>
             </Box>
           </Box>
         </Box>

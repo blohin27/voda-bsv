@@ -31,31 +31,29 @@ export const ServicesAll: FC<IProps> = observer(() => {
               <PoleznyeStatiItem photo={"/photo/nasos.jpg"} title={"Ремонт скважины"} link={"/uslugi/remont-scvajin"} />
               <PoleznyeStatiItem photo={"/photo/gryaznaya_voda.jpg"} title={"Чистка скважины"} link={"/uslugi/chistka"} />
               <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Бурение скважины"} link={"/uslugi/burenie"} />
-              <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Замена насоса в скважине"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Замена насоса в скважине"} link={"/uslugi/zamena-nasosa"} />
+            </>
+          )}
+          {modalStore.stateServiceAll === "пульт2" && (
+            <>
+              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Очистка фильтра скважины"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Обустройства скважины"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Диагностика скважины"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Замена насоса в скважине"} link={"/uslugi/zamena-nasosa"} />
+            </>
+          )}
+          {modalStore.stateServiceAll === "пульт3" && (
+            <>
               <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Очистка фильтра скважины"} link={"/"} />
               <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Обустройства скважины"} link={"/"} />
               <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Диагностика скважины"} link={"/"} />
             </>
           )}
-          {modalStore.stateServiceAll === "пульт2" && (
-            <>
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-            </>
-          )}
-          {modalStore.stateServiceAll === "пульт3" && (
-            <>
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-            </>
-          )}
           {modalStore.stateServiceAll === "пульт4" && (
             <>
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />{" "}
-              <ServiceItem photo={"/photoNew/testImage.jpg"} title={"Ремонт скважины"} desc={"Быстро избавим от ила и песка"} />
+              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Очистка фильтра скважины"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Обустройства скважины"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Диагностика скважины"} link={"/"} />
             </>
           )}
         </Box>
