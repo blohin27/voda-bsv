@@ -7,13 +7,14 @@ import React from "react";
 import { PricePage } from "@/components/Content/PricePage/PricePage";
 import { UslugiPage } from "@/components/Content/UslugiPage/UslugiPage";
 import { Burenie } from "@/components/Content/UslugiPage/UslugiItems/Burenie";
+import { RemontScvajin } from "@/components/Content/UslugiPage/UslugiItems/RemontScvajin";
 
 export default function Remont() {
   return (
     <IsDev>
       <RootLayout>
         <HeaderSite />
-        <Burenie />
+        <RemontScvajin />
         <FooterPage />
       </RootLayout>
     </IsDev>
