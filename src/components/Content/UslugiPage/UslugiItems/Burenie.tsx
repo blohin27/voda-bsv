@@ -43,7 +43,7 @@ export const Burenie: FC<IProps> = () => {
           </h2>
           <Box sx={classes.descTextSection}>
             <Box sx={{ ...classes.imgSection, float: "left", height: "240px" }}>
-              <Image src="/photo/gryaznaya_voda.jpg" alt={"Демонтаж насоса ЭЦВ "} layout={"fill"} objectFit="cover" objectPosition="50% 50%" quality={100} />
+              <Image src="/photo/burenie.jpg" alt={"Бурение  "} layout={"fill"} objectFit="cover" objectPosition="50% 80%" quality={100} />
             </Box>
             <Box>
               <Box sx={{ display: "inline", color: COLOR_ORANGE, fontWeight: 700 }}> Чистка скважины</Box> – одна из самых популярных услуг в нашей компании.
