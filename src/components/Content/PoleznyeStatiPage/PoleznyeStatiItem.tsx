@@ -66,7 +66,7 @@ const classes: ClassesSx = {
     "@media (max-width:800px)": {},
   },
   textSection: {},
-  title: { fontWeight: 600, fontSize: "20px", textAlign: "center", marginTop: "15px", color: COLOR_BLACK },
+  title: { fontWeight: 600, fontSize: "20px", textAlign: "center", margin: "15px 5px 0 5px", color: COLOR_BLACK },
   desc: { fontSize: "16px" },
   buttonSection: { display: "flex", justifyContent: "center" },
   button: { backgroundColor: `${COLOR_ORANGE}`, color: "white", borderRadius: "5px", padding: "10px", fontWeight: "700", margin: "20px" },

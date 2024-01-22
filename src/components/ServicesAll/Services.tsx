@@ -36,10 +36,10 @@ export const ServicesAll: FC<IProps> = observer(() => {
           )}
           {modalStore.stateServiceAll === "пульт2" && (
             <>
-              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Очистка фильтра скважины"} link={"/"} />
-              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Обустройства скважины"} link={"/"} />
-              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Диагностика скважины"} link={"/"} />
-              <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Замена насоса в скважине"} link={"/uslugi/zamena-nasosa"} />
+              <PoleznyeStatiItem photo={"/photo/gidrobak.jpg"} title={"Замена гидроаккумуляторов"} link={"/uslugi/zamena-gidroaccumulatora"} />
+              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Замена гидроаккумуляторов"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Замена гидроаккумуляторов"} link={"/"} />
+              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Замена гидроаккумуляторов"} link={"/"} />
             </>
           )}
           {modalStore.stateServiceAll === "пульт3" && (
