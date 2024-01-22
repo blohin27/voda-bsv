@@ -160,7 +160,9 @@ export const Diagnostica: FC<IProps> = () => {
             Наши специалисты сообщат Вам итоговую стоимость работ , на основании заключенного договора. Далее наша команда прибывает на участок к клиенту и
             проводит все требуемые работы под присмотром клиента. В процессе клиенту будет рассказано то ,что не видно обычным взглядом.
           </Box>
-          <Slogan text={"Работаем от ИП! Гарантии по договору!"} />
+          <Box sx={{ ...classes.sloganSection }}>
+            <Slogan text={"Работаем от ИП! Гарантии по договору!"} />
+          </Box>
           <h2>
             <Box sx={{ ...classes.subTitle1 }}> Фото наших работ</Box>
           </h2>
@@ -229,6 +231,7 @@ const classes: ClassesSx = {
       marginBottom: "10px",
     },
   },
+  sloganSection: { marginTop: "100px", "@media (max-width:1000px)": { marginTop: "30px" } },
   // mb={2} mt={2} sx={{ color: COLOR_ORANGE, fontWeight: 700, fontSize: "25px" }}
   liSection: { marginTop: "15px", color: COLOR_BLACK, fontWeight: "700", fontSize: "22px", "@media (max-width:500px)": { fontSize: "18px" } },
 
