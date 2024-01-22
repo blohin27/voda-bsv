@@ -143,6 +143,16 @@ export const Diagnostica: FC<IProps> = () => {
             <Box sx={{ ...classes.subTitle1 }}>Как происходит диагностика скважины</Box>
           </h2>
           <Box sx={{ ...classes.descTextSection, marginTop: "20px" }}>
+            <Box sx={{ ...classes.imgSection, float: "left", height: "240px" }}>
+              <Image
+                src="/photo/diagnostika_skvajiny_na4alo.jpg"
+                alt={"Монтаж водоснабжения на фото "}
+                layout={"fill"}
+                objectFit="cover"
+                objectPosition="50% 30%"
+                quality={100}
+              />
+            </Box>
             Для начала мы получаем заявку по телефону или по электронной почте от клиента. Мы связываемся с Вами удобным для способом, проводим первоначальную
             консультацию, которая абсолютно бесплатна и если ситуация того требует, назначаем время диагностики.
           </Box>
