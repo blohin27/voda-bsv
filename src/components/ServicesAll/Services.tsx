@@ -46,6 +46,12 @@ export const ServicesAll: FC<IProps> = observer(() => {
               <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Монтаж водоснабжения"} link={"/uslugi/montaj"} />
               <PoleznyeStatiItem photo={"/photo/diagnost.jpg"} title={"Диагностика скважины"} link={"/uslugi/diagnostica"} />
               <PoleznyeStatiItem photo={"/photo/analyzVody.jpg"} title={"Анализ воды в скважине"} link={"/uslugi/analyz-vody"} objectPosition={"center 20%"} />
+              <PoleznyeStatiItem
+                photo={"/photo/pesok_iz_skvajiny.jpg"}
+                title={"Реанимация скважин"}
+                link={"/uslugi/reanimacia-skvajin"}
+                objectPosition={"center 80%"}
+              />
             </>
           )}
           {modalStore.stateServiceAll === "пульт3" && (
