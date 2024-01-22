@@ -49,7 +49,13 @@ export const ServicesAll: FC<IProps> = observer(() => {
               <PoleznyeStatiItem
                 photo={"/photo/pesok_iz_skvajiny.jpg"}
                 title={"Реанимация скважин"}
-                link={"/uslugi/reanimacia-skvajin"}
+                link={"/uslugi/podvedenie-vody-k-domu"}
+                objectPosition={"center 80%"}
+              />
+              <PoleznyeStatiItem
+                photo={"/photo/podevedeine_vody_k_domu.jpg"}
+                title={"Подведение воды к дому"}
+                link={"/uslugi/podvedenie-vody-k-domu"}
                 objectPosition={"center 80%"}
               />
             </>
