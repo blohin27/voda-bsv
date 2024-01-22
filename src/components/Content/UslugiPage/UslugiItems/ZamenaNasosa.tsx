@@ -60,7 +60,7 @@ export const ZamenaNasosa: FC<IProps> = () => {
           </h2>
           <Box sx={classes.descTextSection}>
             <Box sx={{ ...classes.imgSection, float: "left", height: "240px" }}>
-              <Image src="/photo/burenie.jpg" alt={"Бурение  "} layout={"fill"} objectFit="cover" objectPosition="50% 80%" quality={100} />
+              <Image src="/photo/nasos_dlya_vody.jpg" alt={"Замена насоса  "} layout={"fill"} objectFit="cover" objectPosition="50% 0%" quality={100} />
             </Box>
             <Box>
               Наша компания предлагает полный спектр услуг по установке и замене насосного оборудования для скважин на воду. Мы готовы как отремонтировать

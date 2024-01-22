@@ -10,6 +10,7 @@ interface IProps {
   link: string;
   desc?: string;
   photo: string;
+  objectPosition?: string;
 }
 export const PoleznyeStatiItem: FC<IProps> = (props) => {
   return (
@@ -22,7 +23,7 @@ export const PoleznyeStatiItem: FC<IProps> = (props) => {
               alt={"image"}
               layout={"fill"}
               objectFit="cover"
-              objectPosition="center center" // По умолчанию 'center', но может быть изменено-
+              objectPosition={props.objectPosition ? props.objectPosition : "center center"} // По умолчанию 'center', но может быть изменено-
               quality={100}
             />
           </Box>
