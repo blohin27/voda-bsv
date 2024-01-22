@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
-import { COLOR_BLACK, COLOR_BLUE, COLOR_ORANGE, CONST_TITLE, CONST_TITLE_FIRST_PAGE, CONST_TITLE_WITHOUT_MARGIN } from "@/const";
+import { COLOR_BLACK, COLOR_BLUE, COLOR_ORANGE, CONST_TITLE, CONST_TITLE_FIRST_PAGE, CONST_TITLE_WITHOUT_MARGIN, MOBILE_TELEPHONE } from "@/const";
 import Image from "next/image";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { Banner } from "@/components/Banner/Banner";
@@ -9,6 +9,8 @@ import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
 import { FotoRabot, PhotoItem } from "@/components/FotoRabot/FotoRabot";
 import { FcCheckmark } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
+import { FcFlashOn } from "react-icons/fc";
+import { Slogan } from "@/components/Slogan/Slogan";
 
 interface IProps {}
 export const ZamenaNasosa: FC<IProps> = () => {
@@ -18,6 +20,19 @@ export const ZamenaNasosa: FC<IProps> = () => {
     { name: "Замена насоса на глубине до 80 метров", price: "от 23000" },
     { name: "Замена насоса на глубине  до 100 метров", price: "от 28000" },
     { name: "Замена насоса на глубине  до 120 метров", price: "от 31000" },
+  ]);
+  const [dataTableRem2, setDataTableRem2] = useState([
+    { name: "Установка насоса на глубине до 35 метров", price: "от 11000" },
+    { name: "Установка насоса на глубине  до 60 метров", price: "от 16000" },
+    { name: "Замена насоса на глубине до 80 метров", price: "от 23000" },
+    { name: "Установка насоса на глубине  до 100 метров", price: "от 28000" },
+    { name: "Установка насоса на глубине  до 150 метров", price: "от 33000" },
+  ]);
+  const [dataTableRem3, setDataTableRem3] = useState([
+    { name: "Монтаж(замена установка) ЭЦВ насоса до 40 метров", price: "от 11000" },
+    { name: "Монтаж(замена установка) ЭЦВ насоса до 60 метров", price: "от 16000" },
+    { name: "Монтаж(замена установка) ЭЦВ насоса до 80 метров", price: "от 23000" },
+    { name: "Монтаж(замена установка) ЭЦВ насосадо от 80 метров", price: "от 28000" },
   ]);
 
   return (
@@ -48,7 +63,7 @@ export const ZamenaNasosa: FC<IProps> = () => {
               <Image src="/photo/burenie.jpg" alt={"Бурение  "} layout={"fill"} objectFit="cover" objectPosition="50% 80%" quality={100} />
             </Box>
             <Box>
-              Компания Voda-BSV предлагает полный спектр услуг по установке и замене насосного оборудования для скважин на воду. Мы готовы как отремонтировать
+              Наша компания предлагает полный спектр услуг по установке и замене насосного оборудования для скважин на воду. Мы готовы как отремонтировать
               существующий насос, так и установить новый, приобретенный вами. Наша работа основывается на использовании надежных брендов, таких как Джилекс,
               Unipump, Pedrollo, Водолей и Grundfos.
             </Box>
@@ -95,61 +110,71 @@ export const ZamenaNasosa: FC<IProps> = () => {
             у поставщиков оборудования для водоснабжение, что благоприятно влияет на общую стоимость услуг.
           </Box>
           <h2>
-            <Box sx={{ ...classes.subTitle1 }}>Какой метод бурения подходим Вам?</Box>
+            <Box sx={{ ...classes.subTitle1 }}>Цены на установку насоса</Box>
           </h2>
-          <Box>
-            <Box mt={2} sx={{ display: "flex", justifyContent: "center" }}>
-              <Box>
-                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <Box>
-                    <FcApproval size={40} color={COLOR_BLUE} />
-                  </Box>
-                  <h3>
-                    <Box ml={2} sx={{ ...classes.liItem }}>
-                      Шнековое
-                    </Box>
-                  </h3>
-                </Box>
-                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <Box>
-                    <FcApproval size={40} color={COLOR_BLUE} />
-                  </Box>
-
-                  <h3>
-                    <Box ml={2} sx={{ ...classes.liItem }}>
-                      Колонковое
-                    </Box>
-                  </h3>
-                </Box>
-                <Box sx={{ ...classes.liItem, display: "flex", alignItems: "center", marginBottom: "10px" }}>
-                  <Box>
-                    <FcApproval size={40} color={COLOR_BLUE} />
-                  </Box>
-                  <h3>
-                    <Box ml={2} sx={{ ...classes.liItem }}>
-                      Шарошечное
-                    </Box>
-                  </h3>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
           <Box sx={classes.descTextSection}>
-            <Box>
-              В нашей компании используется только вращательный метод бурения, справедливости ради нужно сказать, что существует еще и ударно-канатный метод, но
-              так как он имеет очень много минусов, мы выбрали первый способ.
-            </Box>
-            <Box mt={2}>
-              Вращательный метод бурения - это специальным приспособлением ввинчивают в грунт под большим усилием с различными насадками выбор которых зависит от
-              глубины и свойства грунта:
-            </Box>
+            Установка насоса. Наша компания также осуществляет установки насоса в новые скважины. На основании паспорта скважины мы подбираем клиенту самый
+            оптимальный насос по цене и качеству. Также производим установку с соблюдением всех правил безопасности и предоставляем гарантию на данную услугу.
           </Box>
-
+          <Box sx={classes.table}>
+            <Table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
+              <TableHead>
+                <TableRow>
+                  <TableCell sx={{ ...classes.thStyle }}>Название услуги</TableCell>
+                  <TableCell sx={{ ...classes.thStyle, width: "60%" }}>Цена</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {dataTableRem2.map((item) => (
+                  <TableRow key={item.name}>
+                    <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
+                    <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Box>
+          <Slogan text={"Срочный выезд! Аварийная подача воды!"} />
+          <h2>
+            <Box sx={{ ...classes.subTitle1 }}> Цены замену насоса ЭЦВ</Box>
+          </h2>
+          <Box sx={classes.table}>
+            <Table style={{ width: "100%", borderCollapse: "collapse", border: "none" }}>
+              <TableHead>
+                <TableRow>
+                  <TableCell sx={{ ...classes.thStyle }}>Название услуги</TableCell>
+                  <TableCell sx={{ ...classes.thStyle, width: "60%" }}>Цена</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {dataTableRem3.map((item) => (
+                  <TableRow key={item.name}>
+                    <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
+                    <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Box>
+          <Box sx={{ ...classes.descTextSection, marginTop: "40px" }}>
+            <Box sx={{ display: "block", color: COLOR_BLACK, fontWeight: 700, fontSize: "20px" }}> Почему же насосы выходят из строя:</Box>
+            Неисправный насос Многим кажется что на рынке уже нет плохих насосов и факторы при которых выходят из строя насосы , все предусмотрены, но на самом
+            деле это не так. У них по прежнему есть как плюсы так и минусы. Ниже приведены причины по которым выходят из струя глубинные насосы:
+          </Box>
           <Box sx={{ ...classes.descTextSection }}>
-            Как правило, восстановление скважины состоит из стандартных этапов и только в редком случае ваши проблемы с водоснабжением могут удивить наших
-            мастеров. К нам поступает заявка и мы тут же распределяем их на группу специалистом с учетом территориального признака для того чтобы ваше ожидание
-            было минимальным. По прибытию мастера производят детальную диагностику скважины и всех ее характеристик. Далее, наши специалисты дествуют следующим
-            образом:
+            <Box sx={{ display: "block", color: COLOR_ORANGE, fontWeight: 700, fontSize: "20px" }}> - Перепады напряжения. </Box>
+            За территорией года на дачных участках зачастую бывает серьезные перепады напряжения. У тех людей у кого установлен перед насосом какая-либо защита
+            от скачков напряжения, могут избежать эту проблему на 99%.
+          </Box>
+          <Box sx={{ ...classes.descTextSection }}>
+            <Box sx={{ display: "block", color: COLOR_ORANGE, fontWeight: 700, fontSize: "20px" }}> - Не правильно настроена автоматика( реле ).</Box>
+            Правильной выбора гидробака – это 50% успеха при построении системы водоснабжения. Для правильного выбора гидроаккумулятора(гидробака) обращайтесь к
+            нам.
+          </Box>
+          <Box sx={{ ...classes.descTextSection }}>
+            <Box sx={{ display: "block", color: COLOR_ORANGE, fontWeight: 700, fontSize: "20px" }}> - Срок службы.</Box>
+            Не стоит забывать, что насос работает в сложных условиях с постоянными пусками и у него как у всего на свете имеется срок службы. Топовые брены могут
+            проработать и более 10 лет при должном уходе, но и встречаются наступление гарантийных случаев.
           </Box>
 
           <h2>
