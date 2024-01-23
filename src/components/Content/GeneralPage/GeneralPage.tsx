@@ -27,6 +27,7 @@ import { COLOR_BLACK, COLOR_BLUE_SECTION, COLOR_MILK } from "@/const";
 import { SimpleDialog } from "@/components/Modal/Modal";
 import { modalStore } from "@/domain";
 import { observer } from "mobx-react";
+import { Slogan } from "@/components/Slogan/Slogan";
 
 export const ContentGeneralPage = observer(() => {
   return (
@@ -41,6 +42,7 @@ export const ContentGeneralPage = observer(() => {
       <Box>
         <WhatTypeService />
       </Box>
+      <Slogan text={"Не допустим ухудшения работы вашего водоснабжения! "} />
       <Box sx={{ backgroundColor: COLOR_BLUE_SECTION }}>
         <ServicesAll />
       </Box>

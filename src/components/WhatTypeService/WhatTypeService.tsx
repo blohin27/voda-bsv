@@ -122,7 +122,7 @@ export const WhatTypeService: FC<IProps> = () => {
 };
 
 const classesStyle: ClassesSx = {
-  content: { backgroundColor: COLOR_BLUE_SECTION },
+  content: { backgroundColor: COLOR_BLUE_SECTION, paddingBottom: "40px" },
   sectionHeaderSite: {
     display: "flex",
     justifyContent: "space-between",
