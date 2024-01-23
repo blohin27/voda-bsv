@@ -27,7 +27,7 @@ export const Slogan: FC<IProps> = ({ text }) => {
 const classes: ClassesSx = {
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: {
-    margin: "60px 16px 60px 16px",
+    margin: "40px 16px 40px 16px",
     padding: "20px",
     justifyContent: "center",
     textAlign: "center",
