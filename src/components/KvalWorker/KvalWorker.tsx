@@ -15,7 +15,7 @@ export const KvalWorker: FC<IProps> = () => {
         <Box sx={classes.content} className={montserrat.className}>
           <Box sx={classes.sectionImg}>
             <Image
-              src="/photoNew/dev.png"
+              src="/photo/kvalEmployee.jpg"
               alt={"image"}
               layout={"fill"}
               objectFit="cover"
@@ -25,24 +25,24 @@ export const KvalWorker: FC<IProps> = () => {
           </Box>
           <Box sx={classes.sectionText}>
             <Box>
-              <Box sx={classes.subTitle}>У нас работает более 2 000 специалистов</Box>
+              <Box sx={classes.subTitle}>Высокая Квалификация</Box>
               <Box sx={classes.text}>
-                Наша команда - это тщательно подобранный и обученный персонал. Ни один работник не допускается до клининга, пока не пройдет стажировку и обучение
-                под руководством опытного наставника.
+                Наши сотрудники обладают глубокими знаниями и многолетним опытом в области водоснабжения и скважин. Они постоянно повышают свою квалификацию,
+                следуя последним тенденциям и технологиям отрасли.
               </Box>
             </Box>
             <Box>
-              <Box sx={classes.subTitle}>У нас работает более 2 000 специалистов</Box>
+              <Box sx={classes.subTitle}>Ответственный Подход</Box>
               <Box sx={classes.text}>
-                Наша команда - это тщательно подобранный и обученный персонал. Ни один работник не допускается до клининга, пока не пройдет стажировку и обучение
-                под руководством опытного наставника.
+                Каждый специалист в нашей команде отличается высокой ответственностью и вниманием к деталям. Мы стремимся к тому, чтобы каждый проект был
+                выполнен наилучшим образом, гарантируя качество и надежность.
               </Box>
             </Box>
             <Box>
-              <Box sx={classes.subTitle}>У нас работает более 2 000 специалистов</Box>
+              <Box sx={classes.subTitle}>Ориентированность на Клиента</Box>
               <Box sx={classes.text}>
-                Наша команда - это тщательно подобранный и обученный персонал. Ни один работник не допускается до клининга, пока не пройдет стажировку и обучение
-                под руководством опытного наставника.
+                Наши сотрудники всегда готовы идти на встречу потребностям клиентов, предлагая индивидуальные решения и подходы. Мы ценим каждого клиента и
+                стремимся обеспечить максимальное удовлетворение от наших услуг.
               </Box>
             </Box>
           </Box>
@@ -102,6 +102,9 @@ const classes: ClassesSx = {
     fontWeight: 700,
     fontSize: "20px",
     marginBottom: "5px",
+    "@media (max-width:1000px)": {
+      textAlign: "center",
+    },
   },
   text: {
     lineHeight: "25px",
@@ -119,7 +122,7 @@ const classes: ClassesSx = {
     width: "50%",
     height: "400px",
     alignSelf: "center",
-    "@media (max-width:800px)": {
+    "@media (max-width:1000px)": {
       width: "100%",
     },
     "@media (max-width:500px)": {
@@ -132,7 +135,7 @@ const classes: ClassesSx = {
   content: {
     display: "flex",
     gap: "35px",
-    "@media (max-width:800px)": {
+    "@media (max-width:1000px)": {
       flexDirection: "column",
       gap: "25px",
     },
@@ -142,7 +145,7 @@ const classes: ClassesSx = {
     gap: "30px",
     display: "flex",
     flexDirection: "column",
-    "@media (max-width:800px)": {
+    "@media (max-width:1000px)": {
       width: "100%",
       gap: "15px",
     },
