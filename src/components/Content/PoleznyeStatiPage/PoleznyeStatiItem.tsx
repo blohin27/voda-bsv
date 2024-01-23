@@ -16,7 +16,7 @@ export const PoleznyeStatiItem: FC<IProps> = (props) => {
   return (
     <Box sx={classes.item}>
       <Link href={`${props.link}`} style={{ textDecoration: "none" }}>
-        <Box sx={classes.sectionImage}>
+        <Box sx={{ display: "flex", justifyContent: "space-around", flexDirection: "column" }}>
           <Box sx={classes.photo}>
             <Image
               src={`${props.photo}`}
@@ -27,12 +27,11 @@ export const PoleznyeStatiItem: FC<IProps> = (props) => {
               quality={100}
             />
           </Box>
-        </Box>
-        <Box sx={classes.textSection}>
-          <Box sx={classes.title}>{props.title}</Box>
-          <Box sx={classes.desc}>{props.desc} </Box>
-          <Box sx={classes.buttonSection}>
-            <Box sx={classes.button}> Подробнее</Box>
+          <Box sx={classes.textSection}>
+            <Box sx={classes.title}>{props.title}</Box>
+            <Box sx={classes.buttonSection}>
+              <Box sx={classes.button}> Подробнее</Box>
+            </Box>
           </Box>
         </Box>
       </Link>
@@ -46,6 +45,7 @@ const classes: ClassesSx = {
     flexDirection: "column",
     width: "30%",
     minWidth: "200px",
+    height: "350px",
     backgroundColor: "white",
     borderRadius: "10px",
     overflow: "hidden",
@@ -57,17 +57,24 @@ const classes: ClassesSx = {
       width: "80%",
     },
   },
-  sectionImage: {},
+  sectionImage: { display: "flex" },
   photo: {
     width: "100%",
     display: "flex",
-    height: "200px",
+    height: "240px",
     position: "relative",
     "@media (max-width:800px)": {},
   },
-  textSection: {},
-  title: { fontWeight: 600, fontSize: "20px", textAlign: "center", margin: "15px 5px 0 5px", color: COLOR_BLACK },
+  textSection: { display: "flex", flexDirection: "column", height: "100px", justifyContent: "space-between" },
+  title: {
+    fontWeight: 600,
+    fontSize: "20px",
+    textAlign: "center",
+    color: COLOR_BLACK,
+    margin: "10px 5px 5px 0px",
+    "@media (max-width:850px)": { fontSize: "17px" },
+  },
   desc: { fontSize: "16px" },
   buttonSection: { display: "flex", justifyContent: "center" },
-  button: { backgroundColor: `${COLOR_ORANGE}`, color: "white", borderRadius: "5px", padding: "10px", fontWeight: "700", margin: "20px" },
+  button: { backgroundColor: `${COLOR_ORANGE}`, color: "white", borderRadius: "5px", fontWeight: "700", padding: "10px", marginBottom: "10px" },
 };

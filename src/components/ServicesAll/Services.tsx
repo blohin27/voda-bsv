@@ -1,9 +1,9 @@
-import React, { FC, useState } from "react";
+import React, { FC, useCallback, useState } from "react";
 import { Montserrat } from "next/font/google";
 import { ServiceItem } from "@/components/ServicesAll/component/ServiceItem/ServiceItem";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
-import { COLOR_BLUE_SECTION, COLOR_MILK, CONST_TITLE } from "@/const";
+import { COLOR_BLUE_SECTION, COLOR_MILK, COLOR_ORANGE, CONST_TITLE } from "@/const";
 import { PoleznyeStatiItem } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiItem";
 import { observer } from "mobx-react";
 import { BasicSelect } from "../BasicSelect/BasicSelect";
@@ -13,67 +13,68 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 interface IProps {}
 export const ServicesAll: FC<IProps> = observer(() => {
   const [statePult, setStatePult] = useState("пульт1");
+  const [pokaz, setPokaz] = useState(false);
 
   const changePult = (item: string) => {
     setStatePult(item);
   };
+  const changePokaz = useCallback(() => {
+    setPokaz((prevState) => !prevState);
+  }, []);
 
   return (
     <Box sx={classes.wrapper} className={montserrat.className}>
       <Box sx={classes.titleGeneral}> Услуги по водоснабжению</Box>
-      <Box mb={2}>
-        <BasicSelect />
-      </Box>
+      {/*<Box mb={2}>*/}
+      {/*  <BasicSelect />*/}
+      {/*</Box>*/}
       <Box sx={classes.wrapperItems} mb={10}>
         <Box sx={classes.contentItems}>
           {modalStore.stateServiceAll === "пульт1" && (
             <>
+              <PoleznyeStatiItem photo={"/photo/burenie.jpg"} title={"Бурение скважины"} link={"/uslugi/burenie"} objectPosition={"center 80%"} />
               <PoleznyeStatiItem photo={"/photo/nasos.jpg"} title={"Ремонт скважины"} link={"/uslugi/remont-scvajin"} />
               <PoleznyeStatiItem photo={"/photo/gryaznaya_voda.jpg"} title={"Чистка скважины"} link={"/uslugi/chistka"} />
-              <PoleznyeStatiItem photo={"/photo/burenie.jpg"} title={"Бурение скважины"} link={"/uslugi/burenie"} objectPosition={"center 80%"} />
-              <PoleznyeStatiItem photo={"/photo/zamena_nasosa.jpg"} title={"Замена насоса в скважине"} link={"/uslugi/zamena-nasosa"} />
-            </>
-          )}
-          {modalStore.stateServiceAll === "пульт2" && (
-            <>
-              <PoleznyeStatiItem photo={"/photo/gidrobak.jpg"} title={"Замена гидроаккумуляторов"} link={"/uslugi/zamena-gidroaccumulatora"} />
-              <PoleznyeStatiItem
-                photo={"/photo/serviznoe_obslujivanie_truby.jpg"}
-                title={"Сервисное обслуживание "}
-                link={"/uslugi/servic-obslujivanie"}
-                objectPosition={"center 10%"}
-              />
-              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Монтаж водоснабжения"} link={"/uslugi/montaj"} />
               <PoleznyeStatiItem photo={"/photo/diagnost.jpg"} title={"Диагностика скважины"} link={"/uslugi/diagnostica"} />
-              <PoleznyeStatiItem photo={"/photo/analyzVody.jpg"} title={"Анализ воды в скважине"} link={"/uslugi/analyz-vody"} objectPosition={"center 20%"} />
-              <PoleznyeStatiItem
-                photo={"/photo/pesok_iz_skvajiny.jpg"}
-                title={"Реанимация скважин"}
-                link={"/uslugi/podvedenie-vody-k-domu"}
-                objectPosition={"center 80%"}
-              />
-              <PoleznyeStatiItem
-                photo={"/photo/podevedeine_vody_k_domu.jpg"}
-                title={"Подведение воды к дому"}
-                link={"/uslugi/podvedenie-vody-k-domu"}
-                objectPosition={"center 80%"}
-              />
+              <PoleznyeStatiItem photo={"/photo/zamena_nasosa.jpg"} title={"Замена насоса в скважине"} link={"/uslugi/zamena-nasosa"} />
+              <PoleznyeStatiItem photo={"/photo/gidrobak.jpg"} title={"Замена гидроаккумуляторов"} link={"/uslugi/zamena-gidroaccumulatora"} />
+              {pokaz && (
+                <>
+                  <PoleznyeStatiItem photo={"/photo/vodoochistka.jpg"} title={"Ремонт водоочистки"} link={"/uslugi/remont-vodoochistky"} />
+                  <PoleznyeStatiItem
+                    photo={"/photo/serviznoe_obslujivanie_truby.jpg"}
+                    title={"Сервисное обслуживание "}
+                    link={"/uslugi/servic-obslujivanie"}
+                    objectPosition={"center 10%"}
+                  />
+                  <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Монтаж водоснабжения"} link={"/uslugi/montaj"} />
+                  <PoleznyeStatiItem
+                    photo={"/photo/analyzVody.jpg"}
+                    title={"Анализ воды в скважине"}
+                    link={"/uslugi/analyz-vody"}
+                    objectPosition={"center 20%"}
+                  />
+                  <PoleznyeStatiItem
+                    photo={"/photo/pesok_iz_skvajiny.jpg"}
+                    title={"Реанимация скважин"}
+                    link={"/uslugi/podvedenie-vody-k-domu"}
+                    objectPosition={"center 80%"}
+                  />
+                  <PoleznyeStatiItem
+                    photo={"/photo/podevedeine_vody_k_domu.jpg"}
+                    title={"Подведение воды к дому"}
+                    link={"/uslugi/podvedenie-vody-k-domu"}
+                    objectPosition={"center 80%"}
+                  />
+                </>
+              )}
             </>
           )}
-          {modalStore.stateServiceAll === "пульт3" && (
-            <>
-              <PoleznyeStatiItem photo={"/photo/vodoochistka.jpg"} title={"Ремонт водоочистки"} link={"/uslugi/remont-vodoochistky"} />
-              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Обустройства скважины"} link={"/"} />
-              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Диагностика скважины"} link={"/"} />
-            </>
-          )}
-          {modalStore.stateServiceAll === "пульт4" && (
-            <>
-              <PoleznyeStatiItem photo={"/photo/7t.jpg"} title={"Очистка фильтра скважины"} link={"/"} />
-              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Обустройства скважины"} link={"/"} />
-              <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Диагностика скважины"} link={"/"} />
-            </>
-          )}
+        </Box>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Box onClick={changePokaz} sx={{ ...classes.button, backgroundColor: `${pokaz ? "grey" : COLOR_ORANGE}` }}>
+          {pokaz ? "Свернуть" : " Показать больше"}
         </Box>
       </Box>
     </Box>
@@ -84,7 +85,7 @@ const classes: ClassesSx = {
   wrapperItems: {
     maxWidth: "1080px",
     margin: "0 auto",
-    paddingBottom: "60px",
+    paddingBottom: "30px",
     "@media (max-width:1090px)": {
       // maxWidth: "805px",
       // margin: "0 auto",
@@ -103,6 +104,16 @@ const classes: ClassesSx = {
       paddingBottom: "30px",
       margin: "0 auto",
     },
+  },
+  button: {
+    display: "flex",
+    backgroundColor: COLOR_ORANGE,
+    color: "white",
+    padding: "10px",
+    fontWeight: "700",
+    borderRadius: "3px",
+    cursor: "pointer",
+    marginBottom: "40px",
   },
   titleGeneral: {
     ...CONST_TITLE,
