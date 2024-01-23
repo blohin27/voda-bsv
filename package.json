@@ -42,6 +42,7 @@
     "react-input-mask": "^2.0.4",
     "react-notifications": "^1.7.4",
     "react-responsive-carousel": "^3.2.23",
+    "react-scroll-up": "^1.4.0",
     "react-slick": "^0.29.0",
     "react-toastify": "^10.0.1",
     "slick-carousel": "^1.8.1",

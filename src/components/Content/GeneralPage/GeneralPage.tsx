@@ -28,6 +28,9 @@ import { SimpleDialog } from "@/components/Modal/Modal";
 import { modalStore } from "@/domain";
 import { observer } from "mobx-react";
 import { Slogan } from "@/components/Slogan/Slogan";
+import ScrollToTop from "react-scroll-up";
+import { FcUpload } from "react-icons/fc";
+import { FcRightUp2 } from "react-icons/fc";
 
 export const ContentGeneralPage = observer(() => {
   return (
