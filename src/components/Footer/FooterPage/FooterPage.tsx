@@ -10,6 +10,7 @@ import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
 import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
 import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 import { useMediaQuery } from "@mui/material";
+import { modalStore } from "@/domain";
 
 interface IProps {}
 export const FooterPage: FC<IProps> = () => {
@@ -62,8 +63,22 @@ export const FooterPage: FC<IProps> = () => {
                     <Box sx={classes.timeWork}>
                       <FcCustomerSupport fontSize={30} /> с 8:00 до 23:00
                     </Box>
-                    <Box sx={classes.zvonokButton}>Обратный звонок</Box>
-                    <Box sx={classes.raschetButton}>Расчитать стоимость</Box>
+                    <Box
+                      sx={classes.zvonokButton}
+                      onClick={() => {
+                        modalStore.openModal();
+                      }}
+                    >
+                      Обратный звонок
+                    </Box>
+                    <Box
+                      sx={classes.raschetButton}
+                      onClick={() => {
+                        modalStore.openModal();
+                      }}
+                    >
+                      Расчитать стоимость
+                    </Box>
                   </Box>
                 </Box>
               )}

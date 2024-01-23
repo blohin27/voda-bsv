@@ -18,7 +18,13 @@ export const SectionButtons = () => (
       </Button>
     </Box>
     <Box ml={1} display={"flex"} justifyContent={"center"}>
-      <Button sx={classes.button2} variant="contained">
+      <Button
+        sx={classes.button2}
+        onClick={() => {
+          modalStore.openModal();
+        }}
+        variant="contained"
+      >
         Расчитать стоимость
       </Button>
     </Box>
