@@ -8,7 +8,8 @@ interface IProps {
   text?: string;
   subText?: string;
 }
-export const Banner: FC<IProps> = ({ text, subText }) => {
+
+export const Banner: FC<IProps> = ({ text = "Получить бесплатную консультацию", subText = "Наш специалист свяжется с вами через некторое время" }) => {
   return (
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>

@@ -67,7 +67,7 @@ const classes: ClassesSx = {
   title: {
     marginTop: "40px",
     paddingTop: "40px",
-    marginBottom: "50px",
+    marginBottom: "30px",
     fontSize: "48px",
     color: COLOR_BLACK,
     fontWeight: 700,

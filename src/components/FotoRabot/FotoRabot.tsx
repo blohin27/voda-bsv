@@ -11,14 +11,14 @@ export const FotoRabot: FC<IProps> = () => {
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}>
-          <Box sx={classes.title}>Наши сотрудники за работой</Box>
+          <Box sx={classes.title}>Фото с наших объектов</Box>
           <Box sx={classes.arrayPhoto}>
-            <PhotoItem src="/photoNew/1.png" />
-            <PhotoItem src="/photoNew/1.png" />
-            <PhotoItem src="/photoNew/1.png" />
-            <PhotoItem src="/photoNew/1.png" />
-            <PhotoItem src="/photoNew/1.png" />
-            <PhotoItem src="/photoNew/1.png" />
+            <PhotoItem src="/photo/dostaem_nasos.jpg" />
+            <PhotoItem src="/photo/pred.jpg" />
+            <PhotoItem src="/photo/dostaem_nasos_servisnoe_obslujivanie.jpg" />
+            <PhotoItem src="/photo/montaj_vodoochistki.jpg" />
+            <PhotoItem src="/photo/obslujivaem_zavody.jpg" />
+            <PhotoItem src="/photo/zamena_nasosa.jpg" />
           </Box>
         </Box>
       </Box>

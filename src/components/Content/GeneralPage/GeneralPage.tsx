@@ -55,29 +55,32 @@ export const ContentGeneralPage = observer(() => {
       <Box>
         <KvalWorker />
       </Box>
-      <Box sx={classes.title}>Наши работы</Box>
-      <NashyRabotyTemplate
-        textFirst
-        title={"Чистка скважины"}
-        glubina={"30 метров"}
-        time={"3 часа"}
-        typeWork={"Чистка скважины с использованием профессиональной химии"}
-        kolvoPersonal={"2 человека"}
-        photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
-        price={"30 000 рублей"}
-      />
-      <NashyRabotyTemplate
-        title={"Чистка скважины"}
-        glubina={"30 метров"}
-        time={"3 часа"}
-        typeWork={"Чистка скважины с использованием профессиональной химии"}
-        kolvoPersonal={"2 человека"}
-        photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
-        price={"30 000 рублей"}
-      />
-      <ButtonCentr title={"Больше кейсов"} />
-      <Banner />
+      {/*<NashyRabotyTemplate*/}
+      {/*  textFirst*/}
+      {/*  title={"Чистка скважины"}*/}
+      {/*  glubina={"30 метров"}*/}
+      {/*  time={"3 часа"}*/}
+      {/*  typeWork={"Чистка скважины с использованием профессиональной химии"}*/}
+      {/*  kolvoPersonal={"2 человека"}*/}
+      {/*  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}*/}
+      {/*  price={"30 000 рублей"}*/}
+      {/*/>*/}
+      {/*<NashyRabotyTemplate*/}
+      {/*  title={"Чистка скважины"}*/}
+      {/*  glubina={"30 метров"}*/}
+      {/*  time={"3 часа"}*/}
+      {/*  typeWork={"Чистка скважины с использованием профессиональной химии"}*/}
+      {/*  kolvoPersonal={"2 человека"}*/}
+      {/*  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}*/}
+      {/*  price={"30 000 рублей"}*/}
+      {/*/>*/}
+      {/*<ButtonCentr title={"Больше кейсов"} />*/}
+
       <FotoRabot />
+      <Box mt={10}>
+        <Banner text={"Получить бесплатную консультацию"} subText={"Наш специалист свяжется с вами через некторое время"} />
+      </Box>
+
       <SimpleDialog open={modalStore.modalOpen} />
     </Box>
   );
