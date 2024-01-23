@@ -15,7 +15,7 @@ export default function RootLayout({ children }: PropsWithChildren<unknown>) {
     <Box sx={{ color: COLOR_BLACK }}>
       {children}
       <ToastContainer position="top-center" style={{ fontSize: "25px" }} autoClose={2000} />
-      <ScrollToTop showUnder={60}>
+      <ScrollToTop showUnder={60} easing={"easeInOutCirc"}>
         <FcRightUp2 size={70} />
       </ScrollToTop>
     </Box>

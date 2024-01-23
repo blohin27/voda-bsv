@@ -114,6 +114,7 @@ export function SimpleDialog(props: SimpleDialogProps) {
                   message: `${message}`,
                   click: "Модальное окно",
                 });
+                modalStore.closeModal();
               } else {
                 toast.error("Ошибка ввода", {
                   position: "top-center",
