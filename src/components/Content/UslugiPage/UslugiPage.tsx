@@ -28,13 +28,13 @@ export const UslugiPage: FC<IProps> = () => {
           <Box sx={classes.contentImg}>
             <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
               <h1>
-                <Box sx={{ ...classes.titleGeneral, fontSize: "52px" }}>Услуги</Box>
+                <Box sx={{ ...classes.titleGeneral, fontSize: "52px" }}>Услуги водоснабжения</Box>
               </h1>
             </Box>
           </Box>
         </Box>
       </Box>
-      {/*/////*/}
+
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}>
           <Box mt={-6}>
@@ -42,6 +42,12 @@ export const UslugiPage: FC<IProps> = () => {
           </Box>
           <Box sx={classes.subTitle1}> Услуги</Box>
           <Box sx={classes.uslugiItems}>
+            <Box sx={classes.descTextSection}>
+              <Box sx={{ ...classes.textUp }}>
+                Добро пожаловать на страницу наших услуг по водоснабжению! Здесь вы найдете надежные и эффективные решения для обеспечения вашего дома или
+                бизнеса качественной водой, отвечающей всем стандартам безопасности и удобства.
+              </Box>
+            </Box>
             <Box sx={{ ...classes.uslugiItems }}>
               <PoleznyeStatiItem photo={"/photo/burenie.jpg"} title={"Бурение скважины"} link={"/uslugi/burenie"} objectPosition={"center 80%"} />
               <PoleznyeStatiItem photo={"/photo/nasos.jpg"} title={"Ремонт скважины"} link={"/uslugi/remont-scvajin"} />
@@ -100,6 +106,8 @@ const classes: ClassesSx = {
       height: "250px",
     },
   },
+  textUp: { margin: "0 16px 0 16px", textAlign: "center", fontSize: "20px", "@media (max-width:500px)": { fontSize: "15px" } },
+  descTextSection: { textAlign: "left", margin: "5px 5px", fontSize: "16px", fontWeight: "400", lineHeight: "1.55" },
   sectionWhiteImg: {
     background: "linear-gradient(to left, black, black 100%, rgba(0, 0, 0, 10%) 90%)",
     opacity: 0.6,
