@@ -83,7 +83,6 @@ export const ContentGeneralPage = observer(() => {
       <Box mt={10}>
         <Banner text={"Получить бесплатную консультацию"} subText={"Наш специалист свяжется с вами через некторое время"} />
       </Box>
-
       <SimpleDialog open={modalStore.modalOpen} />
     </Box>
   );

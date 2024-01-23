@@ -37,32 +37,65 @@ export const ComentOnas: FC<IProps> = () => {
           </Box>
         </Box>
         <Box sx={classes.sectionOtz}>
-          <ItemOtz />
-          <ItemOtz />
-          <ItemOtz />
-          <ItemOtz />
+          <ItemOtz
+            kolvoStar={"5"}
+            text={
+              "Вызывал бригаду  на срочный вызов. Больше -20 мороза , в доме с маленьким ребенком никак. Единственные, кто согасился приехать! От всей души Мужики благодарю Вас!"
+            }
+            author={"Звягинцев В.Ю."}
+            term={"Оставлен в Яндекс "}
+          />
+          <ItemOtz
+            kolvoStar={"5"}
+            text={"Воды не было неделю, приехали быстро, половину дня ковырялись, но правда сделали, вода пошла, ПРетензий Нет. Обращаюсь только к ним"}
+            author={"Богомольская А. В."}
+            term={"Оставлен в Яндекс "}
+          />
+          <ItemOtz
+            kolvoStar={"4"}
+            text={"Бурили и подключали мне загородный дом к водоснабжению. Цены у них средние, Качество материалов хорошее,  Реокмендую!"}
+            author={"Слонов В.Д."}
+            term={"Оставлен в Google "}
+          />
+          <ItemOtz
+            kolvoStar={"5"}
+            text={"Нормально раотают, оплатил через безнал, претензий нет. Бригада провереная ВРЕМЕНЕМ"}
+            author={"Башкатов Е.А."}
+            term={"Оставлен в Яндекс "}
+          />
         </Box>
       </Box>
     </Box>
   );
 };
 
-const ItemOtz = () => {
+const ItemOtz: FC<{ text: string; author: string; term: string; kolvoStar: string }> = ({ text, author, kolvoStar, term }) => {
   return (
     <Box sx={classes.sectionOtzItem}>
-      <Box sx={classes.otzItemDesc}>
-        Окна отмыли прекрасно, не оставили ни одного развода на стекле, да и вокруг ничего не намочили и не зaпачкали. Оставили о себе только полoжительные
-        впечатления.
-      </Box>
+      <Box sx={classes.otzItemDesc}>{text}</Box>
       <Box>
         <Box>
-          <IoStarSharp color={"orange"} />
-          <IoStarSharp color={"orange"} />
-          <IoStarSharp color={"orange"} />
-          <IoStarSharp color={"orange"} />
+          {kolvoStar === "5" && (
+            <>
+              {" "}
+              <IoStarSharp color={"orange"} />
+              <IoStarSharp color={"orange"} />
+              <IoStarSharp color={"orange"} />
+              <IoStarSharp color={"orange"} />
+              <IoStarSharp color={"orange"} />
+            </>
+          )}
+          {kolvoStar === "4" && (
+            <>
+              <IoStarSharp color={"orange"} />
+              <IoStarSharp color={"orange"} />
+              <IoStarSharp color={"orange"} />
+              <IoStarSharp color={"orange"} />
+            </>
+          )}
         </Box>
-        <Box sx={classes.otsItemName}> Белоконь Я.Н.</Box>
-        <Box sx={classes.otsItemDate}>Оставлен в Google год назад</Box>
+        <Box sx={classes.otsItemName}> {author}</Box>
+        <Box sx={classes.otsItemDate}>{term}</Box>
       </Box>
     </Box>
   );
