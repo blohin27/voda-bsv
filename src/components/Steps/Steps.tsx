@@ -24,12 +24,14 @@ export const Steps: FC<IProps> = () => {
               </Box>
             </Box>
             <Box sx={classes.itemCardContent}>
-              <Box sx={classes.itemCardContentTitle}>Прием Звонка</Box>
-              <Box sx={classes.itemCardContentDesc}>
-                <Box sx={classes.descTextSection}> Оставьте заявку у нас на сайте. С Вами связжуться в ближайее время</Box>
-              </Box>
-              <Box sx={classes.itemCardContentIcon}>
-                <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+              <Box sx={classes.itemCardContentTitle}>Создание заявки</Box>
+              <Box sx={{ ...classes.descAndIcon }}>
+                <Box sx={classes.descTextSection}>
+                  Ваш первый шаг к решению - просто позвоните нам, и наши специалисты незамедлительно приступят к обработке вашего запроса.{" "}
+                </Box>
+                <Box sx={classes.itemCardContentIcon}>
+                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -42,12 +44,14 @@ export const Steps: FC<IProps> = () => {
               </Box>
             </Box>
             <Box sx={classes.itemCardContent}>
-              <Box sx={classes.itemCardContentTitle}>Прием Звонка</Box>
-              <Box sx={classes.itemCardContentDesc}>
-                <Box sx={classes.descTextSection}> Оставьте заявку у нас на сайте. С Вами связжуться в ближайее время</Box>
-              </Box>
-              <Box sx={classes.itemCardContentIcon}>
-                <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+              <Box sx={classes.itemCardContentTitle}>Выезд Специалиста</Box>
+              <Box sx={{ ...classes.descAndIcon }}>
+                <Box sx={classes.descTextSection}>
+                  Наши квалифицированные эксперты оперативно прибудут на место для оценки ситуации и диагностики вашей скважины.
+                </Box>
+                <Box sx={classes.itemCardContentIcon}>
+                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -60,12 +64,12 @@ export const Steps: FC<IProps> = () => {
               </Box>
             </Box>
             <Box sx={classes.itemCardContent}>
-              <Box sx={classes.itemCardContentTitle}>Прием Звонка</Box>
-              <Box sx={classes.itemCardContentDesc}>
-                <Box sx={classes.descTextSection}> Оставьте заявку у нас на сайте. С Вами связжуться в ближайее время</Box>
-              </Box>
-              <Box sx={classes.itemCardContentIcon}>
-                <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+              <Box sx={classes.itemCardContentTitle}>Разработка Плана Ремонта:</Box>
+              <Box sx={{ ...classes.descAndIcon }}>
+                <Box sx={classes.descTextSection}>Мы разработаем индивидуальный план ремонта, исходя из конкретных потребностей и условий вашей скважины.</Box>
+                <Box sx={classes.itemCardContentIcon}>
+                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -78,12 +82,12 @@ export const Steps: FC<IProps> = () => {
               </Box>
             </Box>
             <Box sx={classes.itemCardContent}>
-              <Box sx={classes.itemCardContentTitle}>Прием Звонка</Box>
-              <Box sx={classes.itemCardContentDesc}>
-                <Box sx={classes.descTextSection}> Оставьте заявку у нас на сайте. С Вами связжуться в ближайее время </Box>
-              </Box>
-              <Box sx={classes.itemCardContentIcon}>
-                <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+              <Box sx={classes.itemCardContentTitle}>Завершение Работ</Box>
+              <Box sx={{ ...classes.descAndIcon }}>
+                <Box sx={classes.descTextSection}>Выполним все необходимые ремонтные работы быстро и эффективно, возвращая вам надежное водоснабжение.</Box>
+                <Box sx={classes.itemCardContentIcon}>
+                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -170,53 +174,78 @@ const classes: ClassesSx = {
     display: "flex",
     margin: "0 16px 0 16px",
     justifyContent: "space-between",
-    "@media (max-width:900px)": {
-      gap: "30px",
+    "@media (max-width:1050px)": {
+      width: "90%",
+      margin: "0 auto",
+      flexDirection: "column",
     },
 
-    "@media (max-width:850px)": {
-      flexDirection: "column",
-      gap: "60px",
+    "@media (max-width:900px)": {
+      // gap: "20px",
     },
   },
+
   itemCard: {
-    display: "flex",
     backgroundColor: "white",
+    width: "250px",
+    height: "400px",
+    display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    border: "1px solid grey",
-    width: "25%",
-    "@media (max-width:1000px)": {
-      width: "80%",
+    padding: "0 16px 0 16px",
+    "@media (max-width:1050px)": {
+      width: "600px",
       margin: "0 auto",
+      height: "350px",
+    },
+    "@media (max-width:700px)": {
+      width: "500px",
+    },
+    "@media (max-width:600px)": {
+      width: "380px",
+    },
+    "@media (max-width:500px)": {
+      width: "350px",
+    },
+    "@media (max-width:430px)": {
+      width: "300px",
+    },
+    "@media (max-width:400px)": {
+      width: "250px",
     },
   },
   itemCardContent: {
-    padding: "0 10px 0 10px",
     display: "flex",
-    height: "400px",
-    textAlign: "center",
     flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
+    height: "85%",
   },
   circle: {
     width: "100%",
     display: "flex",
-    height: "60px",
-    border: "2px solid red",
     "@media (max-width:900px)": {},
     position: "relative",
+    height: "15%",
   },
-  itemCardContentTitle: {
-    fontSize: "28px",
-    fontWeight: 700,
-    textAlign: "center",
-    flex: "0 0 auto",
-
-    "@media (max-width:900px)": {
-      fontSize: "23px",
+  descAndIcon: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    height: "80%",
+    "@media (max-width:1050px)": {
+      // flexDirection: "column",
+      // gap: "40px",
     },
   },
-  itemCardContentDesc: { display: "flex", flex: "0 0 auto", textAlign: "left", margin: "5px 5px", fontSize: "16px", fontWeight: "400", lineHeight: "1.55" },
-  itemCardContentIcon: { textAlign: "center", height: "20%", display: "flex", justifyContent: "center" },
+  itemCardContentTitle: { textAlign: "center", display: "flex", marginTop: "20px", fontSize: "20px", fontWeight: 700, height: "20%" },
+  descTextSection: {
+    height: "50%",
+    display: "flex",
+    textAlign: "center",
+    "@media (max-width:1050px)": { height: "40%" },
+    "@media (max-width:1000px)": { fontSize: "16px" },
+    fontSize: "15px",
+    fontWeight: 300,
+  },
+  itemCardContentIcon: { textAlign: "center", display: "flex", height: "50%", "@media (max-width:1050px)": { height: "60%" } },
 };
