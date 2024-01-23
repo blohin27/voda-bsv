@@ -90,8 +90,22 @@ export const FooterPage: FC<IProps> = () => {
                   <Box sx={{ ...classes.timeWork, display: "flex", justifyContent: "center" }}>
                     <FcCustomerSupport fontSize={30} /> с 8:00 до 23:00
                   </Box>
-                  <Box sx={classes.zvonokButton}>Обратный звонок</Box>
-                  <Box sx={classes.raschetButton}>Расчитать стоимость</Box>
+                  <Box
+                    sx={classes.zvonokButton}
+                    onClick={() => {
+                      modalStore.openModal();
+                    }}
+                  >
+                    Обратный звонок
+                  </Box>
+                  <Box
+                    sx={classes.raschetButton}
+                    onClick={() => {
+                      modalStore.openModal();
+                    }}
+                  >
+                    Расчитать стоимость
+                  </Box>
                 </Box>
               </Box>
             )}
