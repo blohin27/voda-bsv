@@ -76,5 +76,5 @@ const classes: ClassesSx = {
   },
   desc: { fontSize: "16px" },
   buttonSection: { display: "flex", justifyContent: "center" },
-  button: { backgroundColor: `${COLOR_ORANGE}`, color: "white", borderRadius: "5px", fontWeight: "700", padding: "10px", marginBottom: "10px" },
+  button: { backgroundColor: `${COLOR_ORANGE}`, color: "white", borderRadius: "5px", fontWeight: "700", padding: "10px" },
 };
