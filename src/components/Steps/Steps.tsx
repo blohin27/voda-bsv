@@ -6,6 +6,10 @@ import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import { TitleComponent } from "@/components/TitleComponent/TitleComponent";
 import { COLOR_BLACK, COLOR_BLUE_SECTION } from "@/const";
+import { FcAssistant } from "react-icons/fc";
+import { FcShipped } from "react-icons/fc";
+import { FcServices } from "react-icons/fc";
+import { FcOk } from "react-icons/fc";
 
 interface IProps {}
 
@@ -26,11 +30,9 @@ export const Steps: FC<IProps> = () => {
             <Box sx={classes.itemCardContent}>
               <Box sx={classes.itemCardContentTitle}>Создание заявки</Box>
               <Box sx={{ ...classes.descAndIcon }}>
-                <Box sx={classes.descTextSection}>
-                  Ваш первый шаг к решению - просто позвоните нам, и наши специалисты незамедлительно приступят к обработке вашего запроса.{" "}
-                </Box>
+                <Box sx={classes.descTextSection}>Создайте заявку по телефону или на нашем сайте. Далее- с вами свяжутся</Box>
                 <Box sx={classes.itemCardContentIcon}>
-                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                  <FcAssistant style={{ fontSize: "110px", color: "#fe6c36" }} />
                 </Box>
               </Box>
             </Box>
@@ -39,18 +41,16 @@ export const Steps: FC<IProps> = () => {
             <Box sx={classes.circle}>
               <Box sx={classes.circleContent}>
                 <Box style={{ position: "relative", width: "100%", height: "100%" }}>
-                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>1</Box>
+                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>2</Box>
                 </Box>
               </Box>
             </Box>
             <Box sx={classes.itemCardContent}>
               <Box sx={classes.itemCardContentTitle}>Выезд Специалиста</Box>
               <Box sx={{ ...classes.descAndIcon }}>
-                <Box sx={classes.descTextSection}>
-                  Наши квалифицированные эксперты оперативно прибудут на место для оценки ситуации и диагностики вашей скважины.
-                </Box>
+                <Box sx={classes.descTextSection}>Наши сотрудники прибудут на место для оценки ситуации и диагностики вашей скважины.</Box>
                 <Box sx={classes.itemCardContentIcon}>
-                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                  <FcShipped style={{ fontSize: "110px", color: "#fe6c36" }} />
                 </Box>
               </Box>
             </Box>
@@ -59,16 +59,16 @@ export const Steps: FC<IProps> = () => {
             <Box sx={classes.circle}>
               <Box sx={classes.circleContent}>
                 <Box style={{ position: "relative", width: "100%", height: "100%" }}>
-                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>1</Box>
+                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>3</Box>
                 </Box>
               </Box>
             </Box>
             <Box sx={classes.itemCardContent}>
-              <Box sx={classes.itemCardContentTitle}>Разработка Плана Ремонта:</Box>
+              <Box sx={classes.itemCardContentTitle}>Составление плана:</Box>
               <Box sx={{ ...classes.descAndIcon }}>
-                <Box sx={classes.descTextSection}>Мы разработаем индивидуальный план ремонта, исходя из конкретных потребностей и условий вашей скважины.</Box>
+                <Box sx={classes.descTextSection}>Мы разработаем план ремонта, из конкретных потребностей и условий вашей скважины.</Box>
                 <Box sx={classes.itemCardContentIcon}>
-                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                  <FcServices style={{ fontSize: "110px", color: "#fe6c36" }} />
                 </Box>
               </Box>
             </Box>
@@ -77,16 +77,16 @@ export const Steps: FC<IProps> = () => {
             <Box sx={classes.circle}>
               <Box sx={classes.circleContent}>
                 <Box style={{ position: "relative", width: "100%", height: "100%" }}>
-                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>1</Box>
+                  <Box style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", fontSize: "30px" }}>4</Box>
                 </Box>
               </Box>
             </Box>
             <Box sx={classes.itemCardContent}>
               <Box sx={classes.itemCardContentTitle}>Завершение Работ</Box>
               <Box sx={{ ...classes.descAndIcon }}>
-                <Box sx={classes.descTextSection}>Выполним все необходимые ремонтные работы быстро и эффективно, возвращая вам надежное водоснабжение.</Box>
+                <Box sx={classes.descTextSection}>Выполним все необходимые ремонтные работы, вернем Вам надежное водоснабжение.</Box>
                 <Box sx={classes.itemCardContentIcon}>
-                  <AddBusinessIcon style={{ fontSize: "110px", color: "#fe6c36" }} />
+                  <FcOk style={{ fontSize: "110px", color: "#fe6c36" }} />
                 </Box>
               </Box>
             </Box>
