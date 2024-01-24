@@ -43,7 +43,7 @@ export const OurWorksPage: FC<IProps> = observer(() => {
                   textFirst
                   title={"Чистка скважины"}
                   glubina={"40 метров"}
-                  time={"3 часа"}
+                  time={"4 часа"}
                   typeWork={"Чистка скважины с использованием профессиональной химии"}
                   kolvoPersonal={"2 человека"}
                   photo={["/photo/chistyavoda.jpg", "/photo/gryaznaya_voda.jpg"]}
@@ -52,60 +52,59 @@ export const OurWorksPage: FC<IProps> = observer(() => {
               </Box>
               <Box sx={classes.marginItem}>
                 <NashyRabotyTemplate
-                  title={"Чистка скважины"}
-                  glubina={"30 метров"}
+                  title={"Замена насоса"}
+                  glubina={"54 метров"}
                   time={"3 часа"}
-                  typeWork={"Чистка скважины с использованием профессиональной химии"}
+                  typeWork={"Замена насоса с настройкой автоматики"}
                   kolvoPersonal={"2 человека"}
-                  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
-                  price={"30 000 рублей"}
+                  photo={["/photo/diagnostika_skvajiny_na4alo.jpg"]}
+                  price={"18 000 рублей"}
                 />
               </Box>
               <Box sx={classes.marginItem}>
                 <NashyRabotyTemplate
                   textFirst
-                  title={"Чистка скважины"}
-                  glubina={"30 метров"}
-                  time={"3 часа"}
-                  typeWork={"Чистка скважины с использованием профессиональной химии"}
+                  title={"Замена гидроаккумулятора"}
+                  glubina={"40 метров"}
+                  time={"1 часа"}
+                  typeWork={"Замена гидроаккумулятора вместо неисправного"}
                   kolvoPersonal={"2 человека"}
-                  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
-                  price={"30 000 рублей"}
+                  photo={["/photo/1t.jpg", "/photo/montaj_vodosnabjenia.jpg"]}
+                  price={"4 000 рублей"}
                 />
               </Box>
               <Box sx={classes.marginItem}>
                 <NashyRabotyTemplate
-                  title={"Чистка скважины"}
-                  glubina={"30 метров"}
+                  title={"Чистка водоочистки"}
+                  glubina={"80 метров"}
                   time={"3 часа"}
-                  typeWork={"Чистка скважины с использованием профессиональной химии"}
+                  typeWork={"Чистка водоочистки с использованием современного инструмента"}
                   kolvoPersonal={"2 человека"}
-                  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
-                  price={"30 000 рублей"}
+                  photo={["/photo/gryaznaya_vodoochistka.jpg", "/photo/nr_gr_elemtn1.jpg", "/photo/nr_gryazny_element.jpg"]}
+                  price={"25 000 рублей"}
                 />
               </Box>
               <Box sx={classes.marginItem}>
                 <NashyRabotyTemplate
                   textFirst
-                  title={"Чистка скважины"}
-                  glubina={"30 метров"}
-                  time={"3 часа"}
-                  typeWork={"Чистка скважины с использованием профессиональной химии"}
+                  title={"Замена насоса"}
+                  glubina={"80 метров"}
+                  time={"5 часа"}
+                  typeWork={"Замена трехфазного насоса в скважине"}
                   kolvoPersonal={"2 человека"}
-                  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
+                  photo={["/photo/remont_ramenskoe.jpg"]}
                   price={"30 000 рублей"}
                 />
               </Box>
               <Box>
                 <NashyRabotyTemplate
-                  textFirst
-                  title={"Чистка скважины"}
-                  glubina={"30 метров"}
-                  time={"3 часа"}
-                  typeWork={"Чистка скважины с использованием профессиональной химии"}
-                  kolvoPersonal={"2 человека"}
-                  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}
-                  price={"30 000 рублей"}
+                  title={"Установка кессона"}
+                  glubina={"0 метров"}
+                  time={"6 часа"}
+                  typeWork={"Установка кессона на 4 кольца"}
+                  kolvoPersonal={"4 человека"}
+                  photo={["/photo/septic.jpg"]}
+                  price={"20 000 рублей"}
                 />
               </Box>
             </Box>
