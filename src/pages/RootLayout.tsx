@@ -9,6 +9,7 @@ import { SimpleDialog } from "@/components/Modal/Modal";
 import { modalStore } from "@/domain";
 import ScrollToTop from "react-scroll-up";
 import { FcRightUp2, FcUpload } from "react-icons/fc";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 export default function RootLayout({ children }: PropsWithChildren<unknown>) {
   return (
@@ -16,7 +17,7 @@ export default function RootLayout({ children }: PropsWithChildren<unknown>) {
       {children}
       <ToastContainer position="top-center" style={{ fontSize: "25px" }} autoClose={2000} />
       <ScrollToTop showUnder={60} easing={"easeInOutCirc"}>
-        <FcRightUp2 size={70} />
+        <FaArrowCircleUp size={70} />
       </ScrollToTop>
     </Box>
   );
