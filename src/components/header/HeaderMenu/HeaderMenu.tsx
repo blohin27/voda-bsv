@@ -21,7 +21,10 @@ export const HeaderMenu: FC<IProps> = () => {
             <Link href={"/price"} style={{ textDecoration: "none" }}>
               <Box sx={classes.link}>Цены</Box>
             </Link>
-            <Box sx={classes.link}>Срочный выезд</Box>
+            <Link href={"/avaria-vyezd"} style={{ textDecoration: "none" }}>
+              <Box sx={{ ...classes.linkUrgent }}>Аварийный выезд</Box>
+            </Link>
+
             <Link href={"/our-works"} style={{ textDecoration: "none" }}>
               <Box sx={classes.link}>Наши работы</Box>
             </Link>
@@ -58,6 +61,25 @@ const classes: ClassesSx = {
     },
     "@media (max-width:900px)": {
       fontSize: "15px",
+    },
+  },
+
+  linkUrgent: {
+    animation: "blink 3s linear  infinite",
+    borderRadius: "2px",
+    color: "white",
+    fontSize: "20px",
+    "@media (max-width:1100px)": {
+      fontSize: "17px",
+    },
+    "@media (max-width:900px)": {
+      fontSize: "15px",
+    },
+    "@keyframes blink": {
+      "0%, 70%": { backgroundColor: "transparent" },
+      "71%": { backgroundColor: "rgb(255, 0, 0)" },
+      "91%": { backgroundColor: "rgb(255, 0, 0)" },
+      "100%": { backgroundColor: "transparent" },
     },
   },
 };
