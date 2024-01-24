@@ -129,7 +129,7 @@ export const PricePage: FC<IProps> = () => {
                   <h1>
                     <Box sx={{ ...classes.title, fontSize: "52px" }}>Цены на ремонт скважин</Box>
                   </h1>
-                  <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
+                  <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px", margin: "0 16px 0 16px" }}>
                     <Box
                       sx={classes.buttonItem}
                       onClick={() => {
@@ -362,14 +362,29 @@ const classes: ClassesSx = {
     display: "flex",
     height: "330px",
     position: "relative",
+    "@media (max-width:670px)": {
+      height: "350px",
+    },
+    "@media (max-width:550px)": {
+      height: "360px",
+    },
     "@media (max-width:540px)": {
       height: "380px",
+    },
+    "@media (max-width:470px)": {
+      height: "420px",
     },
     "@media (max-width:450px)": {
       height: "420px",
     },
+    "@media (max-width:435px)": {
+      height: "450px",
+    },
     "@media (max-width:400px)": {
       height: "500px",
+    },
+    "@media (max-width:370px)": {
+      height: "550px",
     },
   },
   content: {
