@@ -271,16 +271,8 @@ const classes: ClassesSx = {
     display: "flex",
     justifyContent: "center",
   },
-  tdStyle: {
-    textAlign: "center",
-    backgroundColor: "#fcfbf9",
-    border: "1px solid #dedede",
-    height: "25px",
-    fontSize: "22px",
-    fontWeight: "700",
-    "@media (max-width:500px)": { fontSize: "15px" },
-  },
   thStyle: { width: "60%", backgroundColor: "#4ab461", color: "white", height: "30px", fontSize: "25px", fontWeight: "600", textAlign: "center" },
+  tdStyle: { textAlign: "center", backgroundColor: "#fcfbf9", border: "1px solid #dedede", height: "35px", fontSize: "16px", fontWeight: "400" },
   titlePrice: {
     fontSize: "35px",
     marginTop: "30px",
