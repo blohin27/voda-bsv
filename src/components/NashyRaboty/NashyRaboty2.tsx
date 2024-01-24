@@ -7,6 +7,8 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import { LineBorder } from "@/components/LineBorder/LineBorder";
 import { COLOR_BLACK } from "@/const";
 import { useMediaQuery } from "@mui/material";
+import { modalStore } from "@/domain";
+import { observer } from "mobx-react";
 
 interface IProps {
   title?: string;
@@ -18,7 +20,7 @@ interface IProps {
   time?: string;
   photo: string[];
 }
-export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFirst, time, glubina, kolvoPersonal, price }) => {
+export const NashyRabotyTemplate: FC<IProps> = observer(({ title, typeWork, photo, textFirst, time, glubina, kolvoPersonal, price }) => {
   const [index, setIndex] = useState(0);
   const maxIndex = photo.length - 1;
   const px780 = useMediaQuery("(max-width:780px)");
@@ -83,7 +85,14 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
                     {price}
                   </Box>
                   <Box display={"flex"} justifyContent={"center"}>
-                    <Box sx={classes.zakaz}>Заказать</Box>
+                    <Box
+                      sx={classes.zakaz}
+                      onClick={() => {
+                        modalStore.openModal();
+                      }}
+                    >
+                      Заказать
+                    </Box>
                   </Box>
                 </Box>
               </Box>
@@ -164,7 +173,14 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
                     {price}
                   </Box>
                   <Box display={"flex"} justifyContent={"center"}>
-                    <Box sx={classes.zakaz}>Заказать</Box>
+                    <Box
+                      sx={classes.zakaz}
+                      onClick={() => {
+                        modalStore.openModal();
+                      }}
+                    >
+                      Заказать
+                    </Box>
                   </Box>
                 </Box>
               </Box>
@@ -174,14 +190,12 @@ export const NashyRabotyTemplate: FC<IProps> = ({ title, typeWork, photo, textFi
       </Box>
     </Box>
   );
-};
+});
 
 const classes: ClassesSx = {
   root: {
     color: COLOR_BLACK,
-    "@media (max-width:780px)": {
-      marginTop: "80px",
-    },
+    "@media (max-width:780px)": {},
   },
   wrapper: {
     maxWidth: "1200px",

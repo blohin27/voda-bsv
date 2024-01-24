@@ -5,7 +5,7 @@ import { FooterPage } from "@/components/Footer/FooterPage/FooterPage";
 import { OurWorksPage } from "@/components/Content/OurWorks/OurWorksPage";
 import { PoleznyeStatiPage } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiPage";
 
-export default function OurWorks() {
+export default function Component() {
   return (
     <IsDev>
       <RootLayout>

@@ -11,6 +11,7 @@ export class ModalStore {
   @action.bound
   openModal = () => {
     this.modalOpen = true;
+    console.log("modalOpen");
   };
 
   @action.bound
