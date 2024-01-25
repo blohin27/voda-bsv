@@ -19,21 +19,17 @@ export default function Component() {
   return (
     <>
       <Head>
-        <title>Диагностика скважин на воду - Точность и Надежность в Москве и МО</title>
+        <title>Как Правильно пробурить Скважину - Полезные Советы и Руководство</title>
         <meta
           name="description"
-          content="Комплексная диагностика скважин на воду в Москве и Московской области. Использование современных технологий для точной оценки состояния скважины и обеспечения её эффективной работы."
+          content="Полное руководство по бурени/ скважины: узнайте эффективные методы и советы для бурения вашей скважины на долгие годы"
         />
-        <meta
-          name="keywords"
-          content="Диагностика скважин, скважины на воду, обслуживание скважин, Москва, МО, передовые технологии, точная оценка, эффективная эксплуатация"
-        />
+        <meta name="keywords" content="Бурение скважины, как пробурить скважину, цена на бурение скважины, какую скважину пробурить" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
+        <link rel="icon" type="image/png" href="/icons/favicon.png" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
-        <link rel="preconnect" href="http://voda-bsv.ru" />
       </Head>
       <IsDev>
         <RootLayout>

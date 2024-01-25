@@ -31,8 +31,8 @@ export const PoleznyeStatiPage: FC<IProps> = () => {
           </Box>
           <Box sx={classes.subTitle1}>Полезные статьи для вашей скважины</Box>
           <Box sx={classes.sectionItems}>
-            <PoleznyeStatiItem photo={"/photo/1t.jpg"} title={"Как чистить скважину правильно?"} link={"/poleznye-stati/post1"} />
-            <PoleznyeStatiItem photo={"/photo/2t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+            <PoleznyeStatiItem photo={"/photo/burim.jpg"} title={"Как пробурить скважину?"} link={"/poleznye-stati/post1"} />
+            <PoleznyeStatiItem photo={"/photo/gryaznaya_voda.jpg"} title={"Как очистить скважину своими руками?"} link={"/poleznye-stati/post2"} />
             <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
             <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
             <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
