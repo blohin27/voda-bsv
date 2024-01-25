@@ -7,7 +7,7 @@ import { COLOR_BLUE_SECTION, COLOR_MILK, COLOR_ORANGE, CONST_TITLE } from "@/con
 import { PoleznyeStatiItem } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiItem";
 import { observer } from "mobx-react";
 import { BasicSelect } from "../BasicSelect/BasicSelect";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface IProps {}
@@ -27,7 +27,7 @@ export const ServicesAll: FC<IProps> = observer(() => {
       <Box sx={classes.titleGeneral}> Услуги по водоснабжению</Box>
       <Box sx={classes.wrapperItems} mb={10}>
         <Box sx={classes.contentItems}>
-          {modalStore.stateServiceAll === "пульт1" && (
+          {stateStore.stateServiceAll === "пульт1" && (
             <>
               <PoleznyeStatiItem photo={"/photo/burenie.jpg"} title={"Бурение скважины"} link={"/uslugi/burenie"} objectPosition={"center 80%"} />
               <PoleznyeStatiItem photo={"/photo/nasos.jpg"} title={"Ремонт скважины"} link={"/uslugi/remont-scvajin"} />

@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from "react";
+import React, { FC, useCallback, useEffect, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import Box from "@mui/material/Box";
 import { UslugiItem } from "@/components/Content/UslugiPage/UslugiItem";
@@ -9,15 +9,11 @@ import Link from "next/link";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { BannerFirst } from "@/components/Banner/BannerFirst";
 import { PoleznyeStatiItem } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiItem";
+import { Router, useRouter } from "next/router";
+import { stateStore } from "@/domain";
 
 interface IProps {}
 export const UslugiPage: FC<IProps> = () => {
-  const [pokaz, setPokaz] = useState(false);
-
-  const changePokaz = useCallback(() => {
-    setPokaz((prevState) => !prevState);
-  }, []);
-
   return (
     <Box sx={classes.root}>
       {/*<BannerFirst src={"/photo/photoObjectObslug/mj.png"} title={"Услуги"} />*/}

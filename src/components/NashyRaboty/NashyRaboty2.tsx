@@ -7,7 +7,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import { LineBorder } from "@/components/LineBorder/LineBorder";
 import { COLOR_BLACK } from "@/const";
 import { useMediaQuery } from "@mui/material";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 import { observer } from "mobx-react";
 
 interface IProps {
@@ -88,7 +88,7 @@ export const NashyRabotyTemplate: FC<IProps> = observer(({ title, typeWork, phot
                     <Box
                       sx={classes.zakaz}
                       onClick={() => {
-                        modalStore.openModal();
+                        stateStore.openModal();
                       }}
                     >
                       Заказать
@@ -176,7 +176,7 @@ export const NashyRabotyTemplate: FC<IProps> = observer(({ title, typeWork, phot
                     <Box
                       sx={classes.zakaz}
                       onClick={() => {
-                        modalStore.openModal();
+                        stateStore.openModal();
                       }}
                     >
                       Заказать
@@ -222,6 +222,7 @@ const classes: ClassesSx = {
   },
   zakaz: {
     marginTop: "10px",
+    cursor: "pointer",
     display: "flex",
     color: "white",
     padding: "10px 20px 10px 20px",

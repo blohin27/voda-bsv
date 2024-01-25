@@ -2,7 +2,7 @@ import * as React from "react";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 import { observer } from "mobx-react";
 import { ClassesSx } from "@/theme/theme";
 import { Box } from "@mui/material";
@@ -10,13 +10,13 @@ import { COLOR_ORANGE } from "@/const";
 
 export const BasicSelect = observer(() => {
   const handleChange = (event: SelectChangeEvent) => {
-    modalStore.setStateServiceAll(event.target.value);
+    stateStore.setStateServiceAll(event.target.value);
   };
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <FormControl sx={{ m: 1, minWidth: "400", display: "flex", justifyContent: "center" }}>
-        <Select value={modalStore.stateServiceAll} onChange={handleChange} displayEmpty inputProps={{ "aria-label": "Without label" }} sx={{ ...classes.title }}>
+        <Select value={stateStore.stateServiceAll} onChange={handleChange} displayEmpty inputProps={{ "aria-label": "Without label" }} sx={{ ...classes.title }}>
           <MenuItem value={"пульт1"} sx={{ ...classes.subTitle }}>
             Ремонт и чистка
           </MenuItem>

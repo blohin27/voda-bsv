@@ -8,7 +8,7 @@ import { CrashDeparture } from "@/components/Content/CrashDeparture/CrashDepartu
 import OurWorks from "@/pages/poleznye-stati";
 import { OurWorksPage } from "@/components/Content/OurWorks/OurWorksPage";
 import { SimpleDialog } from "@/components/Modal/Modal";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 
 export default function Component() {
   return (

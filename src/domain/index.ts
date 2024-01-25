@@ -1,3 +1,3 @@
-import { ModalStore } from "@/domain/ModalStore";
+import { StateStore } from "@/domain/StateStore";
 
-export const modalStore = new ModalStore();
+export const stateStore = new StateStore();

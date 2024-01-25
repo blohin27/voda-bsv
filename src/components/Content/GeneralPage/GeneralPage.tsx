@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { ServicesAll } from "@/components/ServicesAll/Services";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ClassesSx } from "@/theme/theme";
 import { montserrat } from "@/components/header/HeaderSite/HeaderSite";
 import { BannerPromo } from "@/components/Content/GeneralPage/BannerPromo";
@@ -25,14 +25,31 @@ import { RayonObsl } from "@/components/RayonObsl/RayonObsl";
 import { Onas } from "@/components/ONas/Onas";
 import { COLOR_BLACK, COLOR_BLUE_SECTION, COLOR_MILK } from "@/const";
 import { SimpleDialog } from "@/components/Modal/Modal";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 import { observer } from "mobx-react";
 import { Slogan } from "@/components/Slogan/Slogan";
 import ScrollToTop from "react-scroll-up";
 import { FcUpload } from "react-icons/fc";
 import { FcRightUp2 } from "react-icons/fc";
+import { Router, useRouter } from "next/router";
 
 export const ContentGeneralPage = observer(() => {
+  // const router = useRouter();
+  // useEffect(() => {
+  //   const handleStart = (url: string) => url !== router.asPath && stateStore.changeLoaderPage(true);
+  //   const handleComplete = () => stateStore.changeLoaderPage(false);
+  //
+  //   Router.events.on("routeChangeStart", handleStart);
+  //   Router.events.on("routeChangeComplete", handleComplete);
+  //   Router.events.on("routeChangeError", handleComplete);
+  //
+  //   return () => {
+  //     Router.events.off("routeChangeStart", handleStart);
+  //     Router.events.off("routeChangeComplete", handleComplete);
+  //     Router.events.off("routeChangeError", handleComplete);
+  //   };
+  // }, [router.asPath]);
+
   return (
     <Box display={"flex"} flexDirection={"column"} className={montserrat.className}>
       <BannerPromo />
@@ -58,32 +75,12 @@ export const ContentGeneralPage = observer(() => {
       <Box>
         <KvalWorker />
       </Box>
-      {/*<NashyRabotyTemplate*/}
-      {/*  textFirst*/}
-      {/*  title={"Чистка скважины"}*/}
-      {/*  glubina={"30 метров"}*/}
-      {/*  time={"3 часа"}*/}
-      {/*  typeWork={"Чистка скважины с использованием профессиональной химии"}*/}
-      {/*  kolvoPersonal={"2 человека"}*/}
-      {/*  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}*/}
-      {/*  price={"30 000 рублей"}*/}
-      {/*/>*/}
-      {/*<NashyRabotyTemplate*/}
-      {/*  title={"Чистка скважины"}*/}
-      {/*  glubina={"30 метров"}*/}
-      {/*  time={"3 часа"}*/}
-      {/*  typeWork={"Чистка скважины с использованием профессиональной химии"}*/}
-      {/*  kolvoPersonal={"2 человека"}*/}
-      {/*  photo={["/photo/1t.jpg", "/photo/2t.jpg", "/photo/5t.jpg", "/photo/6t.jpg", "/photo/7t.jpg"]}*/}
-      {/*  price={"30 000 рублей"}*/}
-      {/*/>*/}
-      {/*<ButtonCentr title={"Больше кейсов"} />*/}
 
       <FotoRabot />
       <Box mt={10}>
         <Banner text={"Получить бесплатную консультацию"} subText={"Наш специалист свяжется с вами через некторое время"} />
       </Box>
-      <SimpleDialog open={modalStore.modalOpen} />
+      <SimpleDialog open={stateStore.modalOpen} />
     </Box>
   );
 });

@@ -1,15 +1,16 @@
 import RootLayout from "@/pages/RootLayout";
 import { IsDev } from "@/components/isDev/IsDev";
 import { Montserrat } from "next/font/google";
-import React from "react";
+import React, { FC, PropsWithChildren } from "react";
 import { HeaderSite } from "../components/header/HeaderSite/HeaderSite";
 import { ContentGeneralPage } from "@/components/Content/GeneralPage/GeneralPage";
 import { FooterPage } from "@/components/Footer/FooterPage/FooterPage";
 import Head from "next/head";
+import { observer } from "mobx-react";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-export default function Home() {
+const Home: FC<PropsWithChildren<unknown>> = observer(() => {
   return (
     <>
       <Head>
@@ -41,4 +42,6 @@ export default function Home() {
       </IsDev>
     </>
   );
-}
+});
+
+export default Home;

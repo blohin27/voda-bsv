@@ -10,7 +10,7 @@ import { QuesResonse } from "@/components/QuesResponse/QuesResponse";
 import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscription";
 import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 import { useMediaQuery } from "@mui/material";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 
 interface IProps {}
 export const FooterPage: FC<IProps> = () => {
@@ -66,7 +66,7 @@ export const FooterPage: FC<IProps> = () => {
                     <Box
                       sx={classes.zvonokButton}
                       onClick={() => {
-                        modalStore.openModal();
+                        stateStore.openModal();
                       }}
                     >
                       Обратный звонок
@@ -74,7 +74,7 @@ export const FooterPage: FC<IProps> = () => {
                     <Box
                       sx={classes.raschetButton}
                       onClick={() => {
-                        modalStore.openModal();
+                        stateStore.openModal();
                       }}
                     >
                       Расчитать стоимость
@@ -93,7 +93,7 @@ export const FooterPage: FC<IProps> = () => {
                   <Box
                     sx={classes.zvonokButton}
                     onClick={() => {
-                      modalStore.openModal();
+                      stateStore.openModal();
                     }}
                   >
                     Обратный звонок
@@ -101,7 +101,7 @@ export const FooterPage: FC<IProps> = () => {
                   <Box
                     sx={classes.raschetButton}
                     onClick={() => {
-                      modalStore.openModal();
+                      stateStore.openModal();
                     }}
                   >
                     Расчитать стоимость

@@ -9,7 +9,7 @@ import { COLOR_BLACK, CONST_TITLE_FIRST_PAGE, CONST_TITLE_WITHOUT_MARGIN } from 
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { observer } from "mobx-react";
 import { SimpleDialog } from "@/components/Modal/Modal";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 
 interface IProps {}
 export const OurWorksPage: FC<IProps> = observer(() => {
@@ -111,7 +111,7 @@ export const OurWorksPage: FC<IProps> = observer(() => {
           </Box>
         </Box>
       </Box>
-      <SimpleDialog open={modalStore.modalOpen} />
+      <SimpleDialog open={stateStore.modalOpen} />
     </>
   );
 });

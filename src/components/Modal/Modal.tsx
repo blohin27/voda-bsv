@@ -12,7 +12,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import AddIcon from "@mui/icons-material/Add";
 import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 import { Box } from "@mui/material";
 import { ClassesSx } from "@/theme/theme";
 import TextField from "@mui/material/TextField";
@@ -33,7 +33,7 @@ export function SimpleDialog(props: SimpleDialogProps) {
   const [message, setMessage] = useState("");
 
   const handleClose = () => {
-    modalStore.closeModal();
+    stateStore.closeModal();
   };
 
   const handleListItemClick = (value: string) => {
@@ -114,7 +114,7 @@ export function SimpleDialog(props: SimpleDialogProps) {
                   message: `${message}`,
                   click: "Модальное окно",
                 });
-                modalStore.closeModal();
+                stateStore.closeModal();
               } else {
                 toast.error("Ошибка ввода", {
                   position: "top-center",

@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import { ClassesSx } from "@/theme/theme";
-import { modalStore } from "@/domain";
+import { stateStore } from "@/domain";
 
 export const SectionButtons = () => (
   <Box sx={classes.root} display={"flex"}>
@@ -11,7 +11,7 @@ export const SectionButtons = () => (
         style={{ backgroundColor: "#ff6c36" }}
         sx={classes.button1}
         onClick={() => {
-          modalStore.openModal();
+          stateStore.openModal();
         }}
       >
         Создать заявку
@@ -21,7 +21,7 @@ export const SectionButtons = () => (
       <Button
         sx={classes.button2}
         onClick={() => {
-          modalStore.openModal();
+          stateStore.openModal();
         }}
         variant="contained"
       >
