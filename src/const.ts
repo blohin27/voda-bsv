@@ -12,7 +12,7 @@ export const IP = { name: "ИП Блохин Д.В.", OGRNIP: "123456789123456",
 export const EMAIL: string = "info@voda-bsv.ru";
 export const EMAIL2: string = "vodabsv@gmail.com";
 export const NICKTELEGRAM = "blohinsergei";
-export const DEV = false;
+export const DEV = true;
 
 export const CONST_TITLE = {
   marginTop: "40px",
