@@ -24,15 +24,19 @@ export const HeaderSite = () => {
   const list = () => (
     <List>
       {[
-        { title: "Услуги", urlRedirect: "/" },
-        { title: "Цены", urlRedirect: "/" },
-        { title: "Срочный выезд", urlRedirect: "/" },
-        { title: "Калькулятор", urlRedirect: "/" },
-        { title: "Наши работы", urlRedirect: "/" },
-        { title: "Полезные статьи", urlRedirect: "/" },
-        { title: "Контакты", urlRedirect: "/" },
+        { title: "Услуги", urlRedirect: "/uslugi" },
+        { title: "Цены", urlRedirect: "/price" },
+        { title: "Аварийный выезд", urlRedirect: "/avaria-vyezd" },
+        // { title: "Калькулятор", urlRedirect: "/" },
+        { title: "Наши работы", urlRedirect: "/nashy-raboty" },
+        { title: "Полезные статьи", urlRedirect: "/poleznye-stati" },
+        { title: "Контакты", urlRedirect: "/contact" },
       ].map((text, index) => (
-        <Box key={`${index + text.title}`} sx={classes.itemHeaderDrawer} className={montserrat.className}>{`${text.title}`}</Box>
+        <Box key={`${index + text.title}`} sx={classes.itemHeaderDrawer} className={montserrat.className}>
+          <Link href={`/${text.urlRedirect}`} style={{ textDecoration: "none", color: "white" }}>
+            {`${text.title}`}
+          </Link>
+        </Box>
       ))}
     </List>
   );
@@ -87,7 +91,7 @@ export const HeaderSite = () => {
 };
 
 const classes: ClassesSx = {
-  root: {},
+  root: { position: "sticky", top: 0, zIndex: 1000 },
   itemHeaderDrawer: {
     color: "white",
     margin: "25px",

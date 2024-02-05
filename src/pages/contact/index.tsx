@@ -18,9 +18,8 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preload" href="your-script.js" as="script" />
-        {/*<meta name="robots" content="noindex, nofollow" />  /!* Запретить индексацию и следование по ссылкам *!/*/}
-        {/* Здесь можно добавить другие элементы head, если это необходимо */}
       </Head>
+      ]
       <IsDev>
         <RootLayout>
           <HeaderSite />

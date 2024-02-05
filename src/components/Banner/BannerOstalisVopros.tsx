@@ -210,6 +210,9 @@ const classes: ClassesSx = {
     "@media (max-width:800px)": {
       height: "450px",
     },
+    "@media (max-width:400px)": {
+      height: "500px",
+    },
   },
   contentForBanner: {
     position: "absolute",

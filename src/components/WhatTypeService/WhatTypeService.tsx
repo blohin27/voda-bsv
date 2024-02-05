@@ -38,8 +38,6 @@ export const WhatTypeService: FC<IProps> = () => {
                 src={"/photo/photoObjectObslug/home.jpg"}
                 alt={"image"}
                 layout={"fill"}
-                // width={600}
-                // height={400}
                 objectFit="cover"
                 objectPosition="center center" // По умолчанию 'center', но может быть изменено
                 quality={100}
@@ -55,8 +53,6 @@ export const WhatTypeService: FC<IProps> = () => {
                 src={"/photo/photoObjectObslug/tc.jpg"}
                 alt={"image"}
                 layout={"fill"}
-                // width={600}
-                // height={400}
                 objectFit="cover"
                 objectPosition="center center" // По умолчанию 'center', но может быть изменено
                 quality={100}
@@ -72,8 +68,6 @@ export const WhatTypeService: FC<IProps> = () => {
                 src={"/photo/photoObjectObslug/predpri.jpg"}
                 alt={"image"}
                 layout={"fill"}
-                // width={600}
-                // height={400}
                 objectFit="cover"
                 objectPosition="center center" // По умолчанию 'center', но может быть изменено
                 quality={100}

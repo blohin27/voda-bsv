@@ -39,29 +39,13 @@ const RootLayout: React.FC<PropsWithChildren<unknown>> = observer(({ children })
       <ScrollToTop showUnder={60} easing={"easeInOutCirc"}>
         <FaArrowCircleUp size={70} />
       </ScrollToTop>
-      {/*{stateStore.loadingPage && (*/}
-      {/*  <Box sx={{ position: "absolute", top: "50%", left: "50%", width: "100%", height: "100%", transform: "translate(-50%,-50%)" }}>*/}
-      {/*    /!*<FadeLoader color={"blue"} loading={true} cssOverride={override} aria-label="Loading Spinner" data-testid="loader" />*!/*/}
-      {/*  </Box>*/}
-      {/*)}*/}
     </Box>
   );
 });
 const classes: ClassesSx = {
   root: {
     color: COLOR_BLACK,
-    // position: "relative",
-    // animation: "blink 6s linear  1",
-    // "@keyframes blink": {
-    //   "0%": { opacity: 1 },
-    //   "20%": { opacity: 0.6 },
-    //   "40%": { opacity: 0.4 },
-    //   "50%": { opacity: 0.2 },
-    //   "60%": { opacity: 0.4 },
-    //   "70%": { opacity: 0.6 },
-    //   "80%": { opacity: 0.8 },
-    //   "100%": { opacity: 1 },
-    // },
+    position: "relative",
   },
 };
 export default RootLayout;

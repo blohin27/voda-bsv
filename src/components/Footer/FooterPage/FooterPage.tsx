@@ -11,6 +11,7 @@ import { EmailSbscribtion } from "@/components/EmailSubscription/EmailSubscripti
 import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 import { useMediaQuery } from "@mui/material";
 import { stateStore } from "@/domain";
+import Link from "next/link";
 
 interface IProps {}
 export const FooterPage: FC<IProps> = () => {
@@ -27,33 +28,52 @@ export const FooterPage: FC<IProps> = () => {
           <Box sx={classes.content}>
             <Box sx={classes.fourSection}>
               <Box>
-                <Box sx={classes.title}>О нас</Box>
+                <Box sx={classes.title}>Обьекты </Box>
                 <Box sx={classes.arrayRef}>
-                  <Box sx={classes.itemRef}>Бурение скважин</Box>
-                  <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
-                  <Box sx={classes.itemRef}>Бурение МБУ</Box>
-                  <Box sx={classes.itemRef}>Бурение на даче</Box>
-                  <Box sx={classes.itemRef}>Обустройство скважины</Box>
+                  <Box sx={classes.itemRef}>
+                    <Link href={`/obsluzhivaemye-obekty/snt-ijs`} style={{ textDecoration: "none", color: "#62953d" }}>
+                      {`СНТ и ИЖС`}
+                    </Link>
+                  </Box>
+                  <Box sx={classes.itemRef}>
+                    <Link href={`/obsluzhivaemye-obekty/doma`} style={{ textDecoration: "none", color: "#62953d" }}>
+                      {`Частные дома`}
+                    </Link>
+                  </Box>
+                  <Box sx={classes.itemRef}>
+                    <Link href={`/obsluzhivaemye-obekty/torg-centry`} style={{ textDecoration: "none", color: "#62953d" }}>
+                      {`Торговые центры`}
+                    </Link>
+                  </Box>
+                  <Box sx={classes.itemRef}>
+                    <Link href={`/obsluzhivaemye-obekty/predpriytie`} style={{ textDecoration: "none", color: "#62953d" }}>
+                      {`Предприятия`}
+                    </Link>
+                  </Box>
+                  <Link href={`/obsluzhivaemye-obekty/rozn-sety`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Розничные сети`}</Box>
+                  </Link>
                 </Box>
               </Box>
               <Box>
-                <Box sx={classes.title}>О нас</Box>
+                <Box sx={classes.title}>Услуги</Box>
                 <Box sx={classes.arrayRef}>
-                  <Box sx={classes.itemRef}>Бурение скважин</Box>
-                  <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
-                  <Box sx={classes.itemRef}>Бурение МБУ</Box>
-                  <Box sx={classes.itemRef}>Бурение на даче</Box>
-                  <Box sx={classes.itemRef}>Обустройство скважины</Box>
+                  <Box sx={classes.itemRef}>Бурение </Box>
+                  <Box sx={classes.itemRef}>Ремонт от ила</Box>
+                  <Box sx={classes.itemRef}>Чистка</Box>
+                  <Box sx={classes.itemRef}>Диагностика</Box>
+                  <Box sx={classes.itemRef}>Замена оборудования</Box>
                 </Box>
               </Box>
               <Box>
-                <Box sx={classes.title}>О нас</Box>
+                <Box sx={classes.title}>Навигация</Box>
                 <Box sx={classes.arrayRef}>
-                  <Box sx={classes.itemRef}>Бурение скважин</Box>
-                  <Box sx={classes.itemRef}>Бурение артезианских скважин</Box>
-                  <Box sx={classes.itemRef}>Бурение МБУ</Box>
-                  <Box sx={classes.itemRef}>Бурение на даче</Box>
-                  <Box sx={classes.itemRef}>Обустройство скважины</Box>
+                  <Box sx={classes.itemRef}>Главная</Box>
+                  <Box sx={classes.itemRef}>Услуги</Box>
+                  <Box sx={classes.itemRef}>Цены</Box>
+                  <Box sx={classes.itemRef}>Аварийный выезд</Box>
+                  <Box sx={classes.itemRef}>Наши работы</Box>
+                  <Box sx={classes.itemRef}>Контакты</Box>
                 </Box>
               </Box>
               {!px600 && (
@@ -121,10 +141,10 @@ export const FooterPage: FC<IProps> = () => {
 
 const classes: ClassesSx = {
   root: { backgroundColor: "#252121" },
-  title: { color: "white", fontWeight: "600", fontSize: "18px", mb: "20px" },
+  title: { color: "white", fontWeight: "600", fontSize: "18px", mb: "20px", textAlign: "center" },
   arrayRef: { color: "#62953d", fontWeight: "400", fontSize: "14px", gap: "10px", display: "flex", flexDirection: "column" },
-  itemRef: { cursor: "pointer", display: "flex" },
-  wrapper: { maxWidth: "1200px", margin: "0 auto" },
+  itemRef: { cursor: "pointer", display: "flex", textAlign: "center", justifyContent: "center" },
+  wrapper: { maxWidth: "1000px", margin: "0 auto" },
   content: { display: "flex", paddingTop: "40px", flexDirection: "column", margin: "0 16px 0 16px" },
   fourSection: {
     display: "flex",
