@@ -23,36 +23,33 @@ export const BannerPromoContact: FC<IProps> = () => {
       <Box sx={classesStyle.sectionWhite} />
       <Box sx={{ width: "100%", position: "relative", zIndex: 2, color: "white", maxWidth: "1200px", margin: "0 auto" }}>
         <Box sx={classesStyle.content}>
-          <Box sx={{ textAlign: "left", fontWeight: 700, fontSize: "40px", lineHeight: "55px" }}>
-            Персональное предложение на постоянное обслуживание юридических лиц
-          </Box>
+          <Box sx={{ ...classesStyle.titleBlock }}>Персональное предложение на постоянное обслуживание юридических лиц</Box>
           <Box sx={{ textAlign: "left", fontWeight: 400, fontSize: "20px", display: "flex", alignItems: "center" }}>
             <FcAdvertising size={50} />
-            <Box>
-              Скидка <span style={{ color: "orange", fontWeight: "700", fontSize: "25px" }}>15-25%</span> на постоянное обслуживание
+            <Box sx={classesStyle.desc}>
+              Скидка <Box sx={{ ...classesStyle.top }}>15-25%</Box> на постоянное обслуживание
             </Box>
           </Box>
-          <OrderCall />
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <FcInspection size={50} />
-            <Box sx={{ fontSize: "18px" }}>Заключаем договор</Box>
+            <Box sx={classesStyle.desc}>Заключаем договор</Box>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <FcSalesPerformance size={50} />
-            <Box sx={{ fontSize: "18px" }}>Полная материальная ответсвенность на нас</Box>
+            <Box sx={classesStyle.desc}>Полная материальная ответсвенность на нас</Box>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <FcBearish size={50} />
-            <Box sx={{ fontSize: "18px" }}>Сниженая стоимость на последующие услуги</Box>
+            <Box sx={classesStyle.desc}>Сниженая стоимость на последующие услуги</Box>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <FcAssistant size={50} />
-            <Box sx={{ fontSize: "18px" }}>Приоритетная техподдержка</Box>
+            <Box sx={classesStyle.desc}>Приоритетная техподдержка</Box>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <FcConferenceCall size={70} />
-            <Box sx={{ fontSize: "25px" }}>
-              Входим в <span style={{ fontWeight: 700, color: "orange" }}>ТОП - 3 лучших компаний </span> по отзывам жителей МО
+            <Box sx={classesStyle.desc}>
+              Входим в <Box sx={{ ...classesStyle.top }}>ТОП - 3 лучших компаний </Box> по отзывам жителей МО
             </Box>
           </Box>
         </Box>
@@ -72,6 +69,58 @@ const classesStyle: ClassesSx = {
     margin: "0 auto",
     "@media (max-width:800px)": {
       textAlign: "center",
+    },
+  },
+  desc: {
+    fontSize: "18px",
+    "@media (max-width:850px)": {
+      fontSize: "16px",
+    },
+    "@media (max-width:650px)": {
+      fontSize: "16px",
+    },
+    "@media (max-width:550px)": {
+      fontSize: "14px",
+    },
+    "@media (max-width:450px)": {
+      fontSize: "14px",
+    },
+  },
+  top: {
+    color: "orange",
+    fontWeight: "700",
+    fontSize: "25px",
+    display: "inline",
+    "@media (max-width:750px)": {
+      fontSize: "20px",
+    },
+    "@media (max-width:650px)": {
+      fontSize: "20px",
+    },
+    "@media (max-width:550px)": {
+      fontSize: "17px",
+    },
+  },
+  titleBlock: {
+    textAlign: "left",
+    fontWeight: 700,
+    fontSize: "40px",
+    lineHeight: "55px",
+    "@media (max-width:850px)": {
+      fontSize: "35px",
+      lineHeight: "50px",
+    },
+    "@media (max-width:750px)": {
+      fontSize: "30px",
+      lineHeight: "40px",
+    },
+    "@media (max-width:500px)": {
+      fontSize: "25px",
+      lineHeight: "35px",
+    },
+    "@media (max-width:400px)": {
+      fontSize: "20px",
+      lineHeight: "30px",
     },
   },
   setcionPromo: {
@@ -135,14 +184,12 @@ const classesStyle: ClassesSx = {
   setcionGeneralPageBanner: {
     width: "100%",
     display: "flex",
-    height: "600px",
+    height: "650px",
     position: "relative",
     alignItems: "center",
-    "@media (max-width:800px)": {
-      height: "450px",
-    },
+    "@media (max-width:800px)": {},
     "@media (max-width:600px)": {
-      height: "350px",
+      height: "600px",
     },
   },
   sectionWhite: {

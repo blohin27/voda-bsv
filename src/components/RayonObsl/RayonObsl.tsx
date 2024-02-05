@@ -18,7 +18,6 @@ export const RayonObsl: FC<IProps> = () => {
     }
   }, [adaptiv500]);
 
-  console.log("!!!!", adaptiv500);
   useEffect(() => {
     if (!adaptiv500) {
       setPokaz(true);
@@ -29,7 +28,7 @@ export const RayonObsl: FC<IProps> = () => {
       setPokaz(false);
     }
   }, [adaptiv500]);
-  console.log("pokaz", pokaz);
+
   return (
     <Box sx={classes.root}>
       <Box>

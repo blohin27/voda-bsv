@@ -197,6 +197,7 @@ const classes: ClassesSx = {
     justifyContent: "center",
     fontSize: "25px",
     fontWeight: "600",
+    marginBottom: "20px",
   },
   ostOtz: {
     fontWeight: "350",

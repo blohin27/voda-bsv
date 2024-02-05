@@ -13,7 +13,7 @@ import { MOBILE_TELEPHONE } from "@/const";
 import { Chistka } from "@/components/Content/UslugiPage/UslugiItems/Chistka";
 import { ZamenaNasosa } from "@/components/Content/UslugiPage/UslugiItems/ZamenaNasosa";
 import { Diagnostica } from "@/components/Content/UslugiPage/UslugiItems/Diagnostica";
-import { Post3 } from "@/components/Content/PoleznyeStatiPage/Post3";
+import { Post4 } from "@/components/Content/PoleznyeStatiPage/Post4";
 
 export default function Component() {
   return (
@@ -38,7 +38,7 @@ export default function Component() {
       <IsDev>
         <RootLayout>
           <HeaderSite />
-          <Post3 />
+          <Post4 />
           <FooterPage />
         </RootLayout>
       </IsDev>

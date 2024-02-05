@@ -8,23 +8,31 @@ export const NashyPreim: FC<IProps> = () => {
     <Box sx={classes.root}>
       <Box sx={classes.wrapper}>
         <Box sx={classes.content}>
-          <Box sx={classes.title}>Почему работать нужно именно с нами</Box>
+          <Box sx={classes.title} mb={4}>
+            Почему работать нужно именно с нами
+          </Box>
           <Box sx={classes.sectionItems}>
             <Box sx={classes.sectionItem}>
-              <Box sx={classes.titleItem}> Выезд 1-2 часа</Box>
-              <Box sx={classes.descrItem}>Срочный выезд бригады клинеров в любое удобное для Вас время.</Box>
+              <Box sx={classes.titleItem}> Профессионализм сотрудников</Box>
+              <Box sx={classes.descrItem}>Наша команда состоит из хороших специалистов, обладающих глубокими знаниями и многолетним опытом работы.</Box>
             </Box>
             <Box sx={classes.sectionItem}>
-              <Box sx={classes.titleItem}> Выезд 1-2 часа</Box>
-              <Box sx={classes.descrItem}>Срочный выезд бригады клинеров в любое удобное для Вас время.</Box>
+              <Box sx={classes.titleItem}> Индивидуальный подход</Box>
+              <Box sx={classes.descrItem}>
+                Мы уделяем особое внимание каждому клиенту, разрабатывая уникальные решения, идеально соответствующие вашим потребностям.
+              </Box>
+            </Box>
+            <Box sx={classes.sectionOptional}>
+              <Box sx={classes.sectionItem}>
+                <Box sx={classes.titleItem}> Новейшие технологии</Box>
+                <Box sx={classes.descrItem}>Мы используем последние достижения техники и технологий для достижения наилучших результатов в нашей работе.</Box>
+              </Box>
             </Box>
             <Box sx={classes.sectionItem}>
-              <Box sx={classes.titleItem}> Выезд 1-2 часа</Box>
-              <Box sx={classes.descrItem}>Срочный выезд бригады клинеров в любое удобное для Вас время.</Box>
-            </Box>
-            <Box sx={classes.sectionItem}>
-              <Box sx={classes.titleItem}> Выезд 1-2 часа</Box>
-              <Box sx={classes.descrItem}>Срочный выезд бригады клинеров в любое удобное для Вас время.</Box>
+              <Box sx={classes.titleItem}> Ответственность и надежность</Box>
+              <Box sx={classes.descrItem}>
+                Наша репутация построена на принципах ответственности и надежности, что гарантирует высокое качество выполнения каждого проекта.
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -41,15 +49,22 @@ const classes: ClassesSx = {
   sectionItems: {
     width: "100%",
     display: "flex",
-
     justifyContent: "center",
     gap: "30px",
-    "@media(max-width:850px)": {
+    "@media(max-width:800px)": {
       flexDirection: "column",
       gap: "20px",
     },
     "@media(max-width:500px)": {
       gap: "10px",
+    },
+  },
+  sectionOptional: {
+    "@media(max-width:1000px)": {
+      display: "none",
+    },
+    "@media(max-width:800px)": {
+      display: "flex",
     },
   },
   sectionItem: {
@@ -59,10 +74,11 @@ const classes: ClassesSx = {
     color: "white",
     height: "200px",
     width: "150px",
+    minWidth: "150px",
     padding: "30px 30px",
     borderRadius: "10px",
     "&:hover": { backgroundColor: "#12dc00" },
-    "@media(max-width:850px)": {
+    "@media(max-width:800px)": {
       padding: "30px",
       width: "auto",
       height: "auto",
@@ -75,9 +91,9 @@ const classes: ClassesSx = {
     fontWeight: 700,
     marginBottom: "30px",
     display: "flex",
-    "@media(max-width:850px)": {
+    "@media(max-width:800px)": {
       marginBottom: "10px",
     },
   },
-  descrItem: { fontWeight: 400, display: "flex" },
+  descrItem: { fontWeight: 400, display: "flex", fontSize: "14px" },
 };

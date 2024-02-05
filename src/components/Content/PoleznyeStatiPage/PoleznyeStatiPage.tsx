@@ -33,10 +33,10 @@ export const PoleznyeStatiPage: FC<IProps> = () => {
           <Box sx={classes.sectionItems}>
             <PoleznyeStatiItem photo={"/photo/burim.jpg"} title={"Как пробурить скважину?"} link={"/poleznye-stati/post1"} />
             <PoleznyeStatiItem photo={"/photo/gryaznaya_voda.jpg"} title={"Как очистить скважину своими руками?"} link={"/poleznye-stati/post2"} />
-            <PoleznyeStatiItem photo={"/photo/5t.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
-            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
-            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
-            <PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/"} />
+            <PoleznyeStatiItem photo={"/photo/zamena_nasosa_beloozersk.jpg"} title={"Почему насос выходит из строя"} link={"/poleznye-stati/post3"} />
+            {/*<PoleznyeStatiItem photo={"/photo/him.jpg"} title={"Какую химию использовать для очистки скважин"} link={"/poleznye-stati/post4"} />*/}
+            {/*<PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/poleznye-stati/post5"} />*/}
+            {/*<PoleznyeStatiItem photo={"/photoNew/testImage.jpg"} title={"Как чистить скважину правильно?"} link={"/poleznye-stati/post6"} />*/}
           </Box>
         </Box>
       </Box>

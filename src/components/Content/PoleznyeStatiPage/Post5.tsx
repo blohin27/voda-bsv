@@ -14,7 +14,7 @@ import { Slogan } from "@/components/Slogan/Slogan";
 import { margin } from "@mui/system";
 
 interface IProps {}
-export const Post3: FC<IProps> = () => {
+export const Post5: FC<IProps> = () => {
   const [dataTableRem, setDataTableRem] = useState([
     { name: "Диагностика скважины на воду.Выезд в день обращения", price: "от 4500" },
     { name: "Видеодиагностика. Запись в подарок", price: "от 5500" },

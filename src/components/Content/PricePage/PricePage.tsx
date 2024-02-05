@@ -112,7 +112,6 @@ export const PricePage: FC<IProps> = () => {
     { name: "Установка гидроаккумулятора ", price: "от 6000" },
   ];
   const scrollToMyRef = (myRef: any) => {
-    console.log("111");
     myRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
