@@ -11,15 +11,19 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Название моей страницы</title>
-        <meta name="description" content="Описание страницы, которое будет отображаться в результатах поиска." />
-        <meta name="keywords" content="ключевое слово 1, ключевое слово 2" />
-        <meta name="robots" content="index, follow" /> {/* Разрешить индексацию и следование по ссылкам */}
+        <title>Контакты | Ремонт скважин на воду в частных домах</title>
+        <meta
+          name="description"
+          content="Наши контакты для связи по вопросам ремонта и обслуживания скважин на воду в частных домах. Быстрая и качественная помощь."
+        />
+        <meta name="keywords" content="ремонт скважин, скважины на воду, частный дом, обслуживание скважин" />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preload" href="your-script.js" as="script" />
+        <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+        <link rel="preconnect" href="http://voda-bsv.ru" />
       </Head>
-      ]
       <IsDev>
         <RootLayout>
           <HeaderSite />
