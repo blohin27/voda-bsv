@@ -58,22 +58,44 @@ export const FooterPage: FC<IProps> = () => {
               <Box>
                 <Box sx={classes.title}>Услуги</Box>
                 <Box sx={classes.arrayRef}>
-                  <Box sx={classes.itemRef}>Бурение </Box>
-                  <Box sx={classes.itemRef}>Ремонт от ила</Box>
-                  <Box sx={classes.itemRef}>Чистка</Box>
-                  <Box sx={classes.itemRef}>Диагностика</Box>
-                  <Box sx={classes.itemRef}>Замена оборудования</Box>
+                  <Link href={`/uslugi/burenie`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Бурение скважины`}</Box>
+                  </Link>
+                  <Link href={`/uslugi/remont-scvajin`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Ремонт скважин`}</Box>
+                  </Link>
+                  <Link href={`/uslugi/chistka`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Чистка от ила`}</Box>
+                  </Link>
+                  <Link href={`/uslugi/diagnostica"`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Диагностика`}</Box>
+                  </Link>
+                  <Link href={`/uslugi/zamena-gidroaccumulatora`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Замена гидроаккумуляторв`}</Box>
+                  </Link>
                 </Box>
               </Box>
               <Box>
                 <Box sx={classes.title}>Навигация</Box>
                 <Box sx={classes.arrayRef}>
-                  <Box sx={classes.itemRef}>Главная</Box>
-                  <Box sx={classes.itemRef}>Услуги</Box>
-                  <Box sx={classes.itemRef}>Цены</Box>
-                  <Box sx={classes.itemRef}>Аварийный выезд</Box>
-                  <Box sx={classes.itemRef}>Наши работы</Box>
-                  <Box sx={classes.itemRef}>Контакты</Box>
+                  <Link href={`/`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Главная`}</Box>
+                  </Link>
+                  <Link href={`/uslugi`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Услуги`}</Box>
+                  </Link>
+                  <Link href={`/ceny`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Цены`}</Box>
+                  </Link>
+                  <Link href={`/avaria-vyezd`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Аварийный выезд`}</Box>
+                  </Link>
+                  <Link href={`/nashy-raboty`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Наши работы`}</Box>
+                  </Link>
+                  <Link href={`/contact`} style={{ textDecoration: "none", color: "#62953d" }}>
+                    <Box sx={classes.itemRef}>{`Контакты`}</Box>
+                  </Link>
                 </Box>
               </Box>
               {!px600 && (
