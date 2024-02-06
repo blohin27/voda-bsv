@@ -15,7 +15,7 @@ import Link from "next/link";
 export const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const HeaderSite = () => {
-  const showDrawer = useMediaQuery("(max-width:910px)");
+  const showDrawer = useMediaQuery("(max-width:920px)");
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = (open: boolean) => {
     setIsOpen(open);
@@ -103,7 +103,7 @@ const classes: ClassesSx = {
     },
   },
   wrapperHeader: {
-    "@media (max-width:910px)": {
+    "@media (max-width:920px)": {
       display: "none",
     },
   },
