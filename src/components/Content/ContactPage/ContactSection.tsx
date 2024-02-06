@@ -25,7 +25,7 @@ export const ContactSection: FC<IProps> = () => {
             </Box>
             <Box sx={classes.sectionContact}>
               <Box sx={classes.titleText}>График работы</Box>
-              <Box sx={classes.textContact}>{MOBILE_TELEPHONE}</Box>
+              <Box sx={classes.textContact}>{"c 7:00 до 23:00"}</Box>
             </Box>
             <Box sx={classes.sectionContact}>
               <Box sx={classes.titleText}>Реквизиты</Box>
