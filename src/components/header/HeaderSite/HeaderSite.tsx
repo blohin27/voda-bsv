@@ -24,6 +24,7 @@ export const HeaderSite = () => {
   const list = () => (
     <List>
       {[
+        { title: "Главная", urlRedirect: "/" },
         { title: "Услуги", urlRedirect: "/uslugi" },
         { title: "Цены", urlRedirect: "/price" },
         { title: "Аварийный выезд", urlRedirect: "/avaria-vyezd" },
