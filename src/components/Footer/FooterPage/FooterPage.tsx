@@ -12,6 +12,7 @@ import { BannerOstalisVopros } from "@/components/Banner/BannerOstalisVopros";
 import { useMediaQuery } from "@mui/material";
 import { stateStore } from "@/domain";
 import Link from "next/link";
+import { IP } from "@/const";
 
 interface IProps {}
 export const FooterPage: FC<IProps> = () => {
@@ -151,9 +152,7 @@ export const FooterPage: FC<IProps> = () => {
                 </Box>
               </Box>
             )}
-            <Box sx={classes.sectionIP}>
-              © 2017-2024 ИП Блохин Д.В. <br /> Все права защищены
-            </Box>
+            <Box sx={classes.sectionIP}>{`© 2017-2024 ${IP.name}Все права защищены`}</Box>
           </Box>
         </Box>
       </Box>
