@@ -152,7 +152,7 @@ export const FooterPage: FC<IProps> = () => {
                 </Box>
               </Box>
             )}
-            <Box sx={classes.sectionIP}>{`© 2017-2024 ${IP.name}Все права защищены`}</Box>
+            <Box sx={classes.sectionIP}>{`© 2017-2024 ${IP.name} Все права защищены`}</Box>
           </Box>
         </Box>
       </Box>
