@@ -172,7 +172,7 @@ const classes: ClassesSx = {
     justifyContent: "space-between",
     flex: "1 1 25%",
     gap: "10px",
-    "@media(max-width:350px)": {
+    "@media(max-width:400px)": {
       flexWrap: "wrap",
       justifyContent: "center",
     },
