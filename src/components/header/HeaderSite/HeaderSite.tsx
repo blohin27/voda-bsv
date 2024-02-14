@@ -21,6 +21,22 @@ export const HeaderSite = () => {
     setIsOpen(open);
   };
 
+  function createAndClickLink(url: string) {
+    // Создаем новый элемент 'a'
+    const link = document.createElement("a");
+    link.href = url;
+
+    // Добавляем элемент в DOM (невидимым образом)
+    link.style.display = "none";
+    document.body.appendChild(link);
+
+    // Имитируем клик по ссылке
+    link.click();
+
+    // Удаляем элемент из DOM
+    document.body.removeChild(link);
+  }
+
   const list = () => (
     <List>
       {[
@@ -56,7 +72,13 @@ export const HeaderSite = () => {
         </Drawer>
         {showDrawer && (
           <Box sx={classes.sectionHeaderSite}>
-            <Box className={montserrat.className} sx={classes.phone}>
+            <Box
+              className={montserrat.className}
+              sx={classes.phone}
+              onClick={() => {
+                createAndClickLink(`tel:${MOBILE_TELEPHONE}`);
+              }}
+            >
               <span>{MOBILE_TELEPHONE}</span>
             </Box>
             <Box
@@ -118,8 +140,12 @@ const classes: ClassesSx = {
     borderTop: "4px solid black",
   },
   phone: {
-    fontSize: "22px",
+    fontSize: "28px",
     fontWeight: "700",
+    cursor: "pointer",
+    "@media (max-width:400px)": {
+      fontSize: "24px",
+    },
   },
   sectionHeaderSite: {
     display: "flex",

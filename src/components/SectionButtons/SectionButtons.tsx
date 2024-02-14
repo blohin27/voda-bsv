@@ -39,7 +39,7 @@ const classes: ClassesSx = {
     },
   },
   button1: {
-    "@media (max-width: 1120px)": {
+    "@media (max-width: 1170px)": {
       justifyContent: "center",
       display: "none",
       // fontSize: "12px",

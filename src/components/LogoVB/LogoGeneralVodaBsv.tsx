@@ -58,7 +58,7 @@ const classes: ClassesSx = {
 
     paddingTop: "3px",
     paddingBottom: "3px",
-    "@media (max-width: 970px)": {
+    "@media (max-width: 1000px)": {
       fontSize: "20px",
     },
   },
