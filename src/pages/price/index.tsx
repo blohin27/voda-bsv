@@ -14,6 +14,7 @@ import { Chistka } from "@/components/Content/UslugiPage/UslugiItems/Chistka";
 import { ZamenaNasosa } from "@/components/Content/UslugiPage/UslugiItems/ZamenaNasosa";
 import { Diagnostica } from "@/components/Content/UslugiPage/UslugiItems/Diagnostica";
 import { AnalizVody } from "@/components/Content/UslugiPage/UslugiItems/AnalizVody";
+import { Post6 } from "@/components/Content/PoleznyeStatiPage/Post6";
 
 export default function Component() {
   return (
@@ -37,11 +38,15 @@ export default function Component() {
       </Head>
 
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <PricePage />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <PricePage />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

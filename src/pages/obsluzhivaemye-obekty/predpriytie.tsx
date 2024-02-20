@@ -8,6 +8,7 @@ import Head from "next/head";
 import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
 import { Predpriyatie } from "@/components/Content/ObjectObsluj/Predpriyatie";
+import { DomObject } from "@/components/Content/ObjectObsluj/DomObject";
 
 export default function Predpriytie() {
   return (
@@ -28,11 +29,15 @@ export default function Predpriytie() {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <Predpriyatie />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <Predpriyatie />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

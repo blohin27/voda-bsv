@@ -7,6 +7,7 @@ import { ContentGeneralPage } from "@/components/Content/GeneralPage/GeneralPage
 import { FooterPage } from "@/components/Footer/FooterPage/FooterPage";
 import Head from "next/head";
 import { observer } from "mobx-react";
+import { ZaprStancii } from "@/components/Content/ObjectObsluj/ZaprStancii";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -34,11 +35,15 @@ const Home: FC<PropsWithChildren<unknown>> = observer(() => {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <ContentGeneralPage />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <ContentGeneralPage />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

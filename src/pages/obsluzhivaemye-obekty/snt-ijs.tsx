@@ -8,6 +8,7 @@ import Head from "next/head";
 import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
 import { DomObject } from "@/components/Content/ObjectObsluj/DomObject";
+import { RoznSety } from "@/components/Content/ObjectObsluj/RoznSety";
 
 export default function SntIjs() {
   return (
@@ -32,11 +33,15 @@ export default function SntIjs() {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <SntAndIjs />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <SntAndIjs />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

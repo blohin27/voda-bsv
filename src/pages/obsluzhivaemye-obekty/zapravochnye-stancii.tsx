@@ -8,6 +8,7 @@ import Head from "next/head";
 import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
 import { ZaprStancii } from "@/components/Content/ObjectObsluj/ZaprStancii";
+import { TorgCentry } from "@/components/Content/ObjectObsluj/TorgCentry";
 
 export default function ZapravochnyeStancii() {
   return (
@@ -31,11 +32,15 @@ export default function ZapravochnyeStancii() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <ZaprStancii />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <ZaprStancii />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

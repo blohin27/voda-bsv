@@ -10,6 +10,7 @@ import { OurWorksPage } from "@/components/Content/OurWorks/OurWorksPage";
 import { SimpleDialog } from "@/components/Modal/Modal";
 import { stateStore } from "@/domain";
 import { PoleznyeStatiPage } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiPage";
+import { RoznSety } from "@/components/Content/ObjectObsluj/RoznSety";
 
 export default function Component() {
   return (
@@ -32,11 +33,15 @@ export default function Component() {
         <link rel="preconnect" href="http://voda-bsv.ru" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <PoleznyeStatiPage />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <PoleznyeStatiPage />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

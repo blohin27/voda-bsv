@@ -34,24 +34,8 @@ import { FcRightUp2 } from "react-icons/fc";
 import { Router, useRouter } from "next/router";
 
 export const ContentGeneralPage = observer(() => {
-  // const router = useRouter();
-  // useEffect(() => {
-  //   const handleStart = (url: string) => url !== router.asPath && stateStore.changeLoaderPage(true);
-  //   const handleComplete = () => stateStore.changeLoaderPage(false);
-  //
-  //   Router.events.on("routeChangeStart", handleStart);
-  //   Router.events.on("routeChangeComplete", handleComplete);
-  //   Router.events.on("routeChangeError", handleComplete);
-  //
-  //   return () => {
-  //     Router.events.off("routeChangeStart", handleStart);
-  //     Router.events.off("routeChangeComplete", handleComplete);
-  //     Router.events.off("routeChangeError", handleComplete);
-  //   };
-  // }, [router.asPath]);
-
   return (
-    <Box display={"flex"} flexDirection={"column"} className={montserrat.className}>
+    <Box sx={classes.root} className={montserrat.className}>
       <BannerPromo />
       <Box mt={-6}>
         <InfoBlocks />
@@ -86,6 +70,10 @@ export const ContentGeneralPage = observer(() => {
 });
 
 const classes: ClassesSx = {
+  root: {
+    display: "flex",
+    flexDirection: "column",
+  },
   title: {
     marginTop: "40px",
     paddingTop: "40px",

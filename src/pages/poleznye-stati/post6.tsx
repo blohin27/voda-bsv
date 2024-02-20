@@ -14,6 +14,7 @@ import { Chistka } from "@/components/Content/UslugiPage/UslugiItems/Chistka";
 import { ZamenaNasosa } from "@/components/Content/UslugiPage/UslugiItems/ZamenaNasosa";
 import { Diagnostica } from "@/components/Content/UslugiPage/UslugiItems/Diagnostica";
 import { Post6 } from "@/components/Content/PoleznyeStatiPage/Post6";
+import { Post5 } from "@/components/Content/PoleznyeStatiPage/Post5";
 
 export default function Component() {
   return (
@@ -36,11 +37,15 @@ export default function Component() {
         <link rel="preconnect" href="http://voda-bsv.ru" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <Post6 />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <Post6 />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

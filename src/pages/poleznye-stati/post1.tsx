@@ -14,6 +14,7 @@ import { Chistka } from "@/components/Content/UslugiPage/UslugiItems/Chistka";
 import { ZamenaNasosa } from "@/components/Content/UslugiPage/UslugiItems/ZamenaNasosa";
 import { Diagnostica } from "@/components/Content/UslugiPage/UslugiItems/Diagnostica";
 import { Post1 } from "@/components/Content/PoleznyeStatiPage/Post1";
+import { PoleznyeStatiPage } from "@/components/Content/PoleznyeStatiPage/PoleznyeStatiPage";
 
 export default function Component() {
   return (
@@ -32,11 +33,15 @@ export default function Component() {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <Post1 />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <Post1 />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

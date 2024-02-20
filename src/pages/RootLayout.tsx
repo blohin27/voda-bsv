@@ -31,10 +31,15 @@ import { ClassesSx } from "@/theme/theme";
 //   );
 // }
 
-const RootLayout: React.FC<PropsWithChildren<unknown>> = observer(({ children }) => {
+type RootLayoutProps = {
+  header: React.ReactNode; // Для HeaderSite
+  content: React.ReactNode; // Для остального содержимого
+};
+const RootLayout: React.FC<PropsWithChildren<RootLayoutProps>> = observer(({ children, header, content }) => {
   return (
     <Box sx={{ ...classes.root }}>
-      {children}
+      {header}
+      <Box sx={classes.contentStyle}>{content}</Box>
       <ToastContainer position="top-center" style={{ fontSize: "25px" }} autoClose={2000} />
       <ScrollToTop showUnder={60} easing={"easeInOutCirc"}>
         <FaArrowCircleUp size={70} />
@@ -46,6 +51,18 @@ const classes: ClassesSx = {
   root: {
     color: COLOR_BLACK,
     position: "relative",
+  },
+  contentStyle: {
+    marginTop: "138px",
+    "@media (max-width: 1200px)": {
+      marginTop: "138px",
+    },
+    "@media (max-width: 1100px)": {
+      marginTop: "135px",
+    },
+    "@media (max-width: 920px)": {
+      marginTop: "60px",
+    },
   },
 };
 export default RootLayout;

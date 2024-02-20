@@ -34,11 +34,15 @@ export default function Component() {
         <link rel="preconnect" href="http://voda-bsv.ru" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <ZamenaNasosa />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <ZamenaNasosa />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

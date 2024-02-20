@@ -8,6 +8,7 @@ import Head from "next/head";
 import React from "react";
 import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
 import { DomObject } from "@/components/Content/ObjectObsluj/DomObject";
+import { OurWorksPage } from "@/components/Content/OurWorks/OurWorksPage";
 
 export default function Copmponent() {
   return (
@@ -32,11 +33,15 @@ export default function Copmponent() {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <DomObject />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <DomObject />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

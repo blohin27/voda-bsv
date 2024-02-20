@@ -10,6 +10,7 @@ import { SntAndIjs } from "@/components/Content/ObjectObsluj/SntAndIjs";
 import { DomObject } from "@/components/Content/ObjectObsluj/DomObject";
 import { TorgCentry } from "@/components/Content/ObjectObsluj/TorgCentry";
 import { RoznSety } from "@/components/Content/ObjectObsluj/RoznSety";
+import { Predpriyatie } from "@/components/Content/ObjectObsluj/Predpriyatie";
 
 export default function Component() {
   return (
@@ -33,11 +34,15 @@ export default function Component() {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <RoznSety />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <RoznSety />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

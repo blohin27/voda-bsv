@@ -71,25 +71,27 @@ export const HeaderSite = () => {
           {list()}
         </Drawer>
         {showDrawer && (
-          <Box sx={classes.sectionHeaderSite}>
-            <Box
-              className={montserrat.className}
-              sx={classes.phone}
-              onClick={() => {
-                createAndClickLink(`tel:${MOBILE_TELEPHONE}`);
-              }}
-            >
-              <span>{MOBILE_TELEPHONE}</span>
-            </Box>
-            <Box
-              sx={classes.wrapperLinesHeader}
-              onClick={() => {
-                toggleDrawer(true);
-              }}
-            >
-              <Box sx={classes.linesHeader}></Box>
-              <Box sx={classes.linesHeader}></Box>
-              <Box sx={classes.linesHeader}></Box>
+          <Box sx={{}}>
+            <Box sx={classes.sectionHeaderSite}>
+              <Box
+                className={montserrat.className}
+                sx={classes.phone}
+                onClick={() => {
+                  createAndClickLink(`tel:${MOBILE_TELEPHONE}`);
+                }}
+              >
+                <span>{MOBILE_TELEPHONE}</span>
+              </Box>
+              <Box
+                sx={classes.wrapperLinesHeader}
+                onClick={() => {
+                  toggleDrawer(true);
+                }}
+              >
+                <Box sx={classes.linesHeader}></Box>
+                <Box sx={classes.linesHeader}></Box>
+                <Box sx={classes.linesHeader}></Box>
+              </Box>
             </Box>
           </Box>
         )}
@@ -114,7 +116,8 @@ export const HeaderSite = () => {
 };
 
 const classes: ClassesSx = {
-  root: { position: "sticky", top: 0, zIndex: 1000 },
+  //  root: { position: "sticky", top: 0, zIndex: 1000 },
+  root: { position: "fixed ", top: 0, zIndex: 1000, width: "100%", backgroundColor: "white" },
   itemHeaderDrawer: {
     color: "white",
     margin: "25px",

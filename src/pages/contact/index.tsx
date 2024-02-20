@@ -6,6 +6,7 @@ import { ContactPage } from "@/components/Content/ContactPage/ContactPage";
 import type { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
+import { CalculatorPage } from "@/components/Content/CalculatorPage/CalculatorPage";
 
 export default function Contact() {
   return (
@@ -25,11 +26,15 @@ export default function Contact() {
         <link rel="preconnect" href="http://voda-bsv.ru" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <ContactPage />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <ContactPage />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

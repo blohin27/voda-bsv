@@ -9,6 +9,7 @@ import OurWorks from "@/pages/poleznye-stati";
 import { OurWorksPage } from "@/components/Content/OurWorks/OurWorksPage";
 import { SimpleDialog } from "@/components/Modal/Modal";
 import { stateStore } from "@/domain";
+import { ContactPage } from "@/components/Content/ContactPage/ContactPage";
 
 export default function Component() {
   return (
@@ -31,11 +32,15 @@ export default function Component() {
         <link rel="preconnect" href="http://voda-bsv.ru" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <OurWorksPage />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <OurWorksPage />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );

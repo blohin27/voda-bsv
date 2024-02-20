@@ -32,11 +32,15 @@ export default function Component() {
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       </Head>
       <IsDev>
-        <RootLayout>
-          <HeaderSite />
-          <TorgCentry />
-          <FooterPage />
-        </RootLayout>
+        <RootLayout
+          header={<HeaderSite />}
+          content={
+            <>
+              <TorgCentry />
+              <FooterPage />
+            </>
+          }
+        />
       </IsDev>
     </>
   );
