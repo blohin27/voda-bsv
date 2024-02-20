@@ -9,23 +9,10 @@ import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
 import { FotoRabot, PhotoItem } from "@/components/FotoRabot/FotoRabot";
 import { FcCheckmark } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
+import { dataTableRemBur, dataTableRemBur2 } from "@/price";
 
 interface IProps {}
 export const Burenie: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Металл Ø133 мм.", price: "от 3000" },
-    { name: "Металл/Пластик Ø133мм./117мм", price: "от 3200" },
-    { name: "Металл Ø159 мм", price: "от 3500" },
-    { name: "Металл/Пластик Ø159мм./125мм ", price: "от 3800" },
-    { name: "Пластик НПВХ 125мм.", price: "от 2600" },
-  ]);
-  const [dataTableRem2, setDataTableRem2] = useState([
-    { name: "Металл Ø133 мм.", price: "от 2800" },
-    { name: "Металл/Пластик Ø133мм./117мм", price: "от 3000" },
-    { name: "Металл Ø159 мм", price: "от 3500" },
-    { name: "Металл/Пластик Ø159мм./125мм ", price: "от 3600" },
-    { name: "Пластик НПВХ 125мм.", price: "от 2500" },
-  ]);
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -83,7 +70,7 @@ export const Burenie: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {dataTableRemBur.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
@@ -108,7 +95,7 @@ export const Burenie: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem2.map((item) => (
+                {dataTableRemBur2.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

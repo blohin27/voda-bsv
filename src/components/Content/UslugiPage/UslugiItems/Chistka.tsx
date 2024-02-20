@@ -15,17 +15,10 @@ import { FcCheckmark } from "react-icons/fc";
 import { FcMediumPriority } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
 import { color } from "@mui/system";
+import { chistka } from "@/price";
 
 interface IProps {}
 export const Chistka: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Диагностика (видеодиагностика)", price: "от 5000" },
-    { name: "От 10 до 40 метров", price: "от 5000" },
-    { name: "От 40 метров ", price: "от 7000" },
-    { name: "От 60 метров ", price: "от 16000" },
-    { name: "От 80 метров ", price: "от 18000" },
-    { name: "От 120 метров ", price: "от 25000" },
-  ]);
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -116,7 +109,7 @@ export const Chistka: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {chistka.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

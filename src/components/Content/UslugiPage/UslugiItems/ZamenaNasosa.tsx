@@ -11,30 +11,10 @@ import { FcCheckmark } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
 import { FcFlashOn } from "react-icons/fc";
 import { Slogan } from "@/components/Slogan/Slogan";
+import { ecv, ustanovkaNasosa, zamenaNasosa } from "@/price";
 
 interface IProps {}
 export const ZamenaNasosa: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Замена насоса на глубине до 35 метров", price: "от 11000" },
-    { name: "Замена насоса на глубинедо 60 метров", price: "от 16000" },
-    { name: "Замена насоса на глубине до 80 метров", price: "от 23000" },
-    { name: "Замена насоса на глубине  до 100 метров", price: "от 28000" },
-    { name: "Замена насоса на глубине  до 120 метров", price: "от 31000" },
-  ]);
-  const [dataTableRem2, setDataTableRem2] = useState([
-    { name: "Установка насоса на глубине до 35 метров", price: "от 11000" },
-    { name: "Установка насоса на глубине  до 60 метров", price: "от 16000" },
-    { name: "Замена насоса на глубине до 80 метров", price: "от 23000" },
-    { name: "Установка насоса на глубине  до 100 метров", price: "от 28000" },
-    { name: "Установка насоса на глубине  до 150 метров", price: "от 33000" },
-  ]);
-  const [dataTableRem3, setDataTableRem3] = useState([
-    { name: "Монтаж(замена установка) ЭЦВ насоса до 40 метров", price: "от 11000" },
-    { name: "Монтаж(замена установка) ЭЦВ насоса до 60 метров", price: "от 16000" },
-    { name: "Монтаж(замена установка) ЭЦВ насоса до 80 метров", price: "от 23000" },
-    { name: "Монтаж(замена установка) ЭЦВ насосадо от 80 метров", price: "от 28000" },
-  ]);
-
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -96,7 +76,7 @@ export const ZamenaNasosa: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {zamenaNasosa.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
@@ -125,7 +105,7 @@ export const ZamenaNasosa: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem2.map((item) => (
+                {ustanovkaNasosa.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
@@ -147,7 +127,7 @@ export const ZamenaNasosa: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem3.map((item) => (
+                {ecv.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

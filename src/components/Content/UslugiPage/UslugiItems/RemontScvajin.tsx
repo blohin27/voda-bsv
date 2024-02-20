@@ -13,19 +13,10 @@ import { List, ListItem, ListItemDecorator } from "@mui/joy";
 import { FcFlashOn } from "react-icons/fc";
 import { FcCheckmark } from "react-icons/fc";
 import { FcMediumPriority } from "react-icons/fc";
+import { dataTableRemontScv, dataTableRemRem } from "@/price";
 
 interface IProps {}
 export const RemontScvajin: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Диагностика скважины на воду (Выезд)", price: "от 5000" },
-    { name: "Видеодиагностика", price: "от 5000" },
-    { name: "Замена гидроаккумулятора (гидробак)", price: "от 4000" },
-    { name: "Замена реле управления", price: "от 2000" },
-    { name: "Установка / замена оголовка", price: "от 2500" },
-    { name: "Монтаж кранов и прочее", price: "от 2500" },
-    { name: "Настройка автоматики", price: " от 2000" },
-    { name: "Сварочные работы", price: " от 4000" },
-  ]);
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -83,7 +74,7 @@ export const RemontScvajin: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {dataTableRemontScv.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

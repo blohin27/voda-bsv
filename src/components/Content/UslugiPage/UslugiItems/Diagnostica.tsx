@@ -12,14 +12,10 @@ import { FcApproval } from "react-icons/fc";
 import { FcFlashOn } from "react-icons/fc";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { margin } from "@mui/system";
+import { diag } from "@/price";
 
 interface IProps {}
 export const Diagnostica: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Диагностика скважины на воду.Выезд в день обращения", price: "от 4500" },
-    { name: "Видеодиагностика. Запись в подарок", price: "от 5500" },
-  ]);
-
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -81,7 +77,7 @@ export const Diagnostica: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {diag.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

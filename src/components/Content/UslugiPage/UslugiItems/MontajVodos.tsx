@@ -12,27 +12,10 @@ import { FcApproval } from "react-icons/fc";
 import { FcFlashOn } from "react-icons/fc";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { margin } from "@mui/system";
+import { montajVodosnab } from "@/price";
 
 interface IProps {}
 export const MontajVodos: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Установка насоса в колодце под ключ", price: "от 3000" },
-    { name: "Установка дополнительного крана", price: "от 4000" },
-    { name: "Установка гидроаккумулятора ", price: "от 6000" },
-    { name: "Установка дополнительного крана ", price: "от 6000" },
-    { name: "Монтаж  греющего кабеля  ", price: "от 6000" },
-    { name: "Монтаж точки потребления воды ", price: "от 6000" },
-    { name: "Замена фильтра (картриджа) для воды", price: "от 6000" },
-    { name: "Монтаж бойлера", price: "от 6000" },
-    { name: "Сборка и установка любых узлов сантехники", price: "от 6000" },
-    { name: "Монтаж кесона под ключ", price: "от 6000" },
-    { name: "Монтаж адаптера скважинного", price: "от 6000" },
-    { name: "Рытье траншей  лопатой  ", price: "от 6000" },
-    { name: "Электромонтажные работы любой сложности", price: "от 6000" },
-    { name: "Монтаж адаптера скважинного", price: "от 6000" },
-    { name: "Установка гидроаккумулятора ", price: "от 6000" },
-  ]);
-
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -93,7 +76,7 @@ export const MontajVodos: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {montajVodosnab.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

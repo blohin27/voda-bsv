@@ -12,25 +12,18 @@ import { FcApproval } from "react-icons/fc";
 import { FcFlashOn } from "react-icons/fc";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { margin } from "@mui/system";
+import { vodoOchistka } from "@/price";
 
 interface IProps {}
 export const RemontVodoOchistki: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Диагностика водоочистки", price: "от 4000 руб. при заказе другой услуги бесплатно" },
-    { name: "Диагностика с анализом воды", price: "от 1000" },
-    { name: "Сервисное обслуживание 1 балон", price: "от 5000" },
-    { name: "Сервисное обслуживание 2 балона", price: "от 7000" },
-    { name: "Сервисное обслуживание 3 балона", price: "от 9000" },
-    { name: "Прочие услуги", price: "договорная" },
-  ]);
-  const [dataTableRem2, setDataTableRem2] = useState([
+  const intervalService = [
     { name: "Сервисное обслуживание распределительной системы", price: "12 месяцев" },
-    { name: "Сервисное обслуживание клапанов управления", price: " 9 месяцев" },
-    { name: "Сервисное обслуживание солевого блока", price: " 9 месяцев " },
-    { name: "Анализ воды", price: " 6 месяцев" },
+    { name: "Сервисное обслуживание клапанов управления", price: "9 месяцев" },
+    { name: "Сервисное обслуживание солевого блока", price: "9 месяцев" },
+    { name: "Анализ воды", price: "6 месяцев" },
     { name: "Замена фильтра", price: "6 месяцев" },
     { name: "Промывка солезаборника", price: "6 месяцев" },
-  ]);
+  ];
 
   return (
     <Box sx={classes.root}>
@@ -103,7 +96,7 @@ export const RemontVodoOchistki: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {vodoOchistka.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
@@ -163,7 +156,7 @@ export const RemontVodoOchistki: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem2.map((item) => (
+                {intervalService.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

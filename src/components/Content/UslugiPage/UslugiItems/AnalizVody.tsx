@@ -12,15 +12,10 @@ import { FcApproval } from "react-icons/fc";
 import { FcFlashOn } from "react-icons/fc";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { margin } from "@mui/system";
+import { analiz } from "@/price";
 
 interface IProps {}
 export const AnalizVody: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Анализа воды из артезианской скважин", price: "от 2000" },
-    { name: "Анализа воды из колодцев и не глубоких скважин", price: "от 1500" },
-    { name: "Микробиологического анализа воды", price: "от 800" },
-  ]);
-
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -112,9 +107,9 @@ export const AnalizVody: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {analiz.map((item) => (
                   <TableRow key={item.name}>
-                    <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
+                    <TableCell sx={{ ...classes.tdStyle, fontWeight: 600 }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
                   </TableRow>
                 ))}

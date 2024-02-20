@@ -12,15 +12,10 @@ import { FcApproval } from "react-icons/fc";
 import { FcFlashOn } from "react-icons/fc";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { margin } from "@mui/system";
+import { montajVodosnab } from "@/price";
 
 interface IProps {}
 export const ServicObsluj: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Замена горизонтального гидроаккумулятора", price: "от 3000" },
-    { name: "Замена вертикального гидроаккумулятора", price: "от 4000" },
-    { name: "Замена вертикального гидроаккумулятора от 100 литров", price: "от 6000" },
-  ]);
-
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -122,7 +117,7 @@ export const ServicObsluj: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {montajVodosnab.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>

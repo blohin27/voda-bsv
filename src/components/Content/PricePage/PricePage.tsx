@@ -7,6 +7,7 @@ import { COLOR_BLACK, CONST_TITLE, CONST_TITLE_FIRST_PAGE } from "@/const";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { v4 as uuidv4 } from "uuid";
+import { chistka, dataTableRemBur, dataTableRemBur2, dataTableRemRem, diag, ecv, montajVodosnab, servObsVodo, ustanovkaNasosa, zamenaNasosa } from "@/price";
 
 interface IProps {}
 export const PricePage: FC<IProps> = () => {
@@ -21,96 +22,7 @@ export const PricePage: FC<IProps> = () => {
   const myRef9 = useRef<HTMLDivElement>(null);
   const myRef10 = useRef<HTMLDivElement>(null);
   const [rem5, setRem] = useState("Ремонт скважины");
-  const [dataTableRem, setDataTableRem] = useState<{ name: string; price: string }[]>([
-    { name: "1Замена asdw asdwdа до 40 м.", price: "30" },
-    { name: "2Замена насоса до 40 м.", price: "25" },
-    { name: "3Замена насоса до 40 м.", price: "35" },
-    { name: "4Замена насоса до 40 м.", price: "25" },
-    { name: "5Замена насоса до 40 м.", price: "35" },
-    { name: "6Замена насоса до 40 м.", price: "25" },
-    { name: "7Замена насоса до 40 м.", price: "35" },
-  ]);
-  const [dataTableRemBur, setDataTableRemBur] = useState([
-    { name: "Металл Ø133 мм.", price: "от 3000" },
-    { name: "Металл/Пластик Ø133мм./117мм", price: "от 3200" },
-    { name: "Металл Ø159 мм", price: "от 3500" },
-    { name: "Металл/Пластик Ø159мм./125мм ", price: "от 3800" },
-    { name: "Пластик НПВХ 125мм.", price: "от 2600" },
-  ]);
-  const [dataTableRemBur2, setDataTableRemBur2] = useState([
-    { name: "Металл Ø133 мм.", price: "от 2800" },
-    { name: "Металл/Пластик Ø133мм./117мм", price: "от 3000" },
-    { name: "Металл Ø159 мм", price: "от 3500" },
-    { name: "Металл/Пластик Ø159мм./125мм ", price: "от 3600" },
-    { name: "Пластик НПВХ 125мм.", price: "от 2500" },
-  ]);
-  const [dataTableRemRem, setDataTableRemRem] = useState([
-    { name: "Диагностика скважины на воду (Выезд)", price: "от 5000" },
-    { name: "Видеодиагностика", price: "от 5000" },
-    { name: "Замена гидроаккумулятора (гидробак)", price: "от 4000" },
-    { name: "Замена реле управления", price: "от 2000" },
-    { name: "Установка / замена оголовка", price: "от 2500" },
-    { name: "Монтаж кранов и прочее", price: "от 2500" },
-    { name: "Настройка автоматики", price: " от 2000" },
-    { name: "Сварочные работы", price: " от 4000" },
-  ]);
-  const [chistka, setChistka] = useState([
-    { name: "Диагностика (видеодиагностика)", price: "от 5000" },
-    { name: "От 10 до 40 метров", price: "от 5000" },
-    { name: "От 40 метров ", price: "от 7000" },
-    { name: "От 60 метров ", price: "от 16000" },
-    { name: "От 80 метров ", price: "от 18000" },
-    { name: "От 120 метров ", price: "от 25000" },
-  ]);
-  const [diag, setDiag] = useState([
-    { name: "Диагностика скважины на воду.Выезд в день обращения", price: "от 4500" },
-    { name: "Видеодиагностика. Запись в подарок", price: "от 5500" },
-  ]);
-  const zamenaNasosa = [
-    { name: "Замена насоса на глубине до 35 метров", price: "от 11000" },
-    { name: "Замена насоса на глубинедо 60 метров", price: "от 16000" },
-    { name: "Замена насоса на глубине до 80 метров", price: "от 23000" },
-    { name: "Замена насоса на глубине  до 100 метров", price: "от 28000" },
-    { name: "Замена насоса на глубине  до 120 метров", price: "от 31000" },
-  ];
-  const ustanovkaNasosa = [
-    { name: "Установка насоса на глубине до 35 метров", price: "от 11000" },
-    { name: "Установка насоса на глубине  до 60 метров", price: "от 16000" },
-    { name: "Замена насоса на глубине до 80 метров", price: "от 23000" },
-    { name: "Установка насоса на глубине  до 100 метров", price: "от 28000" },
-    { name: "Установка насоса на глубине  до 150 метров", price: "от 33000" },
-  ];
-  const ecv = [
-    { name: "Монтаж(замена установка) ЭЦВ насоса до 40 метров", price: "от 11000" },
-    { name: "Монтаж(замена установка) ЭЦВ насоса до 60 метров", price: "от 16000" },
-    { name: "Монтаж(замена установка) ЭЦВ насоса до 80 метров", price: "от 23000" },
-    { name: "Монтаж(замена установка) ЭЦВ насосадо от 80 метров", price: "от 28000" },
-  ];
-  const servObsVodo = [
-    { name: "Диагностика водоочистки", price: "от 4000 руб. при заказе другой услуги бесплатно" },
-    { name: "Диагностика с анализом воды", price: "от 1000" },
-    { name: "Сервисное обслуживание 1 балон", price: "от 5000" },
-    { name: "Сервисное обслуживание 2 балона", price: "от 7000" },
-    { name: "Сервисное обслуживание 3 балона", price: "от 9000" },
-    { name: "Прочие услуги", price: "договорная" },
-  ];
-  const montajVodosnab = [
-    { name: "Установка насоса в колодце под ключ", price: "от 3000" },
-    { name: "Установка дополнительного крана", price: "от 4000" },
-    { name: "Установка гидроаккумулятора ", price: "от 6000" },
-    { name: "Установка дополнительного крана ", price: "от 6000" },
-    { name: "Монтаж  греющего кабеля  ", price: "от 6000" },
-    { name: "Монтаж точки потребления воды ", price: "от 6000" },
-    { name: "Замена фильтра (картриджа) для воды", price: "от 6000" },
-    { name: "Монтаж бойлера", price: "от 6000" },
-    { name: "Сборка и установка любых узлов сантехники", price: "от 6000" },
-    { name: "Монтаж кесона под ключ", price: "от 6000" },
-    { name: "Монтаж адаптера скважинного", price: "от 6000" },
-    { name: "Рытье траншей  лопатой  ", price: "от 6000" },
-    { name: "Электромонтажные работы любой сложности", price: "от 6000" },
-    { name: "Монтаж адаптера скважинного", price: "от 6000" },
-    { name: "Установка гидроаккумулятора ", price: "от 6000" },
-  ];
+
   const scrollToMyRef = (myRef: any) => {
     myRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };

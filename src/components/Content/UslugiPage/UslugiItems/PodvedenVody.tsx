@@ -12,17 +12,10 @@ import { FcApproval } from "react-icons/fc";
 import { FcFlashOn } from "react-icons/fc";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { margin } from "@mui/system";
+import { podvedenie } from "@/price";
 
 interface IProps {}
 export const PodvedenVody: FC<IProps> = () => {
-  const [dataTableRem, setDataTableRem] = useState([
-    { name: "Консультация и даигностика", price: "Бесплатно" },
-    { name: "Копка траншей", price: "от 400 рублей метр" },
-    { name: "Подведение воды к дому до 10 метров", price: "от 1500" },
-    { name: "Подведение воды к дому от 10 до 30 метров", price: "от 1000" },
-    { name: "Подведение воды к дому от 30 метров", price: "от 700" },
-  ]);
-
   return (
     <Box sx={classes.root}>
       <Box sx={classes.setcionGeneralPageBannerImg}>
@@ -166,7 +159,7 @@ export const PodvedenVody: FC<IProps> = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {dataTableRem.map((item) => (
+                {podvedenie.map((item) => (
                   <TableRow key={item.name}>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.name}</TableCell>
                     <TableCell sx={{ ...classes.tdStyle }}>{item.price}</TableCell>
