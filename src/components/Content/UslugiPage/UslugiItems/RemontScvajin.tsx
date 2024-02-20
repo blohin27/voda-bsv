@@ -13,7 +13,7 @@ import { List, ListItem, ListItemDecorator } from "@mui/joy";
 import { FcFlashOn } from "react-icons/fc";
 import { FcCheckmark } from "react-icons/fc";
 import { FcMediumPriority } from "react-icons/fc";
-import { dataTableRemontScv, dataTableRemRem } from "@/price";
+import { dataTableRemontScv } from "@/price";
 
 interface IProps {}
 export const RemontScvajin: FC<IProps> = () => {
