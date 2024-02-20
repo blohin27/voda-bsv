@@ -7,7 +7,7 @@ import { COLOR_BLACK, CONST_TITLE, CONST_TITLE_FIRST_PAGE } from "@/const";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { v4 as uuidv4 } from "uuid";
-import { chistka, dataTableRemBur, dataTableRemBur2, diag, ecv, montajVodosnab, servObsVodo, ustanovkaNasosa, zamenaNasosa } from "@/price";
+import { chistka, dataTableRemBur, dataTableRemBur2, dataTableRemontScv, diag, ecv, montajVodosnab, servObsVodo, ustanovkaNasosa, zamenaNasosa } from "@/price";
 
 interface IProps {}
 export const PricePage: FC<IProps> = () => {
@@ -131,7 +131,7 @@ export const PricePage: FC<IProps> = () => {
           </Box>
           <Box sx={classes.wrapperItemPrice}>
             <Box sx={classes.contenItemPrice}>
-              <ComponentTableWithTitle title={"Цены на ремонт скважины"} dataTableRem={dataTableRemRem} key={uuidv4()} ref={myRef} />
+              <ComponentTableWithTitle title={"Цены на ремонт скважины"} dataTableRem={dataTableRemontScv} key={uuidv4()} ref={myRef} />
               <ComponentTableWithTitle title={"Цены на бурение в Москве и МО"} dataTableRem={dataTableRemBur} key={uuidv4()} ref={myRef2} />
               <ComponentTableWithTitle title={"Цены на бурение за метр малогабаритной установкой"} dataTableRem={dataTableRemBur2} key={uuidv4()} ref={myRef3} />
               <ComponentTableWithTitle title={"Цены на чистку скважин на воду"} dataTableRem={chistka} key={uuidv4()} ref={myRef4} />
