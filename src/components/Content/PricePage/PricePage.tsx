@@ -7,7 +7,7 @@ import { COLOR_BLACK, CONST_TITLE, CONST_TITLE_FIRST_PAGE } from "@/const";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import { InfoBlocks } from "@/components/InfoBlock/InfoBlock";
 import { v4 as uuidv4 } from "uuid";
-import { chistka, dataTableRemBur, dataTableRemBur2, dataTableRemRem, diag, ecv, montajVodosnab, servObsVodo, ustanovkaNasosa, zamenaNasosa } from "@/price";
+import { chistka, dataTableRemBur, dataTableRemBur2, diag, ecv, montajVodosnab, servObsVodo, ustanovkaNasosa, zamenaNasosa } from "@/price";
 
 interface IProps {}
 export const PricePage: FC<IProps> = () => {
