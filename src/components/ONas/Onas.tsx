@@ -5,6 +5,7 @@ import { LogoGeneralVodaBsv } from "@/components/LogoVB/LogoGeneralVodaBsv";
 import { LogoVodaBsv } from "@/components/LogoVB/LogoVodaBsv";
 import { COLOR_BLACK, COLOR_BLUE, CONST_TITLE, IP } from "@/const";
 import Image from "next/image";
+import { LogoVodaBsvWhite } from "@/components/LogoVB/LogoVodaBsvWhite";
 
 interface IProps {}
 export const Onas: FC<IProps> = () => {
@@ -18,7 +19,7 @@ export const Onas: FC<IProps> = () => {
               <Box sx={classes.sectionWhite} />
               <Box>
                 <Image
-                  src="/photo/fonOnas.png"
+                  src="/photo/general.jpeg"
                   alt={"image"}
                   layout={"fill"}
                   objectFit="cover"
@@ -27,20 +28,20 @@ export const Onas: FC<IProps> = () => {
                 />
               </Box>
               <Box sx={{ zIndex: 3, marginLeft: "5px" }}>
-                <LogoVodaBsv sizeText={"50px"} sizeLogoHome={"80px"} />
+                <LogoVodaBsvWhite sizeText={"50px"} sizeLogoHome={"80px"} />
                 {/*<Box sx={classes.titleReqvizit} mt={2}>*/}
                 {/*  Реквизиты*/}
                 {/*</Box>*/}
                 <Box mt={2}>
-                  <Box sx={classes.titleItemReqvizit}>Полное наименоваие: </Box>
+                  <Box sx={classes.titleItemReqvizit}>Полное наименоваие:&nbsp; </Box>
                   <Box sx={classes.itemValueReqvizit}> {IP.name}</Box>
                 </Box>
-                <Box mt={1}>
-                  <Box sx={classes.titleItemReqvizit}> ИНН:</Box>
+                <Box mt={2}>
+                  <Box sx={classes.titleItemReqvizit}> ИНН:&nbsp;</Box>
                   <Box sx={classes.itemValueReqvizit}>{IP.INN}</Box>
                 </Box>
-                <Box mt={1}>
-                  <Box sx={classes.titleItemReqvizit}> ОГРН:</Box>
+                <Box mt={2}>
+                  <Box sx={classes.titleItemReqvizit}> {"ОГРН:"}&nbsp;</Box>
                   <Box sx={classes.itemValueReqvizit}> {IP.OGRNIP}</Box>
                 </Box>
               </Box>
@@ -83,8 +84,8 @@ const classes: ClassesSx = {
   wrapper: { maxWidth: "1200px", margin: "0 auto" },
   content: { margin: "0 16px 0 16px" },
   titleReqvizit: { fontWeight: 700, fontSize: "25px" },
-  titleItemReqvizit: { display: "inline", fontWeight: 700, fontSize: "19px", letterSpacing: "1px" },
-  itemValueReqvizit: { display: "inline", fontWeight: 500, fontSize: "19px", letterSpacing: "1px" },
+  titleItemReqvizit: { display: "inline", fontWeight: 700, fontSize: "19px", letterSpacing: "1px", color: "white" },
+  itemValueReqvizit: { display: "inline", fontWeight: 500, fontSize: "19px", letterSpacing: "1px", color: "white" },
   title: {
     marginTop: "40px",
     paddingTop: "40px",
@@ -125,7 +126,7 @@ const classes: ClassesSx = {
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",
-    height: "500px",
+    height: "550px",
     width: "50%",
     "@media (max-width: 900px)": {
       width: "100%",
@@ -153,8 +154,8 @@ const classes: ClassesSx = {
 
   sectionWhite: {
     zIndex: "2",
-    background: "linear-gradient(to left, white, white 100%, rgba(0, 0, 0, 10%) 90%)",
-    opacity: 0.8,
+    background: "linear-gradient(to left, black, black 100%, rgba(0, 0, 0, 10%) 90%)",
+    opacity: 0.4,
     position: "absolute",
     width: "100%",
     height: "100%",
