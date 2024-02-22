@@ -1,0 +1,4 @@
+Sitemap: voda-bsv.ru/sitemap.xml
+User-agent: *
+Allow:
+
