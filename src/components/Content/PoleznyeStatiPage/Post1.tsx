@@ -97,7 +97,7 @@ export const Post1: FC<IProps> = () => {
           <Box sx={{ ...classes.descTextSection }} mt={2}>
             <Box sx={{ ...classes.imgSectionOnlyOne, float: "left", height: "240px" }}>
               <Image
-                src="/photo/scvajiny dlya stati.JPG"
+                src="/photo/scvajiny_dlya_stati.jpg"
                 alt={"Монтаж водоснабжения на фото "}
                 layout={"fill"}
                 objectFit="cover"
