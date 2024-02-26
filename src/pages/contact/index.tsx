@@ -23,7 +23,7 @@ export default function Contact() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
-        <link rel="preconnect" href="http://voda-bsv.ru" />
+        <link rel="preconnect" href="https://voda-bsv.ru" />
       </Head>
       <IsDev>
         <RootLayout

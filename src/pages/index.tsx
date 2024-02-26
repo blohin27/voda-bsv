@@ -29,7 +29,7 @@ const Home: FC<PropsWithChildren<unknown>> = observer(() => {
         />
         <link rel="icon" type="image/jpg" href="/icons/favicon.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="http://voda-bsv.ru" />
+        <link rel="preconnect" href="https://voda-bsv.ru" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
         <meta name="yandex-verification" content="b7ff7d90f93cfade" />
       </Head>
