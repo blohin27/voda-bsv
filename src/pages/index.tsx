@@ -20,9 +20,7 @@ const Home: FC<PropsWithChildren<unknown>> = observer(() => {
           name="description"
           content="Предлагаем качественные услуги по чистке и обслуживанию скважин на воду в Московской области. Быстро, надежно и по доступным ценам. Забота о вашем комфорте и безопасности."
         />
-        {/*<meta charset="UTF-8" />*/}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="http://voda-bsv.ru" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="BSV" />
         <meta

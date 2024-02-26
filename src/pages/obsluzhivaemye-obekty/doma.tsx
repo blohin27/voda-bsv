@@ -20,7 +20,6 @@ export default function Copmponent() {
           content="Комплексные решения по водоснабжению для частных и загородных домов. Эффективные системы, проектирование, установка и обслуживание в Московской области."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="http://voda-bsv.ru/obsluzhivaemye-obekty/doma" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Voda-BSV" />
         <meta

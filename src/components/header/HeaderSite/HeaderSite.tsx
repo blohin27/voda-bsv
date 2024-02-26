@@ -46,6 +46,7 @@ export const HeaderSite = () => {
         { title: "Аварийный выезд", urlRedirect: "/avaria-vyezd" },
         // { title: "Калькулятор", urlRedirect: "/" },
         { title: "Наши работы", urlRedirect: "/nashy-raboty" },
+        { title: "Тендеры", urlRedirect: "/priglasit-nas-v-tender" },
         { title: "Полезные статьи", urlRedirect: "/poleznye-stati" },
         { title: "Контакты", urlRedirect: "/contact" },
       ].map((text, index) => (
