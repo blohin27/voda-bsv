@@ -1,4 +1,5 @@
 import { mailOptions, transporter } from "../../config/nodemailer";
+import handlerFeedBack from "@/pages/api/feedback";
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
@@ -32,6 +33,8 @@ const handler = async (
 ) => {
   if (req.method === "POST") {
     const data = req.body;
+    await handlerFeedBack(req.body);
+    // console.log("!!!!!!!!!!", req.body);
     // if (true) {
     //   return res.status(400).send({ message: "Bad request" });
     // }
