@@ -85,7 +85,7 @@ export const FooterPage: FC<IProps> = () => {
                   <Link href={`/uslugi`} style={{ textDecoration: "none", color: "#62953d" }}>
                     <Box sx={classes.itemRef}>{`Услуги`}</Box>
                   </Link>
-                  <Link href={`/ceny`} style={{ textDecoration: "none", color: "#62953d" }}>
+                  <Link href={`/price`} style={{ textDecoration: "none", color: "#62953d" }}>
                     <Box sx={classes.itemRef}>{`Цены`}</Box>
                   </Link>
                   <Link href={`/avaria-vyezd`} style={{ textDecoration: "none", color: "#62953d" }}>
